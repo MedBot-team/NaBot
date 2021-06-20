@@ -28,7 +28,7 @@ This is a list of interesting Kaggle notebook or competitions
 RASA is one of the main players in this domain. Here we study what they have reported in their website.
 RASA has a list of chatbots built based on their platform listed in [https://rasa.com/showcase/](https://rasa.com/showcase/). The show cases are presented in three groups. 
  
-## Comercial Assistants
+## Commercial Assistants
 
 | Name | Description | Link | Dataset |
 |---|---|---|---|
