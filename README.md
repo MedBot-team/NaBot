@@ -13,7 +13,8 @@ List the existing data used for building chatbots by others
 List all interesting github or gitlab repositories about chatbots
 | Name | Description| Link |
 |---|---|---|
-| [name](link) | Explain why this is interesting|
+| [Building a Question-Answering System from Scratch] | I am using the Stanford Question Answering Dataset (SQuAD). The problem is pretty famous with all the big companies trying to jump up at the leaderboard and using advanced techniques like attention based RNN models to get the best accuracy. All the GitHub repositories that I found related to SQuAD by other people have also used RNNs. | https://towardsdatascience.com/building-a-question-answering-system-part-1-9388aadff507
+| [Question Answering with a Fine-Tuned BERT] | For something like text classification, you definitely want to fine-tune BERT on your own dataset. For question answering, however, it seems like you may be able to get decent results using a model that’s already been fine-tuned on the SQuAD benchmark. |https://mccormickml.com/2020/03/10/question-answering-with-a-fine-tuned-BERT/
 
 
 # Kaggle 
