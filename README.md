@@ -6,8 +6,11 @@ List the existing data used for building chatbots by others
 
 | Name | Description| Link |
 |---|---|---|
-| [Stanford Question Answering Dataset (SQuAD)] | The SQuAD v1.1 is the Benchmark for QA tasks|https://deepai.org/dataset/squad
-| [Persian question answering dataset] | Persian Question Answering (PersianQA) Dataset is a reading comprehension dataset on Persian Wikipedia. The crowd-sourced dataset consists of more than 9,000 entries. Each entry can be either an impossible-to-answer or a question with one or more answers spanning in the passage (the context) from which the questioner proposed the question. Much like the SQuAD2.0 dataset, the impossible or unanswerable questions can be utilized to create a system which "knows that it doesn't know the answer".|https://github.com/sajjjadayobi/PersianQA
+| [SQuAD Stanford Question Answering Dataset] | The SQuAD v1.1 is the Benchmark for QA tasks|https://deepai.org/dataset/squad
+| [Persian question answering Dataset] | Persian Question Answering (PersianQA) Dataset is a reading comprehension dataset on Persian Wikipedia. The crowd-sourced dataset consists of more than 9,000 entries. Each entry can be either an impossible-to-answer or a question with one or more answers spanning in the passage (the context) from which the questioner proposed the question. Much like the SQuAD2.0 dataset, the impossible or unanswerable questions can be utilized to create a system which "knows that it doesn't know the answer".|https://github.com/sajjjadayobi/PersianQA 
+| [CoQA Dataset] |CoQA is a Conversational Question Answering dataset released by Stanford NLP in 2019. It is a large-scale dataset for building Conversational Question Answering Systems. This dataset aims to measure the ability of machines to understand a text passage and answer a series of interconnected questions that appear in a conversation. The unique feature about this dataset is that each conversation is collected by pairing two crowd workers to chat about a passage in the form of questions and answers and hence, the questions are conversational.  | http://downloads.cs.stanford.edu/nlp/data/coqa/coqa-train-v1.0.json
+| [SQuADv2.0 Dataset] |a corpus of research papers to answer COVID-19 related questions |https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v2.0.json
+| [] | |  
 
 # Repositories
 List all interesting github or gitlab repositories about chatbots
@@ -15,7 +18,7 @@ List all interesting github or gitlab repositories about chatbots
 |---|---|---|
 | [Building a Question-Answering System from Scratch] | I am using the Stanford Question Answering Dataset (SQuAD). The problem is pretty famous with all the big companies trying to jump up at the leaderboard and using advanced techniques like attention based RNN models to get the best accuracy. All the GitHub repositories that I found related to SQuAD by other people have also used RNNs. | https://towardsdatascience.com/building-a-question-answering-system-part-1-9388aadff507
 | [Question Answering with a Fine-Tuned BERT] | For something like text classification, you definitely want to fine-tune BERT on your own dataset. For question answering, however, it seems like you may be able to get decent results using a model that’s already been fine-tuned on the SQuAD benchmark. |https://mccormickml.com/2020/03/10/question-answering-with-a-fine-tuned-BERT/
-
+| [Train A Question-Answering Machine Learning Model (Bio-BERT)] |This tutorial covers how to train the Bio-BERT question-answering model on a corpus of research papers to answer COVID-19 related questions. |https://console.paperspace.com/te9htf38d/notebook/riux64pvhze1om8
 
 # Kaggle 
 This is a list of interesting Kaggle notebook or competitions
