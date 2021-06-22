@@ -76,5 +76,8 @@ RASA has a list of chatbots built based on their platform listed in [https://ras
 
 | Name | Description| Link |
 |---|---|---|
-| [name](link) | Explain why this is interesting|
+| [Smartloop](https://smartloop.ai/) | A point and click conversational AI platform that allows anyone to build a contextual AI assistant in less than 10 minutes.|
+| [Unique.ai](https://rasa.com/showcase/unique-ai/) | A platform to design chatbots that increase  recruitment team's efficiency by recieving the information from candidates in a conversational interface and pre-qualifying them.|
+| [Vocinity's conversational cognitive agent](https://www.vocinity.com/index/coronavirus-hotlines/) | A platform to create chatbots that can used across telephone, text, and chat channels to automatically get specifed information from people throw a conversation. This was used to collect surveys about COVID-19 during the recent pandemic.|
+| [JobAI](https://jobai.de/musterstellenangebot/) | Provides an interface to create recruiting chatbots that can answer questions about companies, collect jobseekers' information and inform them anout open roles and even arrange interview meetings. |
 
