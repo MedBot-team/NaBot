@@ -56,9 +56,7 @@ This is a list of interesting Kaggle notebook or competitions
 
 | Name | Description| Link |
 |---|---|---|
-| [2020 Athens EESTECH Challenge](https://www.kaggle.com/c/2020-athens-eestech-challenge) | Speech Command Recognition. Build an assistive chatbot able to understand speech commands. Dataset contains 97 speakers saying 248 different phrases. The 248 utterances map to 31 unique intents, that are divided into three slots: action, object, and location. The goal in preparing this dataset was to provide a benchmark for end-to-end spoken language understanding models.
-
-This competition is essentially a "Speech Command Recognition" task aiming to Assistive Technology. |  |
+| 2020 Athens EESTECH Challenge | Speech Command Recognition. Build an assistive chatbot able to understand speech commands. Dataset contains 97 speakers saying 248 different phrases. The 248 utterances map to 31 unique intents, that are divided into three slots: action, object, and location. The goal in preparing this dataset was to provide a benchmark for end-to-end spoken language understanding models. | [https://www.kaggle.com/c/2020-athens-eestech-challenge](https://www.kaggle.com/c/2020-athens-eestech-challenge) |
 
 
 # RASA
