@@ -56,8 +56,10 @@ This is a list of interesting Kaggle notebook or competitions
 
 | Name | Description| Link |
 |---|---|---|
-| 2020 Athens EESTECH Challenge | Speech Command Recognition. Build an assistive chatbot able to understand speech commands. Dataset contains 97 speakers saying 248 different phrases. The 248 utterances map to 31 unique intents, that are divided into three slots: action, object, and location. The goal in preparing this dataset was to provide a benchmark for end-to-end spoken language understanding models. | [https://www.kaggle.com/c/2020-athens-eestech-challenge](https://www.kaggle.com/c/2020-athens-eestech-challenge) |
-
+|Chatbot Tourist Guide (ToGu)| One of the important use of chatbot is as a tourist guide. It will help in providing information about an unknown city to the user. Information like important monuments in the city, famous foods, travel mode, etc. can be found easily. Step for getting started with any kind of chatbot:
+Setting up Environment/Text Gathering/Text cleaning/Word Embedding/Generating answer/Conversation | [https://www.kaggle.com/manzoormahmood/getting-started-with-chatbot](https://www.kaggle.com/manzoormahmood/getting-started-with-chatbot)|
+| 2020 Athens EESTECH Challenge | Speech Command Recognition: Build an assistive chatbot able to understand speech commands. Dataset contains 97 speakers saying 248 different phrases. The 248 utterances map to 31 unique intents, that are divided into three slots: action, object, and location. The goal in preparing this dataset was to provide a benchmark for end-to-end spoken language understanding models. | [https://www.kaggle.com/c/2020-athens-eestech-challenge](https://www.kaggle.com/c/2020-athens-eestech-challenge) |
+| | | |
 
 # RASA
 RASA is one of the main players in this domain. Here we study what they have reported in their website.
