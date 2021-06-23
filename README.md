@@ -101,7 +101,7 @@ RASA has a list of chatbots built based on their platform listed in [https://ras
 
 | Name | Description| Link |
 |---|---|---|
-| [name](link) | Explain why this is interesting|
+| [Moltron](https://sid321axn.github.io/moltron_website/) | Moltron is a personal project, that answers queries related to machine learning. It can also handle generalized questions, which chatbots often struggle to respond to. Lastly, it gives multimedia-rich responses in the form of videos and explainer images. The assistant is open source and available for the community to fork on GitHub.|
 
 ## Platforms
 
