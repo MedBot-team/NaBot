@@ -101,7 +101,16 @@ RASA has a list of chatbots built based on their platform listed in [https://ras
 
 | Name | Description| Link |
 |---|---|---|
-| [Moltron](https://sid321axn.github.io/moltron_website/) | Moltron is a personal project, that answers queries related to machine learning. It can also handle generalized questions, which chatbots often struggle to respond to. Lastly, it gives multimedia-rich responses in the form of videos and explainer images. The assistant is open source and available for the community to fork on GitHub.|
+| [Moltron](https://sid321axn.github.io/moltron_website/) | Moltron is a personal project, that answers queries related to machine learning. It can also handle generalized questions, which chatbots often struggle to respond to. Lastly, it gives multimedia-rich responses in the form of videos and explainer images. The assistant is open source and available for the community to fork on GitHub.| [Github](https://github.com/sid321axn/rasa_ml_bot)
+| [CalFireAlertChatBot]() | A service that texts people updates on the California Forest Fires. Chatbot built with RASA to update users with info about their city| [Github](https://github.com/amittallapragada/CalFireAlertChatBot)
+| [CBOT]() | The bot answers questions about the C programming language, and also solves queries using the Stack Overflow API if the question is outside of the assistant's domain. The idea for CBOT came about as a way to help students new to programming.| [Github](https://github.com/amittallapragada/CalFireAlertChatBot)
+| [Gliobot]() | Gliobot is a chatbot embedded in the website that answers questions about glioblastoma multiforme.| []()
+| [Nora](https://norabot.ml/) | Nora is an AI assistant that answers questions about the coronavirus and provides information about social distancing, self-isolation, and the latest coronavirus news.| [Github](https://github.com/Archish27/nora-covid-19-bot)
+| [Golfbot](https://arxiv.org/abs/1803.11175) | Golfbot, built by Greg Stephens, returns rules and regulations from the 2019 United States Golf Association, using Rasa and the Google Universal Sentence Encoder.| []()
+| [booking salon appointments]() | Using a suite of technologies working in concert, Josh Converse's AI assistant interprets voice commands to book salon appointments, with Rasa driving NLU and dialogue management.| []()
+| [A voice-controlled avatar]() | Anna is a voice-controlled avatar made with Blender and Panda3D, powered by a Raspberry Pi 4 running Rasa. Julian Gerhard built Anna in his free time, as a proof of concept demonstrating the SmartBoard in an educational use case.| []()
+| [Jokebot]() | Greg Stephens built Jokebot, a demo assistant that can respond to users with corny jokes, geek jokes, or funny quotes, all sourced from open APIs.| [Github](https://github.com/rgstephens/jokebot)
+| [A Multilingual DemoBot]() | Thomas Zezula's DemoBot can handle basic chitchat in English and German. It allows the user to explore the project page and subscribe to a newsletter. The objective was to build a multilingual bot prototype. The project makes it easy to add a new language model and spin up a new Rasa agent, and it all ships as a single package that can be deployed to Heroku.| [GitLab](https://gitlab.com/langnerd/chatbot-engine)
 
 ## Platforms
 
