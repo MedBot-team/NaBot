@@ -15,7 +15,7 @@ List the existing data used for building chatbots by others
 | Persona-Chat |A chit-chat dataset where paired Turkers are given assigned personas and chat to try to get to know each other. See the paper: https://arxiv.org/abs/1801.07243 | https://github.com/facebookresearch/ParlAI/tree/master/parlai/tasks/personachat
 | DailyDialog | DailyDialog is a high-quality multi-turn open-domain English dialog dataset. It contains 13,118 dialogues split into a training set with 11,118 dialogues and validation and test sets with 1000 dialogues each. On average there are around 8 speaker turns per dialogue with around 15 tokens per turn. | http://yanran.li/dailydialog
 | Amazon question/answer data | This dataset contains Question and Answer data from Amazon, totaling around 1.4 million answered questions. | http://jmcauley.ucsd.edu/data/amazon/qa/
-
+|[10-question-answering-datasets]|In this article, we list down 10 Question-Answering datasets which can be used to build a robust chatbot.|https://analyticsindiamag.com/10-question-answering-datasets-to-build-robust-chatbot-systems/
 ## [This file contains a list of all the tasks, their id and task name, description and the tags associated with them.](https://github.com/facebookresearch/ParlAI/blob/master/parlai/tasks/task_list.py)
 
 # Paperswithcode
