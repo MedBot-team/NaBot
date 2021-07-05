@@ -23,7 +23,7 @@
     | <img src="report_images/config_yml.png" width="400"> | <img src="report_images/component_lifecycle.png" width="400"> |
 
 - Supporting many messaging and voice channels by default:
-    - Your Own Website
+    - Your Website
     - Facebook Messenger
     - Slack
     - Telegram
@@ -39,7 +39,7 @@
     - Conversation-Driven Development (CDD) is the process of listening to your users and using those insights to improve your AI assistant.
     - CDD includes the following actions:
         - Share your assistant with users as soon as possible
-        - Review conversations on a regular basis
+        - Review conversations regularly
         - Annotate messages and use them as NLU training data
         - Test that your assistant always behaves as you expect
         - Track when your assistant fails and measure its performance over time
@@ -49,17 +49,17 @@
     - Handling Out-of-scope Messages with *out_of_scope* intent
     - Fallbacks to handle incoming messages with low NLU confidence.
     - <img src="report_images/fallback.png" width="450">
-    - Support machine-learning based policies such as the TED Policy.
+    - Support machine-learning-based policies such as the TED Policy.
     - Human Handoff
     - Handling contextual interjections with *requested_slot*
 
 - Reaching out first
     - <img src="report_images/reaching_out_first.png" width="450">
 - External Events
-    - Sometimes you want an external device to change the course of an ongoing conversation. For example, if you have a moisture-sensor attached to a Raspberry Pi, you could use it to notify you when a plant needs watering via your assistant.
+    - Sometimes, you want an external device to change the course of an ongoing conversation. For example, if you have a moisture-sensor attached to a Raspberry Pi, you could use it to notify you when a plant needs watering via your assistant.
 
 - Reminders
-    - You can have your assistant reach out to the user after a set amount of time by using Reminders.
+    - You can have your assistant reach out to the user after a set amount of time using Reminders.
 
 - Support many components by default:
     - Language Models
@@ -128,9 +128,9 @@
         - You can create a custom component to perform a specific task which NLU doesn't currently offer (for example, sentiment analysis).
 
 - Policies
-    - Your assistant uses policies to decide which action to take at each step in a conversation. There are machine-learning and rule-based policies that your assistant can use in tandem.
+    - Your assistant uses policies to decide which action to take at each step in a conversation. There are machine-learning and rule-based policies that your assistant can operate in tandem.
     - Support policy priority
-        - In the case that two policies predict with equal confidence (for example, the Memoization and Rule Policies might both predict with confidence 1), the priority of the policies is considered.
+        - If two policies predict with equal confidence (for example, the Memoization and Rule Policies might both predict with confidence 1), the priority of the policies is considered.
     - Machine Learning Policies
         - Transformer Embedding Dialogue (TED) Policy
         - Memoization Policy
@@ -142,8 +142,8 @@
 - Contextual conversations support
     - With slots
         - Slots are your assistant's memory. They can be helpful for contextual conversations.
-    - With machine-learning based policies such as the TED Policy.
-    - Also support *max_history* for certain amount of context that's relevant to your assistant. 
+    - With machine-learning-based policies such as the TED Policy.
+    - Also, support *max_history* for a certain amount of context that's relevant to your assistant. 
 
 - Multi-Intent Classification
 
@@ -154,7 +154,7 @@
     - <img src="report_images/customer.png" width="400">
 
 # Cons
-- Some of the rasa's featuers (Like CDD, Analytics, ...) are only available in proprietary solutions.
+- Some of the rasa's features (Like CDD, Analytics, ...) are only available in proprietary solutions.
     - <img src="report_images/rasa_platform.png" width="600">
 
 - License issue in Rasa X
@@ -167,17 +167,17 @@
         - Change the code
 
 
-- Not support visual tasks. RASA mostly restricted to ChitChat and FAQ tasks.
+- Not support visual tasks. RASA is mainly restricted to ChitChat and FAQ tasks.
 
-- Models (both rule-based and machine-learning based) are retrieval-based. generative models or Hybrid models (generative models + retrieval models) are not supported.
+- Models (both rule-based and machine-learning-based) are retrieval-based. Generative models or Hybrid models (generative models + retrieval models) are not supported.
 
-- If we use **language models** in our pipeline, we'll be restricted to only Spacy or MITIE supported languages. But alternativly we can use **LanguageModelFeaturizer featurizer** with a little more effort.
+- If we use **language models** in our pipeline, we'll be restricted to only Spacy or MITIE supported languages. But alternatively, we can use **LanguageModelFeaturizer featurizer** with a little more effort.
     - <img src="report_images/spacy.png" width="500">
 
 
 
 # New Ideas
-- Design easy-to-use GUI for Rasa platform. 
+- Design an easy-to-use GUI for the Rasa platform. 
 
 - Fork of rasa with support of more models. (Generative and Hybrid models like BlenderBot)
 
