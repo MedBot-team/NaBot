@@ -176,7 +176,7 @@
 - If we use **language models** in our pipeline, we'll be restricted to only Spacy or MITIE supported languages. But alternatively, we can use **LanguageModelFeaturizer featurizer** with a little more effort.
     - <img src="report_images/spacy.png" width="500">
 
-# ParlAIReport
+# ParlAI Platform
 
 ## Pros
 - Support conversations for both text and visual tasks 
