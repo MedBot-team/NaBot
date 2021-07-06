@@ -1,6 +1,6 @@
-# RasaReport
+# Rasa Platform
 
-# Pros
+## Pros
 - Support both text and voice-based conversations
 - Great commandline tools for:
     - Training
@@ -130,7 +130,7 @@
 - Policies
     - Your assistant uses policies to decide which action to take at each step in a conversation. There are machine-learning and rule-based policies that your assistant can operate in tandem.
     - Support policy priority
-        - If two policies predict with equal confidence (for example, the Memoization and Rule Policies might both predict with confidence 1), the priority of the policies is considered.
+        If two policies predict with equal confidence (for example, the Memoization and Rule Policies might both predict with confidence 1), the priority of the policies is considered.
     - Machine Learning Policies
         - Transformer Embedding Dialogue (TED) Policy
         - Memoization Policy
@@ -147,20 +147,22 @@
 
 - Multi-Intent Classification
 
+- GPU Support
+
 - Active contributors
     - <img src="report_images/contributor.png" width="600">
 
 - Great customers
     - <img src="report_images/customer.png" width="400">
 
-# Cons
+## Cons
 - Some of the rasa's features (Like CDD, Analytics, ...) are only available in proprietary solutions.
     - <img src="report_images/rasa_platform.png" width="600">
 
 - License issue in Rasa X
     - You can:
         - Use Rasa X to build AI assistants for commercial or non-commercial purposes
-        - Host Rasa X for your own project
+        - Host Rasa X for your project
     - You can't:
         - Offer a SaaS product or any online service built with or on top of Rasa X that competes with or provides similar functionality to Rasa X
         - Use or copy the Rasa X Software for decompilation or reverse engineering
@@ -174,17 +176,148 @@
 - If we use **language models** in our pipeline, we'll be restricted to only Spacy or MITIE supported languages. But alternatively, we can use **LanguageModelFeaturizer featurizer** with a little more effort.
     - <img src="report_images/spacy.png" width="500">
 
+# ParlAIReport
+
+## Pros
+- Support conversations for both text and visual tasks 
+- Great command line tools for:
+    - Training
+    - Finetuning
+    - Evaluating
+    - Debugging
+    
+    |  Display data  | Train & Evaluate a model  |
+    |------------|-------------|
+    | <img src="report_images/data_parlai.png" width="300"> | <img src="report_images/train_parlai.png" width="500"> |
+
+- Include tensorboard support
+    - <img src="report_images/tensorboard_parlai.png" width="650">
+
+- Include an interactive shell to have a chat with a trained model. For example, you can see *Memory-Augmented Neural Networks (memnn)* model output in a *babi:task10k:1* task
+    - <img src="report_images/babi_1_parlai.png" width="650">
+
+- Easy to use command-line tools with great help and documents.
+
+- Model Zoo. Many state-of-the-art pre-trained models are available.
+    - Wizard Of Wikipedia task models
+        - Retrieval models
+        - Generative models
+        - Bart
+    - Light Dialog models
+    - Personality Captions models
+    - Pretrained Transformers models
+    - Convai2 models    
+    - Image Chat models
+    - Dialogue Safety models
+    - Integration Tests models
+    - Dodeca models
+    - Cornell Movie models
+    - Dailydialog models
+    - Training Benchmark for DNNs (TBD) models
+    - Empathetic Dialogues models
+    - Twitter models
+    - Ubuntu models
+    - Blended Skill Talk models
+        - <img src="report_images/interactive_parlai.png" width="650">
+    - Pushshift.Io models
+    - Eli5 models
+    - Style Gen models
+    - N/A models
+    - Bot Adversarial Dialogue models
+    - Sensitive Topics Evaluation models
+    - Md Gender models
+    - Pretrained Word Embeddings
+    - BERT
+
+- Include great data processing tools
+    - Mutators. Mutators are task-independent transformations and are helpful for writing transformations you want to apply to multiple datasets.
+        - context_shuffle
+        - episode_reverse
+        - <img src="report_images/mutators_parlai.png" width="650">
+        - episode_shuffle
+        - flatten
+        - last_turn
+        - word_reverse
+        - word_shuffle
+        
+- Include many datasets for different tasks
+    - ChitChat tasks
+    - Cloze tasks
+    - Debug tasks
+    - Dodeca tasks
+        - For example, you can see the Ubuntu dataset as dialogs between an Ubuntu user and an expert trying to fix an issue.
+        - <img src="report_images/ubuntu_parlai.png" width="650">
+    - Entailment tasks
+    - Goal tasks
+    - Grounded tasks
+    - LIGHT tasks
+    - MT tasks
+    - MovieDD tasks
+    - NLI tasks
+    - Negotiation tasks
+    - Personalization tasks
+    - QA tasks.
+        - For example, you can see Squad dataset as an Open-domain QA dataset answerable from a given paragraph from Wikipedia.
+        - <img src="report_images/squad_parlai.png" width="650">
+    - Reasoning tasks
+    - Visual tasks
+    - decanlp tasks
+
+- Supporting some messaging channels by default:
+    - Facebook Messenger
+    - Terminal
+    - Web Sockets
+    - Browser
+    - <img src="report_images/browser_parlai.png" width="650">
+
+- Agent Sharing
+    - The most fundamental concept in ParlAI is an Agent. An agent can be a human, a simple bot that repeats back anything that it hears, your perfectly tuned neural network, a dataset being read out, or anything else that might send messages or interact with its environment.
+    - Agent Sharing is the primary mechanism by which we implement batching, model serving, and many other ParlAI features. Agent sharing works by creating clones of an Agent. Each clone of an Agent has a shared state and independent state. 
+    - Each clone of a model is relatively cheap to create: the only new memory used is the dialogue context. The shared object enables us to reuse memory for expensive objects, like neural network weights.
+
+- Support [Dynamic Batching](https://arxiv.org/pdf/1705.07860.pdf) for speedup in training
+    - <img src="report_images/dynamic_batching_parlai.png" width="600">
+
+- Support retrieval, generative and hybrid models
+    - Autoregressive generative models (Torch Generator Agent)
+    - Rank possible responses from a set of potential candidates. (Torch Ranker Agent)
+
+- GPU Support
+    - Support FP16 (Half-precision floating-point format). This option can get significant speedups in GPUs like V100, GTX 2080, etc
+
+- Integration of Amazon Mechanical Turk (MTurk) for data collection and human evaluation
+
+- Active contributors
+    - <img src="report_images/contributor_parlai.png" width="600">
+
+
+## Cons
+- Lack of support for voice-based conversations
+
+- Could be a little hard-to-use for users without AI knowledge
 
 
 # New Ideas
-- Design an easy-to-use GUI for the Rasa platform. 
+- Design easy-to-use GUI for ParlAI or Rasa platform. 
 
-- Fork of rasa with support of more models. (Generative and Hybrid models like BlenderBot)
+- Fork of ParlAI with support of more models. Like Voice-Based chatbots
 
-- Design task-based models. For example medical bots. (Like [Dialogue](https://www.dialogue.co/en/))
+- Fork of Rasa with support of more models. (Generative and Hybrid models like BlenderBot)
+
+- Design task-based models. 
+    - Medical bots with the ability to analyze medical prescriptions, analyze lab tests, diseases prediction, etc. Like [Dialogue](https://www.dialogue.co/en/), [labtestsonline](https://labtestsonline.org/)
     - <img src="report_images/dialogue.png" width="300">
+    - English learning chatbots like Duolingo chatbot
+    - <img src="report_images/duolingo_parlai.jpg" width="250">
+    - Movie with the ability of 
+        - Movie recommendation
+        - Talk about movies
+        - Movie title guess
+        - Give detail about movies 
+    - Book chatbots with the same ability as movie chatbot
 
-# Enterprise platforms to generate new ideas.
+
+# Enterprise platforms to generate new ideas
 ## Enterprise platforms with proprietary models
 - [Google Dialogflow](https://cloud.google.com/dialogflow)
     - <img src="report_images/dialogflow.png" width="600">
