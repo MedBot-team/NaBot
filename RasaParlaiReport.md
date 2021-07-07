@@ -305,7 +305,7 @@
 - Fork of Rasa with support of more models. (Generative and Hybrid models like BlenderBot)
 
 - Design task-based models. 
-    - Medical bots with the ability to analyze medical prescriptions, analyze lab tests, diseases prediction, etc. Like [Dialogue](https://www.dialogue.co/en/), [labtestsonline](https://labtestsonline.org/)
+    - Medical bots with the ability to analyze medical prescriptions, analyze lab tests, diseases prediction, etc. Like [Dialogue](https://www.dialogue.co/en/), [Labtestsonline](https://labtestsonline.org/), [MedlinePlus](https://medlineplus.gov/lab-tests)
     - <img src="report_images/dialogue.png" width="300">
     - English learning chatbots like Duolingo chatbot
     - <img src="report_images/duolingo_parlai.jpg" width="250">
