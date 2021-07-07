@@ -309,7 +309,7 @@
         - Analyze lab tests
         - Disease prediction according to symptoms
         - Disease prediction according to previous personal EHRs
-        - Give detail about drugs
+        - Give detail and possible interaction about drugs
         - Give medical prescriptions
         - Analyzing CT scan or X-ray images
         - Availible datasets: 
@@ -317,7 +317,7 @@
             - [Mayoclinic](https://www.mayoclinic.org/diseases-conditions), [NHS](https://www.nhs.uk/conditions/), [CDC](https://www.cdc.gov/DiseasesConditions/), [nhsinform](https://www.nhsinform.scot/illnesses-and-conditions/a-to-z) for *disease prediction according to symptoms*
             - [Med-BERT](https://www.nature.com/articles/s41746-021-00455-y), [BEHRT](https://www.nature.com/articles/s41598-020-62922-y), [RETAIN](https://arxiv.org/abs/1608.05745) for *disease prediction according to EHRs*
             - [Drugs](https://www.drugs.com/drug_information.html), [NHS](https://www.nhs.uk/medicines/) for *Drugs detail*
-        - Like [Dialogue](https://www.dialogue.co/en/), [Mayoclinic Symptom Checker](https://www.mayoclinic.org/symptom-checker/select-symptom/itt-20009075)
+        - Like [Dialogue](https://www.dialogue.co/en/), [Mayoclinic Symptom Checker](https://www.mayoclinic.org/symptom-checker/select-symptom/itt-20009075), [WebMD Interaction Checker](https://www.webmd.com/interaction-checker/default.htm)
     - <img src="report_images/dialogue.png" width="300">
     - English learning chatbots like Duolingo chatbot
     - <img src="report_images/duolingo_parlai.jpg" width="250">
