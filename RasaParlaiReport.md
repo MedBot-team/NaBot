@@ -305,7 +305,17 @@
 - Fork of Rasa with support of more models. (Generative and Hybrid models like BlenderBot)
 
 - Design task-based models. 
-    - Medical bots with the ability to analyze medical prescriptions, analyze lab tests, diseases prediction, etc. Like [Dialogue](https://www.dialogue.co/en/), [Labtestsonline](https://labtestsonline.org/tests-index), [MedlinePlus](https://medlineplus.gov/lab-tests)
+    - Medical bots with the ability to 
+        - Analyze lab tests
+        - Disease prediction according to symptoms
+        - Disease prediction according to previous personal EHRs
+        - Give medical prescriptions
+        - Analyzing CT scan or X-ray images
+        - Availible datasets: 
+            - [Labtestsonline](https://labtestsonline.org/tests-index), [MedlinePlus](https://medlineplus.gov/lab-tests) for *lab test analyze*
+            - [Mayoclinic](https://www.mayoclinic.org/diseases-conditions), [CDC](https://www.cdc.gov/DiseasesConditions/), [nhsinform](https://www.nhsinform.scot/illnesses-and-conditions/a-to-z) for *disease prediction according to symptoms*
+            - [Med-BERT](https://www.nature.com/articles/s41746-021-00455-y), [BEHRT](https://www.nature.com/articles/s41598-020-62922-y), [RETAIN](https://arxiv.org/abs/1608.05745) for *disease prediction according to EHRs*
+        - Like [Dialogue](https://www.dialogue.co/en/), [Mayoclinic Symptom Checker](https://www.mayoclinic.org/symptom-checker/select-symptom/itt-20009075)
     - <img src="report_images/dialogue.png" width="300">
     - English learning chatbots like Duolingo chatbot
     - <img src="report_images/duolingo_parlai.jpg" width="250">
