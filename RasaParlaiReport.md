@@ -312,6 +312,7 @@
         - Give detail and possible interaction about drugs
         - Give medical prescriptions
         - Analyzing CT scan or X-ray images
+        - Find near Health Care Centers
         - Availible datasets: 
             - [Labtestsonline](https://labtestsonline.org/tests-index), [MedlinePlus](https://medlineplus.gov/lab-tests) for *lab test analyze*
             - [Mayoclinic](https://www.mayoclinic.org/diseases-conditions), [NHS](https://www.nhs.uk/conditions/), [CDC](https://www.cdc.gov/DiseasesConditions/), [nhsinform](https://www.nhsinform.scot/illnesses-and-conditions/a-to-z) for *disease prediction according to symptoms*
