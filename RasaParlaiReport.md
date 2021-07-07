@@ -305,15 +305,15 @@
 - Fork of Rasa with support of more models. (Generative and Hybrid models like BlenderBot)
 
 - Design task-based models. 
-    - Medical bots with the ability to 
+    - **Medical bots with the ability to**
         - Analyze lab tests
         - Disease prediction according to symptoms
         - Disease prediction according to previous personal EHRs
         - Give detail and possible interaction about drugs
         - Give medical prescriptions
-        - Analyzing CT scan or X-ray images
+        - Analyzing CT-scans or X-ray images
         - Find near Health Care Centers
-        - Availible datasets: 
+        - Available datasets: 
             - [Labtestsonline](https://labtestsonline.org/tests-index), [MedlinePlus](https://medlineplus.gov/lab-tests) for *lab test analyze*
             - [Mayoclinic](https://www.mayoclinic.org/diseases-conditions), [NHS](https://www.nhs.uk/conditions/), [CDC](https://www.cdc.gov/DiseasesConditions/), [nhsinform](https://www.nhsinform.scot/illnesses-and-conditions/a-to-z) for *disease prediction according to symptoms*
             - [Med-BERT](https://www.nature.com/articles/s41746-021-00455-y), [BEHRT](https://www.nature.com/articles/s41598-020-62922-y), [RETAIN](https://arxiv.org/abs/1608.05745) for *disease prediction according to EHRs*
@@ -321,14 +321,17 @@
             - [NHS](https://www.nhs.uk/about-us/nhs-website-datasets/) for *near health care centers in UK*
         - Like [Dialogue](https://www.dialogue.co/en/), [Mayoclinic Symptom Checker](https://www.mayoclinic.org/symptom-checker/select-symptom/itt-20009075), [WebMD Interaction Checker](https://www.webmd.com/interaction-checker/default.htm)
     - <img src="report_images/dialogue.png" width="300">
-    - English learning chatbots like Duolingo chatbot
-    - <img src="report_images/duolingo_parlai.jpg" width="250">
-    - Movie with the ability of 
+    - **Movie bot with the ability of**
         - Movie recommendation
         - Talk about movies
         - Movie title guess
         - Give detail about movies 
-    - Book chatbots with the same ability as movie chatbot
+    - **Book chatbots with the same ability as movie chatbots**
+    - **English learning chatbots like Duolingo chatbot with**
+        - Quiz
+        - Chit-Chat
+        - Grammatical errors detection and rephrase suggestion
+        - <img src="report_images/duolingo_parlai.jpg" width="250">
 
 
 # Enterprise platforms to generate new ideas
@@ -348,4 +351,3 @@
     - <img src="report_images/botpress.png" width="600">
 - [Flow.ai](https://flow.ai/)
     - <img src="report_images/flow.png" width="600">
-
