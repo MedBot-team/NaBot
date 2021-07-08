@@ -23,7 +23,10 @@ grep -v "#" /tmp/medicines-lines-redundant.txt > /tmp/medicines-lines.txt
 grep -o -P '(?<=href=").*(?=">)' /tmp/medicines-lines.txt > /tmp/medicines-paths.txt
 
 #Concatinate url domain to medicine paths 
-sed -e 's/^/https:\/\/www.nhs.uk/' /tmp/medicines-paths.txt > nhs-medicines-urls.txt
+sed -e 's/^/https:\/\/www.nhs.uk/' /tmp/medicines-paths.txt > /tmp/nhs-medicines-urls.txt
+
+#Select only unique URLs
+sort /tmp/nhs-medicines-urls.txt | uniq -u > nhs-medicines-urls.txt 
 
 #Show medicines urls
 cat nhs-medicines-urls.txt

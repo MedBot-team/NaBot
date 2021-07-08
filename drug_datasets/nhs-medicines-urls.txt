@@ -10,7 +10,6 @@ https://www.nhs.uk/medicines/amlodipine/
 https://www.nhs.uk/medicines/amoxicillin/
 https://www.nhs.uk/medicines/anastrazole/
 https://www.nhs.uk/medicines/apixaban/
-https://www.nhs.uk/medicines/low-dose-aspirin/
 https://www.nhs.uk/medicines/aspirin-for-pain-relief/
 https://www.nhs.uk/medicines/atenolol/
 https://www.nhs.uk/medicines/atorvastatin/
@@ -42,7 +41,6 @@ https://www.nhs.uk/medicines/carmellose-sodium-/
 https://www.nhs.uk/medicines/carvedilol/
 https://www.nhs.uk/medicines/cefalexin/
 https://www.nhs.uk/medicines/cetirizine/
-https://www.nhs.uk/medicines/champix-varenicline/
 https://www.nhs.uk/medicines/chloramphenicol/
 https://www.nhs.uk/medicines/chlorphenamine-including-piriton/
 https://www.nhs.uk/medicines/cinnarizine/
@@ -61,8 +59,8 @@ https://www.nhs.uk/medicines/co-careldopa/
 https://www.nhs.uk/medicines/co-codamol-adults/
 https://www.nhs.uk/medicines/co-codamol-for-children/
 https://www.nhs.uk/medicines/co-codaprin-aspirin-and-codeine/
-https://www.nhs.uk/medicines/co-dydramol/
 https://www.nhs.uk/medicines/codeine/
+https://www.nhs.uk/medicines/co-dydramol/
 https://www.nhs.uk/medicines/colchicine/
 https://www.nhs.uk/medicines/cyanocobalamin/
 https://www.nhs.uk/medicines/cyclizine/
@@ -116,9 +114,9 @@ https://www.nhs.uk/medicines/heparinoid/
 https://www.nhs.uk/medicines/hydrocortisone/
 https://www.nhs.uk/medicines/hydrocortisone-buccal-tablets/
 https://www.nhs.uk/medicines/hydrocortisone-for-piles-and-itchy-bottom/
-https://www.nhs.uk/medicines/hydrocortisone-skin-cream/
 https://www.nhs.uk/medicines/hydrocortisone-injections/
 https://www.nhs.uk/medicines/hydrocortisone-rectal-foam/
+https://www.nhs.uk/medicines/hydrocortisone-skin-cream/
 https://www.nhs.uk/medicines/hydrocortisone-tablets/
 https://www.nhs.uk/medicines/hydroxocobalamin/
 https://www.nhs.uk/medicines/hyoscine-hydrobromide/
@@ -148,7 +146,6 @@ https://www.nhs.uk/medicines/loperamide/
 https://www.nhs.uk/medicines/loratadine/
 https://www.nhs.uk/medicines/lorazepam/
 https://www.nhs.uk/medicines/losartan/
-https://www.nhs.uk/medicines/low-dose-aspirin/
 https://www.nhs.uk/medicines/lymecycline/
 https://www.nhs.uk/medicines/macrogol/
 https://www.nhs.uk/medicines/mebendazole/
@@ -226,7 +223,6 @@ https://www.nhs.uk/medicines/trazodone/
 https://www.nhs.uk/medicines/trimethoprim/
 https://www.nhs.uk/medicines/valproic-acid/
 https://www.nhs.uk/medicines/valsartan/
-https://www.nhs.uk/medicines/champix-varenicline/
 https://www.nhs.uk/medicines/venlafaxine/
 https://www.nhs.uk/medicines/verapamil/
 https://www.nhs.uk/medicines/warfarin/

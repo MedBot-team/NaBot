@@ -25,8 +25,11 @@ for i in {a..z} 0-9; do
 	grep -o -P "(?<=\/).*(?='>)" /tmp/medicines-lines-$i.txt > /tmp/medicines-paths-$i.txt
 
 	#Concatinate url domain to medicine paths 
-	sed -e 's/^/https:\/\/www.drugs.com\//' /tmp/medicines-paths-$i.txt >> drugs-medicines-urls.txt
+	sed -e 's/^/https:\/\/www.drugs.com\//' /tmp/medicines-paths-$i.txt >> /tmp/drugs-medicines-urls.txt
 done
+
+#Select only unique URLs
+sort /tmp/drugs-medicines-urls.txt | uniq -u > drugs-medicines-urls.txt 
 
 #Show medicines urls
 cat drugs-medicines-urls.txt
