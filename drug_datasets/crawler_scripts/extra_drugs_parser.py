@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 class drugs_dot_com():
     # Class initialization
     def __init__(self):
+        super().__init__()
         # Document parts
         self.columns = ['before-taking',
                         'directions',
@@ -61,7 +62,7 @@ class drugs_dot_com():
         df.sort_values(by=['medicine'], inplace=True)
         df.to_csv(name, index=False)
 
-    # Generate list of items per medicine URL
+    # Read list of items per medicine URL
     def __url_item_list_reader(self, url_item_file):
         return json.load(open(url_item_file))
 

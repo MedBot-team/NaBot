@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup
 class drugs_dot_com():
     # Class initialization
     def __init__(self):
+        super().__init__()
         # Document parts
         self.columns = ['medicine',
                         'vitamin',
