@@ -18,12 +18,26 @@ class drugs_dot_com():
         # Document parts
         self.columns = ['medicine',
                         'vitamin',
+                        'before-taking',
+                        'cautions',
+                        'contraindications',
+                        'directions',
+                        'dosage',
+                        'faq',
+                        'fda-approval',
+                        'interactions',
+                        'patient-advice',
+                        'patient-counseling',
+                        'patient-education',
+                        'pharmacokinetics',
+                        'pharmacology',
+                        'pregnancy',
+                        'preparations',
+                        'side-effects',
+                        'storage',
                         'uses',
                         'warnings',
-                        'dosage',
-                        'what-to-avoid',
-                        'side-effects',
-                        'interactions']
+                        'what-to-avoid']
 
     # Check if the medicine is a vitamin or not
     def __vitamin_check(self, url):
@@ -53,21 +67,27 @@ class drugs_dot_com():
         items = soup.find_all(attrs={'class': 'ddc-anchor-offset'})[:6]
         return items
 
+    # Check if tag is NavigableString or not
+    def __navigablestring_check(self, tag):
+        text = ''
+        while not hasattr(tag.next, 'get'):
+            # text += tag.next
+            tag = tag.next
+        return tag, text
+
     # Update drug dataframe with tag values
     def __drugs_df_update(self, df, index, items):
         for item in items:
-            tag = item
+            tag, _ = self.__navigablestring_check(item)
             # Get a text till reaching the next part
-            while tag.next_sibling.name not in ['div', 'h2']:
-                tag = tag.next_sibling
-                try:
-                    # Get only desired parts of a text
-                    if item.get('id') in self.columns:
-                        # Get all texts after the desired tag
-                        df.loc[index][item.get('id')] = \
-                            df.loc[index][item.get('id')] + tag.text + '\n'
-                except AttributeError:
-                    continue
+            while tag.next.get('id') not in self.columns + ['moreResources'] and tag.next.text != 'Further information':
+                # Get all texts after the desired tag
+                df.loc[index][item.get('id')] = df.loc[index][item.get(
+                    'id')] + tag.next.text + '\n'
+                # Update tag and check if it is NavigableString or not
+                tag, text = self.__navigablestring_check(tag.next)
+                df.loc[index][item.get('id')] = df.loc[index][item.get(
+                    'id')] + text
         return df
 
     # Write drugs dataframe to a comma-separated values file
@@ -87,6 +107,7 @@ class drugs_dot_com():
             df.loc[med_i]['vitamin'] = self.__vitamin_check(url)
             items = self.__get_ddc_items(url)
             df = self.__drugs_df_update(df, med_i, items)
-
+        
+        print(df)
         self.__drugs_df_write(df, dataset_name)
         return df

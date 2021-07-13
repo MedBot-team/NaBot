@@ -36,9 +36,9 @@ class item_extractor():
 
 # Main function
 def main():
-    extractor = item_extractor('input-pro.txt')
+    extractor = item_extractor('input-normal.txt')
     item_dic = extractor.extract_item()
-    extractor.save_dict('drugs_url_items_pro.json')
+    extractor.save_dict('drugs_url_items.json')
     print(item_dic.keys())
 
 
