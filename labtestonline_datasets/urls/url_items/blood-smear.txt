@@ -1,0 +1,39 @@
+Blood Smear
+Peripheral Smear
+Blood Film
+Manual Differential
+Differential Slide
+Red Blood Cell Morphology
+Erythrocyte Morphology
+Leukocyte Differential
+Peripheral Blood Smear
+At a Glance
+Why Get Tested?
+When To Get Tested?
+Sample Required?
+Test Preparation Needed?
+What is being tested?
+Common Questions
+How is the blood smear used?
+When is it ordered?
+What does the test result mean?
+Is there anything else I should know?
+If my blood smear shows abnormal results, what additional testing might be done? 
+Why hasn't the automated blood cell counter totally replaced the blood smear?
+If a drop of blood on a slide contains millions of RBCs, thousands of WBCs, and hundreds of thousands of platelets, how can the laboratorian see individual cells?
+Details on Red Blood Cell Irregularities (RBC morphology)
+Size
+Shape
+Color
+Abnormal structures within the red blood cell
+Details on White Blood Cells
+Neutrophils
+Lymphocytes
+Eosinophils
+Monocytes
+Basophils
+Health Professionals – LOINC
+Related Content
+On This Site
+Elsewhere On The Web
+View Sources
