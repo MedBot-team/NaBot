@@ -29,7 +29,7 @@ for i in {a..z} 0-9; do
 done
 
 #Select only unique URLs
-sort /tmp/drugs-medicines-urls.txt | uniq -u > drugs-medicines-urls.txt 
+sort /tmp/drugs-medicines-urls.txt | uniq > drugs-medicines-urls.txt 
 
 #Show medicines urls
 cat drugs-medicines-urls.txt
