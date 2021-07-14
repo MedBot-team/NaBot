@@ -1,3 +1,10 @@
+#https://www.drugs.com/berinert.html
+#https://www.drugs.com/bydureon.html
+#https://www.drugs.com/gocovri.html
+#https://www.drugs.com/robaxin.html
+#https://www.drugs.com/suboxone.html
+#https://www.drugs.com/toprol.html
+#https://www.drugs.com/vitamin-d.html
 https://www.drugs.com/mtm/zzzquil.html
 https://www.drugs.com/npc/ginseng.html
 https://www.drugs.com/npc/glutathione.html

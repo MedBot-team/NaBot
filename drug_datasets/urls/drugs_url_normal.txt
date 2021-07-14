@@ -54,7 +54,6 @@ https://www.drugs.com/belsomra.html
 https://www.drugs.com/benadryl.html
 https://www.drugs.com/benicar.html
 https://www.drugs.com/benzonatate.html
-https://www.drugs.com/berinert.html
 https://www.drugs.com/betamethasone-topical.html
 https://www.drugs.com/bicalutamide.html
 https://www.drugs.com/biktarvy.html
@@ -70,7 +69,6 @@ https://www.drugs.com/buprenorphine.html
 https://www.drugs.com/bupropion.html
 https://www.drugs.com/buspar.html
 https://www.drugs.com/buspirone.html
-https://www.drugs.com/bydureon.html
 https://www.drugs.com/bystolic.html
 https://www.drugs.com/cabometyx.html
 https://www.drugs.com/calquence.html
@@ -255,7 +253,6 @@ https://www.drugs.com/glucophage.html
 https://www.drugs.com/glucotrol.html
 https://www.drugs.com/glyburide.html
 https://www.drugs.com/glyxambi.html
-https://www.drugs.com/gocovri.html
 https://www.drugs.com/gralise.html
 https://www.drugs.com/guaifenesin.html
 https://www.drugs.com/haegarda.html
@@ -896,7 +893,6 @@ https://www.drugs.com/risperdal.html
 https://www.drugs.com/risperidone.html
 https://www.drugs.com/ritalin.html
 https://www.drugs.com/rituxan.html
-https://www.drugs.com/robaxin.html
 https://www.drugs.com/robitussin.html
 https://www.drugs.com/rocephin.html
 https://www.drugs.com/roxicodone.html
@@ -929,7 +925,6 @@ https://www.drugs.com/stiolto-respimat.html
 https://www.drugs.com/strattera.html
 https://www.drugs.com/stribild.html
 https://www.drugs.com/sublocade.html
-https://www.drugs.com/suboxone.html
 https://www.drugs.com/subutex.html
 https://www.drugs.com/sudafed.html
 https://www.drugs.com/sutent.html
@@ -954,7 +949,6 @@ https://www.drugs.com/tetracycline.html
 https://www.drugs.com/tibsovo.html
 https://www.drugs.com/tizanidine.html
 https://www.drugs.com/topamax.html
-https://www.drugs.com/toprol.html
 https://www.drugs.com/toradol.html
 https://www.drugs.com/toujeo.html
 https://www.drugs.com/tradjenta.html
@@ -1001,7 +995,6 @@ https://www.drugs.com/victoza.html
 https://www.drugs.com/viibryd.html
 https://www.drugs.com/vimpat.html
 https://www.drugs.com/vistaril.html
-https://www.drugs.com/vitamin-d.html
 https://www.drugs.com/vitamin_e.html
 https://www.drugs.com/vivitrol.html
 https://www.drugs.com/voltaren-gel.html

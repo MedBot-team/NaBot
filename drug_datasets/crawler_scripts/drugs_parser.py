@@ -64,15 +64,15 @@ class drugs_dot_com():
     def __get_ddc_items(self, url):
         r = requests.get(url)
         soup = BeautifulSoup(r.content, 'html.parser')
-        items = soup.find_all(attrs={'class': 'ddc-anchor-offset'})[:6]
+        items = soup.find_all(attrs={'class': 'ddc-anchor-offset'})
         return items
 
     # Check if tag is NavigableString or not
     def __navigablestring_check(self, tag):
         text = ''
-        while not hasattr(tag.next, 'get'):
+        while not hasattr(tag.next_sibling, 'get'):
             # text += tag.next
-            tag = tag.next
+            tag = tag.next_sibling
         return tag, text
 
     # Update drug dataframe with tag values
@@ -80,12 +80,12 @@ class drugs_dot_com():
         for item in items:
             tag, _ = self.__navigablestring_check(item)
             # Get a text till reaching the next part
-            while tag.next.get('id') not in self.columns + ['moreResources'] and tag.next.text != 'Further information':
+            while tag.next_sibling.get('id') not in self.columns + ['moreResources'] and tag.next_sibling.text != 'Further information':
                 # Get all texts after the desired tag
                 df.loc[index][item.get('id')] = df.loc[index][item.get(
-                    'id')] + tag.next.text + '\n'
+                    'id')] + tag.next_sibling.text + '\n'
                 # Update tag and check if it is NavigableString or not
-                tag, text = self.__navigablestring_check(tag.next)
+                tag, text = self.__navigablestring_check(tag.next_sibling)
                 df.loc[index][item.get('id')] = df.loc[index][item.get(
                     'id')] + text
         return df
