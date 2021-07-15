@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+<html lang="en" id="lab_test" class="nojs us" data-root="https://medlineplus.gov/">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta http-equiv="window-target" content="_top" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        
+
+        
+
+        <link rel="canonical" href="https://medlineplus.gov/lab-tests/human-papillomavirus-hpv-test/" />
+
+        
+
+  
+        <link rel="alternate" hreflang="en" href="https://medlineplus.gov/lab-tests/human-papillomavirus-hpv-test/" />
+        <link rel="alternate" hreflang="es" href="https://medlineplus.gov/spanish/pruebas-de-laboratorio/prueba-del-virus-del-papiloma-humano-vph/" />
+  
+
+
+
+        <meta name="ac-dictionary" content="medlineplus-ac-dictionary" />
+
+        <meta name="description" content="An HPV test looks for high-risk HPV (human papillomavirus) infections in women. HPV is the most common sexually transmitted disease. Most infections aren&#39;t serious. But some high-risk HPV infections can cause cervical and other types of cancer. Learn more." />
+
+        
+
+        <link rel="shortcut icon" href="https://medlineplus.gov/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="https://medlineplus.gov/images/touch-icon.png" />
+
+        
+        <meta property="fb:app_id" content="1042245625821448" />
+        
+
+        
+        <meta property="og:title" content="Human Papillomavirus (HPV) Test: MedlinePlus Medical Test" />
+        <meta property="og:url" content="https://medlineplus.gov/lab-tests/human-papillomavirus-hpv-test/" />
+        
+        
+          
+        <meta property="og:image" content="https://medlineplus.gov/images/LabTests_Share.jpg" />
+          
+        <meta property="og:image" content="https://medlineplus.gov/images/LabTest_Share2.jpg" />
+          
+        <meta property="og:image" content="https://medlineplus.gov/images/LabTests_Share3.jpg" />
+          
+        
+        
+        <meta property="og:description" content="An HPV test looks for high-risk HPV (human papillomavirus) infections in women. HPV is the most common sexually transmitted disease. Most infections aren&#39;t serious. But some high-risk HPV infections can cause cervical and other types of cancer. Learn more." />
+
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@medlineplus" />
+        <meta name="twitter:creator" content="@medlineplus" />
+        <meta name="twitter:title" content="Human Papillomavirus (HPV) Test: MedlinePlus Medical Test" />
+        <meta name="twitter:description" content="An HPV test looks for high-risk HPV (human papillomavirus) infections in women. HPV is the most common sexually transmitted disease. Most infections aren&#39;t serious. But some high-risk HPV infections can cause cervical and other types of cancer. Learn more." />
+        <meta name="twitter:image" content="https://medlineplus.gov/images/LabTests_Share.jpg" />
+        
+
+        
+
+        
+
+        <title>Human Papillomavirus (HPV) Test: MedlinePlus Medical Test</title>
+
+        <link rel="stylesheet" href="https://medlineplus.gov/css/common.css?12222020" />
+        <!--[if IE 8]> <link rel="stylesheet" href="https://medlineplus.gov/css/ie8/common.css"> <![endif]-->
+        
+        
+
+
+        
+        <script type="text/javascript">document.getElementsByTagName('html')[0].className = document.getElementsByTagName('html')[0].className.replace( /(?:^|\s)nojs(?!\S)/g , '').trim();</script>
+
+
+
+        
+
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MMVM77');</script>
+    </head>
+
+    <body>
+
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMVM77"
+        height="0" width="0" style="display:none;visibility:hidden" title="googletagmanager"></iframe></noscript>
+
+        
+
+        <div id="mplus-wrap">
+            <header>
+                <div id="mplus-header">
+                    <a name="top" id="top"></a>
+                    <a class="hide-offscreen" href="#start">Skip navigation</a>
+
+                    <div id="mplus-orgs">
+                        <a href="http://www.nih.gov/" class="nih-org" target="_blank" title="National Institutes of Health">
+                            <img class="nihlogo" src="https://medlineplus.gov/images/nihlogo.png" alt="National Institutes of Health"/>
+                        </a><a href="https://www.nlm.nih.gov/" target="_blank"> U.S. National Library of Medicine</a>
+                    </div>
+
+                    
+                    <div id="mplus-logo">
+                        <a href="https://medlineplus.gov/">
+                            <img alt="MedlinePlus Trusted Health Information for You" title="MedlinePlus Trusted Health Information for You" src="https://medlineplus.gov/images/m_logo.png"/>
+                        </a>
+                    </div>
+                    
+
+                    <div id="mplus-nav">
+
+                        <div aria-live="polite" class="sm-live-area hide-offscreen"></div>
+                        <button id="sm-menu-btn" class="navmenu-btn" title="Menu" role="button" aria-controls="mplus-menu-list" type="submit">Menu<span class="icon icon-nav-menu"></span></button>
+                        <ul id="mplus-menu-list" class="nav-list">
+                            <li><a href="https://medlineplus.gov/healthtopics.html">Health Topics</a></li>
+                            <li><a href="https://medlineplus.gov/druginformation.html">Drugs & Supplements</a></li>
+                            
+                            <li><a href="https://medlineplus.gov/genetics/">Genetics</a></li>
+                            
+                            <li><a href="https://medlineplus.gov/lab-tests/">Medical Tests</a></li>
+                            <li><a href="https://medlineplus.gov/videosandcooltools.html">Videos & Tools</a></li>
+                            <li><a href="https://medlineplus.gov/about/">About MedlinePlus</a></li>
+                        </ul><button id="sm-search-btn" class="navmenu-btn" title="Search" role="button" aria-controls="mplus-search" type="submit"><span class="hide-offscreen"></span>Search<span class="icon icon-nav-search"></span></button>
+
+                        <form id="mplus-search" method="get" action="https://vsearch.nlm.nih.gov/vivisimo/cgi-bin/query-meta" title="Search MedlinePlus" target="_self">
+                            
+                            <input type="hidden" name="v:project" value="medlineplus"/>
+                            <input type="hidden" name="v:sources" value="medlineplus-bundle"/>
+                            
+                            <div class="form-box text-combo">
+                                <div class="form-area"><label class="hide-offscreen" for="searchtext_primary">Search MedlinePlus</label>
+                                    <input id="searchtext_primary" class="form-text" type="text" placeholder="Search MedlinePlus" alt="#Site Search input" title="Site Search input" maxlength="400" size="40" name="query" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"/>
+                                </div>
+                                <div class="button-area">
+                                  <button class="form-btn" title="Search MedlinePlus" alt="Search MedlinePlus" type="submit">GO</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="secondarynav">
+                            <ul class="nav-list">
+                                <li><a href="https://medlineplus.gov/about/"><span>About MedlinePlus</span></a></li>
+				                <li><a href="https://medlineplus.gov/whatsnew/">What's New</a></li>
+                                <li><a href="https://medlineplus.gov/sitemap.html"><span>Site Map</span></a></li>
+                                
+                                
+                                  <li><a href="https://support.nlm.nih.gov/knowledgebase/category/?id=CAT-01231&category=medlineplus&from=https%3A//medlineplus.gov/lab-tests/human-papillomavirus-hpv-test/" target="_blank"><span>Customer Support</span></a></li>
+                                
+                            </ul>
+                        </div>
+
+                        <div id="mplus-nav-bar">
+                            <ul class="nav-list">
+                                <li><a href="https://medlineplus.gov/healthtopics.html">Health Topics</a></li><li><a href="https://medlineplus.gov/druginformation.html">Drugs & Supplements</a></li><li><a href="https://medlineplus.gov/genetics/">Genetics</a></li><li><a href="https://medlineplus.gov/lab-tests/">Medical Tests</a></li><li><a href="https://medlineplus.gov/videosandcooltools.html">Videos & Tools</a></li>
+                            </ul>
+                        </div>
+
+                        
+                            <a id="mplus-lang-toggle" href="https://medlineplus.gov/spanish/pruebas-de-laboratorio/prueba-del-virus-del-papiloma-humano-vph/" title="Español">Español</a>
+                        
+                    </div>
+                </div>
+            </header>
+
+            <div id="mplus-content">
+            
+<div id="breadcrumbs">
+	<div itemprop="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+		<span class="hide-offscreen">You Are Here:</span>
+		<div itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+			<a href="https://medlineplus.gov/" itemprop="item"><span itemprop="name">Home</span></a>
+			&rarr;
+			<meta itemprop="position" content="1"/>
+		</div>
+		
+			
+				<div itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+					<a href="https://medlineplus.gov/lab-tests/" itemprop="item"><span itemprop="name">Medical Tests</span></a>
+					&rarr;
+					<meta itemprop="position" content="2"/>
+				</div>
+			
+		
+			
+				<div>
+				  <span>Human Papillomavirus (HPV) Test</span>
+				</div>
+			
+		
+	</div>
+</div>
+<span class="page-url print-only">URL of this page: https://medlineplus.gov/lab-tests/human-papillomavirus-hpv-test/</span>
+
+                <div >
+                
+    <article>
+        <div class="page-info">
+            <div class="page-title">
+                <a name="start" id="start"></a>
+                <h1>Human Papillomavirus (HPV) Test</h1>
+            </div>
+            <div class="page-actions"></div>
+            <noscript><span class="js-disabled-message">To use the sharing features on this page, please enable JavaScript.</span></noscript>
+        </div>
+        
+        <div class="main">
+          
+            <section><div class="mp-content"><h2>What is an HPV test?</h2>
+<p><a data-tid="1715" href="https://medlineplus.gov/hpv.html">HPV</a> stands for human papillomavirus. It is the most common <a data-tid="400" href="https://medlineplus.gov/sexuallytransmitteddiseases.html">sexually transmitted disease</a> (STD), with millions of Americans currently infected. HPV can infect both men and women. Most people with HPV don't know they have it and never get any symptoms or health problems.</p>
+<p>There are many different types of HPV. Some types do cause health problems. HPV infections are usually grouped as low-risk or high-risk HPV.</p>
+<ul>
+<li><strong>Low-Risk HPV</strong> can cause <a data-tid="4322" href="https://medlineplus.gov/genitalwarts.html">warts on the anus and genital area</a>, and sometimes the mouth. Other low-risk HPV infections can cause <a data-tid="459" href="https://medlineplus.gov/warts.html">warts</a> on arms, hands, feet, or chest. HPV warts do not cause serious health problems. They may go away on their own, or a health care provider may remove them in a minor in-office procedure.</li>
+<li><strong>High-Risk HPV.</strong> Most high-risk HPV infections do not cause any symptoms and will go away within a year or two. But some high-risk HPV infections can last for years. These long-lasting infections can lead to cancer. HPV is the cause of most <a data-tid="111" href="https://medlineplus.gov/cervicalcancer.html">cervical cancers</a>. Long-lasting HPV may also cause other cancers, including those of the <a data-tid="3791" href="https://medlineplus.gov/analcancer.html">anus</a>, <a data-tid="494" href="https://medlineplus.gov/vaginalcancer.html">vagina</a>, penis, <a data-tid="331" href="https://medlineplus.gov/oralcancer.html">mouth</a>, and <a data-tid="5841" href="https://medlineplus.gov/throatcancer.html">throat</a>.</li>
+</ul>
+<p>An HPV test looks for high-risk HPV in women. Health care providers can usually diagnose low-risk HPV by visually examining the warts. So no testing is needed. While men can be infected with HPV, there is no test available for men. Most men with HPV recover from the infection without any symptoms.</p>
+<p>Other names: genital human papillomavirus, high risk HPV, HPV DNA, HPV RNA</p>
+</div>
+</section>
+          
+            <section><div class="mp-content"><h2>What is it used for?</h2>
+<p>The test is used to check for the type of HPV that can lead to cervical cancer. It is often done at the same time as a pap smear, a procedure that checks for abnormal cells that can also lead to cervical cancer. When an HPV test and a pap smear are done at the same time, it's called co-testing.</p>
+</div>
+</section>
+          
+            <section><div class="mp-content"><h2>Why do I need an HPV test?</h2>
+<p>You may need an HPV test if you:</p>
+<ul>
+<li>Are a woman aged 30-65. The American Cancer Society recommends women in this age group have an HPV test with a pap smear (co-testing) every five years.</li>
+<li>If you are a woman of any age that gets an abnormal result on a pap smear</li>
+</ul>
+<p>HPV testing in <em>not</em> recommended for women younger than 30 who have had normal pap smear results. Cervical cancer is rare in this age group, but HPV infections are common. Most HPV infections in young women clear up without treatment.</p>
+</div>
+</section>
+          
+            <section><div class="mp-content"><h2>What happens during an HPV test?</h2>
+<p>For an HPV test, you will lie on your back on an exam table, with your knees bent. You will rest your feet in supports called stirrups. Your health care provider will use a plastic or metal instrument called a speculum to open the vagina, so the cervix can be seen. Your provider will then use a soft brush or plastic spatula to collect cells from the cervix. If you are also getting a pap smear, your provider may use the same sample for both tests, or collect a second sample of cells.</p>
+</div>
+</section>
+          
+            <section><div class="mp-content"><h2>Will I need to do anything to prepare for the test?</h2>
+<p>You should not have the test while you are having your period. You should also avoid certain activities before testing. Starting two days before your test, you <strong>should not:</strong></p>
+<ul>
+<li>Use tampons</li>
+<li>Use vaginal medicines or birth control foams</li>
+<li>Douche</li>
+<li>Have sex</li>
+</ul>
+</div>
+</section>
+          
+            <section><div class="mp-content"><h2>Are there any risks to the test?</h2>
+<p>There are no known risks to an HPV test. You may feel some mild discomfort during the procedure. Afterward, you may have a little bleeding or other vaginal discharge.</p>
+</div>
+</section>
+          
+            <section><div class="mp-content"><h2>What do the results mean?</h2>
+<p>Your results will be given as negative, also called normal, or positive, also called abnormal.</p>
+<p><strong>Negative/Normal.</strong> No high-risk HPV was found. Your health care provider may recommend you come back for another screening in five years, or sooner depending on your age and medical history.</p>
+<p><strong>Positive/Abnormal.</strong> High-risk HPV was found. It does not mean you have cancer. It means you may be at higher risk for getting cervical cancer in the future. Your health care provider may order more tests to monitor and/or diagnose your condition. These tests may include:</p>
+<ul>
+<li><strong>Colposcopy,</strong> a procedure in which your provider uses a special magnifying tool (colposcope) to look at the vagina and cervix</li>
+<li><strong>Cervical <a data-tid="5921" href="https://medlineplus.gov/biopsy.html">Biopsy</a>,</strong> a procedure in which your provider takes a sample of tissue from the cervix to look at under a microscope</li>
+<li><strong>More frequent co-testing</strong> (HPV and pap smear)</li>
+</ul>
+<p>If your results were positive, it's important to get regular or more frequent tests. It can take decades for abnormal cervical cells to turn into cancer. If found early, abnormal cells can be treated <em>before</em> they become cancerous. It's much easier to prevent cervical cancer than to treat it once it develops.</p>
+<p>Learn more about <a data-pid="806" href="https://medlineplus.gov/lab-tests/how-to-understand-your-lab-results/">laboratory tests, reference ranges, and understanding results</a>.</p></div>
+</section>
+          
+            <section><div class="mp-content"><h2>Is there anything else I need to know about an HPV test?</h2>
+<p>There is no treatment for HPV, but most infections clear up on their own. You can take steps to reduce your risk of getting HPV. Having sex with only one partner and having safe sex (using a condom) can lower your risk. Vaccination is even more effective.</p>
+<p>The HPV vaccine is a safe, effective way to protect yourself from the HPV infections that commonly cause cancer. The HPV vaccine works best when it's given to someone who has never been exposed to the virus. So it's recommended to give it to people before they start sexual activity. The Centers for Disease Control and Prevention (CDC) and the American Academy of Pediatrics recommend girls and boys get vaccinated starting at age 11 or 12. Usually, a total of two or three HPV shots (vaccinations) are given, spaced a few months apart. The difference in  the number of doses depends on the age of your child or young adult and the recommendations of the health care provider.</p>
+<p>If you have questions about the HPV vaccine, talk to your child's health care provider and/or your own provider.</p></div>
+</section>
+          
+            <section><div class="mp-refs mp-content"><h2>References</h2>
+<ol>
+<li>Allina Health [Internet]. Minneapolis: Allina Health; HPV DNA Test [cited 2018 Jun 5]; [about 3 screens]. Available from: <a href="https://wellness.allinahealth.org/library/content/1/7534" target="bibliowin">https://wellness.allinahealth.org/library/content/1/7534</a></li>
+<li>American Academy of Pediatrics [Internet]. Itasca (IL): American Academy of Pediatrics; c2018. Policy Statement: HPV Vaccine Recommendations; 2012 Feb 27 [cited 2018 Jun 5]; [about 4 screens]. Available from: <a href="http://pediatrics.aappublications.org/content/pediatrics/129/3/602.full.pdf" target="bibliowin">http://pediatrics.aappublications.org/content/pediatrics/129/3/602.full.pdf</a></li>
+<li>American Cancer Society [Internet]. Atlanta: American Cancer Society Inc.; c2018. HPV and HPV Testing [updated 2017 Oct 9; cited 2018 Jun 5]; [about 4 screens]. Available from: <a href="https://www.cancer.org/cancer/cancer-causes/infectious-agents/hpv/hpv-and-hpv-testing.html" target="bibliowin">HThttps://www.cancer.org/cancer/cancer-causes/infectious-agents/hpv/hpv-and-hpv-testing.htmlTP</a></li>
+<li>Cancer.net [Internet]. Alexandria (VA): American Society of Clinical Oncology; 2005–2018. HPV and Cancer; 2017 Feb [cited 2018 Jun 5]; [about 3 screens]. Available from: <a href="https://www.cancer.net/navigating-cancer-care/prevention-and-healthy-living/hpv-and-cancer" target="bibliowin">https://www.cancer.net/navigating-cancer-care/prevention-and-healthy-living/hpv-and-cancer</a></li>
+<li>Centers for Disease Control and Prevention [Internet]. Atlanta: U.S. Department of Health and Human Services; Genital HPV Infection-Fact Sheet [updated 2017 Nov 16; cited 2018 Jun 5]; [about 4 screens]. Available from: <a href="https://www.cdc.gov/std/hpv/stdfact-hpv.htm" target="bibliowin">https://www.cdc.gov/std/hpv/stdfact-hpv.htm</a></li>
+<li>Centers for Disease Control and Prevention [Internet]. Atlanta: U.S. Department of Health and Human Services; HPV and Men-Fact Sheet [updated 2017 Jul 14; cited 2018 Jun 5]; [about 4 screens]. Available from: <a href="https://www.cdc.gov/std/hpv/stdfact-hpv-and-men.htm" target="bibliowin">https://www.cdc.gov/std/hpv/stdfact-hpv-and-men.htm</a></li>
+<li>Centers for Disease Control and Prevention [Internet]. Atlanta: U.S. Department of Health and Human Services; Human Papillomavirus (HPV) Vaccination: What Everyone Should Know [updated 2016 Nov 22; cited 2018 Jun 5]; [about 3 screens]. Available from: <a href="https://www.cdc.gov/vaccines/vpd/hpv/public/index.html" target="bibliowin">https://www.cdc.gov/vaccines/vpd/hpv/public/index.html</a></li>
+<li>Lab Tests Online [Internet]. Washington D.C: American Association for Clinical Chemistry; c2001–2018. Human Papillomavirus (HPV) Test [updated 2018 Jun 5; cited 2018 Jun 5]; [about 2 screens]. Available from: <a href="https://labtestsonline.org/tests/human-papillomavirus-hpv-test" target="bibliowin">https://labtestsonline.org/tests/human-papillomavirus-hpv-test</a></li>
+<li>Mayo Clinic [Internet]. Mayo Foundation for Medical Education and Research; c1998–2018. HPV Test; 2018 May 16 [cited 2018 Jun 5]; [about 3 screens]. Available from: <a href="https://www.mayoclinic.org/tests-procedures/hpv-test/about/pac-20394355" target="bibliowin">https://www.mayoclinic.org/tests-procedures/hpv-test/about/pac-20394355</a></li>
+<li>Merck Manual Consumer Version [Internet]. Kenilworth (NJ): Merck &amp; Co., Inc.; c2018. Human Papillomavirus (HPV) Infection [cited 2018 Jun 5]; [about 2 screens]. Available from: <a href="https://www.merckmanuals.com/home/infections/sexually-transmitted-diseases-stds/human-papillomavirus-hpv-infection" target="bibliowin">https://www.merckmanuals.com/home/infections/sexually-transmitted-diseases-stds/human-papillomavirus-hpv-infection</a></li>
+<li>National Cancer Institute [Internet]. Bethesda (MD): U.S. Department of Health and Human Services; NCI Dictionary of Cancer Terms: HPV [cited 2018 Jun 5]; [about 3 screens]. Available from: <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/hpv" target="bibliowin">https://www.cancer.gov/publications/dictionaries/cancer-terms/def/hpv</a></li>
+<li>National Cancer Institute [Internet]. Bethesda (MD): U.S. Department of Health and Human Services; NCI Dictionary of Cancer Terms: Pap test [cited 2018 Jun 5]; [about 3 screens]. Available from: <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pap-test" target="bibliowin">https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pap-test</a></li>
+<li>National Cancer Institute [Internet]. Bethesda (MD): U.S. Department of Health and Human Services; Pap and HPV Testing [cited 2018 Jun 5]; [about 3 screens]. Available from: <a href="https://www.cancer.gov/types/cervical/pap-hpv-testing-fact-sheet" target="bibliowin">https://www.cancer.gov/types/cervical/pap-hpv-testing-fact-sheet</a></li>
+<li>UF Health: University of Florida Health [Internet]. University of Florida; c2018. HPV DNA Test [updated 2018 Jun 5; cited 2018 Jun 5]; [about 2 screens]. Available from: <a href="https://ufhealth.org/hpv-dna-test" target="bibliowin">https://ufhealth.org/hpv-dna-test</a></li>
+<li>UW Health [Internet]. Madison (WI): University of Wisconsin Hospitals and Clinics Authority; c2018. Health Information: Human Papillomavirus (HPV) Test: How It is Done [updated 2017 Mar 20; cited 2018 Jun 5]; [about 5 screens]. Available from: <a href="https://www.uwhealth.org/health/topic/medicaltest/human-papillomavirus-hpv-test/tu6451.html#tu6455" target="bibliowin">https://www.uwhealth.org/health/topic/medicaltest/human-papillomavirus-hpv-test/tu6451.html#tu6455</a></li>
+<li>UW Health [Internet]. Madison (WI): University of Wisconsin Hospitals and Clinics Authority; c2018. Health Information: Human Papillomavirus (HPV) Test: Risks [updated 2017 Mar 20; cited 2018 Jun 5]; [about 7 screens]. Available from: <a href="https://www.uwhealth.org/health/topic/medicaltest/human-papillomavirus-hpv-test/tu6451.html#tu6457" target="bibliowin">HThttps://www.uwhealth.org/health/topic/medicaltest/human-papillomavirus-hpv-test/tu6451.html#tu6457TP</a></li>
+<li>UW Health [Internet]. Madison (WI): University of Wisconsin Hospitals and Clinics Authority; c2018. Health Information: Human Papillomavirus (HPV) Test: Results [updated 2017 Mar 20; cited 2018 Jun 5]; [about 8 screens]. Available from: <a href="https://www.uwhealth.org/health/topic/medicaltest/human-papillomavirus-hpv-test/tu6451.html#tu6458" target="bibliowin">https://www.uwhealth.org/health/topic/medicaltest/human-papillomavirus-hpv-test/tu6451.html#tu6458</a></li>
+<li>UW Health [Internet]. Madison (WI): University of Wisconsin Hospitals and Clinics Authority; c2018. Health Information: Human Papillomavirus (HPV) Test: Test Overview [updated 2017 Mar 20; cited 2018 Jun 5]; [about 2 screens]. Available from: <a href="https://www.uwhealth.org/health/topic/medicaltest/human-papillomavirus-hpv-test/tu6451.html" target="bibliowin">https://www.uwhealth.org/health/topic/medicaltest/human-papillomavirus-hpv-test/tu6451.html</a></li>
+<li>UW Health [Internet]. Madison (WI): University of Wisconsin Hospitals and Clinics Authority; c2018. Health Information: Human Papillomavirus (HPV) Test: Why It is Done [updated 2017 Mar 20; cited 2018 Jun 5]; [about 3 screens]. Available from: <a href="https://www.uwhealth.org/health/topic/medicaltest/human-papillomavirus-hpv-test/tu6451.html#tu6453" target="bibliowin">https://www.uwhealth.org/health/topic/medicaltest/human-papillomavirus-hpv-test/tu6451.html#tu6453</a></li>
+</ol></div>
+</section>
+          
+        </div>
+        
+        <div class="side">
+          <aside>
+            
+              <section><div class="side-section">
+<div class="section-header">
+    <h2>Related Health Topics</h2>
+</div>
+<div class="section-body">
+    <ul class="relatedmp">
+        
+          <li><a href="https://medlineplus.gov/cervicalcancer.html">Cervical Cancer</a></li>
+          
+        
+          <li><a href="https://medlineplus.gov/cervicalcancerscreening.html">Cervical Cancer Screening</a></li>
+          
+        
+          <li><a href="https://medlineplus.gov/genitalwarts.html">Genital Warts</a></li>
+          
+        
+          <li><a href="https://medlineplus.gov/hpv.html">HPV</a></li>
+          
+        
+          <li><a href="https://medlineplus.gov/sexuallytransmitteddiseases.html">Sexually Transmitted Diseases</a></li>
+          
+        
+          <li><a href="https://medlineplus.gov/vaccines.html">Vaccines</a></li>
+          
+        
+          <li><a href="https://medlineplus.gov/warts.html">Warts</a></li>
+          
+        
+          <li><a href="https://medlineplus.gov/womenshealthcheckup.html">Women&#39;s Health Checkup</a></li>
+          
+        
+    </ul>
+</div>
+</div></section>
+            
+              <section><div class="side-section">
+<div class="section-header">
+    <h2>Related Medical Tests</h2>
+</div>
+<div class="section-body">
+    <ul class="relatedmp">
+        
+          <li><a href="https://medlineplus.gov/lab-tests/how-to-understand-your-lab-results/">How to Understand Your Lab Results</a></li>
+          
+        
+          <li><a href="https://medlineplus.gov/lab-tests/pap-smear/">Pap Smear</a></li>
+          
+        
+    </ul>
+</div>
+</div></section>
+            
+          </aside>
+        </div>
+        
+        
+        <div class="bottom">
+          
+            <section><div class="lt-disclaimer">
+<p>The information on this site should not be used as a substitute for professional medical care or advice. Contact a health care provider if you have questions about your health.</p>
+</div>
+</section>
+          
+        </div>
+        
+    </article>
+
+                </div>
+			
+            </div>
+
+            <footer>
+                <div id="mplus-footer">
+                    <div class="footer1">
+
+                        <ul class="secondarynav">
+                            <li><a href="https://medlineplus.gov/about/">About MedlinePlus</a></li>
+			    <li><a href="https://medlineplus.gov/whatsnew/">What's New</a></li>
+                            <li><a href="https://medlineplus.gov/sitemap.html">Site Map</a></li>
+                            
+                            
+                              <li><a href="https://support.nlm.nih.gov/knowledgebase/category/?id=CAT-01231&category=medlineplus&from=https%3A//medlineplus.gov/lab-tests/human-papillomavirus-hpv-test/" target="_blank"><span>Customer Support</span></a></li>
+                            
+                        </ul>
+
+                        <ul class="follow-footer">
+                            <li><a href="https://medlineplus.gov/listserv.html">Get updates<span class="icon icon-email-update"></span></a></li>
+                            <li><a href="https://medlineplus.gov/rss.html">Subscribe to RSS<span class="icon icon-rss"></span></a></li>
+                            <li>
+                                <span class="follow-label">Follow us</span>
+                                <a href="https://twitter.com/medlineplus" class="follow-item" target="_blank">
+                                    <img src="https://medlineplus.gov/images/i_share_twitter.png" class="follow-icon" alt="Twitter" title="Twitter">
+                                </a>
+                                <a href="https://facebook.com/Mplus.gov/" class="follow-item" target="_blank">
+                                    <img src="https://medlineplus.gov/images/i_share_fb.png" class="follow-icon" alt="Facebook" title="Facebook">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://medlineplus.gov/social-media-toolkit/" class="social-media-toolkit-item">Social Media Toolkit<img src="https://medlineplus.gov/images/i_social_media_toolkit.png" class="social-media-toolkit-icon" alt="Social Media Toolkit" title="Social Media Toolkit"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer2">
+                        <ul>
+							
+							
+							<li><a href=" https://www.nlm.nih.gov/web_policies.html" target='_blank'>NLM Web Policies</a></li>
+							
+                            <li><a href="https://medlineplus.gov/about/using/usingcontent/" >Copyright</a></li>
+							
+                            <li><a href="https://medlineplus.gov/accessibility.html">Accessibility</a></li>
+                            <li><a href="https://medlineplus.gov/about/using/criteria/">Guidelines for Links</a></li>
+                            <li><a href="https://medlineplus.gov/plugins.html">Viewers & Players</a></li>
+                            
+                            <li><a href="https://medlineplus.gov/connect/overview.html">MedlinePlus Connect for EHRs</a></li>
+                            <li><a href="https://medlineplus.gov/about/developers/">For Developers</a></li>
+                            
+                        </ul>
+
+                        <div class="address">
+                            <a href="https://www.nlm.nih.gov" target="_blank">U.S. National Library of Medicine</a>
+                            <span>8600 Rockville Pike, Bethesda, MD 20894</span>
+                            <a href="http://www.hhs.gov" target="_blank">U.S. Department of Health and Human Services</a>
+                            <a href="http://www.nih.gov" target="_blank">National Institutes of Health</a>
+                            
+                        </div>
+
+                    
+                        <div class="date">
+                            
+                            <span id="lastupdate">Page last updated on 31 July 2020</span>
+                            
+                            
+                            <span id="lastreview">Page last reviewed: 15 August 2018</span>
+                        </div>
+                    
+
+                        <div class="return-top"><a href="#top" title="Return to top"><img class="return-top-icon" alt="Return to top" src="https://medlineplus.gov/images/return-top.png"></a></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        
+        <script src="https://medlineplus.gov/jslib/jquery-3.6.0.min.js" type="text/javascript"></script>
+        <script src="https://medlineplus.gov/jslib/mplus-frontend-controls.js" type="text/javascript"></script>
+        <script src="https://medlineplus.gov/jslib/mplus-share.js" type="text/javascript"></script>
+        <!--[if lte IE 9]><script src="//www.nlm.nih.gov/medlineplus/jslib/jquery.placeholder.js" type="text/javascript"></script><![endif]-->
+        <script src="https://medlineplus.gov/jslib/control.js" type="text/javascript"></script>
+
+        
+
+        
+<script type='application/ld+json'>{
+  "@context": "http://schema.org",
+  "@type": "MedicalWebPage",
+  "headline": "Human Papillomavirus (HPV) Test",
+  "description": "HPV stands for human papillomavirus. It is the most common sexually transmitted disease (STD), with millions of Americans currently infected. HPV can infect both men and women. Most people with HPV don't know they have it and never get any symptoms or health problems. There are many different types of HPV. Some types do cause health problems. HPV infections are usually grouped as low-risk or high-risk HPV. Low-Risk HPV can cause warts on the anus and genital area, and sometimes the mouth. Other low-risk HPV infections can cause warts on arms, hands, feet, or chest. HPV warts do not cause serious health problems. They may go away on their own, or a health care provider may remove them in a minor in-office procedure.;  High-Risk HPV. Most high-risk HPV infections do not cause any symptoms and will go away within a year or two. But some high-risk HPV infections can last for years. These long-lasting infections can lead to cancer. HPV is the cause of most cervical cancers. Long-lasting HPV may also cause other cancers, including those of the anus, vagina, penis, mouth, and throat.;   An HPV test looks for high-risk HPV in women. Health care providers can usually diagnose low-risk HPV by visually examining the warts. So no testing is needed. While men can be infected with HPV, there is no test available for men. Most men with HPV recover from the infection without any symptoms. Other names: genital human papillomavirus, high risk HPV, HPV DNA, HPV RNA",
+  "url": "https://medlineplus.gov/lab-tests/human-papillomavirus-hpv-test/",
+  "publisher": {
+    "@type": "Organization",
+    "legalName": "National Library of Medicine",
+    "url": "https://www.nlm.nih.gov",
+    "brand": {
+      "@type": "Brand",
+      "name": "MedlinePlus",
+      "description": "MedlinePlus is an online health information resource for patients and their families and friends. It is a service of the National Library of Medicine (NLM), the world's largest medical library, and a part of the National Institutes of Health (NIH).",
+      "url": "https://medlineplus.gov",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://medlineplus.gov/images/m_logo_primary.png"
+      }
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "legalName": "National Institutes of Health",
+      "url": "https://www.nih.gov"
+    }
+  }
+}</script>
+
+    </body>
+</html>
