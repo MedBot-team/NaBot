@@ -23,6 +23,7 @@ pipeline:
 #     intent_tokenization_flag: True
 #     intent_split_symbol: "+"
 #     constrain_similarities: true
+   - name: RegexEntityExtractor
    - name: EntitySynonymMapper
    - name: ResponseSelector
      epochs: 100

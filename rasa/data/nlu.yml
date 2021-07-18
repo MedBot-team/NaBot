@@ -4,136 +4,134 @@ nlu:
 - intent: request_drug
   examples: |
     - I'm looking for drug detail 
+    - I am looking for drug details
+    - I need drug details
     - Can you give me information about drugs?
+    - Is there any information about drugs you can give me?
+    - Are you able to provide me with information about drugs?
 
 - intent: any_detail_lab
   examples: |
-    - Is there anything else I need to know about the [17-Hydroxyprogesterone](lab)?
-    - Is there anything else I need to know about the [Acetaminophen Level](lab)?
-    - Is there anything else I need to know about the [Acid-Fast Bacillus (AFB) Tests](lab)?
+    - Is there anything else I need to know about the [Anoscopy](lab)?
+    - What else should I know about an [Anoscopy](lab)?
+    - Can you tell me anything else about the [Anoscopy](lab)?
+    - Any other information I need to know about the [Anoscopy](lab)?
 
 - intent: result_lab
   examples: |
-    - What do the [17-Hydroxyprogesterone](lab) test results mean?
-    - What do the [Acetaminophen Level](lab) test results mean?
-    - What do the [Acid-Fast Bacillus (AFB) Tests](lab) test results mean?
+    - What do the [Anoscopy](lab) test results mean?
+    - What do the results of the [Anoscopy](lab)? test mean?
+    - How are the results from the [Anoscopy](lab)? test interpreted?
+    - The [Anoscopy](lab)? result means what?
+    - The results of the [Anoscopy](lab)? test mean what?
 
 - intent: risk_lab
   examples: |
-    - Are there any risks to the [17-Hydroxyprogesterone](lab)?
-    - Are there any risks to the [Acetaminophen Level](lab)?
-    - Are there any risks to the [Acid-Fast Bacillus (AFB) Tests](lab)?
+    - Are there any risks to the [Anoscopy](lab)?
+    - Is there any risk associated with an [Anoscopy](lab)?
+    - Do the [Anoscopy](lab) carry any risks?
+    - [Anoscopy](lab) poses any risks?
+    - Is it possible that the [Anoscopy](lab) may have risks?
 
 - intent: prepare_lab
   examples: |
-    - Will I need to do anything to prepare for the [17-Hydroxyprogesterone](lab)?
-    - Will I need to do anything to prepare for the [Acetaminophen Level](lab)?
-    - Will I need to do anything to prepare for the [Acid-Fast Bacillus (AFB) Tests](lab)?
+    - Will I need to do anything to prepare for the [Anoscopy](lab)?
+    - How should I prepare for the [Anoscopy](lab)?
+    - Does anything need to be done to prepare for the [Anoscopy](lab)?
+    - Will I need to do anything in advance for the [Anoscopy](lab)?
+    - Does there are any preparations I need to make for the [Anoscopy](lab)?
+    - What do I need to do to prepare for the [Anoscopy](lab)?
 
 - intent: during_lab
   examples: |
-    - What happens during the [17-Hydroxyprogesterone](lab)?
-    - What happens during the [Acetaminophen Level](lab)?
-    - What happens during the [Acid-Fast Bacillus (AFB) Tests](lab)?
+    - What happens during the [Anoscopy](lab)?
+    - During an [Anoscopy](lab) what happens?
+    - Is there anything that happens during [Anoscopy](lab)?
+    - What happens in [Anoscopy](lab)?
+    - What will happen in the [Anoscopy](lab)?
 
 - intent: need_lab
   examples: |
-    - Why do I need the [17-Hydroxyprogesterone](lab)?
-    - Why do I need the [Acetaminophen Level](lab)?
-    - Why do I need the [Acid-Fast Bacillus (AFB) Tests](lab)?
+    - Why do I need the [Anoscopy](lab)?
+    - Is [Anoscopy](lab) necessary for me?
+    - Can you tell me why I need the [Anoscopy](lab)?
+    - Is it necessary that I go to the [Anoscopy](lab)?
 
 - intent: detail_lab
   examples: |
-    - What is the [17-Hydroxyprogesterone](lab)?
-    - What is the [Acetaminophen Level](lab)?
-    - What is the [Acid-Fast Bacillus (AFB) Tests](lab)?
+    - What is the [Anoscopy](lab)?
+    - The [Anoscopy](lab) is what?
+    - I'm looking for [Anoscopy](lab) detail
+    - Can you give me information about [Anoscopy](lab)?
 
 - intent: usage_lab
   examples: |
-    - What is the [17-Hydroxyprogesterone](lab) used for?
-    - What is the [Acetaminophen Level](lab) used for?
-    - What is the [Acid-Fast Bacillus (AFB) Tests](lab) used for?
+    - What is the [Anoscopy](lab) used for?
+    - What is the purpose of the [Anoscopy](lab)?
+    - [Anoscopy](lab) is used for what?
+    - For what do you use the [Anoscopy](lab)?
 
 - intent: inform_lab
   examples: |
-    - [17-Hydroxyprogesterone](lab)
-    - [Acetaminophen Level](lab)
-    - [Acid-Fast Bacillus (AFB) Tests](lab)
+    - [Anoscopy](lab)
+    - It is [Anoscopy](lab)
 
 - intent: warnings_drug
   examples: |
-    - When should you not take [1-day](drug)?
-    - When should you not take [12-hour-nasal](drug)?
-    - When should you not take [3m-skin-and-nasal-antiseptic](drug)?
+    - When should you not take [acetaminophen](drug)?
+    - Is there any time when you shouldn't take [acetaminophen](drug)?
+    - Do you need to avoid taking [acetaminophen](drug)?
+    - When should you avoid taking [acetaminophen](drug)?
 
 - intent: avoid_drug
   examples: |
-    - What to avoid while taking [1-day](drug)?
-    - What to avoid while taking [12-hour-nasal](drug)?
-    - What to avoid while taking [3m-skin-and-nasal-antiseptic](drug)?
+    - What to avoid while taking [acetaminophen](drug)?
+    - When taking [acetaminophen](drug), what should I avoid?
+    - What should one avoid when using [acetaminophen](drug)?
+    - Which things should you avoid while taking [acetaminophen](drug)?
 
 - intent: sideeffects_drug
   examples: |
-    - What are [1-day](drug) side-effects?
-    - What are side-effects of [1-day](drug)
-    - What condition is a serious side effect of [1-day](drug) use?
-    - What are the dangers of [1-day](drug)?
-    - What are [12-hour-nasal](drug) side-effects?
-    - What are side-effects of [12-hour-nasal](drug)
-    - What condition is a serious side effect of [12-hour-nasal](drug) use?
-    - What are the dangers of [12-hour-nasal](drug)?
-    - What are [3m-skin-and-nasal-antiseptic](drug) side-effects?
-    - What are side-effects of [3m-skin-and-nasal-antiseptic](drug)
-    - What condition is a serious side effect of [3m-skin-and-nasal-antiseptic](drug) use?
-    - What are the dangers of [3m-skin-and-nasal-antiseptic](drug)?
+    - What are [acetaminophen](drug) side-effects?
+    - What are side-effects of [acetaminophen](drug)
+    - What condition is a serious side effect of [acetaminophen](drug) use?
+    - What are the dangers of [acetaminophen](drug)?
 
 - intent: request_lab
   examples: |
     - I'm looking for lab test detail 
-    - Can you give me information about lab tests?
+    - I am looking for lab test details
+    - I need lab test details
+    - Can you give me information about lab test?
+    - Is there any information about lab test you can give me?
+    - Are you able to provide me with information about lab test?
 
 - intent: inform_drug
   examples: |
-    - [Adderall](drug)
     - [acetaminophen](drug)
-    - [Xcopri](drug)
-    - [1-day](drug)
-    - [12-hour-nasal](drug)
-    - [3m-skin-and-nasal-antiseptic](drug)
+    - It is [acetaminophen](drug)
 
 - intent: usage_drug
   examples: |
     - I'm looking for [acetaminophen](drug) detail
-    - What is [Adderall](drug)?
     - What is [acetaminophen](drug)?
-    - I am looking for [1-day](drug) detail
-    - What is [1-day](drug)?
-    - I am looking for [12-hour-nasal](drug) detail
-    - What is [12-hour-nasal](drug)?
-    - I am looking for [3m-skin-and-nasal-antiseptic](drug) detail
-    - What is [3m-skin-and-nasal-antiseptic](drug)?
+    - Can you give me information about [acetaminophen](drug)?
+    - Are you able to provide me with information about [acetaminophen](drug)?
 
 - intent: dosage_drug
   examples: |
-    - How should I take [Jakafi](drug)?
-    - How should I take [Farxiga](drug)?
-    - How should I take [1-day](drug)?
-    - How should I take [12-hour-nasal](drug)?
-    - How should I take [3m-skin-and-nasal-antiseptic](drug)?
+    - How should I take [acetaminophen](drug)?
+    - Give me [acetaminophen](drug) dosage information
+    - I need to know the dosage of [acetaminophen](drug)
+    - Tell me the dosage of [acetaminophen](drug)
+    - Tell me about [acetaminophen](drug) dosage
 
 - intent: interaction_drug
   examples: |
-    - What other drugs will affect [Xcopri](drug)?
-    - What other drugs will affect [Femara](drug)? 
-    - What other drugs will affect [1-day](drug)?
-    - What drugs should not be taken with [1-day](drug)?
-    - Which drugs have a drug interaction with [1-day](drug)?
-    - What other drugs will affect [12-hour-nasal](drug)?
-    - What drugs should not be taken with [12-hour-nasal](drug)?
-    - Which drugs have a drug interaction with [12-hour-nasal](drug)?
-    - What other drugs will affect [3m-skin-and-nasal-antiseptic](drug)?
-    - What drugs should not be taken with [3m-skin-and-nasal-antiseptic](drug)?
-    - Which drugs have a drug interaction with [3m-skin-and-nasal-antiseptic](drug)?
+    - What other drugs will affect [acetaminophen](drug)?
+    - What drugs should not be taken with [acetaminophen](drug)?
+    - Which drugs have a drug interaction with [acetaminophen](drug)?
+    - What other drugs will affect [acetaminophen](drug)?
 
 - intent: greet
   examples: |
