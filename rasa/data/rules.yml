@@ -15,7 +15,6 @@ rules:
     - active_loop: null 
     - action: utter_submit_drug
     - action: utter_slots_values_drug
-    - action: utter_restart
 
 - rule: activate labs form
   steps:
@@ -31,7 +30,6 @@ rules:
     - active_loop: null 
     - action: utter_submit_lab
     - action: utter_slots_values_lab
-    - action: utter_restart
 
 - rule: get drugs usage
   steps:
@@ -41,7 +39,7 @@ rules:
 - rule: get drugs dosage
   steps:
     - intent: dosage_drug
-    - action: utter_dosage_drug
+    - action: data_frame_retrieve
 
 - rule: get drugs interaction
   steps:

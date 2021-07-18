@@ -30,6 +30,9 @@ entities:
   - drug 
   - lab
 
+actions:
+  - data_frame_retrieve
+
 intents:
   - affirm
   - any_detail_lab
@@ -132,8 +135,6 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_restart:
-  - text: "Chat history cleared"
 
 session_config:
   session_expiration_time: 60
