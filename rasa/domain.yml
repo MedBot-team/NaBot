@@ -1,6 +1,28 @@
 version: "2.0"
 
+forms:
+  drugs_form:
+    required_slots:
+      drug: 
+        - type: from_entity
+          entity: drug
+          influence_conversation: false
+
+slots:
+  drug:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+
+entities:
+  - drug 
+
 intents:
+  - request_drug
+  - inform
+  - usage
+  - dosage
+  - interaction
   - greet
   - goodbye
   - affirm
@@ -10,6 +32,24 @@ intents:
   - bot_challenge
 
 responses:
+  utter_ask_drug:
+  - text: "Which drug?"
+
+  utter_slots_values:
+  - text: "I am going to show details about {drug}"
+
+  utter_submit:
+  - text: "All done!"
+
+  utter_usage:
+  - text: "I am going to show usage of {drug}"
+
+  utter_dosage:
+  - text: "I am going to show dosage of {drug}"
+
+  utter_interaction:
+  - text: "I am going to show interaction of {drug}"
+
   utter_greet:
   - text: "Hey! How are you?"
 

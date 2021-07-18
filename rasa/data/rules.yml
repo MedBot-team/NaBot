@@ -1,13 +1,47 @@
 version: "2.0"
 
 rules:
+- rule: activate drugs form
+  steps:
+    - intent: request_drug
+    - action: drugs_form
+    - active_loop: drugs_form
+
+- rule: submit form
+  condition:
+  - active_loop: drugs_form
+  steps:
+    - action: drugs_form 
+    - active_loop: null 
+    - action: utter_submit
+    - action: utter_slots_values
+
+- rule: get drugs usage
+  steps:
+    - intent: usage
+    - action: utter_usage
+
+- rule: get drugs dosage
+  steps:
+    - intent: dosage
+    - action: utter_dosage
+
+- rule: get drugs interaction
+  steps:
+    - intent: interaction
+    - action: utter_interaction
+
+- rule: Say hi anytime the user says hi 
+  steps:
+    - intent: greet 
+    - action: utter_greet
 
 - rule: Say goodbye anytime the user says goodbye
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+    - intent: goodbye
+    - action: utter_goodbye
 
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+    - intent: bot_challenge
+    - action: utter_iamabot
