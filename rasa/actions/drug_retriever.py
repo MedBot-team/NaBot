@@ -31,13 +31,19 @@ class DrugRetrieve(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        drug = tracker.latest_message['entities'][0]['value'].lower()
-        intent = tracker.latest_message['intent']['name']
-        col = self.intent_mapper(intent)
         df = pd.read_csv('drugs_dataset.csv')
+
+        if tracker.get_slot('drug') is None:
+            intent = tracker.latest_message['intent']['name']
+            col = self.intent_mapper(intent)
+            drug = tracker.latest_message['entities'][0]['value'].lower()
+        else:
+            col = 'uses'
+            drug = tracker.get_slot('drug').lower()
+
         result = list(df[df['medicine'] == drug][col])
         dispatcher.utter_message(result[0])
-        
+
         return []
 
 

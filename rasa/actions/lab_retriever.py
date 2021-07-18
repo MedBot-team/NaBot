@@ -33,10 +33,16 @@ class LabRetrieve(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        lab = tracker.latest_message['entities'][0]['value']
-        intent = tracker.latest_message['intent']['name']
-        col = self.intent_mapper(intent)
         df = pd.read_csv('medplus_labs.csv')
+
+        if tracker.get_slot('lab') is None:
+            intent = tracker.latest_message['intent']['name']
+            col = self.intent_mapper(intent)
+            lab = tracker.latest_message['entities'][0]['value']
+        else:
+            col = 'What is the test'
+            lab = tracker.get_slot('lab')
+
         result = list(df[df['Lab test'] == lab][col])
         dispatcher.utter_message(result[0])
         

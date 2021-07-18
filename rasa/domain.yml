@@ -66,20 +66,17 @@ responses:
   utter_ask_drug:
   - text: "Which drug?"
 
+  utter_ask_lab:
+  - text: "Which lab test?"
+
   utter_slots_values_drug:
   - text: "I am going to show details about {drug}"
 
   utter_slots_values_lab:
   - text: "I am going to show details about {lab}"
 
-  utter_submit_drug:
-  - text: "All done!"
-
-  utter_submit_lab:
-  - text: "All done!"
-
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! I'm medical chatbot. What can I do for you?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"

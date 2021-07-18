@@ -13,8 +13,7 @@ rules:
   steps:
     - action: drugs_form 
     - active_loop: null 
-    - action: utter_submit_drug
-    - action: utter_slots_values_drug
+    - action: drug_retrieve
 
 - rule: activate labs form
   steps:
@@ -28,8 +27,7 @@ rules:
   steps:
     - action: labs_form 
     - active_loop: null 
-    - action: utter_submit_lab
-    - action: utter_slots_values_lab
+    - action: lab_retrieve
 
 - rule: get drugs usage
   steps:
