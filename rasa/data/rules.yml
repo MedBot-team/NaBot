@@ -71,6 +71,11 @@ rules:
     - intent: during_lab
     - action: lab_retrieve
 
+- rule: get any things else of labs
+  steps:
+    - intent: any_detail_lab
+    - action: lab_retrieve
+
 - rule: get why do I need labs details
   steps:
     - intent: need_lab

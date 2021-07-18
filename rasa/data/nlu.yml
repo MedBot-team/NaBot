@@ -20,10 +20,10 @@ nlu:
 - intent: result_lab
   examples: |
     - What do the [Anoscopy](lab) test results mean?
-    - What do the results of the [Anoscopy](lab)? test mean?
-    - How are the results from the [Anoscopy](lab)? test interpreted?
-    - The [Anoscopy](lab)? result means what?
-    - The results of the [Anoscopy](lab)? test mean what?
+    - What do the results of the [Anoscopy](lab) test mean?
+    - How are the results from the [Anoscopy](lab) test interpreted?
+    - The [Anoscopy](lab) result means what?
+    - The results of the [Anoscopy](lab) test mean what?
 
 - intent: risk_lab
   examples: |

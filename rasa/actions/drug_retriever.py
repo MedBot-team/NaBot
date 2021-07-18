@@ -31,7 +31,7 @@ class DrugRetrieve(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        drug = tracker.latest_message['entities'][0]['value']
+        drug = tracker.latest_message['entities'][0]['value'].lower()
         intent = tracker.latest_message['intent']['name']
         col = self.intent_mapper(intent)
         df = pd.read_csv('drugs_dataset.csv')
