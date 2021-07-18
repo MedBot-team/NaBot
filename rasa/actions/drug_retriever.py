@@ -12,22 +12,32 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 
-class DataFrameRetrieve(Action):
+class DrugRetrieve(Action):
 
     def name(self) -> Text:
-        return "data_frame_retrieve"
+        return "drug_retrieve"
+
+    def intent_mapper(self, intent):
+        intent_col = {'usage_drug':'uses', 
+                      'warnings_drug':'warnings', 
+                      'dosage_drug':'dosage', 
+                      'avoid_drug':'what-to-avoid',
+                      'sideeffects_drug':'side-effects', 
+                      'interaction_drug':'interactions'}
+        return intent_col[intent]
 
     def run(self, 
             dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        drug = tracker.get_slot('drug')
-        intent = tracker.latest_message['intent']
+        drug = tracker.latest_message['entities'][0]['value']
+        intent = tracker.latest_message['intent']['name']
+        col = self.intent_mapper(intent)
         df = pd.read_csv('drugs_dataset.csv')
-        result = df[df['medicine'] == drug][intent]
-
+        result = list(df[df['medicine'] == drug][col])
         dispatcher.utter_message(result[0])
+        
         return []
 
 

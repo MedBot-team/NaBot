@@ -34,67 +34,67 @@ rules:
 - rule: get drugs usage
   steps:
     - intent: usage_drug
-    - action: utter_usage_drug
+    - action: drug_retrieve
 
 - rule: get drugs dosage
   steps:
     - intent: dosage_drug
-    - action: data_frame_retrieve
+    - action: drug_retrieve
 
 - rule: get drugs interaction
   steps:
     - intent: interaction_drug
-    - action: utter_interaction_drug
+    - action: drug_retrieve
 
 - rule: get drugs what-to-avoid
   steps:
     - intent: avoid_drug
-    - action: utter_avoid_drug
+    - action: drug_retrieve
 
 - rule: get drugs side-effects
   steps:
     - intent: sideeffects_drug
-    - action: utter_sideeffects_drug
+    - action: drug_retrieve
 
 - rule: get drugs warnings
   steps:
     - intent: warnings_drug
-    - action: utter_warnings_drug
+    - action: drug_retrieve
 
 - rule: get labs details
   steps:
     - intent: detail_lab
-    - action: utter_detail_lab
+    - action: lab_retrieve
 
 - rule: get during labs details
   steps:
     - intent: during_lab
-    - action: utter_during_lab
+    - action: lab_retrieve
 
 - rule: get why do I need labs details
   steps:
     - intent: need_lab
-    - action: utter_need_lab
+    - action: lab_retrieve
 
 - rule: get labs preparation details
   steps:
     - intent: prepare_lab
-    - action: utter_prepare_lab
+    - action: lab_retrieve
 
 - rule: get labs result meaning details
   steps:
     - intent: result_lab
-    - action: utter_result_lab
+    - action: lab_retrieve
 
 - rule: get labs risk meaning details
   steps:
     - intent: risk_lab
-    - action: utter_risk_lab
+    - action: lab_retrieve
 
 - rule: get labs usage
   steps:
     - intent: usage_lab
-    - action: utter_usage_lab
+    - action: lab_retrieve
 
 - rule: Say hi anytime the user says hi 
   steps:

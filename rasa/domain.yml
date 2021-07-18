@@ -31,7 +31,8 @@ entities:
   - lab
 
 actions:
-  - data_frame_retrieve
+  - drug_retrieve
+  - lab_retrieve
 
 intents:
   - affirm
@@ -71,50 +72,11 @@ responses:
   utter_slots_values_lab:
   - text: "I am going to show details about {lab}"
 
-  utter_detail_lab:
-  - text: "I am going to show details about {lab}"
-
-  utter_dosage_drug:
-  - text: "I am going to show dosage of {drug}"
-
-  utter_during_lab:
-  - text: "I am going to show during lab of {lab}"
-
-  utter_interaction_drug:
-  - text: "I am going to show interaction of {drug}"
-
-  utter_need_lab:
-  - text: "I am going to show why-do-i-need of {lab}"
-
-  utter_prepare_lab:
-  - text: "I am going to how to prepare of {lab}"  
-
-  utter_result_lab:
-  - text: "I am going to show {lab} results meaning"  
-
-  utter_risk_lab:
-  - text: "I am going to show {lab} risks"    
-
-  utter_sideeffects_drug:
-  - text: "I am going to show {drug} sideeffects"   
-
   utter_submit_drug:
   - text: "All done!"
 
   utter_submit_lab:
   - text: "All done!"
-
-  utter_avoid_drug:
-  - text: "I am going to show what-to-avoid of {drug}"
-
-  utter_usage_drug:
-  - text: "I am going to show usage of {drug}"
-
-  utter_usage_lab:
-  - text: "I am going to show usage of {lab}"
-
-  utter_warnings_drug:
-  - text: "I am going to show {drug} warnings"   
 
   utter_greet:
   - text: "Hey! How are you?"
