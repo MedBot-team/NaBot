@@ -8,7 +8,7 @@ pipeline:
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
   #  - name: WhitespaceTokenizer
    - name: SpacyNLP
-     model: en_core_web_lg
+     model: en_core_web_md
    - name: SpacyTokenizer
    - name: SpacyFeaturizer
    - name: RegexFeaturizer
@@ -26,7 +26,7 @@ pipeline:
    - name: EntitySynonymMapper
    - name: ResponseSelector
      epochs: 100
-#     constrain_similarities: true
+     constrain_similarities: true
 #   - name: FallbackClassifier
 #     threshold: 0.3
 #     ambiguity_threshold: 0.1

@@ -8,47 +8,110 @@ forms:
           entity: drug
           influence_conversation: false
 
+  labs_form:
+    required_slots:
+      lab: 
+        - type: from_entity
+          entity: lab
+          influence_conversation: false
+
 slots:
   drug:
     type: text
     auto_fill: false
     influence_conversation: false
 
+  lab:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+
 entities:
   - drug 
+  - lab
 
 intents:
-  - request_drug
-  - inform
-  - usage
-  - dosage
-  - interaction
-  - greet
-  - goodbye
   - affirm
+  - any_detail_lab
+  - avoid_drug
+  - bot_challenge
   - deny
+  - detail_lab
+  - dosage_drug
+  - during_lab
+  - goodbye
+  - greet
+  - inform_drug
+  - inform_lab
+  - interaction_drug
   - mood_great
   - mood_unhappy
-  - bot_challenge
+  - need_lab
+  - prepare_lab
+  - request_drug
+  - request_lab
+  - result_lab
+  - risk_lab
+  - sideeffects_drug
+  - usage_drug
+  - usage_lab
+  - warnings_drug
+
 
 responses:
   utter_ask_drug:
   - text: "Which drug?"
 
-  utter_slots_values:
+  utter_slots_values_drug:
   - text: "I am going to show details about {drug}"
 
-  utter_submit:
-  - text: "All done!"
+  utter_slots_values_lab:
+  - text: "I am going to show details about {lab}"
 
-  utter_usage:
-  - text: "I am going to show usage of {drug}"
+  utter_detail_lab:
+  - text: "I am going to show details about {lab}"
 
-  utter_dosage:
+  utter_dosage_drug:
   - text: "I am going to show dosage of {drug}"
 
-  utter_interaction:
+  utter_during_lab:
+  - text: "I am going to show during lab of {lab}"
+
+  utter_interaction_drug:
   - text: "I am going to show interaction of {drug}"
+
+  utter_need_lab:
+  - text: "I am going to show why-do-i-need of {lab}"
+
+  utter_prepare_lab:
+  - text: "I am going to how to prepare of {lab}"  
+
+  utter_result_lab:
+  - text: "I am going to show {lab} results meaning"  
+
+  utter_risk_lab:
+  - text: "I am going to show {lab} risks"    
+
+  utter_sideeffects_drug:
+  - text: "I am going to show {drug} sideeffects"   
+
+  utter_submit_drug:
+  - text: "All done!"
+
+  utter_submit_lab:
+  - text: "All done!"
+
+  utter_avoid_drug:
+  - text: "I am going to show what-to-avoid of {drug}"
+
+  utter_usage_drug:
+  - text: "I am going to show usage of {drug}"
+
+  utter_usage_lab:
+  - text: "I am going to show usage of {lab}"
+
+  utter_warnings_drug:
+  - text: "I am going to show {drug} warnings"   
 
   utter_greet:
   - text: "Hey! How are you?"
@@ -68,6 +131,9 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_restart:
+  - text: "Chat history cleared"
 
 session_config:
   session_expiration_time: 60

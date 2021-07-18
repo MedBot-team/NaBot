@@ -7,29 +7,96 @@ rules:
     - action: drugs_form
     - active_loop: drugs_form
 
-- rule: submit form
+- rule: submit drugs form
   condition:
   - active_loop: drugs_form
   steps:
     - action: drugs_form 
     - active_loop: null 
-    - action: utter_submit
-    - action: utter_slots_values
+    - action: utter_submit_drug
+    - action: utter_slots_values_drug
+    - action: utter_restart
+
+- rule: activate labs form
+  steps:
+    - intent: request_lab
+    - action: labs_form
+    - active_loop: labs_form
+
+- rule: submit labs form
+  condition:
+  - active_loop: labs_form
+  steps:
+    - action: labs_form 
+    - active_loop: null 
+    - action: utter_submit_lab
+    - action: utter_slots_values_lab
+    - action: utter_restart
 
 - rule: get drugs usage
   steps:
-    - intent: usage
-    - action: utter_usage
+    - intent: usage_drug
+    - action: utter_usage_drug
 
 - rule: get drugs dosage
   steps:
-    - intent: dosage
-    - action: utter_dosage
+    - intent: dosage_drug
+    - action: utter_dosage_drug
 
 - rule: get drugs interaction
   steps:
-    - intent: interaction
-    - action: utter_interaction
+    - intent: interaction_drug
+    - action: utter_interaction_drug
+
+- rule: get drugs what-to-avoid
+  steps:
+    - intent: avoid_drug
+    - action: utter_avoid_drug
+
+- rule: get drugs side-effects
+  steps:
+    - intent: sideeffects_drug
+    - action: utter_sideeffects_drug
+
+- rule: get drugs warnings
+  steps:
+    - intent: warnings_drug
+    - action: utter_warnings_drug
+
+- rule: get labs details
+  steps:
+    - intent: detail_lab
+    - action: utter_detail_lab
+
+- rule: get during labs details
+  steps:
+    - intent: during_lab
+    - action: utter_during_lab
+
+- rule: get why do I need labs details
+  steps:
+    - intent: need_lab
+    - action: utter_need_lab
+
+- rule: get labs preparation details
+  steps:
+    - intent: prepare_lab
+    - action: utter_prepare_lab
+
+- rule: get labs result meaning details
+  steps:
+    - intent: result_lab
+    - action: utter_result_lab
+
+- rule: get labs risk meaning details
+  steps:
+    - intent: risk_lab
+    - action: utter_risk_lab
+
+- rule: get labs usage
+  steps:
+    - intent: usage_lab
+    - action: utter_usage_lab
 
 - rule: Say hi anytime the user says hi 
   steps:
