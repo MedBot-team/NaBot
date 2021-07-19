@@ -18,21 +18,22 @@ class DrugRetrieve(Action):
         return "drug_retrieve"
 
     def intent_mapper(self, intent):
-        intent_col = {'usage_drug':'uses', 
-                      'warnings_drug':'warnings', 
-                      'dosage_drug':'dosage', 
-                      'avoid_drug':'what-to-avoid',
-                      'sideeffects_drug':'side-effects', 
-                      'interaction_drug':'interactions'}
+        intent_col = {'usage_drug': 'uses',
+                      'warnings_drug': 'warnings',
+                      'dosage_drug': 'dosage',
+                      'avoid_drug': 'what-to-avoid',
+                      'sideeffects_drug': 'side-effects',
+                      'interaction_drug': 'interactions'}
         return intent_col[intent]
 
-    def run(self, 
+    def run(self,
             dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         df = pd.read_csv('drugs_dataset.csv')
 
+        # Check rasa forms are used or not
         if tracker.get_slot('drug') is None:
             intent = tracker.latest_message['intent']['name']
             col = self.intent_mapper(intent)
@@ -41,23 +42,16 @@ class DrugRetrieve(Action):
             col = 'uses'
             drug = tracker.get_slot('drug').lower()
 
-        result = list(df[df['medicine'] == drug][col])
-        dispatcher.utter_message(result[0])
-
+        # Check drug does exist in dataset or not
+        if (df['medicine'] == drug).any():
+            # Check whether the question about the drug exists or not
+            if df[df['medicine'] == drug][col].isnull().values:
+                dispatcher.utter_message(
+                    'I\'m sorry. Unfortunately, I\'m not aware of that yet.')
+            else:
+                result = df[df['medicine'] == drug][col].values
+                dispatcher.utter_message(result[0])
+        else:
+            dispatcher.utter_message(
+                'I\'m sorry. Unfortunately, I don\'t have that drug in my dataset yet')
         return []
-
-
-# from rasa_sdk.events import AllSlotsReset
-
-# class ActionHelloWorld(Action):
-
-#      def name(self) -> Text:
-#             return "action_hello_world"
-
-#      def run(self, dispatcher: CollectingDispatcher,
-#              tracker: Tracker,
-#              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-#          dispatcher.utter_message("Hello World!")
-
-#          return [AllSlotsReset()]

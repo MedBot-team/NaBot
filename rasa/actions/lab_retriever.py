@@ -18,23 +18,24 @@ class LabRetrieve(Action):
         return "lab_retrieve"
 
     def intent_mapper(self, intent):
-        intent_col = {'usage_lab':'What is it used for', 
-                      'detail_lab':'What is the test', 
-                      'need_lab':'Why do I need the test', 
-                      'during_lab':'What happens during the test?',
-                      'prepare_lab':'Will I need to do anything to prepare for the test?', 
-                      'risk_lab':'Are there any risks to the test?',
-                      'result_lab':'What do the results mean?',
-                      'any_detail_lab':'Is there anything else I need to know about the test?'}
+        intent_col = {'usage_lab': 'What is it used for',
+                      'detail_lab': 'What is the test',
+                      'need_lab': 'Why do I need the test',
+                      'during_lab': 'What happens during the test?',
+                      'prepare_lab': 'Will I need to do anything to prepare for the test?',
+                      'risk_lab': 'Are there any risks to the test?',
+                      'result_lab': 'What do the results mean?',
+                      'any_detail_lab': 'Is there anything else I need to know about the test?'}
         return intent_col[intent]
 
-    def run(self, 
+    def run(self,
             dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         df = pd.read_csv('medplus_labs.csv')
 
+        # Check rasa forms are used or not
         if tracker.get_slot('lab') is None:
             intent = tracker.latest_message['intent']['name']
             col = self.intent_mapper(intent)
@@ -43,23 +44,16 @@ class LabRetrieve(Action):
             col = 'What is the test'
             lab = tracker.get_slot('lab').lower()
 
-        result = list(df[df['Lab test'] == lab][col])
-        dispatcher.utter_message(result[0])
-        
+        # Check lab test does exist in dataset or not
+        if (df['Lab test'] == lab).any():
+            # Check whether the question about the lab exists or not
+            if df[df['Lab test'] == lab][col].isnull().values:
+                dispatcher.utter_message(
+                    'I\'m sorry. Unfortunately, I\'m not aware of that yet.')
+            else:
+                result = df[df['Lab test'] == lab][col].values
+                dispatcher.utter_message(result[0])
+        else:
+            dispatcher.utter_message(
+                'I\'m sorry. Unfortunately, I don\'t have that lab in my dataset yet')
         return []
-
-
-# from rasa_sdk.events import AllSlotsReset
-
-# class ActionHelloWorld(Action):
-
-#      def name(self) -> Text:
-#             return "action_hello_world"
-
-#      def run(self, dispatcher: CollectingDispatcher,
-#              tracker: Tracker,
-#              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-#          dispatcher.utter_message("Hello World!")
-
-#          return [AllSlotsReset()]

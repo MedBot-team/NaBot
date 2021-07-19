@@ -12,7 +12,7 @@
 
 3. Convert data generation notebook to python script
     - Also, remove duplicate lines in the yml file (New feature)
-4. Add empty output handling feature to actions: Return 'Sorry massage', if the desired value in the dataframe does not exist.
+4. ~~Add empty output handling feature to actions: Return 'Sorry massage', if the desired value in the dataframe does not exist.~~
 5. Add typo fixer feature: Return similar drug/lab by finding word similarities. Ex. In the case of *acetamenophen*, details of *acetaminophen* should be returned.
 6. Add *slot_reset* custom action
     - This action should be added after *drug/lab_retrieve* in data/rules.yml
