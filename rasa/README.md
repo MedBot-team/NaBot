@@ -7,8 +7,8 @@
     - ~~Fix **None value** return problem for some drugs/labs~~ (Has been fixed by replacing slots by entities) 
     - ~~Fix retrieval algorithm to work for both forms and entities~~ (Done)
 
-2. Make lab test names lowercase in the database
-    - Also .lower() should be added to actions/lab_retriever.py -> line:41/44
+2. ~~Make lab test names lowercase in the database~~
+    - ~~Also .lower() should be added to actions/lab_retriever.py -> line:41/44~~
 
 3. Convert data generation notebook to python script
     - Also, remove duplicate lines in the yml file (New feature)

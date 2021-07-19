@@ -38,10 +38,10 @@ class LabRetrieve(Action):
         if tracker.get_slot('lab') is None:
             intent = tracker.latest_message['intent']['name']
             col = self.intent_mapper(intent)
-            lab = tracker.latest_message['entities'][0]['value']
+            lab = tracker.latest_message['entities'][0]['value'].lower()
         else:
             col = 'What is the test'
-            lab = tracker.get_slot('lab')
+            lab = tracker.get_slot('lab').lower()
 
         result = list(df[df['Lab test'] == lab][col])
         dispatcher.utter_message(result[0])
