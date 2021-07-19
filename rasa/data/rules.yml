@@ -14,6 +14,7 @@ rules:
     - action: drugs_form 
     - active_loop: null 
     - action: drug_retrieve
+    - action: slots_reset
 
 - rule: activate labs form
   steps:
@@ -28,6 +29,7 @@ rules:
     - action: labs_form 
     - active_loop: null 
     - action: lab_retrieve
+    - action: slots_reset
 
 - rule: get drugs usage
   steps:
