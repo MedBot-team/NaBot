@@ -12,5 +12,4 @@ class SlotsReset(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-         dispatcher.utter_message("Hello World!")
          return [AllSlotsReset()]

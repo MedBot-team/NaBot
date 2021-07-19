@@ -2,7 +2,7 @@ version: '2.0'
 
 nlu:
 
-- lookup: medicine
+- lookup: lab
   examples: |
     - 17-Hydroxyprogesterone
     - Acetaminophen Level
