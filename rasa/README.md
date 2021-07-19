@@ -10,8 +10,7 @@
 2. ~~Make lab test names lowercase in the database~~
     - ~~Also .lower() should be added to actions/lab_retriever.py -> line:41/44~~
 
-3. Convert data generation notebook to python script
-    - Also, remove duplicate lines in the yml file (New feature)
+3. ~~Convert data generation notebook to python script~~
 4. ~~Add empty output handling feature to actions: Return 'Sorry massage', if the desired value in the dataframe does not exist.~~
 5. ~~Add typo fixer feature: Return similar drug/lab by finding word similarities. Ex. In the case of *acetamenophen*, details of *acetaminophen* should be returned.~~
 6. ~~Add *slot_reset* custom action~~
