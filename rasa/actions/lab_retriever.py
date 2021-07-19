@@ -42,7 +42,11 @@ class LabRetrieve(Action):
             lab = tracker.latest_message['entities'][0]['value'].lower()
         else:
             col = 'What is the test'
-            lab = tracker.get_slot('lab').lower()
+            # Handling overlapping entities case
+            if isinstance(tracker.get_slot('lab'), list):
+                lab = tracker.get_slot('lab')[0].lower()
+            else:
+                lab = tracker.get_slot('lab').lower()
 
         # Check lab test does exist in dataset or not
         if (df['Lab test'] == lab).any():

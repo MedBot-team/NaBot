@@ -40,7 +40,11 @@ class DrugRetrieve(Action):
             drug = tracker.latest_message['entities'][0]['value'].lower()
         else:
             col = 'uses'
-            drug = tracker.get_slot('drug').lower()
+            # Handling overlapping entities case
+            if isinstance(tracker.get_slot('drug'), list):
+                drug = tracker.get_slot('drug')[0].lower()
+            else:
+                drug = tracker.get_slot('drug').lower()
 
         # Check drug does exist in dataset or not
         if (df['medicine'] == drug).any():
