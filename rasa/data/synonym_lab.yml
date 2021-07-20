@@ -5,7 +5,6 @@ nlu:
   examples: |
     - 10-panel drug screen
     - drug abuse testing
-    - drug screen
     - drug abuse survey
 - synonym: 17-hydroxyprogesterone
   examples: |
@@ -251,8 +250,6 @@ nlu:
 - synonym: basic-metabolic-panel-bmp
   examples: |
     - bmp
-    - chemistry panel
-    - chemistry screen
     - chem 7
 - synonym: b-cell-immunoglobulin-gene-rearrangement
   examples: |
@@ -269,14 +266,8 @@ nlu:
     - anti-beta-2 glycoprotein 1
     - β2-glycoprotein 1 antibodies
     - beta 2gp1 ab
-- synonym: beta-2-microglobulin-kidney-disease
-  examples: |
-    - b2m
-    - β2-microglobulin
-    - thymotaxin
 - synonym: beta-2-microglobulin-tumor-marker
   examples: |
-    - b2m
     - b2m
     - β2-microglobulin
     - thymotaxin
@@ -438,7 +429,6 @@ nlu:
     - antireticulin antibodies
     - ara
     - immunoglobulin a, total
-    - iga
 - synonym: cerebrospinal-fluid-csf-testing
   examples: |
     - csf analysis
@@ -581,7 +571,6 @@ nlu:
     - creat
     - blood creatinine
     - serum creatinine
-    - urine creatinine
 - synonym: creatinine-clearance
   examples: |
     - creatinine clearance, urine
@@ -662,7 +651,6 @@ nlu:
 - synonym: emergency-and-overdose-drug-testing
   examples: |
     - drug testing
-    - drug screen
     - poison testing
     - toxicology assays
 - synonym: epstein-barr-virus-ebv-antibody-tests
@@ -872,7 +860,6 @@ nlu:
     - crit
     - packed cell volume
     - pcv
-    - h and h (hemoglobin and hematocrit)
 - synonym: hemoglobin
   examples: |
     - hgb
@@ -1334,8 +1321,6 @@ nlu:
     - ala
     - porphobilinogen
     - pbg
-    - free erythrocyte protoporphyrin
-    - fep
 - synonym: potassium
   examples: |
     - k
@@ -1346,9 +1331,6 @@ nlu:
   examples: |
     - hcg pregnancy
     - qualitative hcg
-    - quantitative hcg
-    - beta hcg
-    - total beta hcg
 - synonym: prenatal-group-b-strep-gbs-screening
   examples: |
     - group b beta-hemolytic streptococcus
@@ -1619,7 +1601,6 @@ nlu:
     - thrombin clotting time
 - synonym: thyroglobulin
   examples: |
-    - tg
     - tgb
 - synonym: thyroid-antibodies
   examples: |
@@ -1718,7 +1699,6 @@ nlu:
   examples: |
     - urine test
     - urine analysis
-    - ua
 - synonym: urine-albumin-and-albumin-creatinine-ratio
   examples: |
     - microalbumin
