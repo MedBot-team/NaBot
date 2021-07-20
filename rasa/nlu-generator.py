@@ -40,8 +40,8 @@ nlu:
 def main():
     mode = 'drug'
     # mode = 'lab'
-    generator = nlu_generator(mode, 'drugs_dataset.csv')
-    # generator = nlu_generator(mode, 'medplus_labs.csv')
+    generator = nlu_generator(mode, '../drug_datasets/dataset_files/drugs_dataset.csv')
+    # generator = nlu_generator(mode, '../medlineplus_lab_dataset/dataset_files/medplus_labs.csv')
     code = generator.generate()
     generator.write_data(code, 'data/drug.yml')
     # generator.write_data(code, 'data/lab.yml')
