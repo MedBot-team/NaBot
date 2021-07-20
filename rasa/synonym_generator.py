@@ -9,13 +9,15 @@ class nlu_generator():
         super().__init__()
         df = pd.read_csv(med_dataset)
         if mode == 'drug':
-            col = 'medicine'
-            aka_col = 'brand name'
+            col = 'drug_name'
+            aka_col = 'Brand names'
         else:
             col = 'Lab test'
             aka_col = 'Also Known As'
         self.list = df[col].str.lower()
-        self.aka_list = df[aka_col].str.lower()
+        aka_list = df[aka_col].str.lower()
+        self.aka_list = aka_list.str.replace('®', '')
+        self.mode = mode
 
     # Synonym key generator
     def __syn_generator(self, item, aka_list):
@@ -25,7 +27,10 @@ nlu:
   examples: |
 """
         code = yaml.load(inp, Loader=yaml.RoundTripLoader)
-        aka_list = ast.literal_eval(aka_list)
+        if self.mode == 'lab':
+            aka_list = ast.literal_eval(aka_list)
+        else:
+            aka_list = [aka_list]
         for aka in aka_list:
             code['nlu'][0]['examples'] += f'- {aka}\n'
         return code
@@ -44,7 +49,8 @@ nlu:
 
     # NaN check
     def __isnan(self, num):
-        return num != num
+        isnan = (num != num)
+        return isnan
 
     # YAML generator
     def generate(self):
@@ -66,10 +72,14 @@ nlu:
 
 def main():
     mode = 'lab'
+    #mode = 'drug'
     generator = nlu_generator(
         mode, '../labtestonline_datasets/dataset_files/labtest_dataset.csv')
+    #generator = nlu_generator(
+        #mode, '../medlineplus_drug_dataset/dataset_files/MedlinePlus_2.csv')
     code = generator.generate()
     generator.write_data(code, 'data/synonym_lab.yml')
+    #generator.write_data(code, 'data/synonym_drug.yml')
 
 
 if __name__ == "__main__":

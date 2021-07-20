@@ -1008,10 +1008,10 @@ nlu:
     - htlv-i/ii by pcr
 - synonym: igra-tb-test
   examples: |
-    - t-spot®
-    - tb quantiferon®-tb gold (qft-g)
-    - quantiferon®-tb gold plus (qft-plus)
-    - quantiferon®-tb gold in-tube (qft-git)
+    - t-spot
+    - tb quantiferon-tb gold (qft-g)
+    - quantiferon-tb gold plus (qft-plus)
+    - quantiferon-tb gold in-tube (qft-git)
 - synonym: immunoglobulins-iga-igg-igm
   examples: |
     - total immunoglobulins
