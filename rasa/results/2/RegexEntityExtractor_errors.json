@@ -1,0 +1,76 @@
+[
+  {
+    "text": "I'm looking for drug detail",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 16,
+        "end": 20,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I am looking for drug information",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 17,
+        "end": 21,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I need drug details",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 7,
+        "end": 11,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Which drugs have a drug interaction with acetaminophen?",
+    "entities": [
+      {
+        "start": 41,
+        "end": 54,
+        "value": "acetaminophen",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 41,
+        "end": 54,
+        "confidence_entity": 0.9993516802787781,
+        "value": "acetaminophen",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 41,
+        "end": 54,
+        "value": "acetaminophen",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "lab",
+        "start": 19,
+        "end": 23,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  }
+]

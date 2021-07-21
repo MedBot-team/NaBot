@@ -2,90 +2,143 @@
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
 stories:
+
 - story: happy path 1
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
+      I need some info about a drug
+    intent: request_drug
+  - action: drugs_form
+  - active_loop: drugs_form
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+      [advil](drug)
+    intent: inform_drug
+  - action: drugs_form
+  - active_loop: null
+  - user: |
+      Can you help me about a lab test?
+    intent: request_lab
+  - action: labs_form
+  - active_loop: labs_form 
+  - user: |
+      its [drug testing](lab)
+    intent: inform_lab
+  - action: labs_form
+  - active_loop: null
 
 - story: happy path 2
   steps:
   - user: |
-      hello there!
+      what is [clodan](drug) for?
+    intent: usage_drug
+  - action: drug_retrieve
+  - user: |
+      why do i have to use [acetaminophen](drug)
+    intent: usage_drug
+  - action: drug_retrieve
+  - user: |
+      is [estradiol](drug) dangerous?
+    intent: sideeffects_drug
+  - action: drug_retrieve
+  - user: |
+      what should I not do while taking [fosamax](drug)?
+    intent: avoid_drug
+  - action: drug_retrieve
+  - user: |
+      is [glucose in urine test](lab) dangerous?
+    intent: risk_lab
+  - action: lab_retrieve
+  - user : |
+      can ypu explain to me what happens during [laparoscopy](lab)?
+    intent: during_lab
+  - action: lab_retrieve
+
+- story: happy path 3
+  steps:
+  - user: |
+      hey
     intent: greet
   - action: utter_greet
+  - user: | 
+      I need information about a drug
+    intent: request_drug
+  - action: drugs_form
+  - active_loop: drugs_form
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+      [letrozole](drug)
+    intent: inform_drug
+  - action: drugs_form
+  - active_loop: null
+  - user: | 
+      is there anything else you want to tell me about [skin biopsy](lab)?
+    intent: any_detail_lab
+  - action: lab_retrieve
   - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+      what does the result of [troponin test](lab) mean?
+    intent: result_lab
+  - action: lab_retrieve
+  
+- story: happy path 4
+  steps:
+  - user: |
+      what do i need to do before [pregnancy test](lab)?
+    intent: prepare-lab
+  - action: lab_retrieve
+  - user: |
+      what do i need [panic disorder test](lab) for?
+    intent: need_lab
+  - action: lab_retrieve
+  - user: |
+      what is [troponin test](lab)?
+    intent: detail_lab
+  - action: lab_retrieve 
+  - user: |
+      why do i have to do [rash evaluation](lab)?
+    intent: usage_lab
+  - action: lab_retrieve
+  - user: |
+      why do i have to do [rash evaluation](lab)?
+    intent: usage_lab
+  - action: lab_retrieve
+
+- story: happy path 5
+  steps:
+  - user: |
+      what are the warnings for using [ketamine](drug)?
+    intent: warning_drug
+  - action: drug_retrieve
+  - user: |
+      How mauch [ketamine](drug) should i take everytime?
+    intent: dosage_drug
+  - action: drug_retrieve
+  - user: |
+      What drugs have interaction with [kalbitor](drug)?
+    intent: interaction_drug
+  - action: drug_retrieve
+
 
 - story: sad path 1
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
+      I need some info about a drug
+    intent: request_drug
+  - action: drugs_form
+  - active_loop: drugs_form
   - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+      what is [colposcopy](lab) used for?
+    intent: usage_lab
+  - action: lab_retrieve
+  - action: drugs_form
+  - active_loop: null
   - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
+      Can you help me about a lab test?
+    intent: request_lab
+  - action: labs_form
+  - active_loop: labs_form 
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      not really
-    intent: deny
-  - action: utter_goodbye
-
-- story: sad path 3
-  steps:
-  - user: |
-      hi
-    intent: greet
-  - action: utter_greet
-  - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
-
-- story: say goodbye
-  steps:
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: bot challenge
-  steps:
-  - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
+      what does happen in [drug testing](lab)?
+    intent: during_lab
+  - action: lab_retrieve
+  - action: labs_form
+  - active_loop: null
+      
