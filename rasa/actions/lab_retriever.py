@@ -42,7 +42,7 @@ class LabRetrieve(Action):
         if tracker.get_slot('lab') is None:
             intent = tracker.latest_message['intent']['name']
             col = self.intent_mapper(intent)
-            lab_in = tracker.latest_message['entities'][0]['value'].lower()
+            lab_in = tracker.latest_message['entities'][-1]['value'].lower()
         else:
             col = 'What is the test'
             # Handling overlapping entities case

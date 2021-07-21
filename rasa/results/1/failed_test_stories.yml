@@ -1,0 +1,120 @@
+version: "2.0"
+stories:
+- story: happy path 1 (./tests/test_stories.yml)
+  steps:
+  - intent: request_drug
+  - action: drugs_form
+  - active_loop: drugs_form
+  - active_loop: null
+  - action: action_listen  # predicted: drug_retrieve
+  - intent: request_lab
+  - action: labs_form
+  - active_loop: labs_form
+  - active_loop: null
+  - action: action_listen  # predicted: lab_retrieve
+- story: happy path 2 (./tests/test_stories.yml)
+  steps:
+  - intent: usage_drug  # predicted: sideeffects_drug: what is [clodan](drug) for?
+    entities:
+    - drug: clodan
+  - action: drug_retrieve
+  - intent: usage_drug  # predicted: goodbye: why do i have to use [acetaminophen](drug)[acetaminophen](drug)
+    entities:
+    - drug: acetaminophen
+    - drug: acetaminophen
+  - action: drug_retrieve
+  - intent: sideeffects_drug
+    entities:
+    - drug: estradiol
+  - action: drug_retrieve
+  - intent: avoid_drug
+    entities:
+    - drug: fosamax
+  - action: drug_retrieve
+  - intent: risk_lab  # predicted: sideeffects_drug: is [glucose in urine test](lab) dangerous?
+    entities:
+    - lab: glucose in urine test
+  - action: lab_retrieve
+  - intent: during_lab
+    entities:
+    - lab: laparoscopy
+    - lab: laparoscopy
+  - action: lab_retrieve
+- story: happy path 3 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_drug
+  - action: drugs_form
+  - active_loop: drugs_form
+  - active_loop: null
+  - action: action_listen  # predicted: drug_retrieve
+  - intent: any_detail_lab
+    entities:
+    - lab: skin biopsy
+  - action: lab_retrieve
+  - intent: result_lab
+    entities:
+    - lab: troponin test
+  - action: lab_retrieve
+- story: happy path 4 (./tests/test_stories.yml)
+  steps:
+  - intent: prepare-lab  # predicted: prepare_lab: what do i need to do before [pregnancy test](lab)?
+    entities:
+    - lab: pregnancy test
+  - action: lab_retrieve  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: need_lab  # predicted: prepare_lab: what do i need [panic disorder test](lab) for?
+    entities:
+    - lab: panic disorder test
+  - action: lab_retrieve
+  - intent: detail_lab  # predicted: request_lab: what is [troponin test](lab)?
+    entities:
+    - lab: troponin test
+  - action: lab_retrieve
+  - intent: usage_lab  # predicted: goodbye: why do i have to do [rash evaluation](lab)?
+    entities:
+    - lab: rash evaluation
+  - action: lab_retrieve
+  - intent: usage_lab  # predicted: goodbye: why do i have to do [rash evaluation](lab)?
+    entities:
+    - lab: rash evaluation
+  - action: lab_retrieve
+- story: happy path 5 (./tests/test_stories.yml)
+  steps:
+  - intent: warning_drug  # predicted: usage_lab: what are the warnings for using [ketamine](drug)?
+    entities:
+    - drug: ketamine
+  - action: drug_retrieve  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: dosage_drug
+    entities:
+    - drug: ketamine
+  - action: drug_retrieve
+  - intent: interaction_drug
+    entities:
+    - drug: kalbitor
+  - action: drug_retrieve
+- story: sad path 1 (./tests/test_stories.yml)
+  steps:
+  - intent: request_drug
+  - action: drugs_form
+  - active_loop: drugs_form
+  - intent: usage_lab
+    entities:
+    - lab: colposcopy
+    - lab: colposcopy
+  - action: lab_retrieve
+  - action: drugs_form
+  - active_loop: null
+  - action: action_listen  # predicted: drug_retrieve
+  - intent: request_lab
+  - action: labs_form
+  - active_loop: labs_form
+  - intent: during_lab
+    entities:
+    - lab: drug testing
+  - action: lab_retrieve
+  - action: labs_form  # predicted: action_default_fallback
+  - active_loop: null
+  - action: action_listen  # predicted: lab_retrieve

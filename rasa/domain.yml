@@ -83,6 +83,12 @@ responses:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
+  utter_any_more_questions:
+  - text: "Do you have any more questions?"
+  
+  utter_how_can_help:
+  - text: "How can I help you?"
+
   utter_did_that_help:
   - text: "Did that help you?"
 
