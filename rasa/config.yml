@@ -12,6 +12,7 @@ pipeline:
     #  model: "data/total_word_feature_extractor.dat"
    - name: SpacyNLP
      model: en_core_web_lg
+     case_sensitive: False
     #  model: en_core_web_md
    - name: SpacyTokenizer
    - name: SpacyFeaturizer
