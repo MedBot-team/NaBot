@@ -33,6 +33,7 @@ entities:
 actions:
   - drug_retrieve
   - lab_retrieve
+  - slots_reset
 
 intents:
   - affirm

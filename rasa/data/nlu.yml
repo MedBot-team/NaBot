@@ -4,7 +4,7 @@ nlu:
 - intent: request_drug
   examples: |
     - I'm looking for drug detail 
-    - I am looking for drug details
+    - I am looking for drug information
     - I need drug details
     - Can you give me information about drugs?
     - Is there any information about drugs you can give me?
