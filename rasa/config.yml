@@ -7,8 +7,13 @@ pipeline:
 # # If you'd like to customize it, uncomment and adjust the pipeline.
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
   #  - name: WhitespaceTokenizer
+  #  - name: "MitieNLP"
+  # language model to load
+    #  model: "data/total_word_feature_extractor.dat"
    - name: SpacyNLP
-     model: en_core_web_md
+     model: en_core_web_lg
+     case_sensitive: False
+    #  model: en_core_web_md
    - name: SpacyTokenizer
    - name: SpacyFeaturizer
    - name: RegexFeaturizer
@@ -23,6 +28,10 @@ pipeline:
      constrain_similarities: true
 #     intent_tokenization_flag: True
 #     intent_split_symbol: "+"
+   - name: SpacyEntityExtractor
+#     dimensions: ["PRODUCT", "ORG"]
+  #  - name: MitieEntityExtractor
+  #  - name: CRFEntityExtractor
    - name: RegexEntityExtractor
    - name: EntitySynonymMapper
    - name: ResponseSelector
