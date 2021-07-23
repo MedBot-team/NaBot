@@ -1,0 +1,501 @@
+version: '2.0'
+
+nlu:
+
+- lookup: lab
+  examples: |
+    - 17-hydroxyprogesterone
+    - acetaminophen level
+    - acid-fast bacillus tests
+    - adhd screening
+    - adrenocorticotropic hormone
+    - acth
+    - albumin blood test
+    - aldosterone test
+    - alkaline phosphatase
+    - allergy blood test
+    - allergy skin test
+    - alpha-1 antitrypsin test
+    - alpha-fetoprotein test
+    - alpha fetoprotein tumor marker test
+    - alt blood test
+    - ammonia levels
+    - amniocentesis
+    - amniotic fluid test
+    - amylase test
+    - ana test
+    - antinuclear antibody test
+    - anion gap blood test
+    - anoscopy
+    - antibiotic sensitivity test
+    - anti-müllerian hormone test
+    - antineutrophil cytoplasmic antibodies test
+    - anca test
+    - appendicitis tests
+    - ast test
+    - autism spectrum disorder screening
+    - asd screening
+    - bacteria culture test
+    - bacterial vaginosis test
+    - balance tests
+    - barium swallow
+    - basic metabolic panel 
+    - bmp
+    - bcr abl genetic test
+    - beta 2 microglobulin tumor marker test
+    - bilirubin blood test
+    - bilirubin in urine
+    - blood alcohol level
+    - blood differential
+    - blood glucose test
+    - blood in urine
+    - blood oxygen level
+    - blood smear
+    - bone density scan
+    - bone marrow tests
+    - braf genetic test
+    - brca genetic test
+    - breast biopsy
+    - bronchoscopy and bronchoalveolar lavage
+    - bal
+    - bun
+    - blood urea nitrogen
+    - ca-125 blood test 
+    - ca 19-9 blood test
+    - calcitonin test
+    - calcium blood test
+    - calcium in urine test
+    - carbon dioxide in blood
+    - co2 in blood
+    - catecholamine tests
+    - ccp antibody test
+    - cd4 lymphocyte count
+    - c. diff testing
+    - cea test
+    - celiac disease screening
+    - cerebrospinal fluid analysis
+    - csf analysis
+    - ceruloplasmin test
+    - chickenpox and shingles tests
+    - chlamydia test
+    - chloride blood test
+    - cholesterol levels
+    - coagulation factor tests
+    - cognitive testing
+    - colposcopy
+    - complement blood test
+    - complete blood count 
+    - cbc
+    - comprehensive metabolic panel 
+    - cmp
+    - concussion tests
+    - cord blood testing and banking
+    - cortisol test
+    - c-peptide test
+    - c-reactive protein test
+    - crp test
+    - creatine kinase
+    - creatinine test
+    - crystals in urine
+    - csf immunoglobulin g index
+    - csf igg index
+    - d-dimer test
+    - dengue fever test
+    - dental exam
+    - depression screening
+    - dhea sulfate test
+    - diabetic foot exam
+    - differential diagnosis
+    - doppler ultrasound
+    - down syndrome tests
+    - drug testing
+    - elastography
+    - electrocardiogram
+    - electrolyte panel
+    - electromyography and nerve conduction studies
+    - emg and nerve conduction studies
+    - epithelial cells in urine
+    - erythrocyte sedimentation rate 
+    - esr
+    - estrogen levels test
+    - fall risk assessment
+    - fecal occult blood test 
+    - fobt
+    - ferritin blood test
+    - flu test
+    - influenza test
+    - fluoroscopy
+    - follicle-stimulating hormone levels test
+    - fsh levels test
+    - food allergy testing
+    - free light chains
+    - fungal culture test
+    - gamma-glutamyl transferase test
+    - ggt test
+    - glaucoma tests
+    - globulin test
+    - glomerular filtration rate test
+    - gfr test
+    - glucose in urine test
+    - gonorrhea test
+    - gram stain
+    - haptoglobin test
+    - hp test
+    - hearing tests for adults
+    - hearing tests for children
+    - heavy metal blood test
+    - helicobacter pylori tests
+    - h. pylori test
+    - hematocrit test
+    - hemoglobin a1c test
+    - hba1c test
+    - hemoglobin electrophoresis
+    - hemoglobin test
+    - hepatitis panel
+    - her2 testing
+    - breast cancer testing
+    - herpes test 
+    - hsv test
+    - hiv screening test
+    - hiv viral load
+    - homocysteine test
+    - how to understand your lab results
+    - human papillomavirus test
+    - hpv test
+    - hysteroscopy
+    - immunofixation blood test
+    - ife blood test
+    - immunoglobulins blood test
+    - insulin in blood
+    - intravenous pyelogram 
+    - ivp
+    - iron tests
+    - karyotype genetic test
+    - ketones in blood
+    - ketones in urine
+    - kidney stone analysis
+    - lactate dehydrogenase isoenzymes test
+    - ldh isoenzymes test
+    - lactate dehydrogenase test
+    - ldh test
+    - lactic acid test
+    - laparoscopy
+    - legionella tests
+    - lipase tests
+    - lipoprotein (a) blood test
+    - lipoprotein blood test
+    - liver function tests
+    - lung cancer tumor markers
+    - lung function tests
+    - luteinizing hormone levels test
+    - lh levels test
+    - lyme disease tests
+    - magnesium blood test
+    - malaria tests
+    - mcv 
+    - mean corpuscular volume
+    - measles and mumps tests
+    - measuring blood pressure
+    - mental health screening
+    - methylmalonic acid test
+    - mma test
+    - microalbumin creatinine ratio
+    - mononucleosis tests
+    - mono tests
+    - mpv blood test
+    - mrsa tests
+    - mthfr mutation test
+    - mucus in urine
+    - myelography
+    - nasal swab
+    - natriuretic peptide tests
+    - neurological exam
+    - nitrites in urine
+    - obesity screening
+    - obsessive compulsive disorder test
+    - ocd test
+    - opioid testing
+    - osmolality tests
+    - ova and parasite test
+    - panic disorder test
+    - pap smear
+    - parathyroid hormone test
+    - pth test
+    - partial thromboplastin time test
+    - ptt test
+    - pdl1 tests
+    - immunotherapy tests
+    - pharmacogenetic tests
+    - phenylketonuria screening
+    - pku screening
+    - phosphate in blood
+    - phosphate in urine
+    - platelet tests
+    - pleural fluid analysis
+    - porphyrin tests
+    - postpartum depression screening
+    - potassium blood test
+    - prealbumin blood test
+    - pregnancy test
+    - prenatal cell-free dna screening
+    - procalcitonin test
+    - progesterone test
+    - prolactin levels
+    - prostate-specific antigen test
+    - psa test
+    - protein c and protein s tests
+    - protein in urine
+    - prothrombin time test and inr
+    - pt/inr
+    - pten genetic test
+    - rash evaluation
+    - rdw
+    - red cell distribution width
+    - red blood cell antibody screen
+    - respiratory pathogens panel
+    - respiratory syncytial virus tests
+    - rsv tests
+    - reticulocyte count
+    - rheumatoid factor test
+    - rf test
+    - salicylates level
+    - semen analysis
+    - shbg blood test
+    - skin biopsy
+    - skin cancer screening
+    - smooth muscle antibody test
+    - sma test
+    - sodium blood test
+    - ultrasound
+    - sputum culture
+    - stool elastase
+    - strep a test
+    - strep b test
+    - stress tests
+    - suicide risk screening
+    - sweat test for cystic fibrosis
+    - synovial fluid analysis
+    - syphilis tests
+    - testosterone levels test
+    - therapeutic drug monitoring
+    - thyroglobulin
+    - thyroid antibodies
+    - thyroxine test
+    - t4 test
+    - tp53 genetic test
+    - trichomoniasis test
+    - triglycerides test
+    - triiodothyronine tests
+    - t3 tests
+    - troponin test
+    - tsh test
+    - thyroid-stimulating hormone test
+    - tuberculosis screening
+    - tumor marker tests
+    - uric acid test
+    - urobilinogen in urine
+    - videonystagmography 
+    - vng
+    - vision screening
+    - vitamin b test
+    - vitamin d test
+    - vitamin e test
+    - tocopherol test
+    - white blood cell in stool
+    - wbc in stool
+    - white blood count 
+    - wbc
+    - whooping cough diagnosis
+    - xylose testing
+    - yeast infection tests
+    - zika virus test
+    - acid-fast bacillus 
+    - afb 
+    - albumin blood 
+    - aldosterone 
+    - allergy blood 
+    - allergy skin 
+    - alpha-1 antitrypsin 
+    - alpha-fetoprotein 
+    - afp 
+    - afp tumor marker
+    - alpha fetoprotein tumor marker 
+    - alt blood 
+    - amniocentesis
+    - amniotic fluid
+    - amylase 
+    - ana 
+    - antinuclear antibody
+    - anion gap blood 
+    - antibiotic sensitivity 
+    - anti-müllerian hormone 
+    - antineutrophil cytoplasmic antibodies 
+    - anca 
+    - appendicitis 
+    - ast 
+    - bacteria culture 
+    - bacterial vaginosis 
+    - balance 
+    - bcr abl genetic 
+    - beta 2 microglobulin tumor marker 
+    - b2m tumor marker 
+    - bilirubin blood 
+    - blood glucose 
+    - bone marrow 
+    - braf genetic 
+    - brca genetic 
+    - ca-125 blood 
+    - ovarian cancer
+    - ca 19-9 blood  
+    - pancreatic cancer
+    - calcitonin 
+    - calcium blood 
+    - calcium in urine 
+    - catecholamine 
+    - ccp antibody 
+    - c. diff 
+    - cea 
+    - ceruloplasmin 
+    - chickenpox and shingles 
+    - chlamydia 
+    - chloride blood 
+    - coagulation factor 
+    - cognitive 
+    - complement blood 
+    - concussion 
+    - cord blood  and banking
+    - cortisol 
+    - c-peptide 
+    - c-reactive protein
+    - crp 
+    - creatinine 
+    - d-dimer 
+    - dengue fever 
+    - dhea sulfate 
+    - down syndrome 
+    - drug 
+    - estrogen levels 
+    - fecal occult blood  
+    - fobt
+    - ferritin blood 
+    - flu 
+    - influenza 
+    - follicle-stimulating hormone levels 
+    - fsh
+    - food allergy 
+    - fungal culture 
+    - gamma-glutamyl transferase 
+    - ggt 
+    - glaucoma 
+    - globulin 
+    - glomerular filtration rate 
+    - gfr 
+    - glucose in urine 
+    - gonorrhea 
+    - haptoglobin (hp) 
+    - hearing  for adults
+    - hearing  for children
+    - heavy metal blood 
+    - helicobacter pylori 
+    - h. pylori 
+    - hematocrit 
+    - hemoglobin a1c 
+    - hba1c 
+    - hemoglobin 
+    - her2 
+    - breast cancer 
+    - herpes 
+    - hsv 
+    - hiv screening 
+    - homocysteine 
+    - human papillomavirus 
+    - hpv 
+    - immunofixation blood
+    - ife
+    - immunoglobulins blood 
+    - iron 
+    - karyotype genetic 
+    - lactate dehydrogenase isoenzymes 
+    - ldh
+    - lactate dehydrogenase
+    - lactic acid 
+    - legionella 
+    - lipase 
+    - lipoprotein blood 
+    - liver function 
+    - lung function 
+    - luteinizing hormone levels 
+    - lh levels
+    - lyme disease 
+    - magnesium blood 
+    - malaria 
+    - measles and mumps 
+    - methylmalonic acid 
+    - mma 
+    - mononucleosis 
+    - mono 
+    - mpv blood 
+    - mrsa 
+    - mthfr mutation 
+    - natriuretic peptide  
+    - bnp 
+    - nt-probnp
+    - obsessive compulsive disorder 
+    - ocd 
+    - opioid 
+    - osmolality 
+    - ova and parasite 
+    - panic disorder 
+    - parathyroid hormone 
+    - pth 
+    - partial thromboplastin time 
+    - ptt 
+    - pdl1 
+    - immunotherapy 
+    - pharmacogenetic 
+    - platelet 
+    - porphyrin 
+    - potassium blood 
+    - prealbumin blood 
+    - pregnancy 
+    - procalcitonin 
+    - progesterone 
+    - prostate-specific antigen 
+    - psa 
+    - protein c and protein s 
+    - prothrombin time  and inr 
+    - pt/inr
+    - pten genetic 
+    - respiratory syncytial virus 
+    - rsv 
+    - rheumatoid factor 
+    - rf 
+    - shbg blood 
+    - smooth muscle antibody 
+    - sma 
+    - sodium blood 
+    - strep a 
+    - strep b 
+    - stress 
+    - sweat  for cystic fibrosis
+    - syphilis 
+    - testosterone levels 
+    - thyroxine 
+    - t4 
+    - tp53 genetic 
+    - trichomoniasis 
+    - triglycerides 
+    - triiodothyronine 
+    - t3 
+    - troponin 
+    - tsh 
+    - thyroid-stimulating hormone
+    - tumor marker 
+    - uric acid 
+    - vitamin b 
+    - vitamin d 
+    - vitamin e 
+    - tocopherol
+    - xylose 
+    - yeast infection 
+    - zika virus 
