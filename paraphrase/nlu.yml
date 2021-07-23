@@ -1,0 +1,93 @@
+version: '2.0'
+
+nlu:
+
+- intent: request_lab
+  examples: |
+    - I'm looking for lab test detail 
+    - I am looking for lab test details
+
+- intent: any_detail_lab
+  examples: |
+    - Is there anything else I need to know about the [Anoscopy](lab)?
+    - What else should I know about an [Anoscopy](lab)?
+
+- intent: result_lab
+  examples: |
+    - What do the [Anoscopy](lab) test results mean?
+    - What do the results of the [Anoscopy](lab) test mean?
+
+- intent: risk_lab
+  examples: |
+    - Are there any risks to the [Anoscopy](lab)?
+    - Is there any risk associated with an [Anoscopy](lab)?
+
+- intent: prepare_lab
+  examples: |
+    - Will I need to do anything to prepare for the [Anoscopy](lab)?
+    - How should I prepare for the [Anoscopy](lab)?
+
+- intent: during_lab
+  examples: |
+    - What happens during the [Anoscopy](lab)?
+    - During an [Anoscopy](lab) what happens?
+
+- intent: need_lab
+  examples: |
+    - Why do I need the [Anoscopy](lab)?
+    - Is [Anoscopy](lab) necessary for me?
+
+- intent: detail_lab
+  examples: |
+    - What is the [Anoscopy](lab)?
+    - The [Anoscopy](lab) is what?
+
+- intent: usage_lab
+  examples: |
+    - What is the [Anoscopy](lab) used for?
+    - What is the purpose of the [Anoscopy](lab)?
+
+- intent: inform_lab
+  examples: |
+    - [Anoscopy](lab)
+    - It is [Anoscopy](lab)
+
+- intent: request_drug
+  examples: |
+    - I'm looking for drug detail 
+    - I am looking for drug information
+
+- intent: warnings_drug
+  examples: |
+    - When should you not take [acetaminophen](drug)?
+    - Is there any time when you shouldn't take [acetaminophen](drug)?
+
+- intent: avoid_drug
+  examples: |
+    - What to avoid while taking [acetaminophen](drug)?
+    - When taking [acetaminophen](drug), what should I avoid?
+
+- intent: sideeffects_drug
+  examples: |
+    - What are [acetaminophen](drug) side-effects?
+    - What are side-effects of [acetaminophen](drug)
+
+- intent: inform_drug
+  examples: |
+    - [acetaminophen](drug)
+    - It is [acetaminophen](drug)
+
+- intent: usage_drug
+  examples: |
+    - I'm looking for [acetaminophen](drug) detail
+    - What is [acetaminophen](drug)?
+
+- intent: dosage_drug
+  examples: |
+    - How should I take [acetaminophen](drug)?
+    - Give me [acetaminophen](drug) dosage information
+    
+- intent: interaction_drug
+  examples: |
+    - What other drugs will affect [acetaminophen](drug)?
+    - What drugs should not be taken with [acetaminophen](drug)?
