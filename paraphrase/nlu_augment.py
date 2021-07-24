@@ -2,6 +2,7 @@ import re
 from tqdm import tqdm
 from ruamel import yaml
 from paraphrase import wordtune
+from decouple import config
 
 
 class DataAugment():
@@ -68,8 +69,9 @@ class DataAugment():
 
 
 def main():
-    token = 'YOUR_TOKEN'
-    draftId = 'YOUR_Draft_Id'
+    # environmental variables must be in .env file in the same dir as this file
+    token = config('TOKEN')
+    draftId = config('DRAFTID')
 
     nlu_file = 'nlu.yml'
     output_file = 'nlu_augment.yml'

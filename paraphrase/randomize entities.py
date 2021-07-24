@@ -54,8 +54,6 @@ if __name__=='__main__':
     with open(OUTPUT_FILE, 'w') as f:
         yaml.dump(randomized_nlu, f, Dumper=yaml.RoundTripDumper, default_flow_style=None)
 
-    print(randomized_nlu)
-
 
     
     

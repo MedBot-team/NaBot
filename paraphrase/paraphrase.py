@@ -1,6 +1,8 @@
 import time
 import json
 import requests
+from decouple import config
+
 
 
 class wordtune():
@@ -91,8 +93,9 @@ class wordtune():
 
 
 def main():
-    token = 'YOUR_TOKEN'
-    draftId = 'YOUR_Draft_Id'
+    # environmental variables must be in .env file in the same dir as this file
+    token = config('TOKEN')
+    draftId = config('DRAFTID')
     paraphrase = wordtune(token, draftId)
     
     inps = ['How are you?', 'How should I take Acetaminophen?']

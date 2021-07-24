@@ -133,3 +133,6 @@ dmypy.json
 
 # Rasa weights
 *.tar.gz
+
+# Environmental variables
+*.env
