@@ -49,12 +49,11 @@ class SpellChecker(Component):
         pass
 
     def process(self, message: Message, **kwargs: Any) -> None:
-        spell = Speller(lang='en')
-        spell_med = Speller(lang='med')
-
+        # Correct english and medical typoes
+        spell = Speller(lang='en_med')
         correct = spell(message.get("text"))
-        med_correct = spell_med(correct)
-        message.set('text', med_correct, add_to_output=True)
+        
+        message.set('text', correct, add_to_output=True)
 
     def persist(self, file_name: Text, model_dir: Text) -> Optional[Dict[Text, Any]]:
 

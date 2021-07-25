@@ -9,6 +9,7 @@ word_regexes = {
     "cs": r"[AÁBCČDĎEÉĚFGH(Ch)IÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽaábcčdďeéěfgh(ch)iíjklmnňoópqrřsštťuúůvwxyýzž]+",
     "el": r"[α-ωΑ-ΩίϊΐόάέύϋΰήώΊΪΪ́ΌΆΈΎΫΫ́ΉΏ]+",
     "it": r"[a-zA-ZãáàâçéêíõóôúüÃÁÀÂÇÉÊÍÕÓÔÚÜ]+",
+    "en_med": r"[A-Za-z]+",
     "med": r"[A-Za-z]+",
     "fa": r"[آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی]+",
 }
@@ -25,6 +26,7 @@ alphabets = {
     "el": "αβγδεζηθικλμνξοπρςτυφχψωίϊΐόάέύϋΰήώ",
     "it": "abcdefghijklmnopqrstuvwxzyãáàâçéêíõóôúü",
     "med": "abcdefghijklmnopqrstuvwxyz",
+    "en_med": "abcdefghijklmnopqrstuvwxyz",
     "fa": "آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی"
 }
 
