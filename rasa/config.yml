@@ -10,6 +10,7 @@ pipeline:
   #  - name: "MitieNLP"
   # language model to load
     #  model: "data/total_word_feature_extractor.dat"
+   - name: spell_checker.SpellChecker
    - name: SpacyNLP
      model: en_core_web_lg
      case_sensitive: False
