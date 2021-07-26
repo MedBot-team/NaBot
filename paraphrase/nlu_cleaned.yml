@@ -1,0 +1,367 @@
+version: '2.0'
+
+nlu:
+
+- intent: request_lab
+  examples: |
+    - I'm looking for lab test detail 
+    - I am looking for lab test details
+    - Please provide me with details about the lab test
+    - Detail about lab tests is what I'm looking for
+    - Detailed information about a lab test is needed
+    - Details of the lab test are needed
+    - Please provide lab test details
+    - Please let me know the details of lab tests
+    - My lab test detail is needed
+    - Detailed lab test results are needed
+    - Details about lab tests are needed
+    - The details of a lab test are required
+    - I would like to know more about lab tests
+    - Details about laboratory tests would be helpful
+    - Please provide me with the details of a lab test
+    - Details about the lab test are needed
+    - I need lab test results
+    - Detailed information on lab tests is needed
+    - Details of lab tests are needed by me
+    - I am looking for details about lab testing
+    - For lab test details, please contact me
+    - Detailed information about a lab test would be helpful
+
+- intent: any_detail_lab
+  examples: |
+    - Is there anything else I need to know about the [Anoscopy](lab)?
+    - What else should I know about an [Anoscopy](lab)?
+    - What else do I need to know about the [Anoscopy](lab)
+    - Can you tell me anything else about the [Anoscopy](lab)
+    - Do you have anything else to share with me about the [Anoscopy](lab)
+    - What else should I know about the [Anoscopy](lab)
+    - Are there any other things I should know about the [Anoscopy](lab)?
+    - What else can you tell me about the [Anoscopy](lab)?
+    - Do I need to know anything else about the [Anoscopy](lab)?
+    - Are there any other things I need to know about an [Anoscopy](lab)?
+    - How else can I prepare for an [Anoscopy](lab)
+    - I have additional questions about an [Anoscopy](lab), what should I know?
+    - Another thing I should know about an [Anoscopy](lab) is that?
+    - Are there any other things I should keep in mind before an [Anoscopy](lab)?
+    - In what other ways should I prepare for an [Anoscopy](lab)
+
+- intent: result_lab
+  examples: |
+    - What do the [Anoscopy](lab) test results mean?
+    - What do the results of the [Anoscopy](lab) test mean?
+    - What do the results of the [Anoscopy](lab) test mean
+    - [Anoscopy](lab) results: what does it mean
+    - How can the results of an [Anoscopy](lab) test be interpreted?
+    - How do the [Anoscopy](lab) test results help you?
+    - [Anoscopy](lab) test results: what are they telling us?
+    - In what sense does the [Anoscopy](lab) test result matter?
+    - How does the result of the [Anoscopy](lab) test translate?
+    - The results of the [Anoscopy](lab) test mean what?
+    - [Anoscopy](lab) results: What does it mean
+    - [Anoscopy](lab) test results: what do they mean
+    - What does the [Anoscopy](lab) test result mean
+    - How does an [Anoscopy](lab) test affect your health?
+    - What do the [Anoscopy](lab) test results mean
+    - Why is the [Anoscopy](lab) test important?
+    - Are the results of an [Anoscopy](lab) test meaningful?
+
+- intent: risk_lab
+  examples: |
+    - Are there any risks to the [Anoscopy](lab)?
+    - Is there any risk associated with an [Anoscopy](lab)?
+    - Are there any risks associated with an [Anoscopy](lab)?
+    - Is the [Anoscopy](lab) risky?
+    - What are the risks associated with the [Anoscopy](lab)
+    - Can the [Anoscopy](lab) cause any harm?
+    - Is there any risk to an [Anoscopy](lab)?
+    - An [Anoscopy](lab) has any risks?
+    - Is there a risk associated with an [Anoscopy](lab)?
+    - An [Anoscopy](lab) carries any risk?
+    - An [Anoscopy](lab) is associated with any risks?
+    - Can an [Anoscopy](lab) cause any harm?
+    - Does an [Anoscopy](lab) carry any risk?
+    - Is an [Anoscopy](lab) at risk?
+
+- intent: prepare_lab
+  examples: |
+    - Will I need to do anything to prepare for the [Anoscopy](lab)?
+    - How should I prepare for the [Anoscopy](lab)?
+    - Is there anything I need to do to prepare for the [Anoscopy](lab)
+    - Does preparation for an [Anoscopy](lab) need to be done?
+    - How should I prepare for my [Anoscopy](lab)?
+    - Are there any preparations I have to make for the [Anoscopy](lab)?
+    - Am I required to prepare anything for the [Anoscopy](lab)
+    - Are there any precautions I need to take before the [Anoscopy](lab)?
+    - Can I prepare for the [Anoscopy](lab) in any way?
+    - What should I do during my preparation for the [Anoscopy](lab)?
+    - What should I do to prepare for the [Anoscopy](lab)
+    - Is there anything I need to prepare for my [Anoscopy](lab)
+    - When should I prepare for an [Anoscopy](lab)?
+    - What preparation should I make for my [Anoscopy](lab)
+    - Is there anything I should prepare for the [Anoscopy](lab)
+    - Should I prepare for the [Anoscopy](lab) in any specific way?
+    - The day of the [Anoscopy](lab), what should I do to prepare?
+
+- intent: during_lab
+  examples: |
+    - What happens during the [Anoscopy](lab)?
+    - During an [Anoscopy](lab) what happens?
+    - What happens during an [Anoscopy](lab)?
+    - How does an [Anoscopy](lab) work?
+    - In an [Anoscopy](lab), what happens?
+    - When does the [Anoscopy](lab) take place?
+    - How does the [Anoscopy](lab) work?
+    - During the [Anoscopy](lab), what happens?
+    - What happens during an [Anoscopy](lab)?
+    - [Anoscopy](lab): What happens during the procedure?
+    - An [Anoscopy](lab) entails what?
+    - How does an [Anoscopy](lab) work?
+    - When is an [Anoscopy](lab) performed?
+    - An [Anoscopy](lab) takes place when what happens
+    - In an [Anoscopy](lab), what happens
+
+- intent: need_lab
+  examples: |
+    - Why do I need the [Anoscopy](lab)?
+    - Is [Anoscopy](lab) necessary for me?
+    - What is the purpose of the [Anoscopy](lab)?
+    - What are the benefits of an [Anoscopy](lab)?
+    - [Anoscopy](lab): Why is it necessary?
+    - Is the [Anoscopy](lab) necessary?
+    - How can I benefit from an [Anoscopy](lab)
+    - When should I have an [Anoscopy](lab)?
+    - How does the [Anoscopy](lab) help me?
+    - The reason for my [Anoscopy](lab)?
+    - What's the need for the [Anoscopy](lab)
+    - Should I have an [Anoscopy](lab)?
+    - What are the risks associated with an [Anoscopy](lab)?
+
+- intent: detail_lab
+  examples: |
+    - What is the [Anoscopy](lab)?
+    - The [Anoscopy](lab) is what?
+    - An [Anoscopy](lab) is what?
+    - [Anoscopy](lab): What is it?
+    - What is an [Anoscopy](lab)?
+    - In what is the [Anoscopy](lab) used?
+    - As a result of an [Anoscopy](lab), what is it?
+    - What is an [Anoscopy](lab)?
+    - In an [Anoscopy](lab), what do you see?
+    - Which of the following is an [Anoscopy](lab)?
+    - An [Anoscopy](lab) is what
+    - How do you describe the [Anoscopy](lab)?
+    - [Anoscopy](lab) means what
+    - Who performs an [Anoscopy](lab)?
+    - What is the [Anoscopy](lab)?
+
+- intent: usage_lab
+  examples: |
+    - What is the [Anoscopy](lab) used for?
+    - What is the purpose of the [Anoscopy](lab)?
+    - What is the purpose of an [Anoscopy](lab)?
+    - [Anoscopy](lab) serves what purpose?
+    - [Anoscopy](lab) is used for what?
+    - How does the [Anoscopy](lab) work?
+    - Where does an [Anoscopy](lab) come in handy?
+    - How is [Anoscopy](lab) used?
+    - In what cases is the [Anoscopy](lab) used?
+    - How is an [Anoscopy](lab) used?
+    - [Anoscopy](lab): What is its purpose?
+    - How does an [Anoscopy](lab) work?
+    - Exactly what is the purpose of an [Anoscopy](lab)?
+    - Why do we perform an [Anoscopy](lab)?
+    - Why is an [Anoscopy](lab) needed?
+    - In what way does an [Anoscopy](lab) help?
+    - How does the [Anoscopy](lab) help us?
+
+- intent: inform_lab
+  examples: |
+    - [Anoscopy](lab)
+    - It is [Anoscopy](lab)
+    - [Anoscopy](lab) is the procedure
+    - It's an [Anoscopy](lab)
+    - [Anoscopy](lab)
+
+- intent: request_drug
+  examples: |
+    - I'm looking for drug detail 
+    - I am looking for drug information
+    - I am looking for drug information
+    - Detailed information about drugs is needed
+    - I need drug details
+    - Detailed information on drugs is what I need
+    - Please provide me with drug details
+    - Details about a drug are needed
+    - It is important for me to know drug details
+    - My goal is to find details about drugs
+    - Please provide a detailed description of the drug
+    - Details about drugs are what I'm seeking
+    - Information about drugs is what I'm looking for
+    - Trying to find information on drugs
+    - I am searching for drug informatio
+    - I am in search of drug informatio
+    - I need to find out about drugs
+    - Interested in learning about drugs
+    - Where can I find information about drugs
+    - Information on drugs is important to me
+    - Finding drug information is what I am looking for
+    - Looking for drug informatio
+
+- intent: warnings_drug
+  examples: |
+    - When should you not take [acetaminophen](drug)?
+    - Is there any time when you shouldn't take [acetaminophen](drug)?
+    - When should you avoid taking [acetaminophen](drug)
+    - Does [acetaminophen](drug) have to be avoided in certain circumstances?
+    - What are the times when you shouldn't take [acetaminophen](drug)
+    - If you should not take [acetaminophen](drug), when should you?
+    - What should you do if you cannot take [acetaminophen](drug)
+    - If you are taking [acetaminophen](drug), when shouldn't you take it?
+    - Do you ever need to avoid [acetaminophen](drug)
+    - Is [acetaminophen](drug) safe to take in certain situations?
+    - Can you take [acetaminophen](drug) with alcohol?
+    - [acetaminophen](drug) shouldn't be used in these situations?
+    - When should you avoid taking [acetaminophen](drug)
+    - [acetaminophen](drug) shouldn't be taken at any time?
+    - What are the times when you shouldn't take [acetaminophen](drug)
+    - At what times should you not take [acetaminophen](drug)
+    - Do you ever need to avoid taking [acetaminophen](drug)
+    - [acetaminophen](drug) should not be taken at certain times?
+    - If you are taking [acetaminophen](drug), is there a time when you shouldn't?
+    - If I take [acetaminophen](drug), when do I not need it?
+    - [acetaminophen](drug) can you take it with alcohol?
+    - [acetaminophen](drug), when should it not be taken?
+
+- intent: avoid_drug
+  examples: |
+    - What to avoid while taking [acetaminophen](drug)?
+    - When taking [acetaminophen](drug), what should I avoid?
+    - What should you avoid while taking [acetaminophen](drug)
+    - How does [acetaminophen](drug) interact with alcohol?
+    - [acetaminophen](drug): What to avoid?
+    - What should I avoid when taking [acetaminophen](drug)
+    - How can you avoid [acetaminophen](drug) side effects?
+    - How to avoid interactions with [acetaminophen](drug)
+    - Is [acetaminophen](drug) safe to take?
+    - Avoiding [acetaminophen](drug) while taking it?
+    - Can I take [acetaminophen](drug) with food?
+    - How to avoid the side effects of [acetaminophen](drug)
+    - What should I avoid when taking [acetaminophen](drug)?
+    - Is there anything I should avoid while taking [acetaminophen](drug)?
+    - How should I avoid taking [acetaminophen](drug)?
+    - Are there any side effects I should avoid when I take [acetaminophen](drug)?
+    - Can I avoid certain situations when taking [acetaminophen](drug)?
+    - Can I avoid taking [acetaminophen](drug) with food?
+    - Is [acetaminophen](drug) poisonous? What should I avoid when taking it?
+    - What should I avoid while taking [acetaminophen](drug)?
+    - Should I avoid taking [acetaminophen](drug)?
+    - Are there any side effects I should avoid when taking [acetaminophen](drug)?
+
+- intent: sideeffects_drug
+  examples: |
+    - What are [acetaminophen](drug) side-effects?
+    - What are side-effects of [acetaminophen](drug)
+    - What are the side effects of [acetaminophen](drug)?
+    - How does [acetaminophen](drug) affect you?
+    - [acetaminophen](drug) side effects: what are they?
+    - Can [acetaminophen](drug) cause side effects?
+    - Which side effects do [acetaminophen](drug) medications have?
+    - How can [acetaminophen](drug) side effects be avoided?
+    - [acetaminophen](drug) side effects: Which ones are there?
+    - How do [acetaminophen](drug) side-effects differ?
+    - Among [acetaminophen](drug)'s side effects, what are the most common?
+    - Which side effects can I expect with [acetaminophen](drug)?
+    - [acetaminophen](drug) side effects
+    - [acetaminophen](drug) has side effects
+    - A potential side effect of [acetaminophen](drug)
+    - A review of [acetaminophen](drug) side effects
+    - How does [acetaminophen](drug) cause side effects;
+    - [acetaminophen](drug) SIDE EFFECTS
+    - A: [acetaminophen](drug) exhibits side effects
+
+- intent: inform_drug
+  examples: |
+    - [acetaminophen](drug)
+    - It is [acetaminophen](drug)
+    - The drug [acetaminophen](drug)
+    - An[acetaminophen](drug)
+    - It is made up of [acetaminophen](drug)
+    - [acetaminophen](drug) is what it is
+    - [acetaminophen](drug) is the active ingredient
+    - There is [acetaminophen](drug) in it
+    - The medicine is [acetaminophen](drug)
+    - [acetaminophen](drug)
+
+- intent: usage_drug
+  examples: |
+    - I'm looking for [acetaminophen](drug) detail
+    - What is [acetaminophen](drug)?
+    - I need [acetaminophen](drug) details
+    - [acetaminophen](drug) detail is what I need
+    - The [acetaminophen](drug) details I need
+    - I am looking for information about [acetaminophen](drug)
+    - The details of [acetaminophen](drug) are needed
+    - Detailed information on [acetaminophen](drug) is required
+    - I want to know about [acetaminophen](drug)
+    - [acetaminophen](drug) details would be appreciated
+    - My question is about [acetaminophen](drug)
+    - Where can I find details on [acetaminophen](drug)
+    - [acetaminophen](drug) is what?
+    - How does [acetaminophen](drug) work?
+    - [acetaminophen](drug): what is it?
+    - Where can I buy [acetaminophen](drug)
+    - How do you pronounce [acetaminophen](drug)
+    - [acetaminophen](drug) is a pain reliever. What is it?
+    - Exactly what is [acetaminophen](drug)
+    - How much [acetaminophen](drug) is in a packet of [acetaminophen](drug)
+    - Where can I find [acetaminophen](drug)
+
+- intent: dosage_drug
+  examples: |
+    - How should I take [acetaminophen](drug)?
+    - Give me [acetaminophen](drug) dosage information
+    - What is the best way to take [acetaminophen](drug)
+    - [acetaminophen](drug): how should I take it?
+    - What should I do if I am taking [acetaminophen](drug)
+    - Do I need to take [acetaminophen](drug) with food?
+    - Is there a recommended dosage for [acetaminophen](drug)
+    - When should I take [acetaminophen](drug)
+    - Which dosage should I use for [acetaminophen](drug)
+    - Can [acetaminophen](drug) be taken with food?
+    - Where do I find [acetaminophen](drug)
+    - [acetaminophen](drug): how much should I take?
+    - Please tell me the [acetaminophen](drug) dosage
+    - I need to know how much [acetaminophen](drug) to take
+    - Please provide me with [acetaminophen](drug) dosage informatio
+    - I need information on [acetaminophen](drug) dosage
+    - Can you give me information about [acetaminophen](drug) dosage
+    - I would like to know the [acetaminophen](drug) dosage
+    - What is the dosage for [acetaminophen](drug)
+    - Please tell me how much [acetaminophen](drug) I should take
+    - Tell me [acetaminophen](drug) dosage
+    - Tell me the dose of [acetaminophen](drug)
+
+- intent: interaction_drug
+  examples: |
+    - What other drugs will affect [acetaminophen](drug)?
+    - What drugs should not be taken with [acetaminophen](drug)?
+    - How does [acetaminophen](drug) interact with other drugs?
+    - Is there anything else that will affect [acetaminophen](drug)
+    - [acetaminophen](drug) is affected by what other drugs?
+    - Are there any other drugs that can interact with [acetaminophen](drug)
+    - Can [acetaminophen](drug) be harmed by other drugs?
+    - Do other drugs affect [acetaminophen](drug)
+    - Can the use of [acetaminophen](drug) be affected by other medications?
+    - What other drugs may affect [acetaminophen](drug)
+    - Is [acetaminophen](drug) affected by any other drugs?
+    - Which other drugs will affect [acetaminophen](drug)
+    - Which drugs should not be taken with [acetaminophen](drug)
+    - Is it safe to take [acetaminophen](drug) with these drugs?
+    - How should [acetaminophen](drug) be taken in conjunction with other drugs?
+    - Taking [acetaminophen](drug) with which medicines is not recommended?
+    - When should [acetaminophen](drug) not be taken?
+    - [acetaminophen](drug) can be taken with or without other drugs?
+    - Is it possible to take [acetaminophen](drug) and other drugs together?
+    - Is [acetaminophen](drug) compatible with other medicines?
+    - Can you take [acetaminophen](drug) with what medications?
+    - Can [acetaminophen](drug) be taken with which drugs?

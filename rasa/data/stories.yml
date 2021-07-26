@@ -2,6 +2,52 @@ version: "2.0"
 
 stories:
 
+- story: request drug info 1
+  steps:
+  - intent: request_drug
+  - action: drugs_form
+  - active_loop: drugs_form
+
+- story: request drug info 2
+  steps:
+  - intent: request_drug
+  - action: drugs_form
+  - active_loop: drugs_form
+  - intent: usage_drug
+  - action: drug_retrieve
+  - action: utter_any_more_questions
+  - intent: affirm
+  - action: utter_how_can_help
+  - intent: avoid_drug
+  - action: drug_retrieve
+  - action: utter_any_more_questions
+  - intent: deny
+  - action: utter_goodbye
+
+- story: request test info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_lab
+  - action: labs_form
+  - active_loop: labs_form
+  - intent: during_lab
+  - action: lab_retrieve
+
+- story: request lab and drug info
+  steps:
+  - intent: detail_lab
+  - action: lab_retrieve
+  - intent: prepare_lab
+  - action: lab_retrieve
+  - intent: avoid_drug
+  - action: drug_retrieve
+  - intent: request_lab
+  - action: labs_form
+  - active_loop: labs_form
+  
+
+
 - story: happy path
   steps:
   - intent: greet

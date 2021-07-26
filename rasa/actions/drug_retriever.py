@@ -40,7 +40,7 @@ class DrugRetrieve(Action):
         if tracker.get_slot('drug') is None:
             intent = tracker.latest_message['intent']['name']
             col = self.intent_mapper(intent)
-            drug_in = tracker.latest_message['entities'][0]['value'].lower()
+            drug_in = tracker.latest_message['entities'][-1]['value'].lower()
         else:
             col = 'uses'
             # Handling overlapping entities case
