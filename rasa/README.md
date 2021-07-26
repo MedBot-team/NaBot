@@ -15,5 +15,5 @@
 5. ~~Add typo fixer feature: Return similar drug/lab by finding word similarities. Ex. In the case of *acetamenophen*, details of *acetaminophen* should be returned.~~
 6. ~~Add *slot_reset* custom action~~
     - ~~This action should be added after *drug/lab_retrieve* in data/rules.yml~~
-7. Add some stories in the *stories.yml* file to define good/bad paths
+7. ~~Add some stories in the *stories.yml* file to define good/bad paths~~
 8. Add *fall_back* and *out_of_scope* features

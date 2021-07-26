@@ -18,15 +18,14 @@ pipeline:
    - name: SpacyTokenizer
    - name: SpacyFeaturizer
    - name: RegexFeaturizer
+     case_sensitive: False
+     use_word_boundaries: True
    - name: LexicalSyntacticFeaturizer
    - name: CountVectorsFeaturizer
    - name: CountVectorsFeaturizer
      analyzer: char_wb
      min_ngram: 1
      max_ngram: 4
-  #  - name: RegexFeaturizer
-  #    case_sensitive: False
-  #    use_word_boundaries: True
    - name: DIETClassifier
      epochs: 100
      constrain_similarities: true
@@ -37,10 +36,10 @@ pipeline:
   #  - name: MitieEntityExtractor
   #  - name: CRFEntityExtractor
    - name: RegexEntityExtractor
-    #  case_sensitive: False
-    #  use_lookup_tables: True
-    #  use_regexes: True
-    #  use_word_boundaries: True
+     case_sensitive: False
+     use_regexes: True
+     use_word_boundaries: True
+    #  use_lookup_tables: True 
    - name: EntitySynonymMapper
    - name: ResponseSelector
      epochs: 100
