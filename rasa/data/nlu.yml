@@ -4,222 +4,862 @@ nlu:
 
 - intent: request_lab
   examples: |
-    - I'm looking for lab test detail 
-    - I am looking for lab test details
-    - I need lab test details
-    - Can you give me information about lab test?
-    - Is there any information about lab test you can give me?
-    - Are you able to provide me with information about lab test?
+    - I'm looking for lab test details. 
+    - Can you give me information about a test?
+    - I want some info about a medical test.
+    - I need detailed information about a test.
+    - Give me instructions about my test.
+    - can you explain a lab test for me?
+    - I need lab test details.
+    - Details about the lab tests are needed.
+    - I need the results of a lab test.
+    - Details of the lab test are needed.
+    - I'm looking for more information about the lab test.
+    - I need details about lab tests.
+    - My lab test results are needed.
+    - I need details on the lab test.
+    - For lab test details, please.
+    - Information about lab tests would be helpful.
+    - Would you be able to tell me more about a test
+    - Is there a test I can take?
+    - Is there any testing information you can provide?
+    - Can you tell me what the test entails?
+    - Would you mind telling me about a test
+    - Could you provide me with information about a test
+    - How can I find out about a test
+    - Could you give me information about the test
+    - Are you able to give me details about a test
+    - Please let me know if there are any tests available?
+    - I would like to know more about a medical test
+    - A medical test interests me.
+    - The test I'm interested in is a medical one.
+    - I need some information about a medical test
+    - My doctor suggested that I take a medical test
+    - There is some information I need regarding a medical test
+    - My doctor suggested I have a medical test. Please tell me more about that.
+    - I am looking for information about a medical test
+    - I would like to find out the results of a medical test
+    - My question is about a medical test
+    - I would like detailed information about a test
+    - Describe the test in detail for me.
+    - A test I am taking needs detailed information.
+    - A test needs to be described in detail to me.
+    - I need detailed information on a test
+    - A test's details would be helpful to me.
+    - Details about a test are needed.
+    - An explanation of the test is needed.
+    - Detailed information is needed about a test
+    - This test requires detailed information.
+    - Please give me instructions about my test
+    - Please explain my test to me.
+    - Please tell me what to do for my test
+    - Tell me how to take my test
+    - Please let me know how to do my test
+    - I need instructions for my test
+    - Please instruct me on my test
+    - My test instructions.
+    - I want to know more about my test
+    - Give me instructions regarding my test
+    - Would you be able to explain a lab test to me
+    - Why do lab tests matter?
+    - Is there anything you can tell me about a lab test?
+    - Would you mind explaining a laboratory test to me
+    - How does a lab test work?
+    - Could you explain to me what a lab test is?
+    - Is there a lab test I should know about?
+    - What is a lab test?
+    - Is it possible for you to explain a laboratory test?
+    - How do I interpret a lab test?
 
 - intent: any_detail_lab
   examples: |
-    - Is there anything else I need to know about the [Anoscopy](lab)?
-    - What else should I know about an [Anoscopy](lab)?
-    - Can you tell me anything else about the [Anoscopy](lab)?
-    - Any other information I need to know about the [Anoscopy](lab)?
+    - Is there anything else I need to know about the [bun](lab)?
+    - What else should I know about an [thyroid-stimulating hormone test](lab)?
+    - any other info about [haptoglobin (hp)](lab)?
+    - Is there anything else I should know about the [doppler ultrasound](lab)?
+    - Would you mind telling me more about the [alt blood](lab)?
+    - Are there any other questions I should ask about the [pdl1](lab)?
+    - Can you tell me if there is anything else I need to know about the [flu](lab)
+    - Would there be anything else I should know about an [iron tests](lab)?
+    - Would you mind telling me anything else about the [amniocentesis](lab)?
+    - Is there anything else I should know about an [t3](lab)?
+    - How else should I prepare for an [troponin](lab)?
+    - [obsessive compulsive disorder test](lab): What else should I know?
+    - Other information I need to think about an [obsessive compulsive disorder](lab)?
+    - How else can I prepare for an [chlamydia](lab)?
+    - Do you have any other information about [ca-125 blood](lab)?
+    - Are there any other details on [hba1c](lab)?
+    - Other info about [glomerular filtration rate](lab)?
+    - Is there any other information you can give me about [crp](lab)?
+    - Can you provide any further information on [heavy metal blood test](lab)?
 
 - intent: result_lab
   examples: |
-    - What do the [Anoscopy](lab) test results mean?
-    - What do the results of the [Anoscopy](lab) test mean?
-    - How are the results from the [Anoscopy](lab) test interpreted?
-    - The [Anoscopy](lab) result means what?
-    - The results of the [Anoscopy](lab) test mean what?
+    - What do the [beta 2 microglobulin tumor marker](lab) test results mean?
+    - What do the results of the [hsv test](lab) test mean?
+    - what does the numbers in [rsv](lab) mean?
+    - ehat are the numbers in [dengue fever test](lab) result?
+    - how can i interpret my [her2](lab) test results?
+    - can you help me understand my [rf](lab) test results?
+    - What does the [malaria](lab) test result mean
+    - [calcium in urine test](lab) results: What do they mean
+    - How should the results of the [ana test](lab) test be interpreted?
+    - [hematocrit test](lab) test results: What does it mean
+    - What does an [mental health screening](lab) test mean
+    - In what sense do the results of an [stool elastase](lab) mean
+    - How do the [alkaline phosphatase](lab) test results mean
+    - What are the results of the [glaucoma](lab) test?
+    - [ova and parasite test](lab) test results: what do they mean
+    - What does the [hemoglobin a1c test](lab) test result mean
+    - [csf analysis](lab) test: what do the results mean
+    - The [aldosterone](lab) test results mean what?
+    - How does the [vitamin e](lab) test help determine what's going on?
+    - What do the numbers in [reticulocyte count](lab) mean
+    - [food allergy testing](lab) numbers: what do they mean
+    - What does the [erythrocyte sedimentation rate](lab) number mean
+    - Why are there different numbers in an [osmolality](lab)?
+    - How do the numbers in [coagulation factor tests](lab) relate to each other?
+    - [syphilis](lab) has numbers, but what are they meant for?
+    - In [strep a test](lab), what does the number mean
+    - What does the alphabetical order in [microalbumin creatinine ratio](lab) mean
+    - What are the numbers in the [stress](lab) result
+    - What are the results of the [rdw](lab)?
+    - How can I read an [blood urea nitrogen](lab) result
+    - How do the numbers appear on the [dhea sulfate](lab) report?
+    - What is the [pancreatic cancer](lab) result number?
+    - The result of an [lactate dehydrogenase isoenzymes](lab) has numbers. What do they mean?
+    - How do you interpret the numbers in an [down syndrome](lab) result
+    - Which numbers do the [haptoglobin (hp)](lab) results represent?
+    - What should I do if I have an [troponin test](lab) test result?
+    - What does my [bacteria culture](lab) test mean?
+    - [hemoglobin test](lab) test results: how should I interpret them?
+    - Is it possible to interpret my [urobilinogen in urine](lab) results
+    - What do my results of the [calcium blood](lab) mean?
+    - In what way can I interpret the results of an [uric acid test](lab) test?
+    - What effect does the [triiodothyronine tests](lab) test have on my health?
+    - My results from the [lyme disease tests](lab) test are confusing. What do I do?
+    - What can I do if I don't understand my [creatine kinase](lab) results
+    - Would you be able to help me understand the results of my [sweat test for cystic fibrosis](lab) test?
+    - Could you explain my results from the [pleural fluid analysis](lab) test to me?
+    - Is there anything you can tell me about my results from my [alpha-1 antitrypsin](lab) test?
+    - How do I interpret my [free light chains](lab) test results
+    - Why didn't my [mthfr mutation](lab) test result make sense to me?
+    - Could you help me understand my [myelography](lab) results
+    - I want to understand why I had an [beta 2 microglobulin tumor marker test](lab) test. Can you help me?
+    - Why did my [csf igg index](lab) test fail?
+    - Do you have any insight to share regarding my [rf test](lab) test results
 
 - intent: risk_lab
   examples: |
-    - Are there any risks to the [Anoscopy](lab)?
-    - Is there any risk associated with an [Anoscopy](lab)?
-    - Do the [Anoscopy](lab) carry any risks?
-    - [Anoscopy](lab) poses any risks?
-    - Is it possible that the [Anoscopy](lab) may have risks?
+    - Are there any risks to the [lh levels test](lab)?
+    - Is there any risk associated with an [sodium blood test](lab)?
+    - is [ca-125 blood](lab) dangerous?
+    - should i be afraid of [blood in urine](lab)?
+    - what should i worry about when doing [balance tests](lab)?
+    - does [anion gap blood](lab) harm people?
+    - Is there any risk associated with an [cbc](lab)?
+    - Is the [parathyroid hormone test](lab) risky?
+    - Is there a risk associated with the [balance](lab)?
+    - Does the [methylmalonic acid test](lab) carry any risks?
+    - Can the [liver function tests](lab) be risky?
+    - [ldh isoenzymes test](lab) poses any risks?
+    - The [yeast infection](lab) has any risks?
+    - Is there a risk associated with an [immunotherapy tests](lab)?
+    - An [complete blood count](lab) entails any risks?
+    - What is the risk of an [cd4 lymphocyte count](lab)
+    - Is an [shbg blood](lab) associated with any risks?
+    - [hba1c](lab) is it risky?
+    - Does an [whooping cough diagnosis](lab) carry any risk?
+    - What are the risks involved in an [cbc](lab)?
+    - An [procalcitonin](lab) comes with what risks?
+    - [shbg blood test](lab) can be dangerous, right?
+    - [zika virus](lab): is it a risky procedure?
+    - [drug testing](lab) poses a risk?
+    - How much should I fear an [flu test](lab)?
+    - Is an [bilirubin blood](lab) something to be feared?
+    - [procalcitonin test](lab): Is it a thing to fear?
+    - What is the risk of having an [strep a test](lab)?
+    - Are there any risks associated with an [alpha-fetoprotein](lab)?
+    - How should I prepare for an [mono](lab)?
+    - When performing an [heavy metal blood](lab), what should I be concerned about?
+    - Is there anything I should worry about when I do an [anoscopy](lab)?
+    - What should I consider when undergoing an [uric acid test](lab)?
+    - How should I approach an [chlamydia test](lab)?
+    - Why should I worry when doing an [t4](lab)?
+    - [nitrites in urine](lab) harms people
+    - [rheumatoid factor](lab): Is it harmful?
+    - [lactate dehydrogenase](lab): does it harm people
 
 - intent: prepare_lab
   examples: |
-    - Will I need to do anything to prepare for the [Anoscopy](lab)?
-    - How should I prepare for the [Anoscopy](lab)?
-    - Does anything need to be done to prepare for the [Anoscopy](lab)?
-    - Will I need to do anything in advance for the [Anoscopy](lab)?
-    - Does there are any preparations I need to make for the [Anoscopy](lab)?
-    - What do I need to do to prepare for the [Anoscopy](lab)?
+    - Will I need to do anything to prepare for the [hiv screening](lab)?
+    - How should I prepare for the [anion gap blood test](lab)?
+    - what should i know before doing [ova and parasite test](lab)?
+    - what do you suggest me to do before [haptoglobin test](lab)?
+    - Do you have any recommendations for people about how to get ready for [acid-fast bacillus](lab)?
+    - Is there anything I need to do to prepare for the [hematocrit](lab)?
+    - Does the [pth test](lab) require any preparation on my part?
+    - Are there any preparations I need to make prior to the [whooping cough diagnosis](lab)
+    - Am I required to prepare anything for the [hematocrit test](lab)
+    - What preparation is required for the [measuring blood pressure](lab)
+    - Can I do anything to prepare for an [strep b](lab)?
+    - Is there anything I have to do before the [phenylketonuria screening](lab)?
+    - Can I prepare for the [comprehensive metabolic panel](lab) in any way?
+    - Should I prepare something for the [fobt](lab)?
+    - What should I do to prepare for the [troponin test](lab)
+    - What is the best way to prepare for an [cbc](lab)?
+    - Is there anything I should prepare for [cbc](lab)
+    - Preparation for the [prolactin levels](lab)?
+    - The [ana](lab): What does my preparation look like?
+    - What should I do before I undergo an [respiratory syncytial virus tests](lab)?
+    - How should I prepare for an [yeast infection tests](lab)?
+    - What should I know before I undergo an [psa](lab)?
+    - Before undergoing an [cognitive testing](lab), what information should I have?
+    - How can I prepare myself for an [fobt](lab)
+    - When should I have an [progesterone](lab)?
+    - What should I know about an [acid-fast bacillus](lab)?
+    - How should I prepare for an [ca-125 blood test](lab)?
+    - Can you tell me what I should do before an [hearing tests for adults](lab)?
+    - What should I do before my [anti-müllerian hormone test](lab)?
+    - Would you recommend I do anything before my [measuring blood pressure](lab)?
+    - Is there anything I should do before the [insulin in blood](lab)?
+    - Could you please suggest some things that I should do before the [ovarian cancer](lab)?
+    - Do you have any tips for me before the [drug](lab)
+    - How should people prepare for an [lactate dehydrogenase test](lab)?
+    - What preparation should people do before an [opioid testing](lab)
+    - Are there any recommendations about how to prepare for an [concussion tests](lab)
+    - Would you have any suggestions on how people should prepare for an [heavy metal blood](lab)?
+    - Could you provide some advice to people about how to prep for an [uric acid test](lab)?
 
 - intent: during_lab
   examples: |
-    - What happens during the [Anoscopy](lab)?
-    - During an [Anoscopy](lab) what happens?
-    - Is there anything that happens during [Anoscopy](lab)?
-    - What happens in [Anoscopy](lab)?
-    - What will happen in the [Anoscopy](lab)?
+    - What happens during the [cortisol](lab)?
+    - During an [white blood count](lab) what happens?
+    - how is [sma test](lab) done?
+    - what should i do in [lactate dehydrogenase isoenzymes test](lab)?
+    - what is done in an [fungal culture test](lab) test?
+    - What happens during an [immunoglobulins blood test](lab)?
+    - How does an [hsv test](lab) work?
+    - An [gfr](lab) consists of what?
+    - When does the [flu test](lab) take place?
+    - During the [nasal swab](lab), what happens?
+    - How is the [amniotic fluid test](lab) performed?
+    - Is an [calcium in urine](lab) painful?
+    - [strep a test](lab): What happens during the procedure?
+    - In an [triiodothyronine tests](lab), what happens?
+    - What happens during an [psa](lab)?
+    - [crystals in urine](lab): What happens during the procedure?
+    - How does an [herpes test](lab) work?
+    - An [lactate dehydrogenase isoenzymes test](lab) involves what?
+    - The [prothrombin time  and inr](lab) process consists of what?
+    - When is an [semen analysis](lab) performed?
+    - In a procedure called an [d-dimer test](lab), what happens
+    - When an [complement blood test](lab) is performed, what is done?
+    - What is an [flu test](lab)?
+    - [tocopherol test](lab): how does it work?
+    - What happens during an [bacteria culture test](lab)?
+    - What are the steps involved in an [co2 in blood](lab)?
+    - [hemoglobin a1c](lab): what does it entail?
+    - [balance](lab): what is it like?
+    - What should I do during an [mma](lab)?
+    - Can you tell me what to do in [hba1c](lab)
+    - How should I proceed in an [luteinizing hormone levels](lab)?
+    - Do I have to do anything in [cognitive](lab)
+    - Is there anything I should do during an [methylmalonic acid](lab)?
+    - How should I do [red blood cell antibody screen](lab)
+    - What do I need to do during an [aldosterone test](lab)
+    - An [dhea sulfate](lab), what is my duty?
+    - How does an [anoscopy](lab) test work?
+    - [acetaminophen level](lab) consists of what?
+    - How is an [prealbumin blood test](lab) performed?
+    - During an [stress tests](lab), what is done?
+    - An [parathyroid hormone test](lab) involves what?
+    - [mcv](lab) entails what?
+    - In an [pth test](lab) test, what happens?
+    - Can you tell me what happens during an [acetaminophen level](lab)?
+    - An [lh levels](lab) test involves what?
 
 - intent: need_lab
   examples: |
-    - Why do I need the [Anoscopy](lab)?
-    - Is [Anoscopy](lab) necessary for me?
-    - Can you tell me why I need the [Anoscopy](lab)?
-    - Is it necessary that I go to the [Anoscopy](lab)?
+    - Why do I need the [ceruloplasmin](lab)?
+    - Is [malaria tests](lab) necessary for me?
+    - should i have an [shbg blood test](lab)?
+    - do i need [alpha-1 antitrypsin test](lab)?
+    - What is the purpose of the [bronchoscopy and bronchoalveolar lavage](lab)?
+    - [videonystagmography](lab): Why do I need it?
+    - Why should I have an [opioid](lab)?
+    - How do I know if I need an [troponin](lab)?
+    - Is the [urobilinogen in urine](lab) necessary for me?
+    - Why am I in need of an [pharmacogenetic tests](lab)?
+    - What is the need for the [ketones in urine](lab)?
+    - The [albumin blood test](lab) is required for what purpose?
+    - Can you tell me why I should have an [tsh](lab)
+    - Is an [hearing tests for children](lab) necessary for me
+    - How important is an [hearing  for adults](lab) for me
+    - Is an [fsh levels test](lab) required for me
+    - What is the benefit of an [follicle-stimulating hormone levels](lab)?
+    - [coagulation factor tests](lab): should I have one?
+    - [ivp](lab) is recommended for me?
+    - What are the benefits of an [salicylates level](lab)
+    - [c. diff testing](lab): Is it necessary?
+    - How much benefit will I receive from an [lyme disease](lab)?
+    - [c-peptide test](lab) is necessary for me?
+    - What are the benefits of an [immunoglobulins blood test](lab)?
 
 - intent: detail_lab
   examples: |
-    - What is the [Anoscopy](lab)?
-    - The [Anoscopy](lab) is what?
-    - I'm looking for [Anoscopy](lab) detail
-    - Can you give me information about [Anoscopy](lab)?
+    - What is the [globulin test](lab)?
+    - The [methylmalonic acid test](lab) is what?
+    - i need some info about [adhd screening](lab)?
+    - give me information about [uric acid](lab).
+    - can you tell me what [urobilinogen in urine](lab) is?
+    - An [whooping cough diagnosis](lab) is what?
+    - [17-hydroxyprogesterone](lab): What is it?
+    - What is an [hpv](lab)?
+    - As a medical procedure, what is [coagulation factor](lab)?
+    - What exactly is an [platelet](lab)?
+    - The [liver function](lab) is what?
+    - What is an [ast test](lab)?
+    - [gamma-glutamyl transferase test](lab) refers to what
+    - An [haptoglobin test](lab) is what
+    - In an [stress](lab), what does one see?
+    - Is this what the [aldosterone](lab) is?
+    - Which is the aim of the [nitrites in urine](lab)?
+    - Would you mind providing me with some information about [afb](lab)?
+    - Is there any information on [c-reactive protein test](lab) I should know?
+    - How can I find out more about [bcr abl genetic](lab)?
+    - What can you tell me about [d-dimer test](lab)?
+    - What is an [erythrocyte sedimentation rate](lab)?
+    - What do I need to know about [immunofixation blood](lab)
+    - Could you please give me some information on [emg and nerve conduction studies](lab)?
+    - Do you have any information about [potassium blood test](lab)?
+    - Would you mind telling me more about [csf igg index](lab)?
+    - Please tell me more about [vitamin e test](lab).
+    - Describe the [c. diff](lab) procedure to me.
+    - [cognitive testing](lab) information would be appreciated.
+    - Describe what an [cmp](lab) is to me.
+    - I would like information on [ceruloplasmin](lab)
+    - [lactate dehydrogenase test](lab) information is of interest to me.
+    - Let me know more about [](lab).
+    - What is an [cmp](lab)?
+    - Is [blood glucose](lab) what you mean?
+    - Could you please tell me what an [t3](lab) is
+    - [mpv blood](lab) is what you are referring to, right?
+    - Do you know what [heavy metal blood](lab) is
+    - What is the meaning of [strep b test](lab)?
+    - Are you familiar with the term [legionella tests](lab)?
+
 
 - intent: usage_lab
   examples: |
-    - What is the [Anoscopy](lab) used for?
-    - What is the purpose of the [Anoscopy](lab)?
-    - [Anoscopy](lab) is used for what?
-    - For what do you use the [Anoscopy](lab)?
+    - What is the [c. diff](lab) used for?
+    - What is the purpose of the [ife blood test](lab)?
+    - what do i need [legionella tests](lab) for?
+    - what is [chloride blood test](lab) used for?
+    - when is [haptoglobin (hp)](lab) needed?
+    - where is [malaria tests](lab) useful?
+    - What is the purpose of an [thyroid-stimulating hormone test](lab)?
+    - The [breast biopsy](lab) is used for what?
+    - [ketones in urine](lab): what is its purpose?
+    - How is an [alpha-fetoprotein](lab) used?
+    - How does the [differential diagnosis](lab) work?
+    - For what does an [lactate dehydrogenase isoenzymes](lab) are used?
+    - [afp tumor marker](lab): for what purpose is it used?
+    - How is the [glomerular filtration rate](lab) used?
+    - How is [calcium blood test](lab) used?
+    - What is the purpose of an [ca-125 blood test](lab)?
+    - An [cbc](lab) is used for what?
+    - How does an [uric acid](lab) work?
+    - [rheumatoid factor](lab): What is its purpose?
+    - Why is an [pharmacogenetic](lab) performed?
+    - The [antineutrophil cytoplasmic antibodies](lab) has what purpose?
+    - Why would you want an [immunotherapy tests](lab)?
+    - [pancreatic cancer](lab): What is it for?
+    - Exactly what does an [mononucleosis tests](lab) do?
+    - Why do I need an [fungal culture test](lab)?
+    - [sma test](lab) is needed for what?
+    - How can an [uric acid test](lab) help me?
+    - What is the purpose of an [tsh](lab)?
+    - What does an [videonystagmography](lab) do for me?
+    - How do I use an [h. pylori](lab)?
+    - [electromyography and nerve conduction studies](lab): Why is it necessary?
+    - [hemoglobin a1c test](lab) is used for what?
+    - What is the purpose of an [celiac disease screening](lab)?
+    - In what context does [tumor marker tests](lab) take place?
+    - Why do we use [potassium blood](lab)?
+    - Why is [vision screening](lab) used?
+    - What is an [fungal culture](lab)?
+    - What is the need for an [immunotherapy](lab)?
+    - When is an [triiodothyronine tests](lab) necessary?
+    - When should an [tumor marker](lab) be performed?
+    - An [ldh test](lab) is required when?
+    - What is the purpose of an [vitamin d](lab)?
+    - What are the reasons for having an [natriuretic peptide](lab)?
+    - What is the purpose of [immunotherapy tests](lab)?
+    - How and where can [therapeutic drug monitoring](lab) be helpful?
+    - When is [platelet tests](lab) useful
+    - In what situations does [antibiotic sensitivity test](lab) come in handy?
+    - [heavy metal blood test](lab) is useful when and where?
 
 - intent: inform_lab
   examples: |
-    - [Anoscopy](lab)
-    - It is [Anoscopy](lab)
+    - [herpes](lab)
+    - It is [fungal culture](lab)
+    - it's [lactate dehydrogenase isoenzymes](lab)
+    - its name is [glaucoma tests](lab)
+    - i think it's [legionella tests](lab)
+    - [bcr abl genetic](lab) is what it is
+    - [strep a test](lab) is the procedure
+    - [ca-125 blood](lab) is the procedure
+    - It's called an [tsh](lab)
+    - [carbon dioxide in blood](lab)
+    - [ccp antibody test](lab) is its name
+    - [pku screening](lab) is what it is called
+    - This process is called [gonorrhea test](lab)
+    - It appears to be an [calcium blood test](lab)
+    - I believe it's an [cbc](lab)
 
 - intent: request_drug
   examples: |
     - I'm looking for drug detail 
     - I am looking for drug information
+    - I'm looking for information about a medicine. 
+    - Can you give me information about a medicine?
+    - I want some info about a drug.
+    - I need detailed information about a drug.
+    - Give me instructions about my medication.
+    - I'm looking for drug information
+    - Detailed information about drugs is needed
     - I need drug details
-    - Can you give me information about drugs?
-    - Is there any information about drugs you can give me?
-    - Are you able to provide me with information about drugs?
+    - Drug details are what I need
+    - The details of the drug I'm interested in
+    - I need details on drugs
+    - Detailed information on drugs would be helpful to me
+    - The drug details I need
+    - My goal is to find out drug details
+    - My interest is in drug details
+    - I am looking for information about drugs
+    - Information on drugs is what I need
+    - Looking for drug informatio
+    - The information I need pertains to drugs
+    - Interested in finding out more about drugs
+    - Finding information about drugs is important to me
+    - Where can I find information about drugs
+    - My goal is to learn more about drugs
+    - Information about drugs would be helpful
+    - The information I'm looking for is on drugs
+    - I need information about a medicine.
+    - The medicine I'm interested in is listed below.
+    - A medicine interests me.
+    - I want to know more about a medicine.
+    - A medicine that I'm looking for information about.
+    - There's information I need about a medicine.
+    - Looking for information on a medicine.
+    - I am searching for information about a medicine.
+    - My research concern a medicine.
+    - There is information I need on a particular medicine.
+    - Is there any information you can give me about a medicine
+    - What is the drug I am interested in?
+    - Would you mind providing me with information about a medicine
+    - Could you please tell me more about a medicine
+    - What information do you have about a medicine
+    - What do you know about a medicine
+    - Is it possible for you to tell me about a medicine
+    - How can I find out more about a medication?
+    - What information can you provide about this medicine
+    - What is the name of the medicine you have?
+    - I need some information about a drug
+    - The drug I'm interested in isn't listed on the internet.
+    - A drug interests me. Please tell me more.
+    - I want to know more about a drug
+    - I would like some information on a drug
+    - There is a drug I'd like more information about.
+    - My question is about a drug
+    - Please provide me with some information regarding a drug
+    - There is something I need to know about a drug
+    - I am looking for drug information.
+    - I need information about a drug in detail.
+    - The drug I am looking for needs to be described in detail.
+    - A drug's details would be helpful to me.
+    - A drug I'm interested in requires detailed information.
+    - An explanation of a drug is needed.
+    - There is a drug I'd like to learn more about.
+    - A drug needs detailed information.
+    - It is necessary for me to find out more about a drug
+    - Detailed information is needed about a drug
+    - I will need detailed information on a drug
+    - Please give me instructions about my medication
+    - My medication instructions.
+    - Please tell me how to take my medication
+    - Provide me with medication instructions.
+    - I need instructions regarding my medication
+    - Please provide me with directions regarding my medication
+    - You should tell me what to do about my medication
+    - Provide me with instructions on my medication
+    - I need instructions for my medication
+    - Let me know what my medication contains.
 
 - intent: warnings_drug
   examples: |
-    - When should you not take [acetaminophen](drug)?
-    - Is there any time when you shouldn't take [acetaminophen](drug)?
-    - Do you need to avoid taking [acetaminophen](drug)?
-    - When should you avoid taking [acetaminophen](drug)?
+    - When should you not take [flexeril](drug)?
+    - Is there any time when you shouldn't take [minoxidil](drug)?
+    - what should i be aware of, when using [bactrim](drug)?
+    - what should i worry about, when taking [nexletol](drug)?
+    - can you give me warnings about [sitagliptin](drug)?
+    - [nadolol](drug) should not be taken when?
+    - Is it safe to take [wellbutrin-sr](drug) during pregnancy?
+    - What situations should you avoid taking [soma](drug)
+    - When is [ziac](drug) not recommended?
+    - If you should not take [strattera](drug), when should you do so?
+    - Does [fosinopril](drug) need to be avoided in certain situations?
+    - What are the times you shouldn't take [pepcid](drug)
+    - Is [lo-loestrin-fe](drug) safe to take when you are pregnant?
+    - What should you not take [valacyclovir](drug) for?
+    - Does [bactroban](drug) cause stomach upset?
+    - What are the times when you shouldn't take [lorlatinib](drug)
+    - Can you take [intuniv](drug) at any time?
+    - Does [rosuvastatin](drug) have a time when it shouldn't be taken?
+    - Do you ever need to avoid taking [premarin](drug)?
+    - If you take [fluvoxamine](drug), when should you not take it?
+    - At what time should you avoid taking [guaifenesin](drug)
+    - Are there any situations in which you shouldn't take [protonix](drug)
+    - What situations make you not take [lipitor](drug)
+    - What are some situations when they shouldn't be taken with [tolterodine](drug)
+    - Does [methocarbamol](drug) have any danger periods?
+    - When using [soliqua](drug), what should I be aware of?
+    - How should I use [aspirin](drug)
+    - Are there any precautions I need to take when taking [omalizumab](drug)
+    - Is there anything I need to know when I use [allegra](drug)
+    - What should I watch out for when taking [hydrochlorothiazide-and-losartan](drug)
+    - What precautions should I take if I use [colchicine](drug)
+    - What should I know if I choose to use [meloxicam](drug)?
+    - How should I manage [fexofenadine](drug) use?
+    - Should I be aware of any risks when taking [xofigo](drug)
+    - Should I be aware of what to expect when taking [aricept](drug)
+    - When taking [](drug), what should I watch out for?
+    - Is taking [sutent](drug) a cause for concern?
+    - Should I be concerned about taking [prolia](drug)
+    - Can I take [cymbalta](drug) without worry?
+    - Is there anything I should be concerned about when taking [hydrocodone](drug)?
+    - Can I have problems taking [ezetimibe](drug)
+    - Can [kristalose](drug) cause problems for me?
+    - Can I worry when I take [ozanimod](drug)
+    - Is taking [xolair](drug) something to be worried about?
+    - Should [levothyroxine](drug) cause concern when taken?
+    - What warnings do you have about [tranexamic-acid](drug)
+    - Is [coreg](drug) dangerous?
+    - Does [midazolam](drug) come with warnings?
+    - What warnings are there about [vytorin](drug)
+    - How should I use [nitrofurantoin](drug)
+    - What are the warnings about [bryhali](drug)?
+    - Can you give me instructions on [eliquis](drug)
+    - Can you tell me how long a person should take [norvasc](drug) for?
+    - Do you know about the dangers of [mylotarg](drug)?
+    - Would you care to tell me about the warnings of [aimovig](drug)
 
 - intent: avoid_drug
   examples: |
-    - What to avoid while taking [acetaminophen](drug)?
-    - When taking [acetaminophen](drug), what should I avoid?
-    - What should one avoid when using [acetaminophen](drug)?
-    - Which things should you avoid while taking [acetaminophen](drug)?
+    - What to avoid while taking [ciprofloxacin](drug)?
+    - When taking [xermelo](drug), what should I avoid?
+    - what should i be careful about [glucosamine-chondroitin-with-msm](drug)?
+    - what should i not do when using [oxymetazoline-nasal](drug)?
+    - What should you avoid while taking [desyrel](drug)
+    - When taking [carvedilol](drug), what should be avoided?
+    - [etoposide](drug): what to avoid?
+    - How should I avoid [gvoke-hypopen-injection](drug) while taking it?
+    - How can you avoid taking [simethicone](drug)
+    - Is there anything to avoid when taking [alprazolam](drug)
+    - Is [oxymetazoline-nasal](drug) harmful if taken with alcohol or caffeine?
+    - Avoid these things while taking [imodium](drug)
+    - How to avoid these side effects when taking [reglan](drug)
+    - [celecoxib](drug) and what to avoid?
+    - What should I avoid when taking [welchol](drug)?
+    - Do I need to avoid taking [baclofen](drug)?
+    - How should I take [olanzapine](drug)?
+    - Can I take [erythromycin](drug) with or without alcohol?
+    - How should I avoid taking [yosprala](drug)?
+    - Can I avoid anything when taking [5-htp](drug)?
+    - Which side effects should I avoid when I take [donepezil](drug)?
+    - What is one thing that I should avoid when taking [kaletra](drug)?
+    - What should I avoid taking [truxima](drug) when I'm going to take it?
+    - What should I avoid taking [dopamine](drug) with?
+    - How should I use [chlorthalidone](drug) safely?
+    - Are there any [risedronate](drug) side effects I should watch out for?
+    - Are there any precautions I need to take with [paroxetine](drug)?
+    - What should I keep in mind when taking [ivermectin](drug)
+    - Is there anything I should know about [carvedilol](drug)
+    - When should I be careful with [unisom-sleep-gels](drug)
+    - Should I take [lamotrigine](drug) with caution?
+    - How should I handle [otezla](drug)?
+    - What do I need to be aware of when taking [telmisartan](drug)
+    - Why should I avoid taking [levemir](drug)
+    - What should I not do when taking [amiodarone](drug)
+    - Can I use [exelon](drug) if I am pregnant?
+    - If I'm taking [methadone](drug), what should I avoid?
+    - Can I take [demerol](drug) if there is something that I should not do?
+    - Why should I avoid taking [nortriptyline](drug)?
+    - In the case of [breo-ellipta](drug), what should I avoid doing?
+    - Can I interfere with the use of [lithium](drug) with anything?
+    - Can I take [acyclovir](drug) if I have a high fever?
+    - Is there anything I should not do when taking [solifenacin](drug)?
+    - What should I not do if I take [zyprexa](drug)
 
 - intent: sideeffects_drug
   examples: |
-    - What are [acetaminophen](drug) side-effects?
-    - What are side-effects of [acetaminophen](drug)
-    - What condition is a serious side effect of [acetaminophen](drug) use?
-    - What are the dangers of [acetaminophen](drug)?
+    - What are [gemfibrozil](drug) side-effects?
+    - What are side-effects of [fosfomycin](drug)?
+    - what side effects does [chlorthalidone](drug) have?
+    - does [metolazone](drug) have any side effects?
+    - can [yonsa](drug) have unexpected effects?
+    - What are the side effects of [glucagon](drug)?
+    - How does [soliqua](drug) affect me?
+    - [penicillin](drug) has what side effects?
+    - [juxtapid](drug) side effects: what are they?
+    - How can [restoril](drug) cause side effects?
+    - Which side effects are associated with [kalbitor](drug)?
+    - Can [tetracycline](drug) have side effects?
+    - Are there any [jadenu](drug) side effects?
+    - [ketamine](drug) side effects?
+    - [aspir-81](drug) has what side effects?
+    - How does [rapamune](drug) affect the body?
+    - What are the side effects of [quinapril](drug)
+    - [latuda](drug) side effects: what are they?
+    - Are there any side effects associated with [zantac](drug)
+    - How long does [xopenex-hfa](drug) stay in the system?
+    - Can [ajovy](drug) have side effects?
+    - How does [naproxen](drug) cause side effects?
+    - [naprosyn](drug): What are its side effects?
+    - How do [invega](drug) side effects occur?
+    - [paxil](drug) has what side effects?
+    - Does [mayzent](drug) have any side effects?
+    - What are the side effects of [semaglutide](drug)?
+    - Is there any side effect of [granisetron](drug)?
+    - Is [dapagliflozin](drug) associated with any side effects?
+    - How are [botox](drug)'s side effects?
+    - How can [temovate](drug) adversely affect me?
+    - How long does [symbicort](drug) last?
+    - Do [mesalamine](drug) side effects exist?
+    - What are the side effects of [estrace](drug)?
+    - How does [meloxicam](drug) affect the body?
+    - Is there a side effect to [desyrel](drug)?
+    - Are there any side effects associated with [vraylar](drug)?
+    - Is [ibrance](drug) associated with any side effects
+    - Can [annovera](drug) have side effects
+    - What side effects might [fosinopril](drug) cause?
+    - [remeron](drug): does it have any side effects
+    - Do [neurontin](drug)'s side effects last?
+    - [ciprofloxacin](drug) is safe, but what are its side effects
+    - [nitazoxanide](drug) may have unexpected side effects
+    - What are the possible side effects of [voltaren](drug)?
+    - [xiaflex](drug) can have unexpected effects, can it?
+    - Is [ivabradine](drug) capable of causing unexpected effects
+    - Is it possible for [griseofulvin](drug) to have unexpected effects
+    - What unexpected effects might be caused by [bydureon](drug)?
+    - Is there a possibility that [indomethacin](drug) can cause unexpected side effects
+    - Does [zonegran](drug) have any unexpected side effects
+    - Is it possible that [zofran-odt](drug) has unexpected effects
+    - Can [codeine](drug) cause unexpected effects
 
 - intent: inform_drug
   examples: |
-    - [acetaminophen](drug)
-    - It is [acetaminophen](drug)
+    - [votrient](drug)
+    - It is [sulfamethoxazole-and-trimethoprim](drug)
+    - it's [terbinafine](drug)
+    - its name is [shingrix](drug)
+    - i think it's [hiprex](drug)
+    - Aspirin [pantoprazole](drug)
+    - An[sprintec](drug)
+    - It contains [urokinase](drug)
+    - [naproxen](drug) is what it is
+    - [vanos](drug) is the active ingredient
+    - There is [testosterone](drug) in it
+    - [hydrocortisone-topical](drug) is in it
+    - [ubrogepant](drug) is the ingredient
+    - There is an [olopatadine-nasal](drug) in this
+    - [vyvanse](drug) is what it is
+    - [oxandrolone](drug) is the active ingredient
+    - [coreg](drug)
+    - There's [buspirone](drug) in it
+    - [ultram](drug) is what makes it work
+    - [lomotil](drug)
+    - [valsartan](drug) is its name
+    - [remdesivir](drug) is the name of the drug
+    - You're talking about [letrozole](drug)
+    - [potassium_chloride](drug), I believe
+    - [fluphenazine](drug) is what I think it is
+    - [gentamicin](drug) might be the culprit
+    - There's [jardiance](drug) in it
+    - The drug is [misoprostol](drug), I think
+    - [urea-topical](drug) may be the cause
 
 - intent: usage_drug
   examples: |
-    - I'm looking for [acetaminophen](drug) detail
-    - What is [acetaminophen](drug)?
-    - Can you give me information about [acetaminophen](drug)?
-    - Are you able to provide me with information about [acetaminophen](drug)?
+    - I'm looking for [nucynta](drug) detail.
+    - What is [entresto](drug)?
+    - why should i take [alendronate](drug)?
+    - why do i need [baclofen](drug)?
+    - what is [hydrocortisone-topical](drug) used for?
+    - what does [urogesic-blue](drug) cure?
+    - [apokyn](drug) details are what I'm looking for.
+    - Detailed information about [tranexamic-acid](drug) is needed.
+    - I need details on [mesalamine](drug).
+    - Please provide me with [carbamazepine](drug) details.
+    - I want to know more about [biotin](drug).
+    - The [wynzora](drug) detail I'm after.
+    - Details about [montelukast](drug) would be helpful.
+    - Details regarding [zinc](drug) are needed.
+    - Please give me [terazosin](drug) details.
+    - Looking for [terazosin](drug) details.
+    - [odefsey](drug) is what?
+    - How does [furosemide](drug) work?
+    - [xeomin](drug), what is it?
+    - Where can I buy [kalbitor](drug)
+    - How is [humulin-r](drug) used?
+    - Where can you find [wycillin](drug)
+    - Why should you take [metronidazole](drug)
+    - Where can I get [wilate](drug)
+    - Who is [itraconazole](drug)
+    - Where can you buy [ferrous_sulfate](drug)
+    - What are the benefits of taking [letrozole](drug)
+    - [strattera](drug) is why I should take it?
+    - How does [apokyn](drug) help me?
+    - Do I need to take [xofluza](drug)
+    - What is the purpose of taking [allopurinol](drug)
+    - How can I take [hydrocortisone-topical](drug)
+    - Is [mucinex](drug) necessary for my condition?
+    - [pregabalin](drug) - why should I take it?
+    - [humalog](drug) is recommended for why?
+    - Is it okay for me to take [glucosamine-chondroitin-with-msm](drug)
+    - What is the purpose of [gocovri](drug)
+    - [triamterene](drug) is why I need it?
+    - Is [misoprostol](drug) necessary for me?
+    - Where can I find [wilate](drug)
+    - [xcopri](drug) is needed for what purpose?
+    - When should I take [requip](drug)
+    - Is there a reason I need [indomethacin](drug)
+    - Does [zofran](drug) help me?
+    - What is the use of [zydelig](drug)
+    - Is [rivaroxaban](drug) required for me?
+    - [rocephin](drug) is used for what?
+    - How does [spinraza-injection](drug) work?
+    - What is the purpose of [topamax](drug)?
+    - Why is [midodrine](drug) used?
+    - Where does [stelara](drug) come from?
+    - When should you take [glycolax](drug)?
+    - Uses of [zostavax](drug)?
+    - Where can you find [actos](drug)?
+    - Why are [trazodone](drug) tablets used?
+    - [imodium](drug) treats what?
+    - How does [vitamin-c](drug) treat pain?
+    - [subutex](drug) is used to treat what?
+    - [descovy](drug) cures what?
+    - The treatment of [femara](drug)?
+    - What is the cure for [questran](drug)?
+    - Does [valtoco](drug) cure anything?
+    - Why is [berinert](drug) used as a medicine?
+    - [urso-forte](drug) can cure what?
+    - [granisetron](drug) treats which conditions?
 
 - intent: dosage_drug
   examples: |
-    - How should I take [acetaminophen](drug)?
-    - Give me [acetaminophen](drug) dosage information
-    - I need to know the dosage of [acetaminophen](drug)
-    - Tell me the dosage of [acetaminophen](drug)
-    - Tell me about [acetaminophen](drug) dosage
+    - How should I take [terbinafine](drug)?
+    - Give me [xopenex-hfa](drug) dosage information.
+    - how many times a day i can take [juluca](drug)?
+    - how often i should use [zaditor](drug)?
+    - how [linzess](drug) should i take every time?
+    - What is the best way to take [aromasin](drug)
+    - [sodium-bicarbonate](drug) should be taken as directed?
+    - Can I take [questran](drug) with food?
+    - What are the instructions for taking [taltz](drug)?
+    - Is there a way I can take [brilinta](drug) properly?
+    - When and how should I take [kesimpta](drug)
+    - What is the recommended dosage of [5-htp](drug)
+    - Where can I find [prolia](drug)
+    - Is [zostavax](drug) a safe drug to take?
+    - Why is it important to take [clindamycin](drug) on an empty stomach?
+    - Please tell me the [cefdinir](drug) dosage.
+    - How much [nebivolol](drug) should I take.
+    - Give me the dosage information for [naltrexone](drug).
+    - I need information on [fish_oil](drug) dosage.
+    - Please let me know how much [ubrelvy](drug) to take.
+    - I would like to know the [fluvoxamine](drug) dosage.
+    - I need [westhroid](drug) dosage information
+    - Give me information about [azithromycin](drug) dosage.
+    - Please tell me what [xofluza](drug) dosage I need.
+    - Provide me with the dosage for [reclast](drug).
+    - Can I take [niaspan](drug) more than once a day?
+    - What is the maximum dosage of [lenvima](drug) I can take each day?
+    - How often can a person take [sucralfate](drug) each day?
+    - Am I allowed to take [clonidine](drug) many times a day?
+    - What is the recommended dose of [haloperidol](drug) per day for me?
+    - If I take [garlic](drug) every morning, how many times should I do so?
+    - Can I take [jornay-pm](drug) as often as I like?
+    - How often can I take [dexilant](drug) a day?
+    - How many times per day can I take [kevzara](drug)?
+    - When can I take [cyclobenzaprine](drug) per day?
+    - When should I take [atomoxetine](drug)
+    - What is the recommended frequency of [gralise](drug) use?
+    - Do I need to take [xanax_xr](drug) every day?
+    - [doxazosin](drug) should I be taken how often?
+    - What's the recommended dose for [donepezil](drug)
+    - [gralise](drug) dosage: how often should I take it?
+    - What is the appropriate dosage of [mupirocin-topical](drug)
+    - Is it recommended to take [gemzar](drug) frequently?
+    - Is it necessary to take an [skelaxin](drug) every day?
+    - Should I use [requip](drug) every day?
+    - How much [oxcarbazepine](drug) should I take every time
+    - Do I need to take [zosyn](drug) every time I get a headache?
+    - Whenever I take [vilazodone](drug), how much should I take it?
+    - The amount of [strattera](drug) that I should take every time I take it?
+    - Is there an [midazolam](drug) dose I must follow every time
+    - Should I take [insulin](drug) every time
+    - Is it necessary to take [aripiprazole](drug) every time
+    - What dose of [paragard](drug) should I take every time
+    - Do I have to take [itraconazole](drug) every time
+    - Is there a way to take [flovent](drug) every time I become sick?
 
 - intent: interaction_drug
   examples: |
-    - What other drugs will affect [acetaminophen](drug)?
-    - What drugs should not be taken with [acetaminophen](drug)?
-    - Which drugs have a drug interaction with [acetaminophen](drug)?
-    - What other drugs will affect [acetaminophen](drug)?
-
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
-- intent: goodbye
-  examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - What other drugs will affect [alunbrig](drug)?
+    - What drugs should not be taken with [fulvestrant](drug)?
+    - which drugs have interaction with [hydrochlorothiazide-and-valsartan](drug)?
+    - what are the interactions of [keytruda](drug)?
+    - What other drugs interact with [sinemet](drug)
+    - How does [glyxambi](drug) interact with other medications?
+    - [imipramine](drug) can be affected by what other drugs?
+    - Are there any other drugs that affect [kombiglyze-xr](drug)
+    - How are other drugs likely to affect [fentanyl](drug)
+    - Is [xeloda](drug) affected by other drugs?
+    - Do other drugs affect [tolterodine](drug)
+    - Can [omega-3-polyunsaturated-fatty-acids](drug) be harmed by other medications?
+    - How will other medications affect [dupixent](drug)
+    - Which other drugs will affect [olaparib](drug)?
+    - Which drugs should not be taken with [glucagon](drug)
+    - Is [sertraline](drug) safe to take with what medications?
+    - How should [heparin](drug) be taken?
+    - Do I have to avoid taking [cimzia](drug) with any of the following drugs?
+    - Are there any drugs that should not be taken together with [zosyn](drug)
+    - Is it ok to take [bendeka](drug) with the following drugs?
+    - Do not take any drugs with [gas-x](drug)
+    - [coreg](drug) should not be taken with what drugs?
+    - [ketoconazole-topical](drug) should not be taken with the following drugs?
+    - What drugs interact with [amiodarone](drug)
+    - [qvar-redihaler](drug) interacts with which drugs?
+    - Do [omnicef](drug) and certain medications interact?
+    - How does [trazodone](drug) interact with other drugs?
+    - Are there any drugs that interact with [erythromycin](drug)
+    - [metolazone](drug) and which drugs interact?
+    - [tecentriq](drug) and what drugs?
+    - Are there drugs which interact with [sofosbuvir](drug)
+    - [benicar](drug) interactions: which drugs?
+    - Do [nabumetone](drug) and other drugs interact?
+    - [firazyr](drug) interactions: what are they?
+    - How does [humulin_n](drug) interact with other medications?
+    - [lo-loestrin-fe](drug) interacts with what?
+    - What are the interactions between [exenatide](drug) and other medications?
+    - [onpattro](drug) interactions?
+    - What are [pepcid](drug)'s interactions?
+    - A potential interaction of [remicade](drug)
+    - [jadenu](drug) interacts with which drugs?
+    - The interactions of [olux](drug)
+    - Do [skyrizi](drug) interactions occur?

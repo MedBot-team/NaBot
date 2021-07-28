@@ -1,0 +1,11 @@
+version: '2.0'
+
+nlu:
+- synonym: drug
+  examples: |
+    - medicine
+    - medical drug
+    - medication
+    - potion
+    - pill
+    - suppository

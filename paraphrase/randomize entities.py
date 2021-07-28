@@ -41,7 +41,7 @@ def randomize_entity_names(nlu_dict, entities_dict):
 
 if __name__=='__main__':
     
-    NLU_FILE = './nlu_augment.yml'
+    NLU_FILE = './nlu_cleaned.yml'
     ENTITY_NAMES = ['drug', 'lab'] #lookup files should be in same directoty as this file
     OUTPUT_FILE = 'nlu_random.yml'
     #load files

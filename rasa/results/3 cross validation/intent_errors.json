@@ -1,0 +1,1586 @@
+[
+  {
+    "text": "should i be afraid of blood in urine?",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.5060798525810242
+    }
+  },
+  {
+    "text": "How should I prepare for an mono?",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.9995654821395874
+    }
+  },
+  {
+    "text": "Do I have to do anything in cognitive",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.9295136332511902
+    }
+  },
+  {
+    "text": "What is the purpose of the bronchoscopy and bronchoalveolar lavage?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.9807558059692383
+    }
+  },
+  {
+    "text": "The albumin blood test is required for what purpose?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.9985918402671814
+    }
+  },
+  {
+    "text": "What are the benefits of an immunoglobulins blood test?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.3994124233722687
+    }
+  },
+  {
+    "text": "As a medical procedure, what is coagulation factor?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "inform_lab",
+      "confidence": 0.5375133156776428
+    }
+  },
+  {
+    "text": "Which is the aim of the nitrites in urine?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.891705334186554
+    }
+  },
+  {
+    "text": "How can I find out more about bcr abl genetic?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "inform_lab",
+      "confidence": 0.5409113168716431
+    }
+  },
+  {
+    "text": "cognitive testing information would be appreciated.",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.9339277744293213
+    }
+  },
+  {
+    "text": "Is blood glucose what you mean?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.32494935393333435
+    }
+  },
+  {
+    "text": "Are you familiar with the term legionella tests?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "inform_lab",
+      "confidence": 0.9449896812438965
+    }
+  },
+  {
+    "text": "what do i need legionella tests for?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "inform_lab",
+      "confidence": 0.5613030791282654
+    }
+  },
+  {
+    "text": "ketones in urine: what is its purpose?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.5229974985122681
+    }
+  },
+  {
+    "text": "electromyography and nerve conduction studies: Why is it necessary?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.8665111660957336
+    }
+  },
+  {
+    "text": "In what context does tumor marker tests take place?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.8312666416168213
+    }
+  },
+  {
+    "text": "When is an triiodothyronine tests necessary?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.8801511526107788
+    }
+  },
+  {
+    "text": "It is fungal culture",
+    "intent": "inform_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.9941032528877258
+    }
+  },
+  {
+    "text": "What should I watch out for when taking hydrochlorothiazide-and-losartan",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.9404957890510559
+    }
+  },
+  {
+    "text": "Is there anything I should be concerned about when taking hydrocodone?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.8593912124633789
+    }
+  },
+  {
+    "text": "How should I use chlorthalidone safely?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.34229525923728943
+    }
+  },
+  {
+    "text": "Can I use exelon if I am pregnant?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.9968279600143433
+    }
+  },
+  {
+    "text": "Can I interfere with the use of lithium with anything?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.755973756313324
+    }
+  },
+  {
+    "text": "it's terbinafine",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.9963423013687134
+    }
+  },
+  {
+    "text": "Aspirin pantoprazole",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.43684664368629456
+    }
+  },
+  {
+    "text": "vyvanse is what it is",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.5747231841087341
+    }
+  },
+  {
+    "text": "Detailed information about tranexamic-acid is needed.",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.8842365145683289
+    }
+  },
+  {
+    "text": "How can I take hydrocortisone-topical",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "inform_drug",
+      "confidence": 0.7772402167320251
+    }
+  },
+  {
+    "text": "Is there a reason I need indomethacin",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "inform_drug",
+      "confidence": 0.5622112154960632
+    }
+  },
+  {
+    "text": "What is the use of zydelig",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.5256673693656921
+    }
+  },
+  {
+    "text": "How does vitamin-c treat pain?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.35361969470977783
+    }
+  },
+  {
+    "text": "sodium-bicarbonate should be taken as directed?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.9577803611755371
+    }
+  },
+  {
+    "text": "Please let me know how much ubrelvy to take.",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.5561273097991943
+    }
+  },
+  {
+    "text": "Please tell me what xofluza dosage I need.",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.5332221388816833
+    }
+  },
+  {
+    "text": "When should I take atomoxetine",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.9699798822402954
+    }
+  },
+  {
+    "text": "How else should I prepare for an troponin?",
+    "intent": "any_detail_lab",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.9464438557624817
+    }
+  },
+  {
+    "text": "How else can I prepare for an chlamydia?",
+    "intent": "any_detail_lab",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.6769765615463257
+    }
+  },
+  {
+    "text": "Can you provide any further information on heavy metal blood test?",
+    "intent": "any_detail_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.9550941586494446
+    }
+  },
+  {
+    "text": "How does the vitamin e test help determine what's going on?",
+    "intent": "result_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.5685319900512695
+    }
+  },
+  {
+    "text": "Why are there different numbers in an osmolality?",
+    "intent": "result_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.9162104725837708
+    }
+  },
+  {
+    "text": "is ca-125 blood dangerous?",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.7888842821121216
+    }
+  },
+  {
+    "text": "shbg blood test can be dangerous, right?",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.8452778458595276
+    }
+  },
+  {
+    "text": "When performing an heavy metal blood, what should I be concerned about?",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.5893014073371887
+    }
+  },
+  {
+    "text": "What should I consider when undergoing an uric acid test?",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.6885554194450378
+    }
+  },
+  {
+    "text": "what is done in an fungal culture test test?",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.5899292826652527
+    }
+  },
+  {
+    "text": "Can you tell me what to do in hba1c",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.49015095829963684
+    }
+  },
+  {
+    "text": "mcv entails what?",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.4890230596065521
+    }
+  },
+  {
+    "text": "What is the need for the ketones in urine?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.9805340766906738
+    }
+  },
+  {
+    "text": "What are the benefits of an salicylates level",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.8426263332366943
+    }
+  },
+  {
+    "text": "An whooping cough diagnosis is what?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.40655750036239624
+    }
+  },
+  {
+    "text": "What is an erythrocyte sedimentation rate?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.7813094854354858
+    }
+  },
+  {
+    "text": "What do I need to know about immunofixation blood",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "any_detail_lab",
+      "confidence": 0.6538341641426086
+    }
+  },
+  {
+    "text": "Describe the c. diff procedure to me.",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "inform_lab",
+      "confidence": 0.4720185399055481
+    }
+  },
+  {
+    "text": "An ldh test is required when?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.4993271231651306
+    }
+  },
+  {
+    "text": "Does bactroban cause stomach upset?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.7043849229812622
+    }
+  },
+  {
+    "text": "Do you ever need to avoid taking premarin?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.9888722896575928
+    }
+  },
+  {
+    "text": "What should I know if I choose to use meloxicam?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.4879019856452942
+    }
+  },
+  {
+    "text": "Can I worry when I take ozanimod",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.5667088031768799
+    }
+  },
+  {
+    "text": "How should I use nitrofurantoin",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.9321199059486389
+    }
+  },
+  {
+    "text": "How to avoid these side effects when taking reglan",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.9840247631072998
+    }
+  },
+  {
+    "text": "Are there any risedronate side effects I should watch out for?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.9981890916824341
+    }
+  },
+  {
+    "text": "How should I handle otezla?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.3144441545009613
+    }
+  },
+  {
+    "text": "What should I not do when taking amiodarone",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.8872435688972473
+    }
+  },
+  {
+    "text": "Is there anything I should not do when taking solifenacin?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.9968387484550476
+    }
+  },
+  {
+    "text": "What should I not do if I take zyprexa",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.7218172550201416
+    }
+  },
+  {
+    "text": "How long does xopenex-hfa stay in the system?",
+    "intent": "sideeffects_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.9693415760993958
+    }
+  },
+  {
+    "text": "How long does symbicort last?",
+    "intent": "sideeffects_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.5073773860931396
+    }
+  },
+  {
+    "text": "Sprintec",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "inform_lab",
+      "confidence": 0.3874778747558594
+    }
+  },
+  {
+    "text": "It contains urokinase",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.6154887676239014
+    }
+  },
+  {
+    "text": "hydrocortisone-topical is in it",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.9998578429222107
+    }
+  },
+  {
+    "text": "ultram is what makes it work",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.4681898355484009
+    }
+  },
+  {
+    "text": "lomotil",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "inform_lab",
+      "confidence": 0.4715834856033325
+    }
+  },
+  {
+    "text": "potassium_chloride, I believe",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "inform_lab",
+      "confidence": 0.6972039937973022
+    }
+  },
+  {
+    "text": "Please provide me with carbamazepine details.",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.31417012214660645
+    }
+  },
+  {
+    "text": "humalog is recommended for why?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.4781104326248169
+    }
+  },
+  {
+    "text": "When should I take requip",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.495711088180542
+    }
+  },
+  {
+    "text": "How does spinraza-injection work?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.6361189484596252
+    }
+  },
+  {
+    "text": "Uses of zostavax?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.9683777689933777
+    }
+  },
+  {
+    "text": "Is sertraline safe to take with what medications?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.6180047392845154
+    }
+  },
+  {
+    "text": "Would you mind telling me more about the alt blood?",
+    "intent": "any_detail_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.9992684721946716
+    }
+  },
+  {
+    "text": "What effect does the triiodothyronine tests test have on my health?",
+    "intent": "result_lab",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.6958909034729004
+    }
+  },
+  {
+    "text": "Is an calcium in urine painful?",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.9963993430137634
+    }
+  },
+  {
+    "text": "How does an herpes test work?",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.6146277785301208
+    }
+  },
+  {
+    "text": "How should I do red blood cell antibody screen",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.30374273657798767
+    }
+  },
+  {
+    "text": "How does an anoscopy test work?",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.7258267998695374
+    }
+  },
+  {
+    "text": "should i have an shbg blood test?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.9914207458496094
+    }
+  },
+  {
+    "text": "Why should I have an opioid?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.639278769493103
+    }
+  },
+  {
+    "text": "How important is an hearing  for adults for me",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.4553338289260864
+    }
+  },
+  {
+    "text": "The methylmalonic acid test is what?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.9953606128692627
+    }
+  },
+  {
+    "text": "give me information about uric acid.",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.819227397441864
+    }
+  },
+  {
+    "text": "can you tell me what urobilinogen in urine is?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.9423931241035461
+    }
+  },
+  {
+    "text": "The liver function is what?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.8101586699485779
+    }
+  },
+  {
+    "text": "In an stress, what does one see?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.9597519040107727
+    }
+  },
+  {
+    "text": "Do you know what heavy metal blood is",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.9210015535354614
+    }
+  },
+  {
+    "text": "Why do I need an fungal culture test?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.48208847641944885
+    }
+  },
+  {
+    "text": "Why do we use potassium blood?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.7313390374183655
+    }
+  },
+  {
+    "text": "carbon dioxide in blood",
+    "intent": "inform_lab",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.44655171036720276
+    }
+  },
+  {
+    "text": "It appears to be an calcium blood test",
+    "intent": "inform_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.481553316116333
+    }
+  },
+  {
+    "text": "I believe it's an cbc",
+    "intent": "inform_lab",
+    "intent_prediction": {
+      "name": "inform_drug",
+      "confidence": 0.7302879095077515
+    }
+  },
+  {
+    "text": "What precautions should I take if I use colchicine",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.9978323578834534
+    }
+  },
+  {
+    "text": "How should I manage fexofenadine use?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.5385264158248901
+    }
+  },
+  {
+    "text": "Should I be aware of any risks when taking xofigo",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.7535569667816162
+    }
+  },
+  {
+    "text": "Should I be concerned about taking prolia",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.9763062596321106
+    }
+  },
+  {
+    "text": "Can you give me instructions on eliquis",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.9080170392990112
+    }
+  },
+  {
+    "text": "Can you tell me how long a person should take norvasc for?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.2777000069618225
+    }
+  },
+  {
+    "text": "remdesivir is the name of the drug",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.9987646341323853
+    }
+  },
+  {
+    "text": "You're talking about letrozole",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.993712842464447
+    }
+  },
+  {
+    "text": "The drug is misoprostol, I think",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.8962473273277283
+    }
+  },
+  {
+    "text": "why should i take alendronate?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.8714994192123413
+    }
+  },
+  {
+    "text": "why do i need baclofen?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.48147857189178467
+    }
+  },
+  {
+    "text": "I want to know more about biotin.",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.7466766238212585
+    }
+  },
+  {
+    "text": "Do I need to take xofluza",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.973158597946167
+    }
+  },
+  {
+    "text": "pregabalin - why should I take it?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.7538877129554749
+    }
+  },
+  {
+    "text": "Is it okay for me to take glucosamine-chondroitin-with-msm",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.7579154968261719
+    }
+  },
+  {
+    "text": "Is misoprostol necessary for me?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.7010185718536377
+    }
+  },
+  {
+    "text": "Can I take questran with food?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.9152879118919373
+    }
+  },
+  {
+    "text": "What is the recommended frequency of gralise use?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.5558542609214783
+    }
+  },
+  {
+    "text": "Do I have to avoid taking cimzia with any of the following drugs?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.7688097357749939
+    }
+  },
+  {
+    "text": "Is there anything you can tell me about my results from my alpha-1 antitrypsin test?",
+    "intent": "result_lab",
+    "intent_prediction": {
+      "name": "any_detail_lab",
+      "confidence": 0.693359911441803
+    }
+  },
+  {
+    "text": "Why did my csf igg index test fail?",
+    "intent": "result_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.9686007499694824
+    }
+  },
+  {
+    "text": "How should I approach an chlamydia test?",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.3217533230781555
+    }
+  },
+  {
+    "text": "rheumatoid factor: Is it harmful?",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.9625279903411865
+    }
+  },
+  {
+    "text": "What should I know about an acid-fast bacillus?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.8572918772697449
+    }
+  },
+  {
+    "text": "how is sma test done?",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "inform_lab",
+      "confidence": 0.267121285200119
+    }
+  },
+  {
+    "text": "An dhea sulfate, what is my duty?",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.9094284176826477
+    }
+  },
+  {
+    "text": "Why do I need the ceruloplasmin?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.9669255018234253
+    }
+  },
+  {
+    "text": "videonystagmography: Why do I need it?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.7664822936058044
+    }
+  },
+  {
+    "text": "Can you tell me why I should have an tsh",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.6676082611083984
+    }
+  },
+  {
+    "text": "coagulation factor tests: should I have one?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.957615077495575
+    }
+  },
+  {
+    "text": "What exactly is an platelet?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.9941723346710205
+    }
+  },
+  {
+    "text": "Is this what the aldosterone is?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "inform_drug",
+      "confidence": 0.49252212047576904
+    }
+  },
+  {
+    "text": "Would you mind providing me with some information about afb?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.5470794439315796
+    }
+  },
+  {
+    "text": "Could you please give me some information on emg and nerve conduction studies?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.42022639513015747
+    }
+  },
+  {
+    "text": "I would like information on ceruloplasmin",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.3207397758960724
+    }
+  },
+  {
+    "text": "Let me know more about [](lab).",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.9972310662269592
+    }
+  },
+  {
+    "text": "What is the meaning of strep b test?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.6471462249755859
+    }
+  },
+  {
+    "text": "For what does an lactate dehydrogenase isoenzymes are used?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "inform_lab",
+      "confidence": 0.40481939911842346
+    }
+  },
+  {
+    "text": "Why is an pharmacogenetic performed?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.9568948149681091
+    }
+  },
+  {
+    "text": "What is an fungal culture?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "inform_lab",
+      "confidence": 0.5759499073028564
+    }
+  },
+  {
+    "text": "herpes",
+    "intent": "inform_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.7562947869300842
+    }
+  },
+  {
+    "text": "its name is glaucoma tests",
+    "intent": "inform_lab",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.7325633764266968
+    }
+  },
+  {
+    "text": "bcr abl genetic is what it is",
+    "intent": "inform_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.999663770198822
+    }
+  },
+  {
+    "text": "Is it safe to take wellbutrin-sr during pregnancy?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.5037667751312256
+    }
+  },
+  {
+    "text": "At what time should you avoid taking guaifenesin",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.9983730912208557
+    }
+  },
+  {
+    "text": "Does methocarbamol have any danger periods?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.5500400066375732
+    }
+  },
+  {
+    "text": "Can I take cymbalta without worry?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.5984276533126831
+    }
+  },
+  {
+    "text": "what should i not do when using oxymetazoline-nasal?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.9239931702613831
+    }
+  },
+  {
+    "text": "Is oxymetazoline-nasal harmful if taken with alcohol or caffeine?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.6073208451271057
+    }
+  },
+  {
+    "text": "Can I take erythromycin with or without alcohol?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.9171184301376343
+    }
+  },
+  {
+    "text": "Are there any precautions I need to take with paroxetine?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.8513758778572083
+    }
+  },
+  {
+    "text": "Can I take acyclovir if I have a high fever?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.9554106593132019
+    }
+  },
+  {
+    "text": "coreg",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.7250030040740967
+    }
+  },
+  {
+    "text": "Details about montelukast would be helpful.",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.46110349893569946
+    }
+  },
+  {
+    "text": "What are the benefits of taking letrozole",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.8378438949584961
+    }
+  },
+  {
+    "text": "What is the purpose of taking allopurinol",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.8075893521308899
+    }
+  },
+  {
+    "text": "What is the purpose of gocovri",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.9312102198600769
+    }
+  },
+  {
+    "text": "xcopri is needed for what purpose?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.9944188594818115
+    }
+  },
+  {
+    "text": "What is the cure for questran?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.5414271950721741
+    }
+  },
+  {
+    "text": "Does valtoco cure anything?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.5777599215507507
+    }
+  },
+  {
+    "text": "Where can I find prolia",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.9405995607376099
+    }
+  },
+  {
+    "text": "How should heparin be taken?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.43455439805984497
+    }
+  },
+  {
+    "text": "I would like to find out the results of a medical test",
+    "intent": "request_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.5536795854568481
+    }
+  },
+  {
+    "text": "Other info about glomerular filtration rate?",
+    "intent": "any_detail_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.3331889808177948
+    }
+  },
+  {
+    "text": "When should I have an progesterone?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.2973790466785431
+    }
+  },
+  {
+    "text": "When is an semen analysis performed?",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.8036210536956787
+    }
+  },
+  {
+    "text": "hemoglobin a1c: what does it entail?",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.9163776636123657
+    }
+  },
+  {
+    "text": "balance: what is it like?",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.6567478179931641
+    }
+  },
+  {
+    "text": "do i need alpha-1 antitrypsin test?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.993958592414856
+    }
+  },
+  {
+    "text": "How do I know if I need an troponin?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.3738158941268921
+    }
+  },
+  {
+    "text": "Why am I in need of an pharmacogenetic tests?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.9822834730148315
+    }
+  },
+  {
+    "text": "ivp is recommended for me?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.6229131817817688
+    }
+  },
+  {
+    "text": "How much benefit will I receive from an lyme disease?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.57329261302948
+    }
+  },
+  {
+    "text": "17-hydroxyprogesterone: What is it?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.8216316103935242
+    }
+  },
+  {
+    "text": "What is an ast test?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.7057357430458069
+    }
+  },
+  {
+    "text": "An haptoglobin test is what",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.910477876663208
+    }
+  },
+  {
+    "text": "Is there any information on c-reactive protein test I should know?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.3424951732158661
+    }
+  },
+  {
+    "text": "What can you tell me about d-dimer test?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.4073655605316162
+    }
+  },
+  {
+    "text": "Would you mind telling me more about csf igg index?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.9988771080970764
+    }
+  },
+  {
+    "text": "How does the differential diagnosis work?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.6216633915901184
+    }
+  },
+  {
+    "text": "How is the glomerular filtration rate used?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.5235387086868286
+    }
+  },
+  {
+    "text": "Exactly what does an mononucleosis tests do?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.44940701127052307
+    }
+  },
+  {
+    "text": "In what situations does antibiotic sensitivity test come in handy?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.8975421190261841
+    }
+  },
+  {
+    "text": "It's called an tsh",
+    "intent": "inform_lab",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.3950185477733612
+    }
+  },
+  {
+    "text": "pku screening is what it is called",
+    "intent": "inform_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.45926275849342346
+    }
+  },
+  {
+    "text": "What should you not take valacyclovir for?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.8819657564163208
+    }
+  },
+  {
+    "text": "Is there anything I need to know when I use allegra",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.43511271476745605
+    }
+  },
+  {
+    "text": "When taking [](drug), what should I watch out for?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.31242895126342773
+    }
+  },
+  {
+    "text": "How should I take olanzapine?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.8185200095176697
+    }
+  },
+  {
+    "text": "Should I take lamotrigine with caution?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.4485708177089691
+    }
+  },
+  {
+    "text": "What do I need to be aware of when taking telmisartan",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.99900221824646
+    }
+  },
+  {
+    "text": "urea-topical may be the cause",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.2814066410064697
+    }
+  },
+  {
+    "text": "I need details on mesalamine.",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.8163511157035828
+    }
+  },
+  {
+    "text": "Is mucinex necessary for my condition?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.6761964559555054
+    }
+  },
+  {
+    "text": "When should you take glycolax?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.7950668931007385
+    }
+  },
+  {
+    "text": "Why is berinert used as a medicine?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.9999599456787109
+    }
+  },
+  {
+    "text": "When and how should I take kesimpta",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.46339115500450134
+    }
+  },
+  {
+    "text": "Is zostavax a safe drug to take?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.8125801086425781
+    }
+  },
+  {
+    "text": "Why is it important to take clindamycin on an empty stomach?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.7236095666885376
+    }
+  }
+]

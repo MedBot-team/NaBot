@@ -1,0 +1,1430 @@
+[
+  {
+    "text": "any other info about haptoglobin (hp)?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 37,
+        "value": "haptoglobin (hp)",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 21,
+        "end": 37,
+        "confidence_entity": 0.999337375164032,
+        "value": "haptoglobin (hp)",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What do the beta 2 microglobulin tumor marker test results mean?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 45,
+        "value": "beta 2 microglobulin tumor marker",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 12,
+        "end": 45,
+        "confidence_entity": 0.9871608018875122,
+        "value": "beta 2 microglobulin tumor marker",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 12,
+        "end": 50,
+        "value": "beta 2 microglobulin tumor marker test",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "can you help me understand my rf test results?",
+    "entities": [
+      {
+        "start": 30,
+        "end": 32,
+        "value": "rf",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 30,
+        "end": 32,
+        "confidence_entity": 0.9451045393943787,
+        "value": "rheumatoid-factor-rf",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "lab",
+        "start": 30,
+        "end": 37,
+        "value": "rf test",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The aldosterone test results mean what?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "aldosterone",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 15,
+        "confidence_entity": 0.9887626767158508,
+        "value": "aldosterone",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 20,
+        "value": "aldosterone test",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "How does the vitamin e test help determine what's going on?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 22,
+        "value": "vitamin e",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 13,
+        "end": 22,
+        "confidence_entity": 0.9987723231315613,
+        "value": "vitamin e",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 13,
+        "end": 27,
+        "value": "vitamin e test",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Which numbers do the haptoglobin (hp) results represent?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 37,
+        "value": "haptoglobin (hp)",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 21,
+        "end": 37,
+        "confidence_entity": 0.9982471466064453,
+        "value": "haptoglobin (hp)",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What does my bacteria culture test mean?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 29,
+        "value": "bacteria culture",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 13,
+        "end": 29,
+        "confidence_entity": 0.9991477727890015,
+        "value": "bacteria culture",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 13,
+        "end": 34,
+        "value": "bacteria culture test",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Is there anything you can tell me about my results from my alpha-1 antitrypsin test?",
+    "entities": [
+      {
+        "start": 59,
+        "end": 78,
+        "value": "alpha-1 antitrypsin",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 59,
+        "end": 78,
+        "confidence_entity": 0.9669142961502075,
+        "value": "alpha-1 antitrypsin",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 59,
+        "end": 83,
+        "value": "alpha-1 antitrypsin test",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Why didn't my mthfr mutation test result make sense to me?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 28,
+        "value": "mthfr mutation",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 14,
+        "end": 28,
+        "confidence_entity": 0.9997163414955139,
+        "value": "mthfr mutation",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 14,
+        "end": 33,
+        "value": "mthfr mutation test",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "When should I have an progesterone?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 34,
+        "value": "progesterone",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 22,
+        "end": 34,
+        "confidence_entity": 0.9983618855476379,
+        "value": "progesterone",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 22,
+        "end": 34,
+        "value": "progesterone",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "lab",
+        "start": 22,
+        "end": 34,
+        "value": "progesterone",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Is there anything I should do before the insulin in blood?",
+    "entities": [
+      {
+        "start": 41,
+        "end": 57,
+        "value": "insulin in blood",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 41,
+        "end": 57,
+        "confidence_entity": 0.9990519881248474,
+        "value": "insulin in blood",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 41,
+        "end": 48,
+        "value": "insulin",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "lab",
+        "start": 41,
+        "end": 57,
+        "value": "insulin in blood",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "acetaminophen level consists of what?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 19,
+        "value": "acetaminophen level",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 19,
+        "confidence_entity": 0.999617338180542,
+        "value": "acetaminophen level",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 13,
+        "value": "acetaminophen",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 19,
+        "value": "acetaminophen level",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me what happens during an acetaminophen level?",
+    "entities": [
+      {
+        "start": 39,
+        "end": 58,
+        "value": "acetaminophen level",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 39,
+        "end": 58,
+        "confidence_entity": 0.999647855758667,
+        "value": "acetaminophen level",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 39,
+        "end": 52,
+        "value": "acetaminophen",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "lab",
+        "start": 39,
+        "end": 58,
+        "value": "acetaminophen level",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "An lh levels test involves what?",
+    "entities": [
+      {
+        "start": 3,
+        "end": 12,
+        "value": "lh levels",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 3,
+        "end": 12,
+        "confidence_entity": 0.9997541308403015,
+        "value": "lh levels",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 3,
+        "end": 17,
+        "value": "lh levels test",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "when is haptoglobin (hp) needed?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 24,
+        "value": "haptoglobin (hp)",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 8,
+        "end": 24,
+        "confidence_entity": 0.9973069429397583,
+        "value": "haptoglobin (hp)",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I'm looking for drug detail",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 16,
+        "end": 20,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I am looking for drug information",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 17,
+        "end": 21,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I want some info about a drug.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 25,
+        "end": 29,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I need detailed information about a drug.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 36,
+        "end": 40,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I'm looking for drug information",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 16,
+        "end": 20,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I need drug details",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 7,
+        "end": 11,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Drug details are what I need",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 4,
+        "value": "Drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The details of the drug I'm interested in",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 19,
+        "end": 23,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The drug details I need",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 8,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "My goal is to find out drug details",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 23,
+        "end": 27,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "My interest is in drug details",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 18,
+        "end": 22,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Looking for drug information",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 12,
+        "end": 16,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What is the drug I am interested in?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 12,
+        "end": 16,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I need some information about a drug",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 32,
+        "end": 36,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The drug I'm interested in isn't listed on the internet.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 8,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "A drug interests me. Please tell me more.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 2,
+        "end": 6,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I want to know more about a drug",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 28,
+        "end": 32,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I would like some information on a drug",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 35,
+        "end": 39,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "There is a drug I'd like more information about.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 11,
+        "end": 15,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "My question is about a drug",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 23,
+        "end": 27,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Please provide me with some information regarding a drug",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 52,
+        "end": 56,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "There is something I need to know about a drug",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 42,
+        "end": 46,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I am looking for drug information.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 17,
+        "end": 21,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I need information about a drug in detail.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 27,
+        "end": 31,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The drug I am looking for needs to be described in detail.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 8,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "A drug's details would be helpful to me.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 2,
+        "end": 6,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "A drug I'm interested in requires detailed information.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 2,
+        "end": 6,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "An explanation of a drug is needed.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 20,
+        "end": 24,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "There is a drug I'd like to learn more about.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 11,
+        "end": 15,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "A drug needs detailed information.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 2,
+        "end": 6,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "It is necessary for me to find out more about a drug",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 48,
+        "end": 52,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Detailed information is needed about a drug",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 39,
+        "end": 43,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I will need detailed information on a drug",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 38,
+        "end": 42,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Is it safe to take wellbutrin-sr during pregnancy?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 32,
+        "value": "wellbutrin-sr",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 19,
+        "end": 32,
+        "confidence_entity": 0.9973583817481995,
+        "value": "wellbutrin-sr",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 19,
+        "end": 29,
+        "value": "wellbutrin",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "lab",
+        "start": 40,
+        "end": 49,
+        "value": "pregnancy",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What should I watch out for when taking hydrochlorothiazide-and-losartan",
+    "entities": [
+      {
+        "start": 40,
+        "end": 72,
+        "value": "hydrochlorothiazide-and-losartan",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 40,
+        "end": 72,
+        "confidence_entity": 0.9853737354278564,
+        "value": "hydrochlorothiazide-and-losartan",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 40,
+        "end": 59,
+        "value": "hydrochlorothiazide",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "drug",
+        "start": 64,
+        "end": 72,
+        "value": "losartan",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "When taking [](drug), what should I watch out for?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 15,
+        "end": 19,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-msm?",
+    "entities": [
+      {
+        "start": 31,
+        "end": 63,
+        "value": "glucosamine-chondroitin-with-msm",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 31,
+        "end": 63,
+        "confidence_entity": 0.9914407730102539,
+        "value": "glucosamine-chondroitin-with-msm",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 31,
+        "end": 42,
+        "value": "glucosamine",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "When should I be careful with unisom-sleep-gels",
+    "entities": [
+      {
+        "start": 30,
+        "end": 47,
+        "value": "unisom-sleep-gels",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 30,
+        "end": 47,
+        "confidence_entity": 0.9945279955863953,
+        "value": "unisom-sleep-gels",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 30,
+        "end": 36,
+        "value": "unisom",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "How long does xopenex-hfa stay in the system?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 25,
+        "value": "xopenex-hfa",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 14,
+        "end": 25,
+        "confidence_entity": 0.9981343150138855,
+        "value": "xopenex-hfa",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 14,
+        "end": 21,
+        "value": "xopenex",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Is it possible that zofran-odt has unexpected effects",
+    "entities": [
+      {
+        "start": 20,
+        "end": 30,
+        "value": "zofran-odt",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 20,
+        "end": 30,
+        "confidence_entity": 0.9955573678016663,
+        "value": "zofran-odt",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 20,
+        "end": 26,
+        "value": "zofran",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Aspirin pantoprazole",
+    "entities": [
+      {
+        "start": 8,
+        "end": 20,
+        "value": "pantoprazole",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 8,
+        "end": 20,
+        "confidence_entity": 0.9982699155807495,
+        "value": "pantoprazole",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 7,
+        "value": "salicylates-aspirin",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "drug",
+        "start": 8,
+        "end": 20,
+        "value": "pantoprazole",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "hydrocortisone-topical is in it",
+    "entities": [
+      {
+        "start": 0,
+        "end": 22,
+        "value": "hydrocortisone-topical",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 22,
+        "confidence_entity": 0.9978780746459961,
+        "value": "hydrocortisone-topical",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 14,
+        "value": "hydrocortisone",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "remdesivir is the name of the drug",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "remdesivir",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.9999594688415527,
+        "value": "remdesivir",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 10,
+        "value": "remdesivir",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "lab",
+        "start": 30,
+        "end": 34,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The drug is misoprostol, I think",
+    "entities": [
+      {
+        "start": 12,
+        "end": 23,
+        "value": "misoprostol",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 12,
+        "end": 23,
+        "confidence_entity": 0.9993064403533936,
+        "value": "misoprostol",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 12,
+        "end": 23,
+        "value": "misoprostol",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 8,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what is hydrocortisone-topical used for?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 30,
+        "value": "hydrocortisone-topical",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 8,
+        "end": 30,
+        "confidence_entity": 0.9984775185585022,
+        "value": "hydrocortisone-topical",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 8,
+        "end": 22,
+        "value": "hydrocortisone",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "How can I take hydrocortisone-topical",
+    "entities": [
+      {
+        "start": 15,
+        "end": 37,
+        "value": "hydrocortisone-topical",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 15,
+        "end": 37,
+        "confidence_entity": 0.9981250166893005,
+        "value": "hydrocortisone-topical",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 15,
+        "end": 29,
+        "value": "hydrocortisone",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Is it okay for me to take glucosamine-chondroitin-with-msm",
+    "entities": [
+      {
+        "start": 26,
+        "end": 58,
+        "value": "glucosamine-chondroitin-with-msm",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 26,
+        "end": 58,
+        "confidence_entity": 0.9901138544082642,
+        "value": "glucosamine-chondroitin-with-msm",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 26,
+        "end": 37,
+        "value": "glucosamine",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "urso-forte can cure what?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "urso-forte",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.9972559809684753,
+        "value": "urso-forte",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 4,
+        "value": "urso",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Give me xopenex-hfa dosage information.",
+    "entities": [
+      {
+        "start": 8,
+        "end": 19,
+        "value": "xopenex-hfa",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 8,
+        "end": 19,
+        "confidence_entity": 0.9976758360862732,
+        "value": "xopenex-hfa",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 8,
+        "end": 15,
+        "value": "xopenex",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Is zostavax a safe drug to take?",
+    "entities": [
+      {
+        "start": 3,
+        "end": 11,
+        "value": "zostavax",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 3,
+        "end": 11,
+        "confidence_entity": 0.999945878982544,
+        "value": "zostavax",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 3,
+        "end": 11,
+        "value": "zostavax",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "lab",
+        "start": 19,
+        "end": 23,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "which drugs have interaction with hydrochlorothiazide-and-valsartan?",
+    "entities": [
+      {
+        "start": 34,
+        "end": 67,
+        "value": "hydrochlorothiazide-and-valsartan",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 34,
+        "end": 67,
+        "confidence_entity": 0.9878334999084473,
+        "value": "hydrochlorothiazide-and-valsartan",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 34,
+        "end": 53,
+        "value": "hydrochlorothiazide",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "drug",
+        "start": 58,
+        "end": 67,
+        "value": "valsartan",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "ketoconazole-topical should not be taken with the following drugs?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 20,
+        "value": "ketoconazole-topical",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 20,
+        "confidence_entity": 0.9976115226745605,
+        "value": "ketoconazole-topical",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 12,
+        "value": "ketoconazole",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  }
+]

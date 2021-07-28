@@ -1,0 +1,36 @@
+{
+  "lab": {
+    "precision": 0.9412515964240102,
+    "recall": 0.9787516600265604,
+    "f1-score": 0.9596354166666667,
+    "support": 753,
+    "confused_with": {
+      "drug": 4
+    }
+  },
+  "drug": {
+    "precision": 0.9876237623762376,
+    "recall": 0.908883826879271,
+    "f1-score": 0.9466192170818506,
+    "support": 439,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9570345408593092,
+    "recall": 0.9530201342281879,
+    "f1-score": 0.9550231189575451,
+    "support": 1192
+  },
+  "macro avg": {
+    "precision": 0.9644376794001239,
+    "recall": 0.9438177434529158,
+    "f1-score": 0.9531273168742587,
+    "support": 1192
+  },
+  "weighted avg": {
+    "precision": 0.9583299360658121,
+    "recall": 0.9530201342281879,
+    "f1-score": 0.9548416988665541,
+    "support": 1192
+  }
+}
