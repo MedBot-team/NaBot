@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, '../../chatbot')
+sys.path.insert(0, '../../application')
 
 import typing
 from typing import Any, Optional, Text, Dict, List, Type
