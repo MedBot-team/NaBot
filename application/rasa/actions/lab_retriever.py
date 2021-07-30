@@ -30,7 +30,7 @@ class LabRetrieve(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        df = pd.read_csv('../medlineplus_lab_dataset/dataset_files/medplus_labs.csv')
+        df = pd.read_csv('../../datasets/medplus_labs.csv')
 
         # Check if entity is recognized or not
         if not tracker.latest_message['entities']:
