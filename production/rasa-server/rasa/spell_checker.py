@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, '../../application')
+sys.path.insert(0, '../')
 
 import typing
 from typing import Any, Optional, Text, Dict, List, Type
