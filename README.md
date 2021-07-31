@@ -1,5 +1,30 @@
 ﻿# Rasa Medical Chatbot
 
+## Introduction
+
+To run Rasa chatbot we need to run actions-server and chatbot-server separately. So we've seperated actions, datasets and chatbot from each other.
+
+Action-Server will contain actions and datasets and Rasa-Server will contain chatbot model and its autocorrect component.
+
+```
+production/
+├── action-server
+│   ├── actions
+│   └── datasets
+└── rasa-server
+    ├── autocorrect
+    │   └── data
+    └── rasa
+        ├── data
+        ├── models
+        └── tests
+```
+In the rest of document, we're going to build seperated images for actions and rasa and then run them together.
+
+----
+
+## Build an image
+
 1. Build a *rasa chatbot* image
 
 ```
@@ -11,6 +36,10 @@ docker build -t rasa-server production/rasa-server/
 ```
 docker build -t action-server production/action-server/
 ```
+
+---
+
+## Make containers and run images
 
 3. Run *docker-compose* to start and run the chatbot and its actions together in an isolated environment
 ```
@@ -27,6 +56,10 @@ curl --location --request POST 'http://localhost:5005/webhooks/rest/webhook' \
 }'
 ```
 
+---
+
+## Monitor the chatbot
+
 5. Check for errors and warnings in logs
 ```
 docker-compose -f production/docker-compose.yml logs -f -t
@@ -36,6 +69,10 @@ docker-compose -f production/docker-compose.yml logs -f -t
 ```
 docker stats
 ```
+
+---
+
+## In removing the chatbot case
 
 7. Stop and remove chatbot containers
 ```
