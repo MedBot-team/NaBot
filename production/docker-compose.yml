@@ -1,0 +1,11 @@
+services:
+  rasa:
+    image: rasa-server
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+  app:
+    image: action-server
+    expose: 
+      - 5055 
