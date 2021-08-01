@@ -34,13 +34,13 @@ In the rest of document, we're going to build seperated images for actions and r
 1. Build a *rasa chatbot* image
 
 ```
-docker build -t rasa-server -f Dockerfile-Multistage production/rasa-server/
+docker build -t rasa-server -f production/rasa-server/Dockerfile-Multistage production/rasa-server/
 ```
 
 2. Build an *action server* image 
 
 ```
-docker build -t action-server -f Dockerfile-Multistage production/action-server/
+docker build -t action-server -f production/action-server/Dockerfile-Multistage production/action-server/
 ```
 
 
