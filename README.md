@@ -17,10 +17,12 @@ Action-Server will contain actions and datasets and Rasa-Server will contain cha
 production/
 ├── action-server
 │   ├── actions
-│   └── datasets
+│   ├── datasets
+│   └── docker
 └── rasa-server
     ├── autocorrect
     │   └── data
+    ├── docker
     └── rasa
         ├── data
         ├── models
@@ -28,27 +30,27 @@ production/
 ```
 In the rest of document, we're going to build seperated images for actions and rasa and then run them together.
 
+### **Choose your Dockerfile**
+
+1. Copy your desired Dockerfile from docker directory. Default Dockerfile is Dockerfile-Multistage.
+```
+cp production/rasa-server/docker/Dockerfile-Rasa production/rasa-server/Dockerfile
+cp production/action-server/docker/Dockerfile-Rasa production/action-server/Dockerfile
+```
 
 ### **Build an image**
 
-1. Build a *rasa chatbot* image
+2. Build a *rasa chatbot and action server* images
 
 ```
-docker build -t rasa-server -f production/rasa-server/Dockerfile-Multistage production/rasa-server/
+docker-compose -f production/docker-compose.yml build
 ```
-
-2. Build an *action server* image 
-
-```
-docker build -t action-server -f production/action-server/Dockerfile-Multistage production/action-server/
-```
-
 
 ### **Make containers and run images**
 
 3. Run *docker-compose* to start and run the chatbot and its actions together in an isolated environment
 ```
-docker-compose -f production/docker-compose.yml up -d
+docker-compose -f production/docker-compose.yml up -d --no-build
 ```
 
 4. Test your chatbot
