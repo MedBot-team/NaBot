@@ -1,21 +1,30 @@
 #version: "3.9"
 services:
   rasa:
-    build: rasa-server
+    build: 
+      context: ./rasa-server
+      dockerfile: Dockerfile
     image: rasa-server
     container_name: chatbot-server
     restart: always
     ports:
       - 5005:5005
     volumes:
-      - ./:/app
+      - ./logs:/rasa-server/rasa/logs
     networks:
       - rasa-netowrk
+    env_file:
+      - .env
+    command: [$TOKEN]
   app:
-    build: action-server
+    build: 
+      context: ./action-server
+      dockerfile: Dockerfile
     image: action-server
     container_name: action-server
     restart: always
+    volumes:
+      - ./logs:/action-server/logs
     networks:
       - rasa-netowrk
     expose: 

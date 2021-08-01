@@ -46,5 +46,5 @@ WORKDIR /rasa-server/rasa
 VOLUME /tmp
 
 EXPOSE 5005
-ENTRYPOINT ["rasa"]
-CMD [ "run", "--enable-api" ] 
+ENTRYPOINT ["rasa", "run", "--log-file", "logs/rasa-server.log", "--enable-api", "--auth-token"]
+CMD [ "YOUR TOKEN" ] 

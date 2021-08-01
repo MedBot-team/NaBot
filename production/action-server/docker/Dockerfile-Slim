@@ -33,6 +33,8 @@ VOLUME /tmp
 COPY actions/ ./actions
 COPY datasets ./datasets
 
-RUN rasa telemetry disable
-ENTRYPOINT ["rasa"]
-CMD [ "run", "actions" ] 
+RUN mkdir logs && \
+    rasa telemetry disable
+    
+ENTRYPOINT ["rasa", "run", "--log-file", "logs/action-server.log", "actions", "--actions"]
+CMD [ "actions" ] 

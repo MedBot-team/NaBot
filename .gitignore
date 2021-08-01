@@ -137,5 +137,3 @@ dmypy.json
 # Environmental variables
 *.env
 
-.keras
-.config

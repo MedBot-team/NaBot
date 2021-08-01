@@ -30,9 +30,20 @@ production/
 ```
 In the rest of document, we're going to build seperated images for actions and rasa and then run them together.
 
+### **Genrate token**
+1. Generate token for requests authentication. You can do this manually or use urandom device file.
+```
+echo TOKEN=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 20) > production/.env
+```
+Check your token:
+```
+$ cat production/.env
+TOKEN=SOME_RANDOM_STRING
+```
+
 ### **Choose your Dockerfile**
 
-1. Copy your desired Dockerfile from docker directory. Default Dockerfile is Dockerfile-Slim.
+2. Copy your desired Dockerfile from docker directory. Default Dockerfile is Dockerfile-Slim.
 ```
 cp production/rasa-server/docker/Dockerfile-Rasa production/rasa-server/Dockerfile
 cp production/action-server/docker/Dockerfile-Rasa production/action-server/Dockerfile
@@ -40,7 +51,7 @@ cp production/action-server/docker/Dockerfile-Rasa production/action-server/Dock
 
 ### **Build an image**
 
-2. Build a *rasa chatbot and action server* images
+3. Build a *rasa chatbot and action server* images
 
 ```
 docker-compose -f production/docker-compose.yml build
@@ -48,31 +59,45 @@ docker-compose -f production/docker-compose.yml build
 
 ### **Make containers and run images**
 
-3. Run *docker-compose* to start and run the chatbot and its actions together in an isolated environment
+4. Run *docker-compose* to start and run the chatbot and its actions together in an isolated environment
 ```
-docker-compose -f production/docker-compose.yml up -d --no-build
+docker-compose -f production/docker-compose.yml up -d
 ```
 
-4. Test your chatbot
+5. Test your chatbot
 ```
 curl --location --request POST 'http://localhost:5005/webhooks/rest/webhook' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "message" : "Can you give me dosage information of abilify?",
+    "message" : "Can you give me dosage information of Abilify?",
     "sender" : "default"
 }'
 ```
-
-
+Debug your model. (Use your token instead of SOME_RANDOM_STRING)
+```
+curl --location --request POST 'http://localhost:5005/model/parse?token=SOME_RANDOM_STRING' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "text" : "Can you give me dosage information of Abilify?"
+}'
+```
+Or you can use following command. (Again you should use your token instead of SOME_RANDOM_STRING)
+```
+curl --location --request GET 'localhost:5005/conversations/default/tracker?token=SOME_RANDOM_STRING' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "text" : "Can you give me dosage information of Abilify?"
+}'
+```
 
 ### **Monitor the chatbot**
 
-5. Check for errors and warnings in logs
+6. Check for errors and warnings in logs
 ```
 docker-compose -f production/docker-compose.yml logs -f -t
 ```
 
-6. Monitor a live stream of containers resource usage statistics
+7. Monitor a live stream of containers resource usage statistics
 ```
 docker stats
 ```
@@ -81,7 +106,7 @@ docker stats
 
 ## In removing the chatbot case
 
-7. Stop and remove chatbot containers
+8. Stop and remove chatbot containers
 ```
 docker-compose -f production/docker-compose.yml down
 ```
