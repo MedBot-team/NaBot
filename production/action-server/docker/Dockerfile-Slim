@@ -21,29 +21,18 @@ RUN python -m venv /opt/venv && \
     pip install --no-deps wheels/*.whl && \
     rm -rf wheels *.egg-info
   
-RUN python -m spacy download en_core_web_md && \
-    python -m spacy link en_core_web_md en
-
-WORKDIR /rasa-server
-
-COPY autocorrect ./autocorrect
-RUN python -c "import autocorrect; autocorrect.Speller('en_med')"
-
-COPY rasa ./rasa
-WORKDIR /rasa-server/rasa 
-RUN rasa telemetry disable && \
-    rasa train
-
 # Runtime image
 FROM base AS runtime-stage
 
 COPY --from=build-stage /opt/venv /opt/venv
-COPY --from=build-stage /rasa-server /rasa-server
-
 ENV PATH="/opt/venv/bin:$PATH"
 
-WORKDIR /rasa-server/rasa 
+WORKDIR /action-server
 VOLUME /tmp
 
-EXPOSE 5005
-CMD [ "rasa", "run", "--enable-api" ] 
+COPY actions/ ./actions
+COPY datasets ./datasets
+
+RUN rasa telemetry disable
+ENTRYPOINT ["rasa"]
+CMD [ "run", "actions" ] 

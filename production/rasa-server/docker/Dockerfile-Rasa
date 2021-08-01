@@ -41,4 +41,5 @@ ENV PATH="/opt/venv/bin:$PATH"
 WORKDIR /rasa-server/rasa 
 
 EXPOSE 5005
-CMD [ "rasa", "run", "--enable-api" ] 
+ENTRYPOINT ["rasa"]
+CMD [ "run", "--enable-api" ] 

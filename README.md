@@ -32,7 +32,7 @@ In the rest of document, we're going to build seperated images for actions and r
 
 ### **Choose your Dockerfile**
 
-1. Copy your desired Dockerfile from docker directory. Default Dockerfile is Dockerfile-Multistage.
+1. Copy your desired Dockerfile from docker directory. Default Dockerfile is Dockerfile-Slim.
 ```
 cp production/rasa-server/docker/Dockerfile-Rasa production/rasa-server/Dockerfile
 cp production/action-server/docker/Dockerfile-Rasa production/action-server/Dockerfile

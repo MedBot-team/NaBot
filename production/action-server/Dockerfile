@@ -34,4 +34,5 @@ COPY actions/ ./actions
 COPY datasets ./datasets
 
 RUN rasa telemetry disable
-CMD [ "rasa", "run", "actions" ] 
+ENTRYPOINT ["rasa"]
+CMD [ "run", "actions" ] 
