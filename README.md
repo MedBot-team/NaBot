@@ -1,6 +1,13 @@
 ﻿# Rasa Medical Chatbot
 
-## Introduction
+## Installation guide
+
+### **Clone Rasa branch**
+```
+git clone https://github.com/arezae/chatbot --branch rasa --single-branch --depth 1
+```
+
+### **Directory tree**
 
 To run Rasa chatbot we need to run actions-server and chatbot-server separately. So we've seperated actions, datasets and chatbot from each other.
 
@@ -21,25 +28,23 @@ production/
 ```
 In the rest of document, we're going to build seperated images for actions and rasa and then run them together.
 
-----
 
-## Build an image
+### **Build an image**
 
 1. Build a *rasa chatbot* image
 
 ```
-docker build -t rasa-server production/rasa-server/
+docker build -t rasa-server -f Dockerfile-Multistage production/rasa-server/
 ```
 
 2. Build an *action server* image 
 
 ```
-docker build -t action-server production/action-server/
+docker build -t action-server -f Dockerfile-Multistage production/action-server/
 ```
 
----
 
-## Make containers and run images
+### **Make containers and run images**
 
 3. Run *docker-compose* to start and run the chatbot and its actions together in an isolated environment
 ```
@@ -56,9 +61,9 @@ curl --location --request POST 'http://localhost:5005/webhooks/rest/webhook' \
 }'
 ```
 
----
 
-## Monitor the chatbot
+
+### **Monitor the chatbot**
 
 5. Check for errors and warnings in logs
 ```
