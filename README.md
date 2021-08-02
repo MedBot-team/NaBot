@@ -1,112 +1,36 @@
 ﻿# Rasa Medical Chatbot
 
-## Installation guide
+MedBot is a [Rasa-based](https://rasa.com/), smart medical chatbot. It can retrieve medicines and lab tests information for users just by chatting with it.
 
-### **Clone Rasa branch**
-```
-git clone https://github.com/arezae/chatbot --branch rasa --single-branch --depth 1
-```
+- Hey, MedBot, can you give me dosage information of Acetaminophen?
+- Of course, I can! :wink:
 
-### **Directory tree**
+We will support more features in the future. But now, we only support medicines and lab tests information.
 
-To run Rasa chatbot we need to run actions-server and chatbot-server separately. So we've seperated actions, datasets and chatbot from each other.
+# List of MedBot features
 
-Action-Server will contain actions and datasets and Rasa-Server will contain chatbot model and its autocorrect component.
+You can find out a list of medicines, labs, and their information which we're supporting, in the following. 
 
-```
-production/
-├── action-server
-│   ├── actions
-│   ├── datasets
-│   └── docker
-└── rasa-server
-    ├── autocorrect
-    │   └── data
-    ├── docker
-    └── rasa
-        ├── data
-        ├── models
-        └── tests
-```
-In the rest of document, we're going to build seperated images for actions and rasa and then run them together.
+* [List of medicines in our dataset](https://github.com/arezae/chatbot/wiki/List-of-medicines)
+* [List of lab tests in our dataset](https://github.com/arezae/chatbot/wiki/List-of-lab-test)
+* List of information about medicines that MedBot supports 
+* List of information about lab tests that MedBot supports
 
-### **Genrate token**
-1. Generate token for requests authentication. You can do this manually or use urandom device file.
-```
-echo TOKEN=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 20) > production/.env
-```
-Check your token:
-```
-$ cat production/.env
-TOKEN=SOME_RANDOM_STRING
-```
+# Installation Guide
 
-### **Choose your Dockerfile**
+MedBot can be installed from its source code or by docker images. For more information, please read our [installation guide document](https://github.com/arezae/chatbot/wiki/Installation-Guide).
 
-2. Copy your desired Dockerfile from docker directory. Default Dockerfile is Dockerfile-Slim.
-```
-cp production/rasa-server/docker/Dockerfile-Rasa production/rasa-server/Dockerfile
-cp production/action-server/docker/Dockerfile-Rasa production/action-server/Dockerfile
-```
+# Contributing
 
-### **Build an image**
+If you have an idea for improving MedBot, or even if you want medicine or lab test information, which is not supported in MedBot yet, do not hesitate. Create an issue in GitHub. :heart:
 
-3. Build a *rasa chatbot and action server* images
+MedBot needs an open-source contribution. The more features it has, the more skillful it becomes! 
 
-```
-docker-compose -f production/docker-compose.yml build
-```
+# Credits
+Our chatbot gets its power from the [Rasa](https://rasa.com/) engine. We are thankful to their team, for their contribution to open-source society. :heart_eyes:
 
-### **Make containers and run images**
+Our autocorrect component in the chatbot is based on [autocorrect](https://github.com/filyp/autocorrect), which medical and Persian dictionaries are added to it. We are thankful to their team, for their contribution to open-source society. :star_struck:
 
-4. Run *docker-compose* to start and run the chatbot and its actions together in an isolated environment
-```
-docker-compose -f production/docker-compose.yml up -d
-```
+A list of medicines information has been collected from [Drugs.com](https://www.drugs.com/) and [MedlinePlus](https://medlineplus.gov/druginformation.html). We're appreciating their teams for producing great medicines information. :hugs:
 
-5. Test your chatbot
-```
-curl --location --request POST 'http://localhost:5005/webhooks/rest/webhook' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "message" : "Can you give me dosage information of Abilify?",
-    "sender" : "default"
-}'
-```
-Debug your model. (Use your token instead of SOME_RANDOM_STRING)
-```
-curl --location --request POST 'http://localhost:5005/model/parse?token=SOME_RANDOM_STRING' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "text" : "Can you give me dosage information of Abilify?"
-}'
-```
-Or you can use following command. (Again you should use your token instead of SOME_RANDOM_STRING)
-```
-curl --location --request GET 'localhost:5005/conversations/default/tracker?token=SOME_RANDOM_STRING' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "text" : "Can you give me dosage information of Abilify?"
-}'
-```
-
-### **Monitor the chatbot**
-
-6. Check for errors and warnings in logs
-```
-docker-compose -f production/docker-compose.yml logs -f -t
-```
-
-7. Monitor a live stream of containers resource usage statistics
-```
-docker stats
-```
-
----
-
-## In removing the chatbot case
-
-8. Stop and remove chatbot containers
-```
-docker-compose -f production/docker-compose.yml down
-```
+A list of lab tests information has been collected from [Lab tests online](https://labtestsonline.org/) and [MedlinePlus](https://medlineplus.gov/lab-tests/). We're appreciating their teams for producing great lab tests information. :hugs:
