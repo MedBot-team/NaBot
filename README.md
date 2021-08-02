@@ -13,8 +13,8 @@ You can find out a list of medicines, labs, and their information which we're su
 
 * [List of medicines in our dataset](https://github.com/arezae/chatbot/wiki/List-of-medicines)
 * [List of lab tests in our dataset](https://github.com/arezae/chatbot/wiki/List-of-lab-test)
-* List of information about medicines that MedBot supports 
-* List of information about lab tests that MedBot supports
+* [List of information about medicines that MedBot supports](https://github.com/arezae/chatbot/wiki/Medicines-information)
+* [List of information about lab tests that MedBot supports](https://github.com/arezae/chatbot/wiki/Lab-tests-information)
 
 # Installation Guide
 
@@ -27,9 +27,9 @@ If you have an idea for improving MedBot, or even if you want medicine or lab te
 MedBot needs an open-source contribution. The more features it has, the more skillful it becomes! 
 
 # Credits
-Our chatbot gets its power from the [Rasa](https://rasa.com/) engine. We are thankful to their team, for their contribution to open-source society. :heart_eyes:
+Our chatbot gets its power from the [Rasa](https://rasa.com/) engine. We are thankful to their team for their contribution to open-source society. :heart_eyes:
 
-Our autocorrect component in the chatbot is based on [autocorrect](https://github.com/filyp/autocorrect), which medical and Persian dictionaries are added to it. We are thankful to their team, for their contribution to open-source society. :star_struck:
+Our autocorrect component in the chatbot is based on [autocorrect](https://github.com/filyp/autocorrect), which medical and Persian dictionaries are added to it. We are thankful to their team for their contribution to open-source society. :star_struck:
 
 A list of medicines information has been collected from [Drugs.com](https://www.drugs.com/) and [MedlinePlus](https://medlineplus.gov/druginformation.html). We're appreciating their teams for producing great medicines information. :hugs:
 
