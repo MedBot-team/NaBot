@@ -1,51 +1,60 @@
-# Base image
+# Base Stage - Buster-Slim is used as a base image
 FROM python:3.8-slim AS base
 
+# Update base image. It could be helpful for security reasons 
 RUN apt-get update -qq && \
     apt-get upgrade -qq && \
     apt-get autoremove -y -qq && \
     apt-get autoclean -y -qq
 
-# Build image
+# Build stage
 FROM base AS build-stage
-
+# Change current directory to build
 WORKDIR /build
 COPY requirements.txt /build
-
+# Activate virtual environment. 
+# Download python pacakges and compile some of them
+# Install binaries. and the make things clear 
 ENV PATH="/opt/venv/bin:$PATH"
-
 RUN python -m venv /opt/venv && \
     . /opt/venv/bin/activate && \
     pip install --no-cache-dir --upgrade pip wheel && \
     pip wheel --requirement=requirements.txt --wheel-dir=wheels && \
     pip install --no-deps wheels/*.whl && \
     rm -rf wheels *.egg-info
-  
+# Download spacy model weights 
 RUN python -m spacy download en_core_web_md && \
     python -m spacy link en_core_web_md en
 
 WORKDIR /rasa-server
-
+# Copy autocorrect module from the host
 COPY autocorrect ./autocorrect
-RUN mkdir ./autocorrect/data && \
+# Download autocorrect module dictionary
+RUN mkdir -p ./autocorrect/data && \
     python -c "import autocorrect; autocorrect.Speller('en_med')"
-    
+# Copy rasa config files from the host
 COPY rasa ./rasa
 WORKDIR /rasa-server/rasa 
+# Train rasa model
+# To-Do: Upload weights and then download them with `wget`
 RUN rasa telemetry disable && \
     rasa train
 
-# Runtime image
+# Runtime stage
 FROM base AS runtime-stage
-
+# Copy installed libraries and rasa-server from the build stage 
 COPY --from=build-stage /opt/venv /opt/venv
 COPY --from=build-stage /rasa-server /rasa-server
 
 ENV PATH="/opt/venv/bin:$PATH"
 
 WORKDIR /rasa-server/rasa 
-VOLUME /tmp
+RUN rasa telemetry disable
 
+VOLUME /tmp
+# Expose 5005 port for api 
 EXPOSE 5005
+# Create logs. And set an API enabled
 ENTRYPOINT ["rasa", "run", "--log-file", "logs/rasa-server.log", "--enable-api", "--auth-token"]
+# Run container with your token and command
 CMD [ "YOUR TOKEN" ] 
