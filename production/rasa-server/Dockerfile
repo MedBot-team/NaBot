@@ -27,8 +27,9 @@ RUN python -m spacy download en_core_web_md && \
 WORKDIR /rasa-server
 
 COPY autocorrect ./autocorrect
-RUN python -c "import autocorrect; autocorrect.Speller('en_med')"
-
+RUN mkdir ./autocorrect/data && \
+    python -c "import autocorrect; autocorrect.Speller('en_med')"
+    
 COPY rasa ./rasa
 WORKDIR /rasa-server/rasa 
 RUN rasa telemetry disable && \
