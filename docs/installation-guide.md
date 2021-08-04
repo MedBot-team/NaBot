@@ -21,7 +21,7 @@ MedBot can be installed from its source code or by docker images.
 
     services:
       rasa:
-        image: alirazmdideh/medbot_server:latest
+        image: medbot/medbot_server:latest
         container_name: chatbot-server
         restart: always
         ports:
@@ -34,7 +34,7 @@ MedBot can be installed from its source code or by docker images.
           - .env
         command: [$TOKEN]
       app:
-        image: alirazmdideh/action_server:latest
+        image: medbot/action_server:latest
         container_name: action-server
         restart: always
         volumes:
