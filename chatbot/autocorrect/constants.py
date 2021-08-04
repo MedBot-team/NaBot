@@ -70,4 +70,7 @@ urls = {
         "https://dl.dropboxusercontent.com/s/6xci1wfb387zk23/it.tar.gz?dl=0",
         "https://siasky.net/_B33wju4sWamVbwutPMpStZgqi1zKNcDu8_vdIz-wZWmkQ",
     ],
+    "fa": ["https://dl.dropboxusercontent.com/s/6oqzodhiauw9wmv/fa.tar.gz?dl=0"],
+    "med": ["https://dl.dropboxusercontent.com/s/uhm59ueyjfht35y/med.tar.gz?dl=0"],
+    "en_med": ["https://dl.dropboxusercontent.com/s/dj4c31kr33r85ya/en_med.tar.gz?dl=0"]
 }
