@@ -55,7 +55,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/medbot_server
+            medbot/medbot_server
           tags: |
             type=schedule
             type=ref,event=branch
