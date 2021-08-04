@@ -20,32 +20,32 @@ MedBot can be installed from its source code or by docker images.
     $ cat docker-compose.yml
 
     services:
-    rasa:
+      rasa:
         image: alirazmdideh/medbot_server:latest
         container_name: chatbot-server
         restart: always
         ports:
-        - 5005:5005
+          - 5005:5005
         volumes:
-        - ./logs:/rasa-server/rasa/logs
+          - ./logs:/rasa-server/rasa/logs
         networks:
-        - rasa-netowrk
+          - rasa-netowrk
         env_file:
-        - .env
+          - .env
         command: [$TOKEN]
-    app:
+      app:
         image: alirazmdideh/action_server:latest
         container_name: action-server
         restart: always
         volumes:
-        - ./logs:/action-server/logs
+          - ./logs:/action-server/logs
         networks:
-        - rasa-netowrk
+          - rasa-netowrk
         expose: 
-        - 5055 
-
+          - 5055
+          
     networks:
-    rasa-netowrk:
+      rasa-netowrk:
         driver: bridge
     ```
 
