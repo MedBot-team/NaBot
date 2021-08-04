@@ -28,7 +28,7 @@ class DrugRetrieve(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        df = pd.read_csv('../drug_datasets/dataset_files/drugs_dataset.csv')
+        df = pd.read_csv('../../datasets/dataset_files/drugs_dataset.csv')
 
         # Check if entity is recognized or not
         if not tracker.latest_message['entities']:
