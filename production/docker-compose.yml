@@ -1,35 +1,57 @@
+# In Compose Specification, version key is deprecated.
+# Reference: https://github.com/compose-spec/compose-spec/blob/master/spec.md
 #version: "3.9"
 services:
+  # Build chatbot server
   rasa:
-    build: 
+    build:
       context: ./rasa-server
       dockerfile: Dockerfile
+    # Choose image name
     image: rasa-server
+    # Choose container name
     container_name: chatbot-server
     restart: always
+    # Map TCP port 5005 in the container to port 5005 on the Docker host.
+    # This is a chatbot rest api port
     ports:
       - 5005:5005
+    # Store chatbot logs out side of the container
+    # To-Do: change logs path to /var/log
     volumes:
       - ./logs:/rasa-server/rasa/logs
+    # Make the same network for chatbot server and actions server
     networks:
       - rasa-netowrk
+    # Read token from .env file 
+    # This token is needed to authenticate requests to the chatbot server
     env_file:
       - .env
+    # Run container with the token
     command: [$TOKEN]
   app:
+    # Build action server
     build: 
       context: ./action-server
       dockerfile: Dockerfile
+    # Choose image name
     image: action-server
+    # Choose container name
     container_name: action-server
     restart: always
+    # Store chatbot logs out side of the container
+    # To-Do: change logs path to /var/log
     volumes:
       - ./logs:/action-server/logs
+    # Make the same network for chatbot server and actions server
     networks:
       - rasa-netowrk
+    # Expose 5055 port to chatbot server can see the action server
     expose: 
-      - 5055 
+      - 5055
+    # To-Do: Build mysql db to store datasets
 
+# List of docker netowrks
 networks:
   rasa-netowrk:
     driver: bridge
