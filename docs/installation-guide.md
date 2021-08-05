@@ -187,11 +187,9 @@ MedBot can be installed from its source code or by docker images.
     │   └── docker
     └── rasa-server
         ├── autocorrect
-        │   └── data
         ├── docker
         └── rasa
             ├── data
-            ├── models
             └── tests
     ```
 
@@ -214,14 +212,36 @@ MedBot can be installed from its source code or by docker images.
 
 4. Choose your Dockerfile
 
-    Copy your desired Dockerfile from the docker directory. Default Dockerfile is Dockerfile-Slim.
+    Default Dockerfile is Slim-based. But you can choose other Dockerfiles in the `docker` directory. For example for the rasa-based images:
 
     ```
     cp production/rasa-server/docker/Dockerfile-Rasa production/rasa-server/Dockerfile
     cp production/action-server/docker/Dockerfile-Rasa production/action-server/Dockerfile
     ```
+    
+5. Review docker-compose file
 
-5. Build an image
+    * In the case of using an old version of docker-compose or docker-engine, you might need to add the `version` key, on top of the `docker-compose.yml` file. For example in the case of the `1.25.0` version of `docker-compose`, you need to add `version: "3.7"` or `version: "3"` on top of your docker-compose file like this:
+        ```
+        version: "3.7"
+        services:
+          rasa:
+            build:
+              context: ./rasa-server
+              dockerfile: Dockerfile
+              args:
+                - VERSION=v0.1.0
+        .
+        .
+        .
+        ```
+    
+    * Also the version of the **model weights** you want to use, can be assigned by the `VERSION` argument in the docker-compose file. This will download the `VERSION.tar.gz` file from Dropbox while building a Docker images.
+
+      Please note that, if you want to use the special version of our bot, you should clone that version alongside assigning that version as the `VERSION` argument in the docker-compose file. You can find out available versions [here](https://github.com/arezae/chatbot/releases).
+
+
+6. Build an image
 
     Build a *rasa chatbot and action server* images
 
@@ -229,7 +249,7 @@ MedBot can be installed from its source code or by docker images.
     docker-compose -f production/docker-compose.yml build
     ```
 
-6. Make containers and run images
+7. Make containers and run images
 
     Run *docker-compose* to start and run the chatbot and its actions together in an isolated environment
 
@@ -237,7 +257,7 @@ MedBot can be installed from its source code or by docker images.
     docker-compose -f production/docker-compose.yml up -d
     ```
 
-7. Test your chatbot
+8. Test your chatbot
     * Talk with your chatbot
 
         ```
@@ -269,7 +289,7 @@ MedBot can be installed from its source code or by docker images.
         }'
         ```
 
-8. Monitor the chatbot
+9. Monitor the chatbot
 
     * Check for errors and warnings in logs
 
@@ -284,7 +304,7 @@ MedBot can be installed from its source code or by docker images.
         ```
 
 
-9. In removing the chatbot case
+10. In removing the chatbot case
 
     Stop and remove chatbot containers
 

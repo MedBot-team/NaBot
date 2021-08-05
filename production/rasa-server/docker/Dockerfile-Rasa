@@ -12,6 +12,8 @@ RUN apt-get update -qq && \
 
 # Build stage
 FROM base AS build-stage
+# install wget for downloading model weights
+RUN apt-get install -qq -y wget
 # Change current directory to build
 WORKDIR /build
 COPY requirements.txt /build
@@ -32,11 +34,14 @@ RUN mkdir -p ./autocorrect/data && \
     
 # Copy rasa config files from the host
 COPY rasa ./rasa
-# Train rasa model
-# To-Do: Upload weights and then download them with `wget` instead of training in build stage
-WORKDIR /rasa-server/rasa 
-RUN rasa telemetry disable && \
-    rasa train  
+# Pass the version of model weights as an argument to the dockerfile. 
+# The default value is the latest (v0.1.0) version tag.
+# This version should be the same as the MedBot version you've cloned.
+ARG VERSION=v0.1.0
+# Download rasa model weights
+RUN mkdir -p /rasa-server/rasa/models && \
+    wget -q https://www.dropbox.com/s/5ny733am0h0dzso/$VERSION.tar.gz?dl=0 \
+    -O /rasa-server/rasa/models/$VERSION.tar.gz
 
 # Runtime image
 FROM base AS runtime-stage
