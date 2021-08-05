@@ -6,6 +6,9 @@ from rasa_sdk.executor import CollectingDispatcher
 
 
 class DrugRetrieve(Action):
+    def __init__(self) -> None:
+        super().__init__()
+        self.df = pd.read_csv('datasets/drugs_dataset.csv')
 
     def name(self) -> Text:
         return "drug_retrieve"
@@ -28,8 +31,6 @@ class DrugRetrieve(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        df = pd.read_csv('datasets/drugs_dataset.csv')
-
         # Check if entity is recognized or not
         if not tracker.latest_message['entities']:
             dispatcher.utter_message(
@@ -50,15 +51,15 @@ class DrugRetrieve(Action):
                 drug_in = tracker.get_slot('drug').lower()
 
         # Find list of similar drugs to user input
-        drugs = self.find_most_similar(drug_in, df['medicine'].values)
+        drugs = self.find_most_similar(drug_in, self.df['medicine'].values)
         # Check drug does exist in dataset or not
         if len(drugs) != 0:
             # Check whether the question about the drug exists or not
-            if df[df['medicine'] == drugs[0]][col].isnull().values:
+            if self.df[self.df['medicine'] == drugs[0]][col].isnull().values:
                 dispatcher.utter_message(
                     'I\'m sorry. Unfortunately, I\'m not aware of that yet.')
             else:
-                result = df[df['medicine'] == drugs[0]][col].values
+                result = self.df[self.df['medicine'] == drugs[0]][col].values
                 dispatcher.utter_message(result[0])
         else:
             dispatcher.utter_message(
