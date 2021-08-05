@@ -7,6 +7,9 @@ services:
     build:
       context: ./rasa-server
       dockerfile: Dockerfile
+      args:
+        # Pass model weights version as an argument 
+        - VERSION=v0.1.0
     # Choose image name
     image: rasa-server
     # Choose container name
