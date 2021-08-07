@@ -1,5 +1,6 @@
 import difflib
 import mysql.connector
+from decouple import config
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -7,10 +8,15 @@ from rasa_sdk.executor import CollectingDispatcher
 
 class LabRetrieve(Action):
 
-    def __init__(self, password, user='root', host='localhost', 
-                 database='datasets', table='labs') -> None:
-        super().__init__()
-        self.table = table
+    def __init__(self) -> None:
+        super().__init__() 
+
+        password = config('PASSWORD') 
+        user = config('MYSQL_USER')
+        host = config('HOST')
+        database = config('DATABASE')
+
+        self.table = config('LAB_TABLE')
         self.db = mysql.connector.connect(
             host=host,
             user=user,
