@@ -34,7 +34,8 @@ class CSV2DB():
         self.df = self.df.replace(r'\n+', '\n', regex=True)
 
     def norm_column_name(self):
-        columns = [re.sub('-| ', '_', columns) for columns in self.df.columns]
+        columns = [column.replace('?', '') for column in self.df.columns]
+        columns = [re.sub('-| ', '_', column) for column in columns]
         self.df.columns = columns
 
     def check_length(self):
