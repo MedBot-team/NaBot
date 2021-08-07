@@ -1,14 +1,21 @@
 import difflib
-import pandas as pd
+import mysql.connector
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 
 class DrugRetrieve(Action):
-    def __init__(self) -> None:
+
+    def __init__(self, password, user='root', host='localhost', 
+                 database='datasets', table='drugs') -> None:
         super().__init__()
-        self.df = pd.read_csv('datasets/drugs_dataset.csv')
+        self.table = table
+        self.db = mysql.connector.connect(
+            host=host,
+            user=user,
+            password=password,
+            database=database)
 
     def name(self) -> Text:
         return "drug_retrieve"
@@ -17,8 +24,8 @@ class DrugRetrieve(Action):
         intent_col = {'usage_drug': 'uses',
                       'warnings_drug': 'warnings',
                       'dosage_drug': 'dosage',
-                      'avoid_drug': 'what-to-avoid',
-                      'sideeffects_drug': 'side-effects',
+                      'avoid_drug': 'what_to_avoid',
+                      'sideeffects_drug': 'side_effects',
                       'interaction_drug': 'interactions'}
         return intent_col[intent]
 
@@ -34,7 +41,7 @@ class DrugRetrieve(Action):
         # Check if entity is recognized or not
         if not tracker.latest_message['entities']:
             dispatcher.utter_message(
-        'I\'m sorry. Unfortunately, I don\'t have that drug in my dataset yet')
+                'I\'m sorry. Unfortunately, I don\'t have that drug in my dataset yet')
             return []
 
         # Check rasa forms are used or not
@@ -50,18 +57,32 @@ class DrugRetrieve(Action):
             else:
                 drug_in = tracker.get_slot('drug').lower()
 
-        # Find list of similar drugs to user input
-        drugs = self.find_most_similar(drug_in, self.df['medicine'].values)
+        cursor = self.db.cursor()
+        # Find list of similar drugs to the user input
+        cursor.execute(f"SELECT medicine FROM {self.table}")
+        drugs_list = [item[0] for item in list(cursor)]
+        drugs = self.find_most_similar(drug_in.lower(), drugs_list)
         # Check drug does exist in dataset or not
+
         if len(drugs) != 0:
+            cursor.execute(f"SHOW COLUMNS \
+                            FROM {self.table} \
+                            LIKE '{col}';")
             # Check whether the question about the drug exists or not
-            if self.df[self.df['medicine'] == drugs[0]][col].isnull().values:
+            if len(list(cursor)) == 0:
                 dispatcher.utter_message(
                     'I\'m sorry. Unfortunately, I\'m not aware of that yet.')
             else:
-                result = self.df[self.df['medicine'] == drugs[0]][col].values
-                dispatcher.utter_message(result[0])
+                cursor.execute(f"SELECT {col} \
+                                FROM {self.table} \
+                                WHERE medicine = '{drugs[0]}';")
+
+                reply = "".join(item[0]+'\n' for item in list(cursor))
+                dispatcher.utter_message(reply)
         else:
             dispatcher.utter_message(
                 'I\'m sorry. Unfortunately, I don\'t have that drug in my dataset yet')
+        
+        cursor.close()
+        # self.db.close()
         return []
