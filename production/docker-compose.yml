@@ -12,6 +12,10 @@ services:
         - VERSION=v0.1.0
     # Choose image name
     image: rasa-server
+    # Don't start chatbot server before action server
+    depends_on:
+      app:
+        condition: service_healthy
     # Choose container name
     container_name: chatbot-server
     restart: always
@@ -20,41 +24,90 @@ services:
     ports:
       - 5005:5005
     # Store chatbot logs out side of the container
-    # To-Do: change logs path to /var/log
     volumes:
-      - ./logs:/rasa-server/rasa/logs
+      - logs_data:/rasa-server/rasa/logs
     # Make the same network for chatbot server and actions server
     networks:
       - rasa-netowrk
-    # Read token from .env file 
+    # Read token from .env file and run the container with the token
     # This token is needed to authenticate requests to the chatbot server
-    env_file:
-      - .env
-    # Run container with the token
-    command: [$TOKEN]
+    command: ${TOKEN}
+  # Build action server
   app:
-    # Build action server
     build: 
       context: ./action-server
       dockerfile: Dockerfile
     # Choose image name
     image: action-server
+    # Don't start action server before database
+    depends_on:
+      db:
+        condition: service_healthy
     # Choose container name
     container_name: action-server
     restart: always
     # Store chatbot logs out side of the container
-    # To-Do: change logs path to /var/log
     volumes:
-      - ./logs:/action-server/logs
+      - logs_data:/action-server/logs
+      - ./.env:/action-server/.env
     # Make the same network for chatbot server and actions server
+    # And also action server and mysql server
     networks:
       - rasa-netowrk
+      - backend-network
     # Expose 5055 port to chatbot server can see the action server
     expose: 
       - 5055
-    # To-Do: Build mysql db to store datasets
+    # Configuration of healthcheck for mysql action server
+    healthcheck:
+        test: ["CMD", 'curl', 'f', 'localhost:5055']
+        interval: 5s
+        timeout: 3s
+        retries: 30
+  # Build mysql server
+  db:
+    # Use mysql image
+    image: mysql:latest
+    container_name: mysql-server
+    # Use mysql_native_password instead of caching_sha2_password
+    command: '--default-authentication-plugin=mysql_native_password'
+    restart: always
+    volumes:
+      # Load mysql dumps (datasets) to the fresh mysql server during initialization
+      - ./mysql-server:/docker-entrypoint-initdb.d
+      # Store mysql records in the seperate volume. records won't be removed even with removing containers
+      - db-data:/var/lib/mysql
+    # Make the same network for mysql server and actions server
+    networks:
+      - backend-network
+    # Read MYSQL password and database name from .env file
+    env_file:
+      - ./.env
+    # Expose 3306 port to action server can see the mysql server
+    expose: 
+      - 3306
+    # Configuration of healthcheck for mysql db
+    healthcheck:
+        test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', 
+                '-u', 'root', '-p$MYSQL_ROOT_PASSWORD' ]
+        interval: 10s
+        timeout: 3s
+        retries: 30
 
 # List of docker netowrks
 networks:
+  # network between chatbot and action server
   rasa-netowrk:
     driver: bridge
+  # network between action server and mysql server
+  backend-network:
+    driver: bridge
+
+# Seperate volumes
+volumes:
+  # MYSQL database volume
+  db-data:
+    name: mysql_db
+  # Storing logs volume
+  logs_data:
+    name: logs_db

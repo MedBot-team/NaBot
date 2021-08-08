@@ -5,8 +5,10 @@ FROM rasa/rasa:main AS base
 USER root
 
 # Update base image. It might be helpful for security reasons 
+# Install curl to use in docker-compose healthcare
 RUN apt-get update -qq && \
-    apt-get upgrade -qq && \
+    apt-get upgrade -qq -y && \
+    apt-get install -qq -y curl && \
     apt-get autoremove -y -qq && \
     apt-get autoclean -y -qq
 
@@ -31,9 +33,8 @@ COPY --from=build-stage /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 WORKDIR /action-server
-# Copt actions and datasets from the host
+# Copt actions from the host
 COPY actions/ ./actions
-COPY datasets ./datasets
 # Make logs directory for action server logs storing
 RUN mkdir -p logs && \
     rasa telemetry disable

@@ -1,5 +1,6 @@
 import difflib
-import pandas as pd
+import mysql.connector
+from decouple import config
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -8,21 +9,32 @@ from rasa_sdk.executor import CollectingDispatcher
 class LabRetrieve(Action):
 
     def __init__(self) -> None:
-        super().__init__()
-        self.df = pd.read_csv('datasets/medplus_labs.csv')
+        super().__init__() 
+
+        password = config('MYSQL_ROOT_PASSWORD') 
+        user = config('SQL_USER')
+        host = config('HOST')
+        database = config('MYSQL_DATABASE')
+
+        self.table = config('LAB_TABLE')
+        self.db = mysql.connector.connect(
+            host=host,
+            user=user,
+            password=password,
+            database=database)
 
     def name(self) -> Text:
         return "lab_retrieve"
 
     def intent_mapper(self, intent):
-        intent_col = {'usage_lab': 'What is it used for',
-                      'detail_lab': 'What is the test',
-                      'need_lab': 'Why do I need the test',
-                      'during_lab': 'What happens during the test?',
-                      'prepare_lab': 'Will I need to do anything to prepare for the test?',
-                      'risk_lab': 'Are there any risks to the test?',
-                      'result_lab': 'What do the results mean?',
-                      'any_detail_lab': 'Is there anything else I need to know about the test?'}
+        intent_col = {'usage_lab': 'What_is_it_used_for',
+                      'detail_lab': 'What_is_the_test',
+                      'need_lab': 'Why_do_I_need_the_test',
+                      'during_lab': 'What_happens_during_the_test',
+                      'prepare_lab': 'Will_I_need_to_do_anything_to_prepare_for_the_test',
+                      'risk_lab': 'Are_there_any_risks_to_the_test',
+                      'result_lab': 'What_do_the_results_mean',
+                      'any_detail_lab': 'Is_there_anything_else_I_need_to_know_about_the_test'}
         return intent_col[intent]
     
     def find_most_similar(self, name, name_list):
@@ -52,19 +64,33 @@ class LabRetrieve(Action):
                 lab_in = tracker.get_slot('lab')[0].lower()
             else:
                 lab_in = tracker.get_slot('lab').lower()
+        
+        cursor = self.db.cursor()
+        # Find list of similar lab test to the user input
+        cursor.execute(f"SELECT Lab_test FROM {self.table}")
+        labs_list = [item[0] for item in list(cursor)]
+        labs = self.find_most_similar(lab_in.lower(), labs_list)
 
-        # Find list of similar drugs to user input
-        labs = self.find_most_similar(lab_in, self.df['Lab test'].values)
         # Check lab test does exist in dataset or not
         if len(labs) != 0:
+            cursor.execute(f"SHOW COLUMNS \
+                            FROM {self.table} \
+                            LIKE '{col}';")
             # Check whether the question about the lab exists or not
-            if self.df[self.df['Lab test'] == labs[0]][col].isnull().values:
+            if len(list(cursor)) == 0:
                 dispatcher.utter_message(
                     'I\'m sorry. Unfortunately, I\'m not aware of that yet.')
             else:
-                result = self.df[self.df['Lab test'] == labs[0]][col].values
-                dispatcher.utter_message(result[0])
+                cursor.execute(f"SELECT {col} \
+                                FROM {self.table} \
+                                WHERE Lab_test = '{labs[0]}';")
+
+                reply = "".join(item[0]+'\n' for item in list(cursor))
+                dispatcher.utter_message(reply)
         else:
             dispatcher.utter_message(
                 'I\'m sorry. Unfortunately, I don\'t have that lab in my dataset yet')
+
+        cursor.close()
+        # self.db.close()
         return []
