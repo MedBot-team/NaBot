@@ -11,10 +11,10 @@ class LabRetrieve(Action):
     def __init__(self) -> None:
         super().__init__() 
 
-        password = config('PASSWORD') 
-        user = config('MYSQL_USER')
+        password = config('MYSQL_ROOT_PASSWORD') 
+        user = config('SQL_USER')
         host = config('HOST')
-        database = config('DATABASE')
+        database = config('MYSQL_DATABASE')
 
         self.table = config('LAB_TABLE')
         self.db = mysql.connector.connect(
