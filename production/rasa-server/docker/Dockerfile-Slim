@@ -4,7 +4,7 @@ FROM python:3.8-slim AS base
 
 # Update base image. It might be helpful for security reasons 
 RUN apt-get update -qq && \
-    apt-get upgrade -qq && \
+    apt-get upgrade -qq -y && \
     apt-get autoremove -y -qq && \
     apt-get autoclean -y -qq
 
@@ -44,8 +44,8 @@ COPY rasa ./rasa
 ARG VERSION=v0.1.0
 # Download rasa model weights
 RUN mkdir -p /rasa-server/rasa/models && \
-    wget -q https://www.dropbox.com/s/5ny733am0h0dzso/$VERSION.tar.gz?dl=0 \
-    -O /rasa-server/rasa/models/$VERSION.tar.gz
+    wget -q https://www.dropbox.com/s/u1o8s2u96lpt8cv/$VERSION.tar.gz \
+    -P /rasa-server/rasa/models/
 
 # Runtime stage
 FROM base AS runtime-stage
