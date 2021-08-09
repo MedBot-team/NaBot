@@ -2,6 +2,36 @@
 # Reference: https://github.com/compose-spec/compose-spec/blob/master/spec.md
 #version: "3.9"
 services:
+  # Build streamlit ui server
+  ui:
+    build:
+      context: ./streamlit-server
+      dockerfile: Dockerfile
+    # Choose image name
+    image: medbot-ui
+    # Don't start ui server before chatbot server
+    depends_on:
+      rasa:
+        condition: service_healthy
+    # Choose container name
+    container_name: ui-server
+    restart: always
+    # Make the same network for chatbot server and ui server
+    networks:
+      - frontend-netowrk
+    # Mount .env file to the ui server to read chatbot URL
+    volumes:
+      - ./.env:/streamlit/.env
+    # Map TCP port 8501 in the container to port 8501 on the Docker host.
+    # This is a chatbot rest api port
+    ports:
+      - 8501:8501
+    # Healthcheck condition
+    healthcheck:
+        test: ["CMD", 'curl', 'f', 'localhost:8501']
+        interval: 10s
+        timeout: 3s
+        retries: 30
   # Build chatbot server
   rasa:
     build:
@@ -19,16 +49,22 @@ services:
     # Choose container name
     container_name: chatbot-server
     restart: always
-    # Map TCP port 5005 in the container to port 5005 on the Docker host.
-    # This is a chatbot rest api port
-    ports:
-      - 5005:5005
+    # Expose 5005 port to ui server can see the chatbot server
+    expose: 
+      - 5005
+    # Healthcheck condition
+    healthcheck:
+        test: ["CMD", 'curl', 'f', 'localhost:5005']
+        interval: 10s
+        timeout: 3s
+        retries: 30
     # Store chatbot logs out side of the container
     volumes:
       - logs_data:/rasa-server/rasa/logs
     # Make the same network for chatbot server and actions server
     networks:
       - rasa-netowrk
+      - frontend-netowrk
     # Read token from .env file and run the container with the token
     # This token is needed to authenticate requests to the chatbot server
     command: ${TOKEN}
@@ -61,7 +97,7 @@ services:
     # Configuration of healthcheck for mysql action server
     healthcheck:
         test: ["CMD", 'curl', 'f', 'localhost:5055']
-        interval: 5s
+        interval: 10s
         timeout: 3s
         retries: 30
   # Build mysql server
@@ -86,21 +122,30 @@ services:
     # Expose 3306 port to action server can see the mysql server
     expose: 
       - 3306
+    # Add the capability CAP_SYS_NICE to MySQL server can handle mbind error itself silently.
+    cap_add:
+      - SYS_NICE
     # Configuration of healthcheck for mysql db
     healthcheck:
         test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', 
                 '-u', 'root', '-p$MYSQL_ROOT_PASSWORD' ]
-        interval: 1m30s
-        timeout: 20s
+        interval: 2m30s
+        timeout: 30s
         retries: 30
 
 # List of docker netowrks
 networks:
+  # network between chatbot and streamlit server
+  frontend-netowrk:
+    name: medbot_frontend-netowrk
+    driver: bridge
   # network between chatbot and action server
   rasa-netowrk:
+    name: medbot_rasa-netowrk
     driver: bridge
   # network between action server and mysql server
   backend-network:
+    name: medbot_backend-netowrk
     driver: bridge
 
 # Seperate volumes
