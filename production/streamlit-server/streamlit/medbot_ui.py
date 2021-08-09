@@ -4,7 +4,7 @@ import streamlit as st
 from decouple import config
 
 # Read URL from .env file in the directory
-url = config('URL')
+url = config('RASA_SERVER_URL')
 
 # Page header texts
 st.set_page_config(page_title="Synthia")
