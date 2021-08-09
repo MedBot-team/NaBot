@@ -1,4 +1,4 @@
-﻿![Action server workflow](https://github.com/arezae/chatbot/blob/rasa/.github/workflows/docker_push_actions.yml/badge.svg)
+![Action server workflow](https://github.com/arezae/chatbot/blob/rasa/.github/workflows/docker_push_actions.yml/badge.svg)
 
 ![Chatbot server workflow](https://github.com/arezae/chatbot/blob/rasa/.github/workflows/docker_push_chatbot.yml/badge.svg)
 
