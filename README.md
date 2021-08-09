@@ -1,6 +1,5 @@
-![Action server workflow](https://github.com/arezae/chatbot/blob/rasa/.github/workflows/docker_push_actions.yml/badge.svg)
-
-![Chatbot server workflow](https://github.com/arezae/chatbot/blob/rasa/.github/workflows/docker_push_chatbot.yml/badge.svg)
+![Action server workflow](https://github.com/arezae/chatbot/actions/workflows/docker_push_actions.yml/badge.svg?style=svg)
+![Chatbot server workflow](https://github.com/arezae/chatbot/actions/workflows/docker_push_chatbot.yml/badge.svg?style=svg)
 
 
 # Rasa Medical Chatbot
