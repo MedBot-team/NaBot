@@ -1,4 +1,9 @@
-﻿# Rasa Medical Chatbot
+![Action server workflow](https://github.com/arezae/chatbot/actions/workflows/docker_push_actions.yml/badge.svg?style=svg)
+![Chatbot server workflow](https://github.com/arezae/chatbot/actions/workflows/docker_push_chatbot.yml/badge.svg?style=svg)
+![Chatbot UI workflow](https://github.com/arezae/chatbot/actions/workflows/docker_push_ui.yml/badge.svg?style=svg)
+
+
+# Rasa Medical Chatbot
 
 MedBot is a [Rasa-based](https://rasa.com/), smart medical chatbot. It can retrieve medicines and lab tests information for users just by chatting with it.
 
