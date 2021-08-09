@@ -7,6 +7,7 @@ USER root
 # Update base image. It could be helpful for security reasons 
 RUN apt-get update -qq && \
     apt-get upgrade -qq -y && \
+    apt-get install -qq -y curl && \
     apt-get autoremove -y -qq && \
     apt-get autoclean -y -qq
 
