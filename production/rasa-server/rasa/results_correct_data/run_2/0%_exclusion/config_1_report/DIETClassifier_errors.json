@@ -1,0 +1,215 @@
+[
+  {
+    "text": "c. diff testing: Is it necessary?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 15,
+        "value": "c. diff testing",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 8,
+        "end": 15,
+        "confidence_entity": 0.8744617104530334,
+        "value": "testing",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 15,
+        "value": "c. diff testing",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "You're talking about letrozole",
+    "entities": [
+      {
+        "start": 21,
+        "end": 30,
+        "value": "letrozole",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.5806807279586792,
+        "value": "letrozole",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 21,
+        "end": 30,
+        "value": "letrozole",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-mm?",
+    "entities": [
+      {
+        "start": 31,
+        "end": 63,
+        "value": "glucosamine-chondroitin-with-msm",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 31,
+        "end": 43,
+        "confidence_entity": 0.45987042784690857,
+        "value": "glucosamine-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 43,
+        "end": 55,
+        "confidence_entity": 0.6403535604476929,
+        "value": "chondroitin-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 59,
+        "end": 60,
+        "confidence_entity": 0.7018283605575562,
+        "value": "-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 31,
+        "end": 42,
+        "value": "glucosamine",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "ketoconazole-topical should not be taken with the following drugs?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 20,
+        "value": "ketoconazole-topical",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 13,
+        "confidence_entity": 0.8752101063728333,
+        "value": "ketoconazole-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 12,
+        "value": "ketoconazole",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "afp tumor marker: for what purpose is it used?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 16,
+        "value": "afp tumor marker",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.7854282259941101,
+        "value": "alpha-fetoprotein-afp-tumor-marker",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 9,
+        "confidence_entity": 0.7919166088104248,
+        "value": "tumor",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 3,
+        "value": "alpha-fetoprotein-afp-tumor-marker",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 16,
+        "value": "tumor marker",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What does the hemoglobin a1c test test result mean",
+    "entities": [
+      {
+        "start": 14,
+        "end": 33,
+        "value": "hemoglobin a1c test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 14,
+        "end": 24,
+        "confidence_entity": 0.8681889772415161,
+        "value": "hemoglobin",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 25,
+        "end": 38,
+        "confidence_entity": 0.48541420698165894,
+        "value": "a1c test test",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 14,
+        "end": 33,
+        "value": "hemoglobin a1c test",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  }
+]

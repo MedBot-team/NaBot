@@ -1,0 +1,98 @@
+[
+  {
+    "text": "c. diff testing: Is it necessary?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.8482683897018433
+    }
+  },
+  {
+    "text": "You're talking about letrozole",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.4669632315635681
+    }
+  },
+  {
+    "text": "its name is shingrix",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.2848779559135437
+    }
+  },
+  {
+    "text": "nitrites in urine harms people",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.8379048109054565
+    }
+  },
+  {
+    "text": "cognitive testing information would be appreciated.",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.7320753931999207
+    }
+  },
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-mm?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.7375031113624573
+    }
+  },
+  {
+    "text": "What should I not do if I take zyprexa",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.5091562271118164
+    }
+  },
+  {
+    "text": "Is xeloda affected by other drugs?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.6196854114532471
+    }
+  },
+  {
+    "text": "When should I take atomoxetine",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.4940676689147949
+    }
+  },
+  {
+    "text": "what is hydrocortisone-topical used for?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.796495795249939
+    }
+  },
+  {
+    "text": "strattera is why I should take it?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.6621977686882019
+    }
+  },
+  {
+    "text": "Please give me terazosin details.",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.99766606092453
+    }
+  }
+]

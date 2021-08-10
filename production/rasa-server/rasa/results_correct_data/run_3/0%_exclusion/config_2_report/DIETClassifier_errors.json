@@ -1,0 +1,364 @@
+[
+  {
+    "text": "nitrites in urine harms people",
+    "entities": [
+      {
+        "start": 0,
+        "end": 17,
+        "value": "nitrites in urine",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.7596777677536011,
+        "value": "nitrites",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 12,
+        "end": 17,
+        "confidence_entity": 0.8480290174484253,
+        "value": "urine",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 17,
+        "value": "nitrites in urine",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Would you have any suggestions on how people should prepare for an heavy metal blood?",
+    "entities": [
+      {
+        "start": 67,
+        "end": 84,
+        "value": "heavy metal blood",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 79,
+        "end": 84,
+        "confidence_entity": 0.8000507950782776,
+        "value": "blood",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 67,
+        "end": 84,
+        "value": "heavy metal blood",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What should I know about an acid-fast bacillus?",
+    "entities": [
+      {
+        "start": 28,
+        "end": 46,
+        "value": "acid-fast bacillus",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 28,
+        "end": 33,
+        "confidence_entity": 0.9577144980430603,
+        "value": "acid-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 38,
+        "end": 46,
+        "confidence_entity": 0.9847401976585388,
+        "value": "bacillus",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 28,
+        "end": 46,
+        "value": "acid-fast bacillus",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Which is the aim of the nitrites in urine?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 41,
+        "value": "nitrites in urine",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 24,
+        "end": 32,
+        "confidence_entity": 0.5725193023681641,
+        "value": "nitrites",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 36,
+        "end": 41,
+        "confidence_entity": 0.8582804203033447,
+        "value": "urine",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 24,
+        "end": 41,
+        "value": "nitrites in urine",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "ketoconazole-topical should not be taken with the following drugs?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 20,
+        "value": "ketoconazole-topical",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 13,
+        "confidence_entity": 0.9557401537895203,
+        "value": "ketoconazole-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 12,
+        "value": "ketoconazole",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Is it possible that zofran-odt has unexpected effects",
+    "entities": [
+      {
+        "start": 20,
+        "end": 30,
+        "value": "zofran-odt",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 20,
+        "end": 27,
+        "confidence_entity": 0.957457959651947,
+        "value": "zofran-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 20,
+        "end": 26,
+        "value": "zofran",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "calcium in urine test results: What do they mean",
+    "entities": [
+      {
+        "start": 0,
+        "end": 21,
+        "value": "calcium in urine test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9847633242607117,
+        "value": "calcium",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 11,
+        "end": 21,
+        "confidence_entity": 0.8157300353050232,
+        "value": "urinalysis",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 21,
+        "value": "calcium in urine test",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Could you help me understand my myelography results",
+    "entities": [
+      {
+        "start": 32,
+        "end": 43,
+        "value": "myelography",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 32,
+        "end": 43,
+        "confidence_entity": 0.7413874864578247,
+        "value": "myelography",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 32,
+        "end": 43,
+        "value": "myelography",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "How do the numbers appear on the dhea sulfate report?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 45,
+        "value": "dhea sulfate",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 33,
+        "end": 37,
+        "confidence_entity": 0.42209210991859436,
+        "value": "dhea",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 38,
+        "end": 45,
+        "confidence_entity": 0.95576411485672,
+        "value": "sulfate",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 33,
+        "end": 45,
+        "value": "dheas",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Does valtoco cure anything?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 12,
+        "value": "valtoco",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 5,
+        "end": 12,
+        "confidence_entity": 0.9864224791526794,
+        "value": "valtoco",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 13,
+        "end": 17,
+        "confidence_entity": 0.45431360602378845,
+        "value": "cure",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 5,
+        "end": 12,
+        "value": "valtoco",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "urso-forte can cure what?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "urso-forte",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 4,
+        "end": 5,
+        "confidence_entity": 0.9855681657791138,
+        "value": "-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 4,
+        "value": "urso",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  }
+]

@@ -1,0 +1,100 @@
+[
+  {
+    "text": "Can I avoid anything when taking 5-hp?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 38,
+        "value": "5-htp",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 33,
+        "end": 37,
+        "confidence_entity": 0.8,
+        "value": "5-hp",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-mm?",
+    "entities": [
+      {
+        "start": 31,
+        "end": 63,
+        "value": "glucosamine-chondroitin-with-msm",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 31,
+        "end": 62,
+        "confidence_entity": 0.8131967186927795,
+        "value": "glucosamine-chondroitin-with-mm",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 31,
+        "end": 42,
+        "value": "glucosamine",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Is it possible that zofran-out has unexpected effects",
+    "entities": [
+      {
+        "start": 20,
+        "end": 30,
+        "value": "zofran-odt",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 20,
+        "end": 27,
+        "confidence_entity": 0.9935304522514343,
+        "value": "zofran-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 20,
+        "end": 26,
+        "value": "zofran",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Can I take journal-pm as often as I like?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 20,
+        "value": "jornay-pm",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 18,
+        "end": 21,
+        "confidence_entity": 0.6679220199584961,
+        "value": "-pm",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "text": "ketoconazole-topical should not be taken with the following drugs?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 20,
+        "value": "ketoconazole-topical",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 20,
+        "confidence_entity": 0.805639922618866,
+        "value": "ketoconazole-topical",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 12,
+        "value": "ketoconazole",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Is it possible that zofran-out has unexpected effects",
+    "entities": [
+      {
+        "start": 20,
+        "end": 30,
+        "value": "zofran-odt",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 20,
+        "end": 27,
+        "confidence_entity": 0.8611390590667725,
+        "value": "zofran-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 20,
+        "end": 26,
+        "value": "zofran",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Is zostavax a safe drug to take?",
+    "entities": [
+      {
+        "start": 3,
+        "end": 11,
+        "value": "zostavax",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 3,
+        "end": 11,
+        "confidence_entity": 0.997757613658905,
+        "value": "zostavax",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 3,
+        "end": 11,
+        "value": "zostavax",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "lab",
+        "start": 19,
+        "end": 23,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "urso-forte can cure what?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "urso-forte",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.44640499353408813,
+        "value": "urso-forte",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 4,
+        "value": "urso",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The drug I am looking for needs to be described in detail.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 8,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  }
+]

@@ -1,0 +1,131 @@
+[
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-mm?",
+    "entities": [
+      {
+        "start": 31,
+        "end": 63,
+        "value": "glucosamine-chondroitin-with-msm",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 31,
+        "end": 43,
+        "confidence_entity": 0.8626310229301453,
+        "value": "glucosamine-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 43,
+        "end": 55,
+        "confidence_entity": 0.7119418978691101,
+        "value": "chondroitin-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 59,
+        "end": 60,
+        "confidence_entity": 0.9990505576133728,
+        "value": "-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 31,
+        "end": 42,
+        "value": "glucosamine",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "ketoconazole-topical should not be taken with the following drugs?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 20,
+        "value": "ketoconazole-topical",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 13,
+        "confidence_entity": 0.9517539739608765,
+        "value": "ketoconazole-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 13,
+        "end": 20,
+        "confidence_entity": 0.5643657445907593,
+        "value": "topical",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 12,
+        "value": "ketoconazole",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what is hydrocortisone-topical used for?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 30,
+        "value": "hydrocortisone-topical",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 22,
+        "end": 23,
+        "confidence_entity": 0.9983876943588257,
+        "value": "-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 23,
+        "end": 30,
+        "confidence_entity": 0.683967649936676,
+        "value": "topical",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 8,
+        "end": 22,
+        "value": "hydrocortisone",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "The drug I am looking for needs to be described in detail.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 8,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  }
+]

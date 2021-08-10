@@ -1,0 +1,34 @@
+{
+  "lab": {
+    "precision": 0.9375,
+    "recall": 1.0,
+    "f1-score": 0.967741935483871,
+    "support": 30,
+    "confused_with": {}
+  },
+  "drug": {
+    "precision": 1.0,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.8333333333333333,
+    "support": 21,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9574468085106383,
+    "recall": 0.8823529411764706,
+    "f1-score": 0.9183673469387754,
+    "support": 51
+  },
+  "macro avg": {
+    "precision": 0.96875,
+    "recall": 0.8571428571428572,
+    "f1-score": 0.9005376344086021,
+    "support": 51
+  },
+  "weighted avg": {
+    "precision": 0.9632352941176471,
+    "recall": 0.8823529411764706,
+    "f1-score": 0.9123972169512966,
+    "support": 51
+  }
+}

@@ -1,0 +1,148 @@
+[
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-mm?",
+    "entities": [
+      {
+        "start": 31,
+        "end": 63,
+        "value": "glucosamine-chondroitin-with-msm",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 31,
+        "end": 43,
+        "confidence_entity": 0.7720524668693542,
+        "value": "glucosamine-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 43,
+        "end": 55,
+        "confidence_entity": 0.61,
+        "value": "chondroitin-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 59,
+        "end": 62,
+        "confidence_entity": 0.4313686192035675,
+        "value": "-mm",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 31,
+        "end": 42,
+        "value": "glucosamine",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Is it possible that zofran-out has unexpected effects",
+    "entities": [
+      {
+        "start": 20,
+        "end": 30,
+        "value": "zofran-odt",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 20,
+        "end": 27,
+        "confidence_entity": 0.775727391242981,
+        "value": "zofran-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 20,
+        "end": 26,
+        "value": "zofran",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "can you help me understand my rf test results?",
+    "entities": [
+      {
+        "start": 30,
+        "end": 32,
+        "value": "rf",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 30,
+        "end": 37,
+        "value": "rf test",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "urso-forte can cure what?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "urso-forte",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 4,
+        "end": 5,
+        "confidence_entity": 0.7042883634567261,
+        "value": "-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 4,
+        "value": "urso",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I need detailed information about a drug.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 36,
+        "end": 40,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What is the drug I am interested in?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 12,
+        "end": 16,
+        "value": "drug",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  }
+]

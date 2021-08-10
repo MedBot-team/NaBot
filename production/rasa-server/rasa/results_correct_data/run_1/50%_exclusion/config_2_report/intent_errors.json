@@ -1,0 +1,130 @@
+[
+  {
+    "text": "c. diff testing: Is it necessary?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.9388565421104431
+    }
+  },
+  {
+    "text": "You're talking about letrozole",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.4005122780799866
+    }
+  },
+  {
+    "text": "gentamicin might be the culprit",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.4750269055366516
+    }
+  },
+  {
+    "text": "Could you provide some advice to people about how to prep for an uric acid test?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.39295390248298645
+    }
+  },
+  {
+    "text": "What is an ast test?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.7447699904441833
+    }
+  },
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-msm?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.7599549889564514
+    }
+  },
+  {
+    "text": "Do omnicef and certain medications interact?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.9889363050460815
+    }
+  },
+  {
+    "text": "benicar interactions: which drugs?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.7537785768508911
+    }
+  },
+  {
+    "text": "afp tumor marker: for what purpose is it used?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.31233665347099304
+    }
+  },
+  {
+    "text": "What should I know if I choose to use meloxicam?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.47559723258018494
+    }
+  },
+  {
+    "text": "If you take fluvoxamine, when should you not take it?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.6973217725753784
+    }
+  },
+  {
+    "text": "What is the recommended frequency of gralise use?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.31562718749046326
+    }
+  },
+  {
+    "text": "What is the maximum dosage of lenvima I can take each day?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.5878708958625793
+    }
+  },
+  {
+    "text": "strattera is why I should take it?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.47321733832359314
+    }
+  },
+  {
+    "text": "Would you be able to tell me more about a test",
+    "intent": "request_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.80710369348526
+    }
+  },
+  {
+    "text": "Detailed information is needed about a test",
+    "intent": "request_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.9864890575408936
+    }
+  }
+]

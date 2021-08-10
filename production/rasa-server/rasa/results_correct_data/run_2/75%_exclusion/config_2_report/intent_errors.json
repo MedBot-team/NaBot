@@ -1,0 +1,146 @@
+[
+  {
+    "text": "c. diff testing: Is it necessary?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.7112565040588379
+    }
+  },
+  {
+    "text": "You're talking about letrozole",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.20298385620117188
+    }
+  },
+  {
+    "text": "its name is shingrix",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.21822378039360046
+    }
+  },
+  {
+    "text": "nitrites in urine harms people",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.4183189272880554
+    }
+  },
+  {
+    "text": "cognitive testing information would be appreciated.",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.9732396602630615
+    }
+  },
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-msm?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.2704821825027466
+    }
+  },
+  {
+    "text": "What should I not do if I take zyprexa",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.23559290170669556
+    }
+  },
+  {
+    "text": "Is xeloda affected by other drugs?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.7996569871902466
+    }
+  },
+  {
+    "text": "afp tumor marker: for what purpose is it used?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.47701573371887207
+    }
+  },
+  {
+    "text": "How does rapamune affect the body?",
+    "intent": "sideeffects_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.24761821329593658
+    }
+  },
+  {
+    "text": "How do the numbers appear on the dhea sulfate report?",
+    "intent": "result_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.4994736909866333
+    }
+  },
+  {
+    "text": "Could you explain my results from the pleural fluid analysis test to me?",
+    "intent": "result_lab",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.8065853118896484
+    }
+  },
+  {
+    "text": "When should I take atomoxetine",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.6740759611129761
+    }
+  },
+  {
+    "text": "what is hydrocortisone-topical used for?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.4609699547290802
+    }
+  },
+  {
+    "text": "strattera is why I should take it?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.22626951336860657
+    }
+  },
+  {
+    "text": "Please give me terazosin details.",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.9922594428062439
+    }
+  },
+  {
+    "text": "A medical test interests me.",
+    "intent": "request_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.46577200293540955
+    }
+  },
+  {
+    "text": "Would you be able to tell me more about a test",
+    "intent": "request_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.7380089163780212
+    }
+  }
+]

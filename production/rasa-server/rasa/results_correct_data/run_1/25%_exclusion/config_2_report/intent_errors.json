@@ -1,0 +1,82 @@
+[
+  {
+    "text": "c. diff testing: Is it necessary?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.8766595125198364
+    }
+  },
+  {
+    "text": "You're talking about letrozole",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.6932585835456848
+    }
+  },
+  {
+    "text": "gentamicin might be the culprit",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.19441191852092743
+    }
+  },
+  {
+    "text": "What is an ast test?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.9730181694030762
+    }
+  },
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-msm?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.43118709325790405
+    }
+  },
+  {
+    "text": "Do omnicef and certain medications interact?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.6833652257919312
+    }
+  },
+  {
+    "text": "What should I know if I choose to use meloxicam?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.2583337128162384
+    }
+  },
+  {
+    "text": "What is the recommended frequency of gralise use?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.34244126081466675
+    }
+  },
+  {
+    "text": "What is the maximum dosage of lenvima I can take each day?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.6865333318710327
+    }
+  },
+  {
+    "text": "strattera is why I should take it?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.38277316093444824
+    }
+  }
+]

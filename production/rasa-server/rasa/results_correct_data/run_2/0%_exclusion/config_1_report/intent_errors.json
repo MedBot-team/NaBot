@@ -1,0 +1,98 @@
+[
+  {
+    "text": "c. diff testing: Is it necessary?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.9570311307907104
+    }
+  },
+  {
+    "text": "You're talking about letrozole",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.2919878363609314
+    }
+  },
+  {
+    "text": "its name is shingrix",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.18368910253047943
+    }
+  },
+  {
+    "text": "nitrites in urine harms people",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.6368352174758911
+    }
+  },
+  {
+    "text": "cognitive testing information would be appreciated.",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.7549401521682739
+    }
+  },
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-mm?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.32203349471092224
+    }
+  },
+  {
+    "text": "What should I not do if I take zyprexa",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.43832048773765564
+    }
+  },
+  {
+    "text": "Is xeloda affected by other drugs?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.48216304183006287
+    }
+  },
+  {
+    "text": "When should I take atomoxetine",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.5917357802391052
+    }
+  },
+  {
+    "text": "what is hydrocortisone-topical used for?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.8647571802139282
+    }
+  },
+  {
+    "text": "strattera is why I should take it?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.2914249002933502
+    }
+  },
+  {
+    "text": "Please give me terazosin details.",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.9959520697593689
+    }
+  }
+]

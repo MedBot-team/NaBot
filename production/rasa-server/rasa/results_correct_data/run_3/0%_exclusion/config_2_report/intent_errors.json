@@ -1,0 +1,114 @@
+[
+  {
+    "text": "How do I know if I need an troponin?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.5024623274803162
+    }
+  },
+  {
+    "text": "lomotil",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.45643681287765503
+    }
+  },
+  {
+    "text": "its name is shingrix",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.21022196114063263
+    }
+  },
+  {
+    "text": "nitrites in urine harms people",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.2756265103816986
+    }
+  },
+  {
+    "text": "What should I know about an acid-fast bacillus?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.2648632824420929
+    }
+  },
+  {
+    "text": "Which is the aim of the nitrites in urine?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.6028831601142883
+    }
+  },
+  {
+    "text": "What to avoid while taking ciprofloxacin?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.4470740258693695
+    }
+  },
+  {
+    "text": "What should I avoid when taking welchol?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.508716881275177
+    }
+  },
+  {
+    "text": "afp tumor marker: for what purpose is it used?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.847104012966156
+    }
+  },
+  {
+    "text": "Can I take cymbalta without worry?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.7517154812812805
+    }
+  },
+  {
+    "text": "Is zostavax a safe drug to take?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.9614840745925903
+    }
+  },
+  {
+    "text": "Does valtoco cure anything?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.36860978603363037
+    }
+  },
+  {
+    "text": "Please give me terazosin details.",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.8134064674377441
+    }
+  },
+  {
+    "text": "urso-forte can cure what?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.6825329661369324
+    }
+  }
+]

@@ -1,0 +1,261 @@
+[
+  {
+    "text": "nitrites in urine harms people",
+    "entities": [
+      {
+        "start": 0,
+        "end": 17,
+        "value": "nitrites in urine",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.5011217594146729,
+        "value": "nitrites",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 12,
+        "end": 17,
+        "confidence_entity": 0.7193607091903687,
+        "value": "urine",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 17,
+        "value": "nitrites in urine",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Would you have any suggestions on how people should prepare for an heavy metal blood?",
+    "entities": [
+      {
+        "start": 67,
+        "end": 84,
+        "value": "heavy metal blood",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 79,
+        "end": 84,
+        "confidence_entity": 0.4994865655899048,
+        "value": "blood",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 67,
+        "end": 84,
+        "value": "heavy metal blood",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What should I know about an acid-fast bacillus?",
+    "entities": [
+      {
+        "start": 28,
+        "end": 46,
+        "value": "acid-fast bacillus",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 28,
+        "end": 33,
+        "confidence_entity": 0.6014179587364197,
+        "value": "acid-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 38,
+        "end": 46,
+        "confidence_entity": 0.8955146670341492,
+        "value": "bacillus",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 28,
+        "end": 46,
+        "value": "acid-fast bacillus",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Which is the aim of the nitrites in urine?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 41,
+        "value": "nitrites in urine",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 24,
+        "end": 32,
+        "confidence_entity": 0.4099516272544861,
+        "value": "nitrites",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 36,
+        "end": 41,
+        "confidence_entity": 0.6700310111045837,
+        "value": "urine",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 24,
+        "end": 41,
+        "value": "nitrites in urine",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what is done in an fungal culture test test?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 38,
+        "value": "fungal culture test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 19,
+        "end": 43,
+        "confidence_entity": 0.5992129445075989,
+        "value": "fungal culture test test",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 19,
+        "end": 38,
+        "value": "fungal culture test",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Is it possible that zofran-odt has unexpected effects",
+    "entities": [
+      {
+        "start": 20,
+        "end": 30,
+        "value": "zofran-odt",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 20,
+        "end": 27,
+        "confidence_entity": 0.8146559596061707,
+        "value": "zofran-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 20,
+        "end": 26,
+        "value": "zofran",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "calcium in urine test results: What do they mean",
+    "entities": [
+      {
+        "start": 0,
+        "end": 21,
+        "value": "calcium in urine test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9184443950653076,
+        "value": "calcium",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 11,
+        "end": 21,
+        "confidence_entity": 0.7211688160896301,
+        "value": "urinalysis",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 21,
+        "value": "calcium in urine test",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "urso-forte can cure what?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "urso-forte",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.4933323860168457,
+        "value": "urso-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 4,
+        "value": "urso",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  }
+]

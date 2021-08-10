@@ -1,0 +1,98 @@
+[
+  {
+    "text": "How do I know if I need an troponin?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.4466986358165741
+    }
+  },
+  {
+    "text": "lomotil",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.29717376828193665
+    }
+  },
+  {
+    "text": "nitrites in urine harms people",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.44671630859375
+    }
+  },
+  {
+    "text": "What should I know about an acid-fast bacillus?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.6114829182624817
+    }
+  },
+  {
+    "text": "Which is the aim of the nitrites in urine?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.45559749007225037
+    }
+  },
+  {
+    "text": "what is done in an fungal culture test test?",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.452322781085968
+    }
+  },
+  {
+    "text": "afp tumor marker: for what purpose is it used?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.37823790311813354
+    }
+  },
+  {
+    "text": "How do the numbers appear on the dhea sulfate report?",
+    "intent": "result_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.28968605399131775
+    }
+  },
+  {
+    "text": "Is zostavax a safe drug to take?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.44807055592536926
+    }
+  },
+  {
+    "text": "Does valtoco cure anything?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.43919897079467773
+    }
+  },
+  {
+    "text": "Please give me terazosin details.",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.9580039381980896
+    }
+  },
+  {
+    "text": "My goal is to learn more about drugs",
+    "intent": "request_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.8756701946258545
+    }
+  }
+]

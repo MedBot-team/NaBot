@@ -1,0 +1,162 @@
+[
+  {
+    "text": "c. diff testing: Is it necessary?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.8645229935646057
+    }
+  },
+  {
+    "text": "You're talking about letrozole",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.44910961389541626
+    }
+  },
+  {
+    "text": "gentamicin might be the culprit",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.17559488117694855
+    }
+  },
+  {
+    "text": "Could you provide some advice to people about how to prep for an uric acid test?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.3088839650154114
+    }
+  },
+  {
+    "text": "What is an ast test?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.9843303561210632
+    }
+  },
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-msm?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.2951772212982178
+    }
+  },
+  {
+    "text": "Do omnicef and certain medications interact?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.3000587224960327
+    }
+  },
+  {
+    "text": "benicar interactions: which drugs?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.28326159715652466
+    }
+  },
+  {
+    "text": "afp tumor marker: for what purpose is it used?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.5750100612640381
+    }
+  },
+  {
+    "text": "How is calcium blood test used?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.24511148035526276
+    }
+  },
+  {
+    "text": "Is it possible that zofran-odt has unexpected effects",
+    "intent": "sideeffects_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.6120744943618774
+    }
+  },
+  {
+    "text": "How do the numbers appear on the dhea sulfate report?",
+    "intent": "result_lab",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.415548175573349
+    }
+  },
+  {
+    "text": "What should I know if I choose to use meloxicam?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.44215303659439087
+    }
+  },
+  {
+    "text": "What is the recommended frequency of gralise use?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.4146220088005066
+    }
+  },
+  {
+    "text": "What is the maximum dosage of lenvima I can take each day?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.5091211199760437
+    }
+  },
+  {
+    "text": "How does vitamin-c treat pain?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.26915469765663147
+    }
+  },
+  {
+    "text": "urso-forte can cure what?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.3722851574420929
+    }
+  },
+  {
+    "text": "strattera is why I should take it?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.6222230195999146
+    }
+  },
+  {
+    "text": "Would you be able to tell me more about a test",
+    "intent": "request_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.5814162492752075
+    }
+  },
+  {
+    "text": "What is the drug I am interested in?",
+    "intent": "request_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.23907029628753662
+    }
+  }
+]
