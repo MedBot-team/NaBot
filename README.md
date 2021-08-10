@@ -35,7 +35,7 @@ Our chatbot gets its power from the [Rasa](https://rasa.com/) engine. We are tha
 
 Our autocorrect component in the chatbot is based on [autocorrect](https://github.com/filyp/autocorrect), which medical and Persian dictionaries are added to it. We are thankful to their team for their contribution to open-source society. :heart_eyes:
 
-Ui of ourchatbot gets its power from [Streamlit](https://github.com/streamlit/streamlit). Thanks for their for their contribution to the open-source society. :heart_eyes:
+Ui of ourchatbot gets its power from [Streamlit](https://github.com/streamlit/streamlit). Thanks for their contribution to the open-source society. :heart_eyes:
 
 A list of medicines information has been collected from [Drugs.com](https://www.drugs.com/) and [MedlinePlus](https://medlineplus.gov/druginformation.html). We're appreciating their teams for producing great medicines information. :hugs:
 
