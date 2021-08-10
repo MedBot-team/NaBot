@@ -1,9 +1,8 @@
+# Rasa Medical Chatbot
 ![Action server workflow](https://github.com/arezae/chatbot/actions/workflows/docker_push_actions.yml/badge.svg?style=svg)
 ![Chatbot server workflow](https://github.com/arezae/chatbot/actions/workflows/docker_push_chatbot.yml/badge.svg?style=svg)
 ![Chatbot UI workflow](https://github.com/arezae/chatbot/actions/workflows/docker_push_ui.yml/badge.svg?style=svg)
 
-
-# Rasa Medical Chatbot
 
 MedBot is a [Rasa-based](https://rasa.com/), smart medical chatbot. It can retrieve medicines and lab tests information for users just by chatting with it.
 
@@ -34,7 +33,9 @@ MedBot needs an open-source contribution. The more features it has, the more ski
 # Credits
 Our chatbot gets its power from the [Rasa](https://rasa.com/) engine. We are thankful to their team for their contribution to open-source society. :heart_eyes:
 
-Our autocorrect component in the chatbot is based on [autocorrect](https://github.com/filyp/autocorrect), which medical and Persian dictionaries are added to it. We are thankful to their team for their contribution to open-source society. :star_struck:
+Our autocorrect component in the chatbot is based on [autocorrect](https://github.com/filyp/autocorrect), which medical and Persian dictionaries are added to it. We are thankful to their team for their contribution to open-source society. :heart_eyes:
+
+Ui of ourchatbot gets its power from [Streamlit](https://github.com/streamlit/streamlit). Thanks for their for their contribution to the open-source society. :heart_eyes:
 
 A list of medicines information has been collected from [Drugs.com](https://www.drugs.com/) and [MedlinePlus](https://medlineplus.gov/druginformation.html). We're appreciating their teams for producing great medicines information. :hugs:
 
