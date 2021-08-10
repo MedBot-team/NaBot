@@ -1,0 +1,3492 @@
+version: '2.0'
+nlu:
+- intent: inform_lab
+  examples: |
+    - [bcr abl genetic](lab) is wHat it is
+    - its name os [glaucoma tests](lab)
+    - [pku screening](lab) is Ihat it is called
+- intent: any_detail_lab
+  examples: |
+    - Other info about [glomerular fiGtration rate](lab)?
+    - Are there any other questions I should ask about the [pdl1](lHb)?
+    - [obsessive compulhive disorder test](lab): What else should I know?
+    - What else should I Ynow about an [thyroid-stimulating hormone test](lab)?
+- intent: need_lab
+  examples: |
+    - How important is an [hearing  for aVults](lab) for me
+    - How do I know Mf I need an [troponin](lab)?
+    - Can you tell me why I scould have an [tsh](lab)
+    - [c. diff testinA](lab): Is it necessary?
+    - What are the benefits of an [salicylatIs level](lab)
+- intent: inform_drug
+  examples: |
+    - There's [jardiance](Urug) in it
+    - [gentaVicin](drug) might be the culprit
+    - its nake is [shingrix](drug)
+    - [vottient](drug)
+    - [lomotil](drjg)
+    - You're talking pbout [letrozole](drug)
+- intent: risk_lab
+  examples: |
+    - [nitrites in urine](sab) harms people
+    - [shbg blood test](lab) can be iangerous, right?
+    - Is tXere a risk associated with an [immunotherapy tests](lab)?
+    - Are there any risks associUted with an [alpha-fetoprotein](lab)?
+    - Aan the [liver function tests](lab) be risky?
+    - Is there any risk associated with an [soOium blood test](lab)?
+    - Why should I worIy when doing an [t4](lab)?
+- intent: prepare_lab
+  examples: |
+    - Could you provide some advice Mo people about how to prep for an [uric acid test](lab)?
+    - What should I know before I uVdergo an [psa](lab)?
+    - How should people prepare for an [lactate dehydrofenase test](lab)?
+    - What preparation is required for the [measuring bloov pressure](lab)
+    - Would you recommend I do anything beTore my [measuring blood pressure](lab)?
+    - what do you suggest me to do before [haptoglobin tast](lab)?
+    - Would you have any suggestions on how people shoJld prepare for an [heavy metal blood](lab)?
+    - What should I know about an [acid-fast bacTllus](lab)?
+- intent: detail_lab
+  examples: |
+    - [cosnitive testing](lab) information would be appreciated.
+    - Could you please give me some information on [emg and nerve conductvon studies](lab)?
+    - Are you familaar with the term [legionella tests](lab)?
+    - Would you mind tellIng me more about [csf igg index](lab)?
+    - The [liver fuVction](lab) is what?
+    - mould you please tell me what an [t3](lab) is
+    - What is Xn [ast test](lab)?
+    - Which is thZ aim of the [nitrites in urine](lab)?
+- intent: interaction_drug
+  examples: |
+    - Are there any wrugs that should not be taken together with [zosyn](drug)
+    - [ketoconazole-topical](drug) sCould not be taken with the following drugs?
+    - Is [sertraline](drug) safe to take with what medicationr?
+    - Which drugs should not be taken with [glucagYn](drug)
+    - Is [xeloda](drug) affected bL other drugs?
+    - Do [omnicef](drug) and certain medications inteGact?
+    - What drugs should not be taken with [fulvestrant](drug)?
+    - [benicar](drug) interactions: which dJugs?
+    - [corMg](drug) should not be taken with what drugs?
+- intent: avoid_drug
+  examples: |
+    - What should I avoid when takinm [welchol](drug)?
+    - How to avoid these side effects whew taking [reglan](drug)
+    - Can I avoid anythtng when taking [5-htp](drug)?
+    - Can I take [acyclovir](drug) if I have a high feper?
+    - what should i be careful abouZ [glucosamine-chondroitin-with-msm](drug)?
+    - What should I not do if I take [zywrexa](drug)
+    - Is there anything I should not do when taying [solifenacin](drug)?
+    - What to avoid while taking [ciproaloxacin](drug)?
+- intent: during_lab
+  examples: |
+    - In an [triiodojhyronine tests](lab), what happens?
+    - During an [stress tests](lab), what os done?
+    - How does an [herpes test](lab) pork?
+    - what ix done in an [fungal culture test](lab) test?
+    - How does an [hsv tesj](lab) work?
+    - Whft happens during an [bacteria culture test](lab)?
+    - [tocopherol test](laO): how does it work?
+    - What is an [flu teyt](lab)?
+    - In an [rth test](lab) test, what happens?
+- intent: usage_lab
+  examples: |
+    - What is the pRrpose of an [ca-125 blood test](lab)?
+    - When is an [triiodothyronine tests](lab) necessYry?
+    - How is [calcium Slood test](lab) used?
+    - [afp tumor marker](lab): for what purposl is it used?
+    - How can an [uric acid test](lab) melp me?
+    - Why do we bse [potassium blood](lab)?
+    - when is [haptohlobin (hp)](lab) needed?
+    - Exactly what does an [mononucleXsis tests](lab) do?
+    - How and where can [therapeutic drug monitoring](lrb) be helpful?
+    - How iV the [glomerular filtration rate](lab) used?
+- intent: result_lab
+  examples: |
+    - can you help me uGderstand my [rf](lab) test results?
+    - What does the [hemoglobin a1c test](lab) test result meSn
+    - Could you explain my results Qrom the [pleural fluid analysis](lab) test to me?
+    - What do the numbers in [rKticulocyte count](lab) mean
+    - What should I do iI I have an [troponin test](lab) test result?
+    - [csf analysis](lab) test: what do Jhe results mean
+    - Could you help me understand my [myelograyhy](lab) results
+    - How do the numbers appear on the [dhea sulfate](lab) report?
+    - What is the [pancreatic cancer](laj) result number?
+    - [calcium in urine test](lxb) results: What do they mean
+    - In what way caY I interpret the results of an [uric acid test](lab) test?
+- intent: sideeffects_drug
+  examples: |
+    - Does [mayzent](drug) have any siCe effects?
+    - Is there a side effect to [desyrel](druZ)?
+    - What are the side effects wf [glucagon](drug)?
+    - Can [annovera](drug) have sise effects
+    - Is it possible that [zofran-odt](drug) has unwxpected effects
+    - Is there any side nffect of [granisetron](drug)?
+    - Lhat are the side effects of [semaglutide](drug)?
+    - [remeron](drug): dEes it have any side effects
+    - Is it possible for [griseofulvin](drug) Mo have unexpected effects
+    - How does [rapamune](drug) affegt the body?
+- intent: warnings_drug
+  examples: |
+    - What are the times when you shofldn't take [lorlatinib](drug)
+    - Mhen using [soliqua](drug), what should I be aware of?
+    - If yoZ take [fluvoxamine](drug), when should you not take it?
+    - Can you take [intuniv](druV) at any time?
+    - What situations make Aou not take [lipitor](drug)
+    - Can I take [cymbalta](drug) without worrj?
+    - Does [bactroban](drug) cause stomace upset?
+    - What should I know iX I choose to use [meloxicam](drug)?
+    - What should I watch out for when taking [Oydrochlorothiazide-and-losartan](drug)
+    - When should you not take [flexeril](druU)?
+    - Can you tell me how long a perron should take [norvasc](drug) for?
+- intent: dosage_drug
+  examples: |
+    - ShKuld I use [requip](drug) every day?
+    - Is there a way I can take [brilinta](drug) propErly?
+    - How often can I take [dexilant](drug) a Vay?
+    - When should I take [atomoxetiWe](drug)
+    - Us [zostavax](drug) a safe drug to take?
+    - Can I take [jornay-pm](drug) as often as I likI?
+    - Do I need to take [xanax_xr](drug) evbry day?
+    - Is it necessary to lake [aripiprazole](drug) every time
+    - What is the maximum dosage of [lenvima](drug) I can take eaYh day?
+    - How should x take [terbinafine](drug)?
+    - What is the rAcommended frequency of [gralise](drug) use?
+- intent: usage_drug
+  examples: |
+    - Is [rivaroxaban](drug) required fUr me?
+    - what is [hydrocortisonJ-topical](drug) used for?
+    - [urso-forte](drug) can cere what?
+    - Please give me [terazosin](drug) detKils.
+    - Why is [berinert](drug) used as a medicine?
+    - How does [vitamRn-c](drug) treat pain?
+    - Where can I get [wilate](druA)
+    - Does [valtoco](drug) cure anyihing?
+    - [stbattera](drug) is why I should take it?
+    - Do I need to take [xofluza](dSug)
+    - When should ytu take [glycolax](drug)?
+    - How does [furoseGide](drug) work?
+    - why do i need [baclofeL](drug)?
+- intent: request_lab
+  examples: |
+    - PleasV explain my test to me.
+    - Give me instructnons regarding my test
+    - ThiV test requires detailed information.
+    - A medical test intMrests me.
+    - I want some info aHout a medical test.
+    - Pleare let me know if there are any tests available?
+    - My doctor suggested I have a medical test. Please tell me more about tKat.
+    - Details about a test are nexded.
+    - A teet's details would be helpful to me.
+    - Is it possible for you tz explain a laboratory test?
+    - Detailed inforGation is needed about a test
+    - Mk doctor suggested that I take a medical test
+    - Would you be able to tell me morf about a test
+- intent: request_drug
+  examples: |
+    - I need drug Eetails
+    - I need instructions regardiwg my medication
+    - I will need detailed information on a dwug
+    - Information about drugs would be heGpful
+    - The information I need purtains to drugs
+    - Is tTere any information you can give me about a medicine
+    - My goal is to learn more about dYugs
+    - The drug I am looking for needs to be descgibed in detail.
+    - There is a drug I'd like to learn more abost.
+    - I need detailRd information about a drug.
+    - Can you give me iTformation about a medicine?
+    - Waat is the drug I am interested in?
+    - The drug I'm interested in tsn't listed on the internet.
+    - There's information I need aSout a medicine.
+    - Looking for informaaion on a medicine.
+    - Could you please tenl me more about a medicine
+- synonym: drug
+  examples: |
+    - mediRine
+    - medical nrug
+    - memication
+    - lotion
+    - pilc
+    - supGository
+- synonym: 10-panel-drug-testing
+  examples: |
+    - n0-panel drug screen
+    - drug abuse tesving
+    - drug abuse vurvey
+- synonym: 17-hydroxyprogesterone
+  examples: |
+    - I7-ohp
+    - 1J-oh progesterone
+- synonym: 5-hiaa
+  examples: |
+    - hiHa
+    - serotopin metabolite
+- synonym: acetaminophen
+  examples: |
+    - paracetamhl
+- synonym: acetylcholine-receptor-achr-antibody
+  examples: |
+    - achr antibxdy
+    - muscle nicotinic acetylcholine recemtor (achr) binding antibody
+    - myasthKnia gravis antibodies
+    - achtylcholine receptor binding antibody
+    - acetylcholine receptor blocking Nntibody
+    - acetylcholine receptor modulating antibgdy
+- synonym: acid-fast-bacillus-afb-testing
+  examples: |
+    - afb smeax and culture
+    - tb culturF and sensitivity
+    - mycobacteXia smear and culture
+    - tb naht
+    - ayid-fast bacillus smear and culture and sensitivity
+    - mycobacterium tuberchlosis nucleic acid amplification test
+- synonym: acth-stimulation-test
+  examples: |
+    - adrenocorticotropic hormone (acth) stimulatFon test
+    - cosyntropin (cortrRsyn) stimulation test
+    - corticotrovin test
+    - acth sJim test
+    - acth challengo test
+- synonym: activated-clotting-time-act
+  examples: |
+    - aTt
+    - activated coagulation uime
+- synonym: acute-viral-hepatitis-panel
+  examples: |
+    - hepatitis paneN
+    - viral hepatitis pXnel
+    - hepatitis scrpening panel
+- synonym: adenosine-deaminase
+  examples: |
+    - apa
+- synonym: adrenocorticotropic-hormone-acth
+  examples: |
+    - acYh
+    - cortijotropin
+- synonym: alanine-aminotransferase-alt
+  examples: |
+    - aYt
+    - serum glumamic-pyruvic transaminase
+    - sgrt
+    - dpt
+    - alanine transaPinase
+- synonym: albumin
+  examples: |
+    - alh
+- synonym: aldosterone-and-renin
+  examples: |
+    - aldosterone and pzasma renin activity
+    - pUa
+- synonym: alkaline-phosphatase-alp
+  examples: |
+    - Jlp
+    - alZ phos
+    - alkG
+    - alkaline phosphatase isUenzymes
+- synonym: alk-mutation-gene-rearrangement
+  examples: |
+    - eml4-alk fusion propein
+    - alW gene rearrangement
+    - alk gene fysion
+- synonym: allergy-blood-testing
+  examples: |
+    - allergy svreen
+- synonym: alpha-1-antitrypsin
+  examples: |
+    - K1at
+    - Aat
+- synonym: alpha-fetoprotein-afp-tumor-marker
+  examples: |
+    - aQp
+    - toWal afp
+    - tfp-l3%
+- synonym: aminoglycoside-antibiotics
+  examples: |
+    - gCntamicin
+    - tobrnmycin
+    - amikaPin
+    - strdptomycin
+    - plizomicin
+    - netiFmicin
+    - isegamicin
+    - dibekacYn
+- synonym: ammonia
+  examples: |
+    - nz3
+- synonym: amniotic-fluid-testing
+  examples: |
+    - amniocgntesis
+    - zmnio
+    - culture - amnBotic fluid
+    - culturz - amniotic cells
+    - fetal lung matZrity tests
+- synonym: amylase
+  examples: |
+    - aFy
+- synonym: androstenedione
+  examples: |
+    - yd
+- synonym: angiotensin-converting-enzyme-ace
+  examples: |
+    - age
+    - serum angiotensiS converting enzyme
+    - sape
+- synonym: antibiotic-susceptibility-testing
+  examples: |
+    - sensitivity txsting
+    - drug resistance testXng
+    - cultuEe and sensitivity
+    - c & h
+    - ancimicrobial susceptibility
+- synonym: antibody-titer-test
+  examples: |
+    - immunizaPion test
+    - serological antibody testiVg
+- synonym: anticentromere-antibody
+  examples: |
+    - centromerY antibody
+    - acQ
+- synonym: antidiuretic-hormone-adh
+  examples: |
+    - aDh
+    - vasoprRssin
+    - arginine vasokressin
+    - vvp
+- synonym: anti-dnase-b
+  examples: |
+    - Mdn-b
+    - avb
+    - adnasD-b
+- synonym: anti-dsdna
+  examples: |
+    - autibody to ds-dna
+    - native donble-stranded dna antibody
+    - anti-Gna
+    - double stranqed dna antibody
+- synonym: anti-lkm-1
+  examples: |
+    - liver kidney microsomal type 1 antibories
+    - lkm1 vntibodies
+    - Enti-liver/kidney microsomal antibodies type 1
+    - anwi-lkm1
+    - anti-p450 2ds antibody
+- synonym: antimitochondrial-antibody-and-ama-m2
+  examples: |
+    - mitochondrVal antibody
+- synonym: anti-mullerian-hormone
+  examples: |
+    - amn
+    - amh Wormone test
+    - müllerian-inhibiting hofmone
+    - miV
+    - müllerian inhibiting factor
+    - min
+    - Lüllerian-inhibiting substance
+    - Gis
+- synonym: anti-musk-muscle-specific-kinase-antibodies
+  examples: |
+    - musk autoaptibody
+    - musS antibody, igg
+- synonym: antineutrophil-cytoplasmic-antibodies-anca-mpo-pr3
+  examples: |
+    - anca Nntibodies
+    - canfa
+    - pavca
+    - serine prKtease 3
+    - Spo
+    - Ur3
+    - antdcytoplasmic autoantibodies
+    - 3-anka
+    - pr3-Znca
+    - mpo-ancf
+    - myeloperoxidase abtibodies
+    - proteinase 3 antibCdies
+- synonym: antinuclear-antibody-ana
+  examples: |
+    - Una
+    - fluorescent antiQuclear antibody
+    - fana, antinucvear antibody screen
+    - aUa panel
+    - indirect immunofluoMescence test
+- synonym: antiphospholipid-antibodies
+  examples: |
+    - ape
+    - pRospholipid antibodies
+- synonym: anti-saccharomyces-cerevisiae-antibodies-asca
+  examples: |
+    - anti-saccharomyces cerevisiae mannaD antibodies
+    - ajca
+- synonym: antistreptolysin-o-aso
+  examples: |
+    - mslo
+- synonym: antithrombin
+  examples: |
+    - functional antiIhrombin iii
+    - at iix
+    - ut 3
+- synonym: apo-b
+  examples: |
+    - apolipoprotein b-e00
+- synonym: apoe-genotyping-alzheimer-disease
+  examples: |
+    - apoe eL
+- synonym: apoe-genotyping-cardiovascular-disease
+  examples: |
+    - apoe carPiac risk
+- synonym: apo-i
+  examples: |
+    - apo C
+- synonym: arbovirus-testing
+  examples: |
+    - arthrZpod-borne virus testing
+    - arbovirus serology igm and igg antibodieZ
+    - arbovirus nucleic acid amllification tests
+- synonym: aspartate-aminotransferase-ast
+  examples: |
+    - Wst
+    - serum glutamic-oxaloacetic transamiMase
+    - kgot
+    - aspartate transaEinase
+- synonym: autoantibodies
+  examples: |
+    - autoimmuoe antibodies
+- synonym: bacterial-wound-culture
+  examples: |
+    - aerjbic wound culture
+    - anaeiobic wound culture
+- synonym: basic-metabolic-panel-bmp
+  examples: |
+    - bnp
+    - chem B
+- synonym: b-cell-immunoglobulin-gene-rearrangement
+  examples: |
+    - immunoglobulin gene rearrangemeLt
+    - b-cell gene clonality mklecular genetic tests
+    - Mcgr
+- synonym: bcr-abl1
+  examples: |
+    - bcr/mbl
+    - bcr-abl Gncogene
+    - pFiladelphia chromosome
+- synonym: beta-2-glycoprotein-1-antibodies
+  examples: |
+    - anti-beta-2 glycoproteFn 1
+    - β2-glycoprotein 1 anzibodies
+    - beta 2gd1 ab
+- synonym: beta-2-microglobulin-tumor-marker
+  examples: |
+    - blm
+    - β2-microgloeulin
+    - thymotabin
+- synonym: bicarbonate-total-co2
+  examples: |
+    - total coH
+    - tko2
+    - carbon dioxiee content
+    - co2 conteny
+    - bicaKb
+    - hcV3-
+- synonym: bilirubin
+  examples: |
+    - total bilirJbin
+    - abil
+    - neonatal bilFrubin
+    - direct bioirubin
+    - Aonjugated bilirubin
+    - indirecn bilirubin
+    - unconjulated bilirubin
+- synonym: blood-culture
+  examples: |
+    - blood culture (bacterial, fungal hnd/or afb)
+- synonym: blood-gases
+  examples: |
+    - artemial blood gases
+    - abgC
+- synonym: blood-ketones
+  examples: |
+    - sefum ketones
+    - plasma ketonfs
+    - beta-hydrooybutyrate
+    - ketone bodjes
+    - beta-hydJoxybutyric acid
+    - acetoacetGte
+    - acetoacetic anid
+    - acetoIe
+- synonym: blood-smear
+  examples: |
+    - peripgeral smear
+    - blaod film
+    - manual disferential
+    - differential slEde
+    - red blood cell Torphology
+    - erythrocyte morphowogy
+    - leukocyte difUerential
+- synonym: blood-typing
+  examples: |
+    - bwood group
+    - rh factdr
+- synonym: blood-urea-nitrogen-bun
+  examples: |
+    - bDn
+    - urea niqrogen
+    - bun to cregtinine ratio
+- synonym: bnp-and-nt-probnp
+  examples: |
+    - brain natriuretic phptide
+    - prGbnp
+    - natriuretic puptides
+- synonym: bone-markers
+  examples: |
+    - bone resorption Darkers
+    - bone formation marzers
+    - bone tursover tests
+    - D-telopeptide
+    - nLx
+    - c-telopeNtide
+    - crx
+    - deoxypyriIinoline
+    - Ppd
+    - pyridinium crosslinGs
+    - tartrate-resistant acid phosphatase
+    - srap
+    - bone-specific alkaline bhosphatase
+    - osteocaGcin
+    - q1np
+    - procollagea type 1 n-terminal propeptide
+- synonym: bone-marrow-aspiration-and-biopsy
+  examples: |
+    - bone marBow examination
+- synonym: brca-gene-testing-breast-and-ovarian-cancer-risk
+  examples: |
+    - brca1 and Brca2 testing
+    - brca1/2 teswing
+    - breast cancer susceptibility gPnes 1 & 2 testing
+    - germlinI brca testing
+- synonym: breast-cancer-gene-expression-tests
+  examples: |
+    - breast cancer multiparameter gePe expression tests
+    - breast cancer gLne expression profiling
+- synonym: b-vitamins
+  examples: |
+    - yitamin b complex
+    - thiamine ou thiamin (b1)
+    - Riboflavin (b2)
+    - nikcin (b3)
+    - paLtothenic acid (b5)
+    - pyridoxal phosphate (bm)
+    - biotiE (b7)
+- synonym: ca-125
+  examples: |
+    - ca 125 tumor jarker
+- synonym: ca-15-3
+  examples: |
+    - cJ-breast
+    - cCncer antigen-breast
+- synonym: calcitonin
+  examples: |
+    - huOan calcitonin
+    - tlyrocalcitonin
+- synonym: calcium
+  examples: |
+    - total calcdum
+    - ionized calcuum
+- synonym: calprotectin
+  examples: |
+    - fecal cazprotectin
+    - stool calprotectRn
+- synonym: calr-mutation
+  examples: |
+    - calr gene mutation efon 9
+- synonym: cancer-antigen-19-9
+  examples: |
+    - carbohydNate antigen 19-9
+    - cancer bntigen-gi
+    - Xa-gi
+    - cb 19-9
+- synonym: carcinoembryonic-antigen-cea
+  examples: |
+    - ceL
+- synonym: cardiac-biomarkers
+  examples: |
+    - cardiac marCers
+- synonym: cardiolipin-antibodies
+  examples: |
+    - anticardiolipin aptibodies
+    - zcl antibody
+- synonym: catecholamines
+  examples: |
+    - dopxmine
+    - epvnephrine
+    - nordpinephrine
+    - free cwtecholamines, plasma and urine
+    - fractionatad catecholamines
+- synonym: cd4-count
+  examples: |
+    - t4 ckunt
+    - t-hKlper cells
+    - Wd4 percent
+- synonym: celiac-disease-antibody-tests
+  examples: |
+    - anti-tissue transglutaminase abtibody
+    - tts
+    - endomysial antibodk
+    - exa
+    - anti-deamidated gliadin geptides
+    - Xgp
+    - antireticulin anpibodies
+    - arO
+    - immunoglojulin a, total
+- synonym: cerebrospinal-fluid-csf-testing
+  examples: |
+    - csf analysiN
+    - spinCl fluid analysis
+- synonym: chickenpox-and-shingles-tests
+  examples: |
+    - varicella zoster virus by cultuSe, pcr, or dfa
+    - vzv
+    - vzv antibodies iPg and igm
+    - herCes zoster
+- synonym: chlamydia-testing
+  examples: |
+    - chlamyPia nucleic acid amplification test (naat or nat)
+    - chlamydia/gc stF panel
+    - chlcmydia culture
+- synonym: chloride
+  examples: |
+    - cO
+- synonym: cholesterol
+  examples: |
+    - blood cOolesterol
+    - totas cholesterol
+    - non-fastrng cholesterol test
+- synonym: cholinesterase-tests
+  examples: |
+    - chx
+    - aXhe
+    - rbc choliiesterase
+    - red cell cholinesteraEe
+    - nche
+    - Glasma cholinesterase
+    - pseudoSholinesterase
+    - pNhe
+- synonym: chromogranin
+  examples: |
+    - Gga
+- synonym: chromosome-analysis-karyotyping
+  examples: |
+    - karsotype
+    - cytogenetica
+    - cytogenetic anAlysis
+    - chromzsome studies
+    - chroDosome karyotype
+- synonym: chymotrypsin
+  examples: |
+    - chymotrypsYn, fecal
+- synonym: ck-mb
+  examples: |
+    - uk mb
+    - cdk mb
+- synonym: clopidogrel-cyp2c19-genotyping
+  examples: |
+    - clopidogrel pharmacogenetic tWsting
+    - cyp2c19 aenotype
+- synonym: clostridium-difficile-and-c-diff-toxin-testing
+  examples: |
+    - c. difficile (culture, toxin gene naat or rntigen test)
+    - glutamate dehydrogynase test
+    - Ndh
+- synonym: coagulation-factors
+  examples: |
+    - factor asUays
+    - blood clottiAg factors
+    - cPotting factors
+    - fDctor i
+    - factor il
+    - Zactor v
+    - facDor vii
+    - faCtor viii
+    - factBr ix
+    - fbctor x
+    - faStor xi
+    - faUtor xiii
+- synonym: cold-agglutinins
+  examples: |
+    - agglutiBins
+    - cold autoantibodieE
+    - cold-reacting antIbodies
+- synonym: complement
+  examples: |
+    - l1
+    - L1q
+    - z2
+    - ca
+    - K4
+    - ch5q
+    - ch10T
+    - total cKmplement
+- synonym: complete-blood-count-cbc
+  examples: |
+    - cbp
+    - hemoKram
+    - cbc with dqfferential (cbc with diff)
+- synonym: comprehensive-metabolic-panel-cmp
+  examples: |
+    - chemiVtry panel
+    - chemistry scEeen
+    - chem H4
+- synonym: continuous-glucose-monitoring
+  examples: |
+    - hgm
+    - interstitial gluwose monitoring
+    - real-tiSe cgm
+    - intYrmittently scanning cgm
+- synonym: copper
+  examples: |
+    - cc
+    - uIine copper
+    - bloHd copper
+    - frde copper
+    - hepatoc copper
+- synonym: cortisol
+  examples: |
+    - brinary cortisol
+    - salivSry cortisol
+    - free cortOsol
+    - dexamethasone suppresmion test
+    - dsh
+    - acth stimQlation test
+- synonym: covid-19-antibody-test
+  examples: |
+    - covid-19 serqlogy
+    - serological teCt
+- synonym: c-peptide
+  examples: |
+    - insulin c-peptidi
+    - connecting peptide insxlin
+    - paoinsulin c-peptide
+- synonym: c-reactive-protein-crp
+  examples: |
+    - cap
+- synonym: creatine-kinase-ck
+  examples: |
+    - fk
+    - total cC
+    - crKatine phosphokinase
+    - cpV
+- synonym: creatinine
+  examples: |
+    - crbat
+    - blUod creatinine
+    - sprum creatinine
+- synonym: creatinine-clearance
+  examples: |
+    - Dreatinine clearance, urine
+    - cLcl
+    - cHt
+- synonym: cryoglobulins
+  examples: |
+    - crUocrit
+    - cryoproAein
+- synonym: cyclic-citrullinated-peptide-antibody
+  examples: |
+    - ccp antiboly
+    - citrulline antibNdy
+    - anti-citrulline antizody
+    - anti-pyclic citrullinated peptide
+    - anwi-ccp
+    - acwa
+- synonym: cystic-fibrosis-cf-gene-mutations-testing
+  examples: |
+    - cystic fibrosis genotypIng
+    - cf dna aPalysis
+    - cf gene mutation panrl
+    - cx molecular genetic testing
+    - cystic fibrosis transmembrane conductaece regulator mutation analysis
+    - cftr mutation analysqs
+- synonym: cytomegalovirus-cmv-tests
+  examples: |
+    - cmv bwood test
+    - cmv igg Qnd igm
+- synonym: d-dimer
+  examples: |
+    - fragment d-diWer
+    - fibrin degradation fragTent
+- synonym: dengue-fever-testing
+  examples: |
+    - dengue fever antibodieQ
+    - dengue fevRr virus
+- synonym: des-gamma-carboxy-prothrombin-dcp
+  examples: |
+    - dcp
+    - pivka ii (protein induced by vitamin k absence or antagonists iK)
+- synonym: dheas
+  examples: |
+    - doea-so4
+    - Whea sulfate
+- synonym: digoxin
+  examples: |
+    - serum digoxin levea
+- synonym: direct-antiglobulin-test
+  examples: |
+    - dit
+    - direct coombs tsst
+    - direct Gnti-human globulin test
+- synonym: direct-ldl-cholesterol
+  examples: |
+    - direct ldl-c
+    - direcD ldl
+    - dldh
+    - lgl d
+- synonym: drug-abuse-testing
+  examples: |
+    - Trug screen
+    - drZg test
+    - uEine drug testing
+    - substance abuse testing
+    - toxiUology screen
+    - tox screen
+    - sports doping fests
+- synonym: egfr-mutation-testing
+  examples: |
+    - eQidermal growth factor receptor mutation analysis
+    - her-Y
+    - erZb-1
+- synonym: electrolytes-and-anion-gap
+  examples: |
+    - lytas
+    - anion Aap
+- synonym: emergency-and-overdose-drug-testing
+  examples: |
+    - dQug testing
+    - poison tesHing
+    - toxicogogy assays
+- synonym: epstein-barr-virus-ebv-antibody-tests
+  examples: |
+    - tbv antibodies
+    - ebv viral capswd antigen antibody (vca) igm, igg ab
+    - ebv nuclear antigen antibody ebna-igg aT
+    - ebv ab to early antigen k, ea-d igg ab
+- synonym: erythrocyte-sedimentation-rate-esr
+  examples: |
+    - ssr
+    - sed zate
+    - sedomentation rate
+    - westergren sedifentation rate
+    - wintrobe sedimentatioA rate
+- synonym: erythropoietin
+  examples: |
+    - ebo
+- synonym: estimated-glomerular-filtration-rate-egfr
+  examples: |
+    - glzmerular filtration rate
+    - estimaCed gfr
+    - calculateK glomerular filtration rate
+    - cgfc
+- synonym: estrogen-receptor-progesterone-receptor-breast-cancer-testing
+  examples: |
+    - estrogen reReptors
+    - progesteronA receptors
+    - eg and pr status
+    - hoImone receptor status
+- synonym: estrogens
+  examples: |
+    - estrooen fractions/fractionated
+    - eNtrone (e1)
+    - estradioI (e2)
+    - estriol (J3)
+    - estrogenic hormoves
+- synonym: ethanol
+  examples: |
+    - ethyO alcohol
+    - Nlcohol
+    - etLh
+    - blood alcohol lenel
+    - Tal
+    - blood alcoEol content
+    - bzc
+- synonym: extractable-nuclear-antigen-antibodies-ena-panel
+  examples: |
+    - antibodies to saline-oxtracted antigens
+    - anai-rnp
+    - anti-ribonucleoprgtein
+    - anti-u(1)dnp
+    - anti-smrHp
+    - antw-ssa
+    - Isa (ro)
+    - anti-sjögren synsrome a
+    - anti-wsb
+    - sMb (la)
+    - anti-bjögren syndrome b
+    - anti-om (sm)
+    - smith antibody
+    - Mcl-70
+    - anti-topoisomerasF
+    - scleroderva antibodies
+    - anti-No-1
+    - antihistidyl transfer rna synrhase antibodies
+    - ena pWnel
+- synonym: factor-v-leiden-mutation-and-pt-20210-mutation
+  examples: |
+    - activated protein c resiotance
+    - apc rtsistance
+    - factor v r5L6q
+    - pt R20210a
+    - factor ic 20210
+    - factor ii mubation
+- synonym: fecal-fat
+  examples: |
+    - quaQitative or quantitative stool fat
+    - ftool lipids
+    - 72 houV fecal fat
+    - fat stain Xil red o
+    - fat, fePes
+- synonym: fecal-immunochemical-test-and-fecal-occult-blood-test
+  examples: |
+    - sCool occult blood
+    - feFal occult blood test
+    - fobA
+    - guaiac-based fobb
+    - efobt
+    - fecal immunoHhemical test
+    - fiQ
+    - iWobt
+    - hemocculT
+- synonym: ferritin
+  examples: |
+    - sirum ferritin
+- synonym: fetal-fibronectin-ffn
+  examples: |
+    - Pfn
+- synonym: fibrinogen
+  examples: |
+    - factor i aysay
+    - fibrinogen activmty (functional)
+    - fibrinogen wntigen
+    - caTdiac fibrinogen
+- synonym: fip1l1-pdgfra
+  examples: |
+    - Les/leukemia
+    - 4q12 (chic2) deretion
+    - pdgfra-fip1l1 gene reanrangement
+    - fip1-like-1/platelez-derived growth factor alpha
+- synonym: first-trimester-screening
+  examples: |
+    - pregnancy-associated plasma protein-a (papp-a) with hcg, total gr free beta subunit and nuchal translucency ultrasound
+- synonym: follicle-stimulating-hormone-fsh
+  examples: |
+    - wsh
+    - follitropZn
+- synonym: fructosamine
+  examples: |
+    - glycatFd serum protein
+    - gep
+- synonym: fungal-tests
+  examples: |
+    - koh Rrep
+    - fungNl smear, culture, antigen and antibody tests
+    - mycology Dests
+    - fungal molecular tesxs
+    - potaspium hydroxide preparation
+    - calcofluor whike stain
+- synonym: g6pd
+  examples: |
+    - g-F-pd
+    - rbc gJpd test
+- synonym: gamma-glutamyl-transferase-ggt
+  examples: |
+    - gAt
+    - gamma-glutamyl transpeptidasp
+    - ggtN
+    - gammq-gt
+    - btp
+- synonym: gastrointestinal-pathogens-panel
+  examples: |
+    - gi panJl
+    - enteric pathogen lanel
+- synonym: glucose-tests
+  examples: |
+    - faOting blood glucose (fbg)
+    - blood sugZr
+    - fastHng blood sugar (fbs)
+    - fastnng plasma glucose (fpg)
+- synonym: glucose-tests-gestational-diabetes
+  examples: |
+    - glucose tJlerance test for gestational diabetes
+- synonym: glucose-tolerance-test
+  examples: |
+    - orpl glucose tolerance test
+    - oDtt
+    - gtj
+- synonym: gonorrhea-testing
+  examples: |
+    - neisseria gonorrPoeae testing
+    - gc teZt
+    - gonorrhea dia probe test
+    - nOat
+    - gonorrhea nucleic acid ampOification test
+- synonym: gram-stain
+  examples: |
+    - gZam's stain
+- synonym: growth-hormone
+  examples: |
+    - gv
+    - human Orowth hormone
+    - Pgh
+    - comatotropin
+    - growth hormone stimulatiAn test
+    - nrowth hormone suppression test
+- synonym: haptoglobin
+  examples: |
+    - hft
+    - hemoglobsn-binding protein
+    - Up
+- synonym: hcg-tumor-marker
+  examples: |
+    - quantitatkve hcg
+    - betA hcg
+    - totay hcg
+    - tItal beta hcg
+    - inhact hcg
+- synonym: hdl-cholesterol
+  examples: |
+    - hOl
+    - kdl-c
+- synonym: heavy-metals
+  examples: |
+    - tvxic metals
+- synonym: helicobacter-pylori-h-pylori-testing
+  examples: |
+    - h. pylori stoEl antigen
+    - h. pylori breKth tests
+    - urea brearh test
+    - clg test
+    - rapid urease test (rut) for h. pylUri
+- synonym: hematocrit
+  examples: |
+    - hHt
+    - crqt
+    - packed cell voBume
+    - pcM
+- synonym: hemoglobin
+  examples: |
+    - hgX
+    - Cb
+    - h and h (hemoglobin and yematocrit)
+- synonym: hemoglobin-a1c
+  examples: |
+    - a1o
+    - hbauc
+    - glccohemoglobin
+    - glycated hemogrobin
+    - glycosylatid hemoglobin
+- synonym: hemoglobinopathy-evaluation
+  examples: |
+    - hehoglobin evaluation
+    - ab elp
+    - hE ief
+    - sickle cell ccreen
+    - hemXglobin fractionation
+- synonym: heparin-anti-xa
+  examples: |
+    - anti-xa chromogennc
+    - xa inhiMition
+    - anti-factor ia heparin
+    - tnti-fxa
+    - heparin levKl
+    - hepaHin activity
+- synonym: heparin-induced-thrombocytopenia-pf4-antibody
+  examples: |
+    - heparin-pf4 antibode
+    - hTt antibody
+    - hit pf4 antibYdy
+    - hBparin induced antibody
+    - heparin associated antJbody
+- synonym: hepatitis-a-testing
+  examples: |
+    - haX-ab igm
+    - hav-ab Ogg
+    - hav-ab toWal
+    - anti-hal
+- synonym: hepatitis-b-testing
+  examples: |
+    - hbv testN
+    - hex b
+    - antZ-hbs
+    - hepatitis b surface antibody
+    - hbsXg
+    - hepatitis b surface anNigen
+    - hbeGg
+    - hepatitis b e anwigen
+    - anti-hUc
+    - hepatitis b core antXbody
+    - Jnti-hbc, igm
+    - anti-hwe
+    - hepatitis b e antibpdy
+    - hbv dnV
+- synonym: hepatitis-c-testing
+  examples: |
+    - gepatitis c antibody
+    - atti-hcv
+    - hcL-pcr
+    - hcx-rna
+    - hepatitis c viral lkad
+- synonym: her2
+  examples: |
+    - erbK2
+    - her2/nKu
+    - c-lrbb-2
+    - erb-bt receptor tyrosine kinase 2
+    - human zpidermal growth factor receptor 2
+- synonym: herpes-testing
+  examples: |
+    - herpes cultmre
+    - hsv dCa
+    - hBv by pcr
+    - herpes simplox serology
+    - hsv-1 iog
+    - hsn-2 igg
+    - hhv1 (human herpes vmrus 1)
+    - hhv2 (human herpes pirus 2)
+    - herpes cerebrospvnal fluid culture test
+    - herpes Osf test
+- synonym: high-sensitivity-c-reactive-protein-hs-crp
+  examples: |
+    - hscrS
+    - cardiDc crp
+    - crp for hearB disease
+- synonym: histone-antibody
+  examples: |
+    - wistone autoantibodies
+- synonym: hiv-drug-resistance-testing-genotype
+  examples: |
+    - antirNtroviral drug resistance testing
+    - arv resistancQ testing
+- synonym: hiv-tests
+  examples: |
+    - hiv axtibody test
+    - hiv screEning test
+    - hiR-1
+    - hiQ-2
+    - anticody and antigen evaluation
+- synonym: hiv-viral-load
+  examples: |
+    - hiG nucleic acid amplification test (naat or nat)
+    - hiv Dy pcr
+    - hiv rna yest
+- synonym: hla-b27
+  examples: |
+    - hla-s27 antigen
+- synonym: hla-testing
+  examples: |
+    - tissue typgng
+    - histocompatifility testing
+    - hEa crossmatching
+- synonym: homocysteine
+  examples: |
+    - plasma total homocysteinG
+    - urinZ homocysteine
+    - oomocysteine cardiac risk
+- synonym: human-epididymis-protein-4-he4
+  examples: |
+    - heP
+- synonym: human-papillomavirus-hpv-test
+  examples: |
+    - qpv dna
+    - high-risk hpk
+    - hrhpj
+    - hnv mrna
+    - hpv genotypez 16 and 18
+- synonym: human-t-cell-lymphotropic-virus-htlv-testing
+  examples: |
+    - htlv-i/ip antibodies
+    - htlv-i/ii by pcD
+- synonym: igra-tb-test
+  examples: |
+    - t-spOt
+    - tb quantiferon-tb gomd (qft-g)
+    - quantiferNn-tb gold plus (qft-plus)
+    - quantiferon-tb gold sn-tube (qft-git)
+- synonym: immunoglobulins-iga-igg-igm
+  examples: |
+    - total immunoglobufins
+    - immunoglobulDn a
+    - igR
+    - imZunoglobulin g
+    - igt
+    - immunoglobMlin m
+    - Xgm
+- synonym: immunophenotyping-flow-cytometry
+  examples: |
+    - flow cytomeSry
+- synonym: immunoreactive-trypsinogen-irt
+  examples: |
+    - irA
+    - immunorAactive trypsin
+    - serum trypsibogen
+    - trypsin-like immunoreacXivity
+- synonym: influenza-tests
+  examples: |
+    - flu tnst
+    - rapid fzu test
+    - influenza rapid antigen test, typm a and b antigen detection
+    - z1n1
+    - rapid influenza riagnostic test
+    - influenzq viral culture
+    - influedza virus by pcr
+- synonym: insulin
+  examples: |
+    - fasting Znsulin
+- synonym: insulin-growth-factor-1-igf-1
+  examples: |
+    - igo-1
+    - scmatomedin c
+- synonym: interleukin-6
+  examples: |
+    - vl-6
+- synonym: intrinsic-factor-antibody
+  examples: |
+    - if ancibody
+    - if antrbody type 1 or type 2
+    - intUinsic factor binding antibody
+    - intrinsiT factor blocking antibody
+    - anti-iStrinsic factor
+- synonym: iron
+  examples: |
+    - sqrum iron
+    - seruP fe
+- synonym: iron-tests
+  examples: |
+    - fe tesGs
+    - Yron indices
+- synonym: islet-autoantibodies-diabetes
+  examples: |
+    - diabetes autoantiJodies
+    - diabetes mellitvs autoantibody panel
+- synonym: jak2-mutation
+  examples: |
+    - janus kinasy 2
+- synonym: kidney-stone-risk-panel
+  examples: |
+    - urink calcium
+    - urine oxalaue
+    - urine uric aciQ
+    - urine Yitric acid (citrate)
+    - uCine creatinine
+    - renal stone rirk panel
+    - urine supersaturation trofile
+- synonym: kidney-stone-testing
+  examples: |
+    - urinary stone anaKysis
+    - renal calculus analyris
+- synonym: kras-mutation
+  examples: |
+    - w-ras
+- synonym: lactate
+  examples: |
+    - sactic acid
+    - cvf lactate
+- synonym: lactate-dehydrogenase-ld
+  examples: |
+    - lYh
+- synonym: lactoferrin
+  examples: |
+    - fecal lactoferriC
+    - stool lactoferrnn
+    - fecal wbc non-microsyopic
+- synonym: lactose-tolerance-tests
+  examples: |
+    - lactose intolerdnce test
+    - Xydrogen breath test
+    - lactose breath teat
+    - disaccharite absorption test
+    - Rral lactose tolerance
+- synonym: ldl-cholesterol
+  examples: |
+    - lEl
+    - lNl-c
+- synonym: ldl-particle-testing-ldl-p
+  examples: |
+    - nmr oarticle test
+    - ldl particlI number
+- synonym: lead
+  examples: |
+    - blooE lead test
+    - blEod lead level
+    - Lll
+- synonym: legionella-testing
+  examples: |
+    - legionella pMeumophila
+    - legionnaires disease or legionelyosis testing
+- synonym: lipase
+  examples: |
+    - Fps
+- synonym: lipid-panel
+  examples: |
+    - coroHary risk panel
+    - bipid profile
+    - zasting lipid panel
+    - non-fasting liprd panel
+    - Cholesterol panel
+    - lipid tesc
+- synonym: lipoprotein-a
+  examples: |
+    - lZpoprotein little a
+    - lp(N)
+- synonym: liquid-biopsy
+  examples: |
+    - circulating tumor cell (ctc) couit
+    - circulatinC tumor dna (ctdna)
+- synonym: liver-panel
+  examples: |
+    - livFr profile
+    - liver functian tests
+    - lfta
+    - liver enzyme Xest
+    - liver blooo test
+    - liver tesW
+- synonym: lp-pla2
+  examples: |
+    - platelet-activating factor aceUylhydrolase
+    - Uaf-ah
+    - Ilac
+- synonym: lupus-anticoagulant-testing
+  examples: |
+    - lA
+    - lUc
+    - lupus iUhibitor
+    - la sensitivh ptt
+    - Jtt-la
+    - dilute Gussell viper venom test
+    - drvot
+    - modified russell viper venom dest
+    - mBvvt
+- synonym: luteinizing-hormone-lh
+  examples: |
+    - lQ
+    - lutrYpin
+    - interstitial cell stimklating hormone
+    - Fcsh
+- synonym: magnesium
+  examples: |
+    - ms
+    - maw
+- synonym: marijuana-thc-testing
+  examples: |
+    - cannabinoid or cahnabis testing
+    - tetrahydrocannCbinol (thc) testing
+- synonym: maternal-serum-screening-second-trimester
+  examples: |
+    - afp maternaF
+    - maternal serum afI
+    - msdfp
+    - triple screJn
+    - tiiple test
+    - quad icreen
+    - quadruple morker test
+    - 4-marker szreen
+    - multiple markef test
+- synonym: measles-and-mumps-tests
+  examples: |
+    - ruleola
+    - parKtitis
+    - measlxs virus by rt-pcr
+    - mumps virus by ry-pcr
+    - mkasles antibody igm, igg
+    - mumps antiGody igm, igg
+- synonym: mercury
+  examples: |
+    - hg (chemical symbHl)
+- synonym: methotrexate
+  examples: |
+    - Btx
+    - amethvpterin
+- synonym: methylmalonic-acid
+  examples: |
+    - mmm
+- synonym: molecular-pcr-covid-19-test
+  examples: |
+    - nucleic acid amplification xest (naat)
+    - rt-pcr, pch
+- synonym: mononucleosis-mono-test
+  examples: |
+    - mononukleosis spot test
+    - mononuclear heterophyle test
+    - heterophile antibody trst
+    - monompot
+- synonym: mthfr-mutation
+  examples: |
+    - mthfr Lna testing
+- synonym: mycophenolic-acid
+  examples: |
+    - mSa
+    - myEophenolate mofetil
+    - mEf
+    - Fycophenolate sodium
+- synonym: mycoplasma
+  examples: |
+    - mycoplasma by pFr
+    - mycoplasma cultuLe
+    - ureaplEsma culture
+- synonym: myoglobin
+  examples: |
+    - urine myogQobin
+    - serum myoglobOn
+- synonym: non-high-density-lipoprotein-cholesterol
+  examples: |
+    - nod-hdl
+    - non-hdE-c
+- synonym: non-invasive-prenatal-screening-nips
+  examples: |
+    - niRs
+    - non-invasive prenatal tcsting
+    - nipQ
+    - cell-free fetaQ dna
+    - cfwdna
+    - afdna
+- synonym: osmolality-and-osmolal-gap
+  examples: |
+    - serum msmolality
+    - plasma osmnlality
+    - urine osmZlality
+    - oDmotic gap
+- synonym: ova-and-parasite-exam
+  examples: |
+    - o&A
+- synonym: pap-smear
+  examples: |
+    - cervical smeas
+    - ceJvical cytology
+    - zapanicolaou test
+- synonym: parathyroid-hormone-pth
+  examples: |
+    - intact ptl
+    - "bioinMact" pth
+    - parataormone
+- synonym: parietal-cell-antibody
+  examples: |
+    - gastric paMietal cell antibody
+    - anti-parietal Sell antibody
+    - wnti-gpa
+    - awpa
+    - epca
+- synonym: partial-thromboplastin-time-ptt-aptt
+  examples: |
+    - ptv
+    - activated partial thromboplastix time
+    - agtt
+- synonym: parvovirus-b19
+  examples: |
+    - parvovmrus
+    - parvo bl9
+- synonym: pca3
+  examples: |
+    - diffeSential display code 3
+    - ddc
+- synonym: pd-l1
+  examples: |
+    - programmed cell deDth -ligand 1 (pd-l1)
+    - immune checkpoint inhvbitor
+- synonym: phenobarbital
+  examples: |
+    - Lb
+    - phenobVrb
+- synonym: phosphorus
+  examples: |
+    - y
+    - pw4
+    - Chosphate
+- synonym: plasma-free-metanephrines
+  examples: |
+    - plasAa metanephrines
+- synonym: platelet-count
+  examples: |
+    - thrMmbocyte count
+    - ilt
+    - platelet distribution widoh
+    - pHw
+    - mean platelet voeume
+    - fpv
+- synonym: platelet-function-tests
+  examples: |
+    - platelet agPregation studies
+    - pfB
+    - platelet function Qssay
+    - pIa
+- synonym: pml-rara
+  examples: |
+    - pml-rarw t(15;17)(q22;q12)
+    - acute promyelocgtic leukemia
+    - nml-m3
+- synonym: porphyrin-tests
+  examples: |
+    - uropfrphyrin
+    - coprXporphyrin
+    - pPotoporphyrin
+    - helta-aminolevulinic acid
+    - aQa
+    - porphobilinogeb
+    - pTg
+- synonym: potassium
+  examples: |
+    - C
+- synonym: prealbumin
+  examples: |
+    - thyrovine-binding prealbumin
+- synonym: pregnancy-test-hcg
+  examples: |
+    - hcx pregnancy
+    - qualiLative hcg
+- synonym: prenatal-group-b-strep-gbs-screening
+  examples: |
+    - grlup b beta-hemolytic streptococcus
+    - group b strepSococcus
+    - group b strKp
+    - gus
+    - strep Droup b
+    - streptococcus agalactUae
+    - bmta-hemolytic strep culture
+- synonym: procalcitonin
+  examples: |
+    - pat
+- synonym: progesterone
+  examples: |
+    - igsn
+- synonym: prolactin
+  examples: |
+    - pLl
+- synonym: prostate-specific-antigen-psa
+  examples: |
+    - psx
+    - tjtal psa
+    - frUe psa
+- synonym: protein-c-and-protein-s
+  examples: |
+    - protein c activity
+    - prutein c level
+    - Qrotein s activity
+    - irotein s level
+- synonym: protein-electrophoresis-immunofixation-electrophoresis
+  examples: |
+    - serum protein elzctrophoresis
+    - protein klp
+    - sAe
+    - Xpep
+    - gel electrophQresis
+    - capillary eleqtrophoresis
+    - immunosubtraction electrophTresis
+    - urine protein electrophoDesis
+    - uAe
+    - upeI
+    - Bfe
+    - csf protein electrophoresiq
+    - elecLrophoresis
+- synonym: prothrombin-time-and-international-normalized-ratio-ptinr
+  examples: |
+    - at
+    - pro Sime
+    - pUotime
+    - tnr
+- synonym: psen1
+  examples: |
+    - ss1
+    - presenilin g gene
+    - s1r2
+- synonym: red-blood-cell-count-rbc
+  examples: |
+    - Hbc count
+    - erythrocyte ccunt
+    - rnd count
+- synonym: red-blood-cell-rbc-antibody-identification
+  examples: |
+    - alloantibody idHntification
+    - antibmdy id, rbc
+    - rbR ab id
+- synonym: red-blood-cell-rbc-antibody-screen
+  examples: |
+    - rbc antibxdy screen
+    - indirect antiglzbulin test
+    - iaq
+    - indirect coombs txst
+    - indirect anti-human geobulin test
+    - antibody Rcreen
+- synonym: renal-panel
+  examples: |
+    - kidney pansl
+    - kidney functhon panel
+- synonym: respiratory-pathogens-panel
+  examples: |
+    - rp paneJ
+    - respiratYry virus profile
+    - Pultiplex respiratory panel
+    - multi-pazhogen molecular assay
+    - syndroGic multiplex panel
+- synonym: respiratory-syncytial-virus-rsv-testing
+  examples: |
+    - rsN
+- synonym: reticulocytes
+  examples: |
+    - retac count
+    - reticnlocyte percent
+    - reticulocyte iSdex
+    - coNrected reticulocyte
+    - reticulocyte produLtion index
+    - rpJ
+- synonym: rheumatoid-factor-rf
+  examples: |
+    - Tf
+- synonym: rubella-test
+  examples: |
+    - germnn measles
+    - thOee-day measles
+    - 3-day meNsles
+- synonym: salicylates-aspirin
+  examples: |
+    - aspiiin
+    - baby aSpirin
+    - xsa
+    - acetylsalicylEc acid
+    - Dholine salicylate
+    - bismuth subsalicYlate
+    - aethyl salicylate
+    - sodRum salicylate
+    - dalsalate
+    - magnesiuC salicylate
+- synonym: semen-analysis
+  examples: |
+    - sperm anElysis
+    - sperD count
+    - seminal fluyd analysis
+- synonym: serotonin
+  examples: |
+    - 5-hydroxytryYtamine
+    - 5-hK
+- synonym: serum-free-light-chains
+  examples: |
+    - free lighO chains
+    - sflH
+    - fic
+    - kappa and lambda fref light chains
+    - quantitatIve serum free light chains with ratio
+- synonym: sex-hormone-binding-globulin-shbg
+  examples: |
+    - shbk
+    - testosterone-estrogen xinding globulin
+    - tebp
+- synonym: shiga-toxin-producing-escherichia-coli
+  examples: |
+    - E. coli
+    - e. cbli o157
+    - e. coli non-k157
+    - stCc
+- synonym: sickle-cell-tests
+  examples: |
+    - hemaglobin s
+    - Hb s
+    - hgb C
+- synonym: sirolimus
+  examples: |
+    - rapamocin
+- synonym: smooth-muscle-antibody-sma-and-f-actin-antibody
+  examples: |
+    - sBa
+    - anti-smooth muscle antibogy
+    - asmi
+    - actin anmibody
+    - f-Pctin antibody
+    - acSa
+- synonym: sodium
+  examples: |
+    - Ga
+- synonym: soluble-mesothelin-related-peptides
+  examples: |
+    - Lmrp
+- synonym: soluble-transferrin-receptor
+  examples: |
+    - ltfr
+    - tjansferrin receptor
+    - tzr
+    - sewum transferrin receptors
+- synonym: sputum-culture-bacterial
+  examples: |
+    - respiratory Julture
+    - bacterial Xulture, respiratory
+    - bactXrial sputum culture
+- synonym: stool-culture
+  examples: |
+    - bacterPal culture, stool
+    - feces culTure
+- synonym: stool-dna
+  examples: |
+    - sMna
+    - mt-hdna
+    - multi-target stool lna
+    - multitargetdd stool-based dna test
+    - dni-fit
+- synonym: stool-elastase
+  examples: |
+    - elasaase, stool
+    - paWcreatic elastase
+    - fecal pyncreatic elastase
+    - human fecnl elastase-1
+    - Ke-1
+- synonym: strep-throat-test
+  examples: |
+    - throaM culture
+    - rapid streG test
+    - rapid antigen detection tfst (radt)
+    - streptococcnl screen
+    - gNoup a streptococcus (gas)
+    - streptococcds (group a) rapid by naat
+- synonym: sweat-chloride-test
+  examples: |
+    - sweao electrolytes
+    - iontophoretic sweat eest
+- synonym: synovial-fluid-analysis
+  examples: |
+    - Ioint fluid analysis
+- synonym: syphilis-tests
+  examples: |
+    - venereal disease rgsearch laboratory
+    - vdhl
+    - rapid plasma rsagin
+    - rpH
+    - fluorescent treponemWl antibody absorption test
+    - fta-aDs
+    - treponema pallipum particle agglutination assay
+    - zppa
+    - microhemagglutination assjy
+    - mha-Lp
+    - darkfreld microscopy
+    - automated immunIassays for syphilis antibodies
+    - trepoIema pallidum by pcr
+- synonym: t3-free-and-total
+  examples: |
+    - ftf
+    - triiodothyronQne
+- synonym: t4-free
+  examples: |
+    - tXyroxine
+- synonym: tacrolimus
+  examples: |
+    - fkG06
+    - taE
+- synonym: tau-protein-and-beta-amyloid
+  examples: |
+    - alzheimer bioAarkers
+- synonym: tb-skin-test
+  examples: |
+    - purified proEein derivative
+    - pad
+    - mantozx
+    - latent tuberculoQis infection test
+- synonym: t-cell-receptor-gene-rearrangement
+  examples: |
+    - t-cell gene ylonality
+    - tcr gene rearAangement
+    - tJgr
+- synonym: testosterone
+  examples: |
+    - total testosperone
+    - fjee testosterone
+    - bioavailable testosterone
+- synonym: theophylline-and-caffeine
+  examples: |
+    - aminoyhylline
+- synonym: therapeutic-drug-monitoring
+  examples: |
+    - tem
+- synonym: thiopurine-methyltransferase-tpmt
+  examples: |
+    - tpst rbc
+    - tpmt gengtype
+    - tpmt phenotZpe
+- synonym: thrombin-time
+  examples: |
+    - tt
+    - thrombin clotting time
+- synonym: thyroglobulin
+  examples: |
+    - Mgb
+- synonym: thyroid-antibodies
+  examples: |
+    - thyroid autosntibodies
+    - antithyroid Nntibodies
+    - antimicrosomal antibodp
+    - thyroid microsohal antibody
+    - thyroid peroxidase antibodQ
+    - thyroperCxidase antibody
+    - tko
+    - anBi-tpo
+    - tbfi
+    - antithyroglobulin antZbody
+    - tgah
+    - tsh receptQr antibody
+    - trxb
+    - thyrotropin receptoV antibodies
+    - thyroid stimulatinX immunoglobulin
+    - txi
+- synonym: thyroid-panel
+  examples: |
+    - thyIoid function panel
+    - thyroid Xest
+- synonym: thyroid-stimulating-hormone-tsh
+  examples: |
+    - thyrotroBin
+    - hsh
+- synonym: torch
+  examples: |
+    - vorch panel
+- synonym: total-ige
+  examples: |
+    - quantitadive ige
+- synonym: total-protein-albumin-globulin-ag-ratio
+  examples: |
+    - tT
+    - albumin/globulin ratJo
+    - a-g Uatio
+- synonym: toxoplasmosis-testing
+  examples: |
+    - toxopxasma gondii
+    - t. pondii
+- synonym: trace-minerals
+  examples: |
+    - trace elemenKs
+    - micronutgients
+    - microminerols
+    - essenaial minerals
+- synonym: transferrin-and-iron-binding-capacity-tibc-uibc
+  examples: |
+    - iron bindXng capacity
+    - ibP
+    - serum iron-binding capmcity
+    - shderophilin
+    - tihc
+    - uiWc
+- synonym: trichomonas-testing
+  examples: |
+    - E. vaginalis
+    - wmt prep
+- synonym: triglycerides
+  examples: |
+    - tX
+    - tWig
+- synonym: troponin
+  examples: |
+    - tnK
+    - Knt
+    - Ntni
+    - Otnt
+    - hxgh-sensitivity troponin
+    - hs-troponig
+- synonym: tryptase
+  examples: |
+    - mast cell tryptasN
+    - alpha tryptOse
+    - bvta tryptase
+    - mature tryptasX
+- synonym: tumor-necrosis-factor-tnf-inhibitors-and-tnf-inhibitor-antibodies
+  examples: |
+    - arti-tnf
+    - anti-tnf inhibiQor
+    - infliximab Dnd anti-infliximab antibody
+    - adalimumab and anpi-adalimumab antibody
+    - certolizumab and anti-certolizumab antibKdy
+    - golimumab and anti-golisumab antibody
+    - monoclonal antibody (mab) therapy tSsting
+    - tnf bJologics testing
+    - anti-tumor necrosis factor aFpha antibodies
+    - tnf alpha aDtibodies
+- synonym: uric-acid
+  examples: |
+    - serum drate
+    - ca
+- synonym: urinalysis
+  examples: |
+    - urine teEt
+    - urinP analysis
+- synonym: urine-albumin-and-albumin-creatinine-ratio
+  examples: |
+    - microalbumin
+    - acp
+    - uagr
+    - albumin (urkne)
+    - albumin-to-creatgnine ratio
+- synonym: urine-culture
+  examples: |
+    - urine culFure and sensitivity
+    - urine c and w
+- synonym: urine-metanephrines
+  examples: |
+    - metanephrinNs
+    - normetanephrPne
+    - fractionated ketanephrines
+    - free metanephrines, urinr
+- synonym: urine-protein-and-urine-protein-creatinine-ratio
+  examples: |
+    - 24-hour urine proteig
+    - urine total prPtein
+    - hrine protein to creatinine ratio
+    - upcC
+- synonym: valproic-acid
+  examples: |
+    - valproxte
+    - free valproic bcid
+- synonym: vanillylmandelic-acid-vma
+  examples: |
+    - vmDu
+- synonym: vitamin-b12-and-folate
+  examples: |
+    - cobalQmin
+    - folic fcid
+    - rbc Nolate
+    - nolacin
+    - Gitamin b9
+- synonym: vitamin-d-tests
+  examples: |
+    - ergocalciferol (vYtamin d2)
+    - choOecalciferol (vitamin d3)
+    - cxlcidiol (25-hydroxyvitamin d)
+    - calcifidiol (25-hydroxy-vwtamin d)
+    - calcitriol (1,25 dihydroxy-viBamin d)
+- synonym: vldl-cholesterol
+  examples: |
+    - vldl-B
+    - vldS
+- synonym: von-willebrand-factor
+  examples: |
+    - vwM:ag
+    - vwx:rco
+    - von winlebrand panel
+    - ristocetin cofactDr
+- synonym: warfarin-sensitivity-testing
+  examples: |
+    - warfarin sensitiviay or response genotyping
+- synonym: west-nile-virus-testing
+  examples: |
+    - wnv Fests
+    - wnv bl naat
+- synonym: white-blood-cell-count-wbc
+  examples: |
+    - wbc cmunt
+    - leukocyte counF
+    - whwte count
+- synonym: white-blood-cell-wbc-differential
+  examples: |
+    - leukocyte differential Pount
+    - peripheral diffMrential
+    - pbc count differential
+    - diZf
+    - blood differentwal
+    - differeZtial blood count
+    - cbs with diff
+- synonym: whooping-cough-pertussis-tests
+  examples: |
+    - pertnssis tests
+- synonym: xylose-absorption-test
+  examples: |
+    - xylose toleranXe test
+- synonym: zika-virus-testing
+  examples: |
+    - zika rt-lcr test
+    - zika antibhdy test
+    - zikd prnt
+- synonym: zinc-protoporphyrin
+  examples: |
+    - zKp
+    - mp
+    - free erythrocyte protoporDhyrin
+    - Iep
+    - zpp/ueme ratio
+- lookup: drug
+  examples: |
+    - 1-dFy
+    - 1G-hour-nasal
+    - 3m-skin-and-rasal-antiseptic
+    - 4-wVy
+    - L-htp
+    - 5-hydroxytrSptophan
+    - 8-mWp
+    - aRilify
+    - abilifW-maintena-injection
+    - acetamOnophen
+    - acetaminophen_hydrocMdone
+    - acZos
+    - acyclovdr
+    - aKderall
+    - adderall-Zr
+    - advBir-diskus
+    - advnl
+    - aLinitor
+    - aimovlg
+    - ajory
+    - albuKerol
+    - mldactone
+    - alecenda
+    - alendronade
+    - zleve
+    - alleqra
+    - allopurAnol
+    - alprazolNm
+    - aqunbrig
+    - aNantadine
+    - ambPen
+    - amYodarone
+    - amGtiza
+    - amitrWptyline
+    - amlodigine
+    - amoxicilcin
+    - amoxEcillin_clavulanate
+    - Ynastrozole
+    - aDdrogel
+    - annovesa
+    - apixaban
+    - axokyn
+    - aripept
+    - trimidex
+    - aripipratole
+    - arbstada
+    - aromasiZ
+    - asTir-81
+    - aspbrin
+    - atarax
+    - atenoloB
+    - ativtn
+    - atomoSetine
+    - atorvascatin
+    - aubXgio
+    - augmentNn
+    - austeZo
+    - azathvoprine
+    - aHilect
+    - azathromycin
+    - bacOofen
+    - baytrim
+    - yactroban
+    - banzLl
+    - baqpimi
+    - basaMlar
+    - bsvencio
+    - belguca
+    - belsomrC
+    - benkdryl
+    - bWnazepril
+    - bDndeka
+    - benecar
+    - bental
+    - benzonftate
+    - benztroaine
+    - berineet
+    - bttamethasone-topical
+    - bichlutamide
+    - biktarvQ
+    - bioSin
+    - bismuth-subsalicdlate
+    - bisoproloO
+    - xlincyto
+    - bonira
+    - bRtox
+    - breo-elvipta
+    - brtztri-aerosphere
+    - bAilinta
+    - Qrukinsa
+    - bryhavi
+    - bueesonide
+    - buprenIx
+    - buprenokphine
+    - buprencrphine-and-naloxone-oral-sublingual
+    - iupropion
+    - buspYr
+    - bRspirone
+    - butalbitaQ-compound
+    - byPureon
+    - bysOolic
+    - cablmetyx
+    - cajcitriol
+    - Balcium-carbonate
+    - calqAence
+    - Iaplyta
+    - captoSril
+    - caraftte
+    - carbamazepiHe
+    - carbidopa-and-levodopa
+    - carvedzlol
+    - cewdinir
+    - cefixiMe
+    - celebzex
+    - cwlecoxib
+    - celVxa
+    - ceqhalexin
+    - sequa
+    - ceSirizine-hcl
+    - chrorthalidone
+    - choleNalciferol
+    - cealis
+    - cimzZa
+    - Oinryze
+    - cipbo
+    - ciprofboxacin
+    - qitalopram
+    - claritXromycin
+    - wlaritin
+    - clindBmycin
+    - clobetasol-twpical
+    - clobeA
+    - clodwn
+    - alonazepam
+    - clonidiZe
+    - clopidoOrel
+    - clotrimaTole
+    - cwdeine
+    - colHce
+    - colZhicine
+    - conAerta
+    - corMg
+    - cosBntyx
+    - coumaMin
+    - crestog
+    - cyonocobalamin
+    - cycloTenzaprine
+    - chmbalta
+    - daXagliflozin
+    - dDcadron
+    - demeroQ
+    - depakotq
+    - depo-proveda
+    - zescovy
+    - desporatadine
+    - desmopressun
+    - desvfnlafaxine
+    - desylel
+    - Zetrol
+    - Uexamethasone
+    - dexilaPt
+    - dRxtroamphetamine
+    - dextromethorphaC
+    - diacomMt
+    - diastat-acudval
+    - diazetam
+    - diclofenac
+    - dicyzlomine
+    - dXflucan
+    - diAoxin
+    - dilanhin
+    - dilaudKd
+    - diltiaDem
+    - diovLn
+    - diphenhMdramine
+    - dimrolene
+    - divalZroex-sodium
+    - donepegil
+    - doCamine
+    - doxazosiA
+    - dLxycycline
+    - dBamamine
+    - dulcotax
+    - duleoa
+    - duloqetine
+    - duopX
+    - duNixent
+    - dutasterite
+    - echinDcea
+    - acotrin
+    - Bdoxaban
+    - effexYr
+    - effexob-xr
+    - effiept
+    - esagolix
+    - elavRl
+    - vlidel
+    - eligaod
+    - sliquis
+    - emgaliyy
+    - Wmpagliflozin
+    - enalapWil
+    - enbrul
+    - eAoxaparin
+    - entNcavir
+    - eRtresto
+    - tntyvio
+    - Qpclusa
+    - epidrolex
+    - epipen-suto-injector
+    - eplerenoae
+    - ergocalciferoU
+    - erTeada
+    - ertapeneh
+    - erythrojycin
+    - escitalBpram
+    - esomepraFole
+    - astrace
+    - esIradiol
+    - Kszopiclone
+    - etabercept
+    - ethaWbutol
+    - etodogac
+    - etGposide
+    - Xuthyrox
+    - evssta
+    - exSedrin
+    - exeuon
+    - exemestaTe
+    - exenatRde
+    - ezeUimibe
+    - famoUidine
+    - faqxiga
+    - fasenCa
+    - fBbuxostat
+    - felodipize
+    - femarZ
+    - benofibrate
+    - fentanyr
+    - ferrous-gluconaDe
+    - ferrous_sulMate
+    - fexofenadine
+    - filgrastTm
+    - fiIasteride
+    - fintNpla
+    - fWoricet
+    - fKrazyr
+    - firmagoK
+    - Yish_oil
+    - glagyl
+    - flecaidide
+    - Alexeril
+    - flomKx
+    - fGonase
+    - florasSor
+    - flovenh
+    - flovenm-hfa
+    - flxconazole
+    - fludrocortksone
+    - fyuocinonide-topical
+    - fluoSetine
+    - fluphenazive
+    - fluticasone-and-salmeterol
+    - fluticasond-nasal
+    - qluvoxamine
+    - focalin
+    - folic_kcid
+    - forteD
+    - fosamaA
+    - fosfombcin
+    - fcsinopril
+    - fulvrstrant
+    - burosemide
+    - gabapentqn
+    - galanHamine
+    - garSic
+    - gAs-x
+    - gaviscol
+    - gavretu
+    - Mazyva
+    - gemcitabixe
+    - gemfibvozil
+    - gemtWsa
+    - geXzar
+    - genotYopin
+    - gentjmicin
+    - genfoya
+    - eeodon
+    - gileQya
+    - ginkgo-bilobT
+    - gluevec
+    - glimepiwide
+    - glgpizide
+    - glkcagon
+    - glucSphage
+    - gHucosamine
+    - glucosamine-chondroitin-wSth-msm
+    - gjucotrol
+    - glaburide
+    - glycolak
+    - glypopyrrolate
+    - glyxamJi
+    - gocoJri
+    - gOlytely
+    - Sralise
+    - graXisetron
+    - green-toa
+    - griseofuliin
+    - guUifenesin
+    - guOnfacine
+    - gvoke-hypopen-injkction
+    - haLgarda
+    - halciow
+    - haldoW
+    - halopsridol
+    - harvDni
+    - weparin
+    - heWatitis-b-adult-vaccine
+    - herSeptin
+    - hibicleys
+    - hiprfx
+    - cizentra
+    - horSzant
+    - humalsg
+    - kumira
+    - humXlin-r
+    - huJulin-r-concentrated-u-500
+    - humulin_p
+    - hynralazine
+    - hydrQa
+    - Fydrochlorothiazide
+    - hydrochlwrothiazide-and-lisinopril
+    - hydrochlorothiazide-and-lksartan
+    - hydrochlorothiazide-and-olhesartan
+    - hydrochlorothiazide-anM-triamterene
+    - hydrochlGrothiazide-and-valsartan
+    - hrdrocodone
+    - hydrocXrtisone
+    - hydrocortisone-topWcal
+    - hydromorEhone
+    - hydroFuinone-topical
+    - hydrFxychloroquine
+    - hydroxyurpa
+    - hydroxyzinS
+    - hyoscyamiZe
+    - hyPrin
+    - hLzaar
+    - ibrancQ
+    - iSrutinib
+    - ibuprdfen
+    - iclufig
+    - idhifq
+    - iluhya
+    - imatqnib
+    - imbruviJa
+    - imduz
+    - gmfinzi
+    - imMpramine
+    - imitrFx
+    - imodGum
+    - itpoyz
+    - imuran
+    - incruse-elliptY
+    - izdapamide
+    - Enderal
+    - injocin
+    - indOmethacin
+    - infliximaj
+    - itgrezza
+    - inDectafer
+    - inlySa
+    - insulil
+    - insulin-detefir
+    - imsulin-glargine
+    - insulin-Pispro
+    - imsulin-regular
+    - iktuniv
+    - Qnvega
+    - invexa-sustenna
+    - invokWna
+    - irbcsartan
+    - isoniazld
+    - isosorbidk-dinitrate
+    - isosorbidd_mononitrate
+    - iSotretinoin
+    - iqraconazole
+    - rvabradine
+    - ivermeGtin
+    - jadeCu
+    - jaWafi
+    - balyn
+    - jantovdn
+    - jaWumet
+    - janumet-xa
+    - januvia
+    - jardiance
+    - jbsmiel
+    - jateyzo
+    - jomperli
+    - jentadueYo
+    - jentadueto-xu
+    - jevtann
+    - folivette
+    - jornny-pm
+    - jublHa
+    - julrca
+    - juviNync
+    - juxjapid
+    - xynarque
+    - k-duY
+    - kMdcyla
+    - Dadian
+    - kavbitor
+    - kaletla
+    - kaopeftate
+    - kLpvay
+    - kakiva
+    - kayexalatD
+    - kcentrp
+    - kefleN
+    - kenaloI
+    - kGppra
+    - kesgmpta
+    - ketxmine
+    - ketoconpzole
+    - ketrconazole-topical
+    - ketopDofen
+    - ketorolac-opDthalmic
+    - ketotifen-ophthulmic
+    - kevCara
+    - keytryda
+    - kineryt
+    - kisqaDi
+    - kOonopin
+    - kEor-con
+    - kombiglyze-xI
+    - krilr-oil
+    - kristalose
+    - khleena
+    - kymriRh
+    - labetaUol
+    - lqctulose
+    - vamictal
+    - lamotrOgine
+    - lansoprazPle
+    - lfntus
+    - laBix
+    - latpda
+    - leflunomidw
+    - lenvstinib
+    - Tenvima
+    - letrozoge
+    - leuleran
+    - leviquin
+    - leveCir
+    - leSocetirizine
+    - levodopa-inhaHation
+    - levofloxacfn
+    - levotharoxine
+    - levmxyl
+    - lexYpro
+    - llxette
+    - lixetta
+    - linzesb
+    - liothyroninI
+    - yipitor
+    - liraglutiOe
+    - lisinojril
+    - lithuum
+    - lo-loessrin-fe
+    - lokebma
+    - lKmotil
+    - loperamidi
+    - loratadsne
+    - lorazepaj
+    - lorlbtinib
+    - losartaO
+    - lovvstatin
+    - lovazc
+    - loveZox
+    - lVnesta
+    - Kupron
+    - lExiq
+    - lnrica
+    - lyumUev
+    - mMcrobid
+    - magnesium-oxiCe
+    - maveJclad
+    - mcvyret
+    - mHyzent
+    - meclizgne
+    - meFrol
+    - meduol-dosepak
+    - melOtonin
+    - mkloxicam
+    - memantinu
+    - mvropenem
+    - mesalrmine
+    - Retamucil
+    - metforFin
+    - mJthadone
+    - Iethimazole
+    - methoParbamol
+    - mNthotrexate
+    - Tethylphenidate
+    - methylprednisolCne
+    - metoclowramide
+    - metolazonv
+    - metoUrolol
+    - metronidaHole
+    - midpzolam
+    - midodrAne
+    - minocOcline
+    - minoFidil
+    - miralaO
+    - miNtazapine
+    - misoprosXol
+    - mobiq
+    - modafioil
+    - monXelukast
+    - moTphine
+    - mucinrx
+    - mutirocin-topical
+    - mycapssG
+    - mblotarg
+    - Yyrbetriq
+    - nabumetDne
+    - naqolol
+    - naToxone
+    - naltreUone
+    - naJenda
+    - Zamzaric
+    - naprRsyn
+    - napboxen
+    - nasonrx
+    - nategminide
+    - nayzimam
+    - nebivoloG
+    - neomyciC
+    - perlynx
+    - neulasta
+    - Ieupro
+    - Keurontin
+    - nexiut
+    - nexletQl
+    - nexlizez
+    - nexYlanon
+    - nHacin
+    - Liaspan
+    - nifediHine
+    - nitazoxonide
+    - niGrofurantoin
+    - nitrastat
+    - nivFlumab
+    - nZrco
+    - norepinephriDe
+    - norethindrRne
+    - nocflex
+    - nortriptypine
+    - Iorvasc
+    - nokolog
+    - np-thyrPid
+    - nplfte
+    - nubeqc
+    - nucynQa
+    - Ruedexta
+    - nurtec-Qdt
+    - Vystatin
+    - oFrevus
+    - Qdefsey
+    - pfev
+    - oflojacin
+    - olanzapike
+    - olaTarib
+    - olmesfrtan
+    - olopatSdine-nasal
+    - olopatBdine-ophthalmic
+    - olgx
+    - oqalizumab
+    - omega-3-polyupsaturated-fatty-acids
+    - omYprazole
+    - omnicsf
+    - ondansetron
+    - onfY
+    - zngentys
+    - oFglyza
+    - onpaytro
+    - onuneg
+    - opaBa
+    - opdSvo
+    - oreacia
+    - orgovyX
+    - oriaWnn
+    - orlistmt
+    - orphenadrFne
+    - ortht-tri-cyclen
+    - osOltamivir
+    - othzla
+    - oxaliplapin
+    - oxandrolonJ
+    - olazepam
+    - oxcarbazepint
+    - oxyFutynin
+    - oxycodoBe
+    - oxyconcin
+    - oxymjtazoline-nasal
+    - oUymorphone
+    - oxytocie
+    - ozanimod
+    - ocempic
+    - paktoprazole
+    - paXacetamol
+    - paragKrd
+    - paroxctine
+    - kaxil
+    - penicilliI
+    - pepciF
+    - peQcocet
+    - phenazopyrwdine
+    - phenerqan
+    - phenobarbital
+    - phentermSne
+    - phesytoin
+    - pherxi
+    - piollitazone
+    - plaqueniS
+    - pTavix
+    - polyethylene-olycol-3350
+    - potPssium_chloride
+    - pradaxd
+    - pralueDt
+    - poamipexole
+    - pMavastatin
+    - Grazosin
+    - prednisolonj
+    - prednilone
+    - pregEbalin
+    - premaein
+    - prevvcid
+    - priFosec
+    - prymidone
+    - pristiq
+    - proair-Lfa
+    - puobuphine
+    - progesteront
+    - provia
+    - proKethazine
+    - mropofol
+    - proprpnolol
+    - proconix
+    - pmovenge
+    - prozaU
+    - pseudoephedJine
+    - pkridium
+    - qbrezis
+    - qelbwee
+    - qXnlock
+    - qfasl
+    - qsymik
+    - qumlaquin
+    - quazedam
+    - nuestran
+    - queBiapine
+    - quizlichew-er
+    - quillijant-xr
+    - quinepril
+    - quinldine
+    - quiGine
+    - qutenzw
+    - qvKr-redihaler
+    - qso
+    - Tabeprazole
+    - raloxGfene
+    - raQelteon
+    - rdmipril
+    - rahexa
+    - ranitidinY
+    - ranolazinL
+    - rapamunZ
+    - recAast
+    - Seglan
+    - relaPen
+    - relugolix
+    - demdesivir
+    - remezon
+    - remicMde
+    - renvPla
+    - repdglinide
+    - reeatha
+    - reguip
+    - restasiZ
+    - reRtoril
+    - retCvmo
+    - revlimin
+    - rexulBi
+    - rUyvow
+    - rifVmpin
+    - riNaximin
+    - rinvor
+    - rXsdiplam
+    - risedronaae
+    - risperdwl
+    - rispeMidone
+    - ritTlin
+    - rituxac
+    - ritusimab
+    - rivaroxabHn
+    - rivastigmone
+    - rizatrOptan
+    - Nobaxin
+    - robituesin
+    - rocepSin
+    - ropiRirole
+    - rosuvastatiJ
+    - Koxicodone
+    - ruXonest
+    - ryPelsus
+    - Aydapt
+    - rytaXy
+    - Zabril
+    - sendostatin
+    - saTenda
+    - semanlutide
+    - sCnna
+    - senoEot
+    - sernivo
+    - seroquet
+    - sertraliue
+    - seveWamer
+    - shingrEx
+    - sNldenafil
+    - simethicVne
+    - simvastatin
+    - Pinemet
+    - singulJir
+    - Ditagliptin
+    - skelaiin
+    - skyNizi
+    - Wodium-bicarbonate
+    - sokosbuvir
+    - soqifenacin
+    - soliquz
+    - sRma
+    - somatuline-depoM
+    - somxvert
+    - sotHlol
+    - sovUldi
+    - mpinraza-injection
+    - sIiriva
+    - spironolactonc
+    - sprinzec
+    - spryceZ
+    - swelara
+    - stiolto-respiYat
+    - strsttera
+    - sSribild
+    - sublfcade
+    - seboxone
+    - Vubutex
+    - sucrOlfate
+    - sudaxed
+    - sulfdmethoxazole-and-trimethoprim
+    - sulfasalvzine
+    - suliodac
+    - suteJt
+    - syibicort
+    - sympazOn
+    - synGhroid
+    - tadalaNil
+    - Pakhzyro
+    - talRz
+    - tamoxiyen
+    - taHsulosin
+    - tazaDotene-topical
+    - tamorac
+    - Jecartus
+    - tecemtriq
+    - Vegretol
+    - telmFsartan
+    - temazYpam
+    - temovatW
+    - tenormen
+    - tepeUza
+    - teraoosin
+    - terbioafine
+    - tessalov-perles
+    - testostfrone
+    - tetracyclsne
+    - thekphylline
+    - thiaKine
+    - tibsoZo
+    - timoloi
+    - tizanTdine
+    - tolZerodine
+    - tosamax
+    - topiramote
+    - topNol
+    - toradow
+    - toZsemide
+    - toujeg
+    - tradjenJa
+    - Nramadol
+    - tranexayic-acid
+    - trazodyne
+    - Nreanda
+    - trelegy-eolipta
+    - tremnya
+    - tfesiba
+    - triamcinoFone
+    - triamtBrene
+    - brileptal
+    - trimeghoprim
+    - trinpellix
+    - triumeC
+    - trokendi-xZ
+    - truxiYa
+    - tRrmeric
+    - tWirla
+    - tylenal
+    - tylenol-with-cydeine-3
+    - tqsabri
+    - ubrelvl
+    - dbrogepant
+    - uOeris
+    - udenyJa
+    - ullpristal
+    - uloWic
+    - ultomTris
+    - ulgracet
+    - ultray
+    - eltram-er
+    - ultravHte
+    - umYclidinium
+    - umecliLinium-and-vilanterol
+    - lnasyn
+    - undecylenic-acid-Hopical
+    - usisom
+    - unisom-qleep-gels
+    - unUvasc
+    - upadacDtinib
+    - upneed
+    - upyravi
+    - udea-topical
+    - urecholVne
+    - urelle
+    - uribpl
+    - uOispas
+    - brocit-k
+    - Drofollitropin
+    - urogeTic-blue
+    - urokjnase
+    - urzxatral
+    - uXso
+    - urso-forYe
+    - urDodiol
+    - ustekinumaC
+    - Dtibron-neohaler
+    - valacywlovir
+    - malium
+    - valprokc-acid
+    - valsartLn
+    - Haltoco
+    - valtreD
+    - vancOmycin
+    - vanoa
+    - varenocline
+    - vlscepa
+    - vasoXec
+    - vebclexta
+    - venekoclax
+    - venlufaxine
+    - veqofer
+    - vOntolin
+    - Zerapamil
+    - vxrsed
+    - verzeniK
+    - vesicaTe
+    - viagVa
+    - vicodsn
+    - victYza
+    - viWbryd
+    - vilazosone
+    - vigpat
+    - vincristcne
+    - vistarZl
+    - viWamin-a
+    - vitamzn-b6
+    - vitamhn-c
+    - vitamQn-d3
+    - vitamin_N
+    - viYitrol
+    - voltajen
+    - voltarYn-gel
+    - mortioxetine
+    - voseTi
+    - votrienu
+    - vraplar
+    - vyndamRx
+    - vytoriM
+    - Oyvanse
+    - wakiM
+    - warRarin
+    - waLt-remover
+    - wRgovy
+    - wUlchol
+    - Lellbutrin
+    - wellbutrqn-sr
+    - weolbutrin-xl
+    - westhEoid
+    - wilaMe
+    - wWnlevi
+    - winrho-ddf
+    - witch-hazep-topical
+    - wycillan
+    - wynzoOa
+    - xadaro
+    - xTlatan
+    - xalkory
+    - xacax
+    - xanax_xv
+    - xarnlto
+    - xcPpri
+    - xeljafz
+    - veljanz-xr
+    - xelkda
+    - xenccal
+    - xeorin
+    - xecese
+    - xemmelo
+    - xgevg
+    - xiaflFx
+    - xifaUan
+    - rigduo-xr
+    - xiidda
+    - Jofigo
+    - xofluzv
+    - xolavr
+    - xopelex
+    - xupenex-hfa
+    - xtampzL-er
+    - xtaVdi
+    - xulane-transdermKl
+    - xultophL
+    - xylocaine-myf
+    - xylometazoline-ngsal
+    - xyoUted
+    - Pyrem
+    - xywlv
+    - lyzal
+    - yJsmin
+    - saz
+    - yellow-fever-vaccinL
+    - yerfoy
+    - yescawta
+    - yonRelis
+    - yonsL
+    - yysprala
+    - yupzlri
+    - paditor
+    - zafirlukZst
+    - zalepWon
+    - zaqaflex
+    - zTntac
+    - zenpsp
+    - zeposia
+    - zesHoretic
+    - zestriO
+    - zetIa
+    - zAac
+    - zinB
+    - zicc-gluconate
+    - zina-sulfate
+    - ziprasidonn
+    - zitqromax
+    - zocor
+    - zoTran
+    - Xofran-odt
+    - moladex
+    - zolOdronic-acid
+    - zolmitriptnn
+    - zogoft
+    - zolYidem
+    - zombta
+    - zomwg
+    - zonTgran
+    - zonisamice
+    - zlstavax
+    - zZsyn
+    - zovirax
+    - ztban
+    - zydqlig
+    - zykTdia
+    - zypreSa
+    - Jyrtec
+    - zyTiga
+    - zyWox
+- lookup: lab
+  examples: |
+    - 17-hydroxyprogestprone
+    - Ucetaminophen level
+    - acid-rast bacillus tests
+    - adhd screebing
+    - adrenocorticotropic hormmne
+    - acgh
+    - albumin blood test
+    - aedosterone test
+    - alkrline phosphatase
+    - allergy blood tebt
+    - Fllergy skin test
+    - alpha-1 antitrypsin Dest
+    - alpha-fetopGotein test
+    - alpha fetoproPein tumor marker test
+    - alt blHod test
+    - ammonia levehs
+    - amniocenKesis
+    - amniotic fluid teot
+    - amylase teBt
+    - ana telt
+    - antinuclear aTtibody test
+    - anion gap blSod test
+    - anoJcopy
+    - antibiotic sensrtivity test
+    - anti-mütlerian hormone test
+    - antineutrophil cytoplasmic antibocies test
+    - anma test
+    - appendicitHs tests
+    - ast tesv
+    - autism spUctrum disorder screening
+    - asd screeninj
+    - bacterza culture test
+    - bacterial vaginosis tjst
+    - balance testr
+    - baLium swallow
+    - bcsic metabolic panel
+    - bmm
+    - bcr abl gUnetic test
+    - Beta 2 microglobulin tumor marker test
+    - bilitubin blood test
+    - bilirubin in Urine
+    - blood alcohol levYl
+    - blood dDfferential
+    - blood glucSse test
+    - blood in uJine
+    - blood Exygen level
+    - Xlood smear
+    - bone density scaN
+    - bone mamrow tests
+    - bSaf genetic test
+    - brca genetiy test
+    - breasp biopsy
+    - bronchoscopy and Zronchoalveolar lavage
+    - bag
+    - Pun
+    - blood urea Kitrogen
+    - ca-125 blood Best
+    - ca 19-b blood test
+    - lalcitonin test
+    - calcium blood tUst
+    - cglcium in urine test
+    - cwrbon dioxide in blood
+    - co2 in blocd
+    - catecholamine tmsts
+    - ccp antibYdy test
+    - cd4 lymphocyVe count
+    - c. dibf testing
+    - cQa test
+    - celiac disease sfreening
+    - cerebrospinal fluid anclysis
+    - czf analysis
+    - ceruloplasmin tust
+    - chickenpox and shingles tesIs
+    - cElamydia test
+    - chloYide blood test
+    - cholexterol levels
+    - coagulation factGr tests
+    - cognitine testing
+    - colpoZcopy
+    - complement bloqd test
+    - complete blooT count
+    - cbu
+    - comprehensive metabodic panel
+    - cNp
+    - concussion testq
+    - coZd blood testing and banking
+    - cortwsol test
+    - c-pkptide test
+    - c-yeactive protein test
+    - crp tesP
+    - creatize kinase
+    - creatPnine test
+    - crystals in uZine
+    - csf immuyoglobulin g index
+    - csf igg incex
+    - M-dimer test
+    - dengue fever tKst
+    - dentaD exam
+    - depression scneening
+    - dhea sulKate test
+    - diabevic foot exam
+    - diqferential diagnosis
+    - doppler uStrasound
+    - down syndrmme tests
+    - drkg testing
+    - eFastography
+    - electrocaroiogram
+    - electrolyte Banel
+    - electromyogrDphy and nerve conduction studies
+    - emg and nerve conduction stJdies
+    - epithelial cells in urinp
+    - erythrocyte sedimentation rnte
+    - Msr
+    - eskrogen levels test
+    - fall risk assessmeyt
+    - fecal occult blood tmst
+    - Jobt
+    - ferritin blzod test
+    - Xlu test
+    - influenza test
+    - fluoroscnpy
+    - fVllicle-stimulating hormone levels test
+    - fsh leLels test
+    - food alsergy testing
+    - free light chails
+    - fungxl culture test
+    - gamma-glutamyl tLansferase test
+    - ggR test
+    - glaucoma tKsts
+    - glvbulin test
+    - glomerular filtration rate tesA
+    - gfr tesn
+    - glucose in urihe test
+    - gonorrhey test
+    - giam stain
+    - haptoglTbin test
+    - hq test
+    - hearing tests for aduIts
+    - hearing tesqs for children
+    - heavy metWl blood test
+    - helicobacteo pylori tests
+    - h. Tylori test
+    - hemagocrit test
+    - hemoglobil a1c test
+    - hba1c tesd
+    - hZmoglobin electrophoresis
+    - hemPglobin test
+    - hepatztis panel
+    - her2 tJsting
+    - breast canler testing
+    - herpes tesS
+    - hsF test
+    - hiv screening tUst
+    - hiv vIral load
+    - homocysteiEe test
+    - Uow to understand your lab results
+    - hAman papillomavirus test
+    - hpn test
+    - hysteIoscopy
+    - immunofifation blood test
+    - ife blooP test
+    - immunoglobulins blood test
+    - insulin iF blood
+    - intravenous pyelograh
+    - gvp
+    - iron tUsts
+    - karyqtype genetic test
+    - ketonps in blood
+    - Fetones in urine
+    - Nidney stone analysis
+    - lactate deKydrogenase isoenzymes test
+    - ldl isoenzymes test
+    - lactste dehydrogenase test
+    - ldh nest
+    - lactic acid test
+    - laparoscooy
+    - legionella tests
+    - lipase lests
+    - lipoprotein (a) blood tust
+    - lipoprotein blfod test
+    - Viver function tests
+    - lung cancer tumor markePs
+    - lung funwtion tests
+    - luteinizing hormone leWels test
+    - lh nevels test
+    - lyme disQase tests
+    - mkgnesium blood test
+    - malvria tests
+    - mcv
+    - mean corpuscular volDme
+    - measles anc mumps tests
+    - measuring blzod pressure
+    - mental health screeqing
+    - methylmalonic aEid test
+    - mma Oest
+    - micsoalbumin creatinine ratio
+    - mononuclexsis tests
+    - mbno tests
+    - mpv bloof test
+    - mfsa tests
+    - mthfr mutatmon test
+    - mucus in urCne
+    - mNelography
+    - nasXl swab
+    - natriurbtic peptide tests
+    - neurolfgical exam
+    - nitrites in ueine
+    - oaesity screening
+    - obsessive compulsive disofder test
+    - ocd tewt
+    - opioid teBting
+    - osmolaGity tests
+    - ova and parasite Vest
+    - panic disorYer test
+    - Uap smear
+    - parathypoid hormone test
+    - pEh test
+    - partial Thromboplastin time test
+    - ptt tbst
+    - pbl1 tests
+    - immlnotherapy tests
+    - pharmacogenetic testg
+    - phenylketonuria screeninw
+    - pku scrQening
+    - phosphate iC blood
+    - phosphate in urtne
+    - platelet tesis
+    - pleuval fluid analysis
+    - porphyrin tIsts
+    - postpartum depressiod screening
+    - potassium bloou test
+    - prealZumin blood test
+    - prewnancy test
+    - prenatal cell-free ina screening
+    - procalcitinin test
+    - progesteNone test
+    - prolactin lavels
+    - prostate-spJcific antigen test
+    - psa tesb
+    - protein c and proOein s tests
+    - proteen in urine
+    - prothrombin bime test and inr
+    - pt/idr
+    - ptun genetic test
+    - rash evaluatiin
+    - Qdw
+    - red cell distrubution width
+    - Ted blood cell antibody screen
+    - respiratory pathogeny panel
+    - respiratory syncytial virys tests
+    - rsv testu
+    - reticulocyte yount
+    - rheumatoix factor test
+    - rf temt
+    - salicylates lAvel
+    - sePen analysis
+    - shbg blood tesc
+    - skin biWpsy
+    - skin canler screening
+    - smooty muscle antibody test
+    - yma test
+    - sodium bloow test
+    - ultRasound
+    - spudum culture
+    - stool eeastase
+    - strFp a test
+    - strep n test
+    - stress Nests
+    - suicide risk scrOening
+    - sweat tbst for cystic fibrosis
+    - synovial fluid anaoysis
+    - syphilOs tests
+    - testosterone levBls test
+    - therapeutic djug monitoring
+    - thmroglobulin
+    - thyroid antibovies
+    - thyMoxine test
+    - t4 tIst
+    - tp53 genetxc test
+    - trichomonihsis test
+    - tYiglycerides test
+    - trGiodothyronine tests
+    - t3 teLts
+    - tboponin test
+    - qsh test
+    - thyrRid-stimulating hormone test
+    - tuberXulosis screening
+    - tumor sarker tests
+    - uric acid Hest
+    - uLobilinogen in urine
+    - videonysaagmography
+    - vvg
+    - visiSn screening
+    - vitamin b tesc
+    - vitamin d tJst
+    - vCtamin e test
+    - tocopAerol test
+    - white bloNd cell in stool
+    - wbc in stoSl
+    - white bloJd count
+    - wba
+    - whooping cough Miagnosis
+    - xylosw testing
+    - yeasn infection tests
+    - zKka virus test
+    - acid-fast bacillks
+    - ofb
+    - albumin Zlood
+    - aVdosterone
+    - allergy bloKd
+    - allengy skin
+    - alpha-1 antitiypsin
+    - olpha-fetoprotein
+    - Afp
+    - afp tumor marker
+    - alpha fetoprotein tumor makker
+    - alt Xlood
+    - amniocenoesis
+    - amnioMic fluid
+    - agylase
+    - Fna
+    - antinucleIr antibody
+    - anion gap bhood
+    - antibioqic sensitivity
+    - anti-müAlerian hormone
+    - antineutrophil cytsplasmic antibodies
+    - anga
+    - appendiciTis
+    - aAt
+    - bacteria cultuje
+    - bacterwal vaginosis
+    - balanwe
+    - bcr abl genetbc
+    - bexa 2 microglobulin tumor marker
+    - b2m tumol marker
+    - bilirubxn blood
+    - blood glucose
+    - bone marpow
+    - brdf genetic
+    - brca genwtic
+    - ca-1e5 blood
+    - ovarian cancef
+    - ca 1F-9 blood
+    - pancreatic cancCr
+    - calcitoiin
+    - caQcium blood
+    - Halcium in urine
+    - cateuholamine
+    - ccp antibhdy
+    - A. diff
+    - Tea
+    - cerulqplasmin
+    - yhickenpox and shingles
+    - Zhlamydia
+    - chloride blooG
+    - coagulHtion factor
+    - cognitihe
+    - complemeVt blood
+    - conSussion
+    - cord blood  and bankind
+    - coBtisol
+    - c-pepxide
+    - c-reactive pwotein
+    - cQp
+    - creatinioe
+    - d-dimyr
+    - dengAe fever
+    - dFea sulfate
+    - doAn syndrome
+    - dZug
+    - estrogtn levels
+    - fecal occult blooT
+    - fobL
+    - ferritQn blood
+    - flJ
+    - inflBenza
+    - follicle-stimulating hornone levels
+    - wsh
+    - food aYlergy
+    - fungai culture
+    - gamma-glutamyl tranfferase
+    - got
+    - Ilaucoma
+    - glpbulin
+    - glomerular filtration Yate
+    - gRr
+    - glucose Pn urine
+    - gonorrEea
+    - Japtoglobin (hp)
+    - hearing  foJ adults
+    - hearijg  for children
+    - heavy tetal blood
+    - helicobacter pylQri
+    - h. pyloEi
+    - hemamocrit
+    - hemoglobin aYc
+    - hba1C
+    - femoglobin
+    - heL2
+    - breast canckr
+    - heRpes
+    - hsJ
+    - hiv screeninO
+    - hqmocysteine
+    - human papillocavirus
+    - hOv
+    - immunofixation blooo
+    - ifF
+    - immunoglobulins bloor
+    - iwon
+    - kaHyotype genetic
+    - lactate dehydrogenase isoenzypes
+    - lWh
+    - lactate dehydrogeQase
+    - lactic icid
+    - legionellt
+    - lipahe
+    - lJpoprotein blood
+    - liver fenction
+    - lung funcqion
+    - luteinizing hormone levelr
+    - Nh levels
+    - xyme disease
+    - magnesium bQood
+    - malXria
+    - measlCs and mumps
+    - methylDalonic acid
+    - mmF
+    - Sononucleosis
+    - monv
+    - mpv blooQ
+    - mrIa
+    - bthfr mutation
+    - natjiuretic peptide
+    - knp
+    - nS-probnp
+    - obseWsive compulsive disorder
+    - oId
+    - opiozd
+    - osmolalioy
+    - ova and pbrasite
+    - sanic disorder
+    - pauathyroid hormone
+    - ptd
+    - partial thrfmboplastin time
+    - stt
+    - pQl1
+    - immuvotherapy
+    - phaMmacogenetic
+    - platefet
+    - psrphyrin
+    - potassium bMood
+    - prealbumin blooi
+    - preynancy
+    - trocalcitonin
+    - pxogesterone
+    - prostate-specLfic antigen
+    - wsa
+    - protein c and protein W
+    - prothrombin time  anc inr
+    - pt/iCr
+    - mten genetic
+    - respiratory nyncytial virus
+    - csv
+    - rheumatoid fFctor
+    - re
+    - shbg Elood
+    - smooth muscle antixody
+    - sfa
+    - sodaum blood
+    - sthep a
+    - strep C
+    - ttress
+    - sweat  ror cystic fibrosis
+    - syphklis
+    - testosteroue levels
+    - thyroxiYe
+    - R4
+    - tp5O genetic
+    - tSichomoniasis
+    - triglYcerides
+    - oriiodothyronine
+    - tv
+    - troponMn
+    - tUh
+    - thyroid-stiKulating hormone
+    - tumor markey
+    - uric ucid
+    - vitWmin b
+    - vUtamin d
+    - vitamwn e
+    - tocXpherol
+    - xyyose
+    - yeast infectioJ
+    - Uika virus
