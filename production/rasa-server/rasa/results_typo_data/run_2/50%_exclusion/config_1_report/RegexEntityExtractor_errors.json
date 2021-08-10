@@ -1,0 +1,480 @@
+[
+  {
+    "text": "How important ns an hearing  for adults for me",
+    "entities": [
+      {
+        "start": 20,
+        "end": 39,
+        "value": "hearing  for adultM",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "is name Csf shingrix",
+    "entities": [
+      {
+        "start": 12,
+        "end": 20,
+        "value": "shingrix",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 8,
+        "end": 11,
+        "confidence_entity": 0.9974586367607117,
+        "value": "Csf",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "lomotil",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "lomotRl",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.6728444695472717,
+        "value": "lomotil",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Is there a Risk associated with an immunotherapy rests?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 54,
+        "value": "immunotherapy rests",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What preparation is required for tie measuring blood pressure",
+    "entities": [
+      {
+        "start": 37,
+        "end": 61,
+        "value": "measuring blood pressuZe",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 47,
+        "end": 52,
+        "confidence_entity": 0.6297301650047302,
+        "value": "blood",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what do you suggest me to do before haptoglobin test?",
+    "entities": [
+      {
+        "start": 36,
+        "end": 52,
+        "value": "haptoglobin telt",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Which is the aim of the nitrites in urine?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 41,
+        "value": "niPrites in urine",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 24,
+        "end": 32,
+        "confidence_entity": 0.38720500469207764,
+        "value": "nitrites",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 36,
+        "end": 41,
+        "confidence_entity": 0.9956417083740234,
+        "value": "urine",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What to avoid while taking ciprofloxacin?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 40,
+        "value": "ciprofloxacie",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 27,
+        "end": 40,
+        "confidence_entity": 0.6870877742767334,
+        "value": "ciprofloxacin",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What should I not do if I make zyprexa",
+    "entities": [
+      {
+        "start": 31,
+        "end": 38,
+        "value": "zyprexa",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 31,
+        "end": 38,
+        "confidence_entity": 0.5217857956886292,
+        "value": "zyprexa",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "benicar interactions: which drugs?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "beniear",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Is xeloda affected by other drugs?",
+    "entities": [
+      {
+        "start": 3,
+        "end": 9,
+        "value": "xelyda",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How does an herpes test work?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 23,
+        "value": "herpes tDst",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Why do we use potassium blood?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 29,
+        "value": "potassium blood",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 14,
+        "end": 29,
+        "confidence_entity": 0.6649695038795471,
+        "value": "potassium blood",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How is the glomerular filtration rate used?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 37,
+        "value": "glomerular filtration rate",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 11,
+        "end": 21,
+        "confidence_entity": 0.907863199710846,
+        "value": "glomerular",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Is kt possible for griseofulvin to have unexpected effects",
+    "entities": [
+      {
+        "start": 19,
+        "end": 31,
+        "value": "griseofulvin",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 19,
+        "end": 31,
+        "confidence_entity": 0.9009984135627747,
+        "value": "griseofulvin",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "calcium in urine test results: What do they mean",
+    "entities": [
+      {
+        "start": 0,
+        "end": 21,
+        "value": "calcium in urinO test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.999025821685791,
+        "value": "calcium",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 11,
+        "end": 16,
+        "confidence_entity": 0.9939337372779846,
+        "value": "urine",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Could you explain my results from the pleural fluid analysis test to me?",
+    "entities": [
+      {
+        "start": 38,
+        "end": 60,
+        "value": "pleural fSuid analysis",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 38,
+        "end": 45,
+        "confidence_entity": 0.8412860631942749,
+        "value": "pleural",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What does the hemoglobin a1R test test result mean",
+    "entities": [
+      {
+        "start": 14,
+        "end": 33,
+        "value": "hemoglobin a1R test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 14,
+        "end": 24,
+        "confidence_entity": 0.7643490433692932,
+        "value": "hemoglobin",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can I take cymbalta without worry?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 19,
+        "value": "cybbalta",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 11,
+        "end": 19,
+        "confidence_entity": 0.6484131813049316,
+        "value": "cymbalta",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "When should you not take flexeril?",
+    "entities": [
+      {
+        "start": 25,
+        "end": 33,
+        "value": "flexeril",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 25,
+        "end": 33,
+        "confidence_entity": 0.6832217574119568,
+        "value": "flexeril",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What is the recommended frequency of gralise une?",
+    "entities": [
+      {
+        "start": 37,
+        "end": 44,
+        "value": "gralise",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 37,
+        "end": 44,
+        "confidence_entity": 0.991970419883728,
+        "value": "gralise",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "When should I take atomoxetine",
+    "entities": [
+      {
+        "start": 19,
+        "end": 30,
+        "value": "aromoxetine",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 19,
+        "end": 30,
+        "confidence_entity": 0.7423583269119263,
+        "value": "atomoxetine",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Why is berinert used as a medicine?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 15,
+        "value": "berinert",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "urso-forte can cure what?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "urso-foQte",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 4,
+        "end": 5,
+        "confidence_entity": 0.9642422795295715,
+        "value": "-",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "way do i need baclofen?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 22,
+        "value": "baclofen",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 14,
+        "end": 22,
+        "confidence_entity": 0.3914555311203003,
+        "value": "baclofen",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

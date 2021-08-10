@@ -1,0 +1,138 @@
+[
+  {
+    "text": "How hD I know if I need an troponin?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.6500105261802673
+    }
+  },
+  {
+    "text": "lomotRl",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.3935036063194275
+    }
+  },
+  {
+    "text": "There's jarEiance iF it",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.1842775195837021
+    }
+  },
+  {
+    "text": "Can the Kiver function tCsts be risky?",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.24527424573898315
+    }
+  },
+  {
+    "text": "wfat do you suggest me to do before haptoglobin telt?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.33828604221343994
+    }
+  },
+  {
+    "text": "The liver functiin is wAat?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.20813289284706116
+    }
+  },
+  {
+    "text": "What shouFd I not do if I oake zyprexa",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.6940200924873352
+    }
+  },
+  {
+    "text": "xhat happens during an balteria culture test?",
+    "intent": "during_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.2697142958641052
+    }
+  },
+  {
+    "text": "How can an uric acid test Zelp me?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.3543928861618042
+    }
+  },
+  {
+    "text": "Is kt possible for griseofulvin to have unexpected effects",
+    "intent": "sideeffects_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.8016020655632019
+    }
+  },
+  {
+    "text": "What should I watck out for when taking hydrochlorothiazide-and-losartan",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.30533653497695923
+    }
+  },
+  {
+    "text": "Does bactroban cause stomacs upset?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.292827308177948
+    }
+  },
+  {
+    "text": "Cs zostavax a safe drug to take?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.6477964520454407
+    }
+  },
+  {
+    "text": "strattera is why I shculd take it?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.5010128021240234
+    }
+  },
+  {
+    "text": "Where jan I get wilate",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.28153806924819946
+    }
+  },
+  {
+    "text": "How does lurosemide work?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.941922128200531
+    }
+  },
+  {
+    "text": "I need instiuctions regarding my medication",
+    "intent": "request_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.9878726601600647
+    }
+  }
+]

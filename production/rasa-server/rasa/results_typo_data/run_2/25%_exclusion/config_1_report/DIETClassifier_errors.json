@@ -1,0 +1,245 @@
+[
+  {
+    "text": "How important ns an hearing  for adults for me",
+    "entities": [
+      {
+        "start": 20,
+        "end": 39,
+        "value": "hearing  for adultM",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "is name Csf shingrix",
+    "entities": [
+      {
+        "start": 12,
+        "end": 20,
+        "value": "shingrix",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 8,
+        "end": 11,
+        "confidence_entity": 0.9920622110366821,
+        "value": "Csf",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Is there a Risk associated with an immunotherapy rests?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 54,
+        "value": "immunotherapy rests",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What preparation is required for tie measuring blood pressure",
+    "entities": [
+      {
+        "start": 37,
+        "end": 61,
+        "value": "measuring blood pressuZe",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 47,
+        "end": 61,
+        "confidence_entity": 0.9937868118286133,
+        "value": "blood pressure",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Which is the aim of the nitrites in urine?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 41,
+        "value": "niPrites in urine",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 24,
+        "end": 32,
+        "confidence_entity": 0.5115809440612793,
+        "value": "nitrites",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 36,
+        "end": 41,
+        "confidence_entity": 0.9894387125968933,
+        "value": "urine",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "benicar interactions: which drugs?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "beniear",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How does an herpes test work?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 23,
+        "value": "herpes tDst",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How is the glomerular filtration rate used?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 37,
+        "value": "glomerular filtration rate",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 11,
+        "end": 21,
+        "confidence_entity": 0.9643704295158386,
+        "value": "glomerular",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "calcium in urine test results: What do they mean",
+    "entities": [
+      {
+        "start": 0,
+        "end": 21,
+        "value": "calcium in urinO test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9977732300758362,
+        "value": "calcium",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 11,
+        "end": 21,
+        "confidence_entity": 0.920869767665863,
+        "value": "urine test",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What does the hemoglobin a1R test test result mean",
+    "entities": [
+      {
+        "start": 14,
+        "end": 33,
+        "value": "hemoglobin a1R test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 14,
+        "end": 24,
+        "confidence_entity": 0.9631127715110779,
+        "value": "hemoglobin",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.9292487502098083,
+        "value": "test test",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What is the recommended frequency of gralise une?",
+    "entities": [
+      {
+        "start": 37,
+        "end": 44,
+        "value": "gralise",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Why is berinert used as a medicine?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 15,
+        "value": "berinert",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "urso-forte can cure what?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "urso-foQte",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 4,
+        "end": 5,
+        "confidence_entity": 0.9699188470840454,
+        "value": "-",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

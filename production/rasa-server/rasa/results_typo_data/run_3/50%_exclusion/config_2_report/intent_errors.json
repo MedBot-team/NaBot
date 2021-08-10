@@ -1,0 +1,114 @@
+[
+  {
+    "text": "What are the benefito of Tn salicylates level",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.4620882570743561
+    }
+  },
+  {
+    "text": "iUs name Cs shingrix",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.40800943970680237
+    }
+  },
+  {
+    "text": "There's jarEiance iF it",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.3599364161491394
+    }
+  },
+  {
+    "text": "Can the Kiver function tCsts be risky?",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.9262860417366028
+    }
+  },
+  {
+    "text": "What should Q know about an acid-fast bacOllus?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.37049105763435364
+    }
+  },
+  {
+    "text": "Would yqu mind telling mU more about csf igg index?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.6485114097595215
+    }
+  },
+  {
+    "text": "How to avoid these side effects wheh taking heglan",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.9031694531440735
+    }
+  },
+  {
+    "text": "wGat shoCld i be careful about glucosamine-chondroitin-with-msm?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.26401057839393616
+    }
+  },
+  {
+    "text": "Is xelyda affecteF by other drugs?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.7265586256980896
+    }
+  },
+  {
+    "text": "What drugB should not He taken with fulvestrant?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.675288736820221
+    }
+  },
+  {
+    "text": "when is haptoglobin (hp) neeyed?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.9627428650856018
+    }
+  },
+  {
+    "text": "Does bactroban cause stomacs upset?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.5040012001991272
+    }
+  },
+  {
+    "text": "Is rivaroxaban reqjired for me?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.29807716608047485
+    }
+  },
+  {
+    "text": "wuy do i need baclofen?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.40902116894721985
+    }
+  }
+]

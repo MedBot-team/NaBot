@@ -1,0 +1,146 @@
+[
+  {
+    "text": "What are the benefit of Tn salicylates level",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.24346613883972168
+    }
+  },
+  {
+    "text": "is name Csf shingrix",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.4907662868499756
+    }
+  },
+  {
+    "text": "There's jardiance in it",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.33839452266693115
+    }
+  },
+  {
+    "text": "Can the Liver function tests be risky?",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.16105152666568756
+    }
+  },
+  {
+    "text": "Could you provide some advice to people about how to prep for an uric acid test?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.7418095469474792
+    }
+  },
+  {
+    "text": "What should Q know about an acid-fast bacillus?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.49109378457069397
+    }
+  },
+  {
+    "text": "Would you mind telling U more about csf igg index?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.3264683783054352
+    }
+  },
+  {
+    "text": "How to avoid these side effects when taking reglan",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.764398992061615
+    }
+  },
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-mm?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.5055294036865234
+    }
+  },
+  {
+    "text": "Is xeloda affected by other drugs?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.7164509892463684
+    }
+  },
+  {
+    "text": "What drug should not Hp taken with fulvestrant?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.2911708354949951
+    }
+  },
+  {
+    "text": "when is haptoglobin (hp) needed?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.7184783816337585
+    }
+  },
+  {
+    "text": "Does bactroban cause stomach upset?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.3261561393737793
+    }
+  },
+  {
+    "text": "How often can I take dexilant a day?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.3233780860900879
+    }
+  },
+  {
+    "text": "How should I take terbinafine?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.6478110551834106
+    }
+  },
+  {
+    "text": "strattera is why I should take it?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.4302939176559448
+    }
+  },
+  {
+    "text": "Is rivaroxaban required for me?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.292682021856308
+    }
+  },
+  {
+    "text": "way do i need baclofen?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.35356971621513367
+    }
+  }
+]

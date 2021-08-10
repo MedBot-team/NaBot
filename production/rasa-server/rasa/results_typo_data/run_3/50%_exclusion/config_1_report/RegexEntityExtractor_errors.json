@@ -1,0 +1,455 @@
+[
+  {
+    "text": "What are the benefit of Tn salicylates level",
+    "entities": [
+      {
+        "start": 28,
+        "end": 45,
+        "value": "salicylates level",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "is name Csf shingrix",
+    "entities": [
+      {
+        "start": 12,
+        "end": 20,
+        "value": "shingrix",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 8,
+        "end": 11,
+        "confidence_entity": 0.37374454736709595,
+        "value": "Csf",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 12,
+        "end": 20,
+        "confidence_entity": 0.7136667966842651,
+        "value": "shingrix",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "There's jardiance in it",
+    "entities": [
+      {
+        "start": 8,
+        "end": 17,
+        "value": "jarEiance",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can the Liver function tests be risky?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 28,
+        "value": "Kiver function tCsts",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.9958886504173279,
+        "value": "Liver",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 23,
+        "end": 28,
+        "confidence_entity": 0.9931507110595703,
+        "value": "tests",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Could you provide some advice to people about how to prep for an uric acid test?",
+    "entities": [
+      {
+        "start": 65,
+        "end": 79,
+        "value": "uric acid test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 65,
+        "end": 69,
+        "confidence_entity": 0.5486827492713928,
+        "value": "uric",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 70,
+        "end": 79,
+        "confidence_entity": 0.41202986240386963,
+        "value": "acid test",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What should Q know about an acid-fast bacillus?",
+    "entities": [
+      {
+        "start": 28,
+        "end": 46,
+        "value": "acid-fast bacOllus",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 32,
+        "end": 33,
+        "confidence_entity": 0.801871120929718,
+        "value": "-",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Would you mind telling U more about csf igg index?",
+    "entities": [
+      {
+        "start": 37,
+        "end": 50,
+        "value": "csf igg index",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How to avoid these side effects when taking reglan",
+    "entities": [
+      {
+        "start": 44,
+        "end": 50,
+        "value": "heglan",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 44,
+        "end": 50,
+        "confidence_entity": 0.5512910485267639,
+        "value": "reglan",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-mm?",
+    "entities": [
+      {
+        "start": 31,
+        "end": 63,
+        "value": "glucosamine-chondroitin-with-msm",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 42,
+        "end": 43,
+        "confidence_entity": 0.7314445972442627,
+        "value": "-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 43,
+        "end": 55,
+        "confidence_entity": 0.581565797328949,
+        "value": "chondroitin-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 59,
+        "end": 60,
+        "confidence_entity": 0.8857496380805969,
+        "value": "-",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Is xeloda affected by other drugs?",
+    "entities": [
+      {
+        "start": 3,
+        "end": 9,
+        "value": "xelyda",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What drug should not Hp taken with fulvestrant?",
+    "entities": [
+      {
+        "start": 36,
+        "end": 47,
+        "value": "fulvestrant",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 35,
+        "end": 46,
+        "confidence_entity": 0.506179928779602,
+        "value": "fulvestrant",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "that happens during an bacteria culture test?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 44,
+        "value": "balteria culture test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "when is haptoglobin (hp) needed?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 24,
+        "value": "haptoglobin (hp)",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 8,
+        "end": 19,
+        "confidence_entity": 0.9987977743148804,
+        "value": "haptoglobin",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "pap tumor marker: for what purpose is it used?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 16,
+        "value": "pfp tumor marker",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 9,
+        "confidence_entity": 0.8135966062545776,
+        "value": "tumor",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Ts there a side effect to desyrel?",
+    "entities": [
+      {
+        "start": 26,
+        "end": 33,
+        "value": "desyrel",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "would you help me understand my myelography results",
+    "entities": [
+      {
+        "start": 32,
+        "end": 43,
+        "value": "myelography",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "csf analysis test: what do the results mean",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "csf analUsis",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 17,
+        "confidence_entity": 0.6431297063827515,
+        "value": "analysis test",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "In what way can I interpret the results of an uric acid test test?",
+    "entities": [
+      {
+        "start": 46,
+        "end": 60,
+        "value": "uric acid test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 46,
+        "end": 50,
+        "confidence_entity": 0.5822616815567017,
+        "value": "uric",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 51,
+        "end": 65,
+        "confidence_entity": 0.3569684624671936,
+        "value": "acid test test",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Does bactroban cause stomach upset?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 14,
+        "value": "bactroban",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can you tell me how long a person should take norvasc for?",
+    "entities": [
+      {
+        "start": 46,
+        "end": 53,
+        "value": "norvasc",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 46,
+        "end": 53,
+        "confidence_entity": 0.8590676784515381,
+        "value": "norvasc",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How often can I take dexilant a day?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 29,
+        "value": "dexilant",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How should I take terbinafine?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 29,
+        "value": "teabinafine",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "strattera is why I should take it?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "strattera",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.7481891512870789,
+        "value": "strattera",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "way do i need baclofen?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 22,
+        "value": "baclofen",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

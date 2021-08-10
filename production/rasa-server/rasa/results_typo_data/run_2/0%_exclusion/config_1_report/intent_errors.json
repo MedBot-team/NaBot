@@ -1,0 +1,114 @@
+[
+  {
+    "text": "is name Csf shingrix",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.38392147421836853
+    }
+  },
+  {
+    "text": "lomotil",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.23956002295017242
+    }
+  },
+  {
+    "text": "what do you suggest me to do before haptoglobin test?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.44012948870658875
+    }
+  },
+  {
+    "text": "Which is the aim of the nitrites in urine?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.32136231660842896
+    }
+  },
+  {
+    "text": "What should I not do if I make zyprexa",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.7377036809921265
+    }
+  },
+  {
+    "text": "benicar interactions: which drugs?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.4348854720592499
+    }
+  },
+  {
+    "text": "Is xeloda affected by other drugs?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.834133505821228
+    }
+  },
+  {
+    "text": "Why do we use potassium blood?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.4834102988243103
+    }
+  },
+  {
+    "text": "How is the glomerular filtration rate used?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.4210571348667145
+    }
+  },
+  {
+    "text": "Can I take cymbalta without worry?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.29013827443122864
+    }
+  },
+  {
+    "text": "What is the recommended frequency of gralise une?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.7652999758720398
+    }
+  },
+  {
+    "text": "When should I take atomoxetine",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.866832971572876
+    }
+  },
+  {
+    "text": "Why is berinert used as a medicine?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.9677143692970276
+    }
+  },
+  {
+    "text": "Detailed information ig needed about a test",
+    "intent": "request_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.9991213083267212
+    }
+  }
+]

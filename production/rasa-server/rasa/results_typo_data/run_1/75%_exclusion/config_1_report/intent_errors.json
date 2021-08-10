@@ -1,0 +1,170 @@
+[
+  {
+    "text": "How hp I know if I need an troponin?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.4175060987472534
+    }
+  },
+  {
+    "text": "lomotil",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.3566710948944092
+    }
+  },
+  {
+    "text": "There's jardiance in it",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.37687456607818604
+    }
+  },
+  {
+    "text": "Can the Liver function tests be risky?",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.4233734607696533
+    }
+  },
+  {
+    "text": "what do you suggest me to do before haptoglobin test?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.2804015576839447
+    }
+  },
+  {
+    "text": "The liver function is what?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.37179800868034363
+    }
+  },
+  {
+    "text": "Do omnicef bnp certain medications interact?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.43235164880752563
+    }
+  },
+  {
+    "text": "How can an uric acid test Help me?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.49518030881881714
+    }
+  },
+  {
+    "text": "What is the purpose of an ca-125 blood test?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.3284218907356262
+    }
+  },
+  {
+    "text": "How do the number appear on the dhea sulfate report?",
+    "intent": "result_lab",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.19099892675876617
+    }
+  },
+  {
+    "text": "What do the numbers in reticulocyte count mean",
+    "intent": "result_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.47369253635406494
+    }
+  },
+  {
+    "text": "Does bactroban cause stomach upset?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.22417505085468292
+    }
+  },
+  {
+    "text": "Csf zostavax a safe drug to take?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.4940016269683838
+    }
+  },
+  {
+    "text": "How often can I take dexilant a day?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.45509812235832214
+    }
+  },
+  {
+    "text": "strattera is why I should take it?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.48220953345298767
+    }
+  },
+  {
+    "text": "Where jan I get wilate",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.336251437664032
+    }
+  },
+  {
+    "text": "How does furosemide work?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.9648023843765259
+    }
+  },
+  {
+    "text": "Please explain my test to me.",
+    "intent": "request_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.7251668572425842
+    }
+  },
+  {
+    "text": "I need instructions regarding my medication",
+    "intent": "request_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.700966477394104
+    }
+  },
+  {
+    "text": "There's information I need about a medicine.",
+    "intent": "request_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.9908291697502136
+    }
+  },
+  {
+    "text": "Is there any information you can give me about a medicine",
+    "intent": "request_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.8808807730674744
+    }
+  }
+]

@@ -1,0 +1,156 @@
+{
+  "during_lab": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1,
+    "confused_with": {}
+  },
+  "detail_lab": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {
+      "request_drug": 1
+    }
+  },
+  "prepare_lab": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "request_lab": 1,
+      "avoid_drug": 1
+    }
+  },
+  "usage_lab": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2,
+    "confused_with": {
+      "prepare_lab": 1
+    }
+  },
+  "dosage_drug": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "warnings_drug": 1,
+      "avoid_drug": 1
+    }
+  },
+  "result_lab": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1-score": 0.8571428571428571,
+    "support": 3,
+    "confused_with": {}
+  },
+  "need_lab": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {
+      "detail_lab": 1
+    }
+  },
+  "inform_drug": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "request_drug": 1,
+      "detail_lab": 1
+    }
+  },
+  "avoid_drug": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "warnings_drug": 1,
+      "sideeffects_drug": 1
+    }
+  },
+  "warnings_drug": {
+    "precision": 0.3333333333333333,
+    "recall": 0.5,
+    "f1-score": 0.4,
+    "support": 2,
+    "confused_with": {
+      "risk_lab": 1
+    }
+  },
+  "usage_drug": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "risk_lab": 1,
+      "request_drug": 1,
+      "avoid_drug": 1
+    }
+  },
+  "request_drug": {
+    "precision": 0.42857142857142855,
+    "recall": 1.0,
+    "f1-score": 0.6,
+    "support": 3,
+    "confused_with": {}
+  },
+  "request_lab": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 2,
+    "confused_with": {}
+  },
+  "risk_lab": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {
+      "result_lab": 1
+    }
+  },
+  "sideeffects_drug": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 2,
+    "confused_with": {}
+  },
+  "interaction_drug": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "request_drug": 1,
+      "avoid_drug": 1
+    }
+  },
+  "accuracy": 0.41935483870967744,
+  "macro avg": {
+    "precision": 0.30282738095238093,
+    "recall": 0.375,
+    "f1-score": 0.3202380952380952,
+    "support": 31
+  },
+  "weighted avg": {
+    "precision": 0.3183563748079877,
+    "recall": 0.41935483870967744,
+    "f1-score": 0.34531490015360977,
+    "support": 31
+  }
+}

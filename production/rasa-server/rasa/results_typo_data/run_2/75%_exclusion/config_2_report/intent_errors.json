@@ -1,0 +1,146 @@
+[
+  {
+    "text": "How important ns an hearing  for adultM for me",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.2771281898021698
+    }
+  },
+  {
+    "text": "iUs name Cs shingrix",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.3969176411628723
+    }
+  },
+  {
+    "text": "lomotRl",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.23177984356880188
+    }
+  },
+  {
+    "text": "wfat do you suggest me to do before haptoglobin telt?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.4420105814933777
+    }
+  },
+  {
+    "text": "Whicg is the aim of the niPrites in urine?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "inform_drug",
+      "confidence": 0.5645201206207275
+    }
+  },
+  {
+    "text": "Wuat to avoid while taking ciprofloxacie?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.6247488856315613
+    }
+  },
+  {
+    "text": "What shouFd I not do if I oake zyprexa",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.6264838576316833
+    }
+  },
+  {
+    "text": "beniear interacthons: which drugs?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.7446127533912659
+    }
+  },
+  {
+    "text": "Is xelyda affecteF by other drugs?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.7872799038887024
+    }
+  },
+  {
+    "text": "Why do we usX potassium blood?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.5354551672935486
+    }
+  },
+  {
+    "text": "How is the glomerular filtration rate usod?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.5271503925323486
+    }
+  },
+  {
+    "text": "Can I take cybbalta without worry?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.37952864170074463
+    }
+  },
+  {
+    "text": "What is the recommended frequency of gralise une?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.22517089545726776
+    }
+  },
+  {
+    "text": "When should I take aromoxetine",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.7977488040924072
+    }
+  },
+  {
+    "text": "Why is berinert used as a mCdicine?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.4855966866016388
+    }
+  },
+  {
+    "text": "urso-foQte can cure what?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.272562712430954
+    }
+  },
+  {
+    "text": "wuy do i need baclofen?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.32996633648872375
+    }
+  },
+  {
+    "text": "Detailed information ig needed about a test",
+    "intent": "request_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.8850561380386353
+    }
+  }
+]

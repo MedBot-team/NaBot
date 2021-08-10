@@ -1,0 +1,114 @@
+[
+  {
+    "text": "What are the benefit of Tn salicylates level",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "detail_lab",
+      "confidence": 0.7414567470550537
+    }
+  },
+  {
+    "text": "is name Csf shingrix",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.3103444576263428
+    }
+  },
+  {
+    "text": "There's jardiance in it",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.5613121390342712
+    }
+  },
+  {
+    "text": "What should Q know about an acid-fast bacillus?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.3745974600315094
+    }
+  },
+  {
+    "text": "Would you mind telling U more about csf igg index?",
+    "intent": "detail_lab",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.41726264357566833
+    }
+  },
+  {
+    "text": "How to avoid these side effects when taking reglan",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.9479588866233826
+    }
+  },
+  {
+    "text": "what should i be careful about glucosamine-chondroitin-with-mm?",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.7249282598495483
+    }
+  },
+  {
+    "text": "Is xeloda affected by other drugs?",
+    "intent": "interaction_drug",
+    "intent_prediction": {
+      "name": "sideeffects_drug",
+      "confidence": 0.3483244478702545
+    }
+  },
+  {
+    "text": "when is haptoglobin (hp) needed?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "prepare_lab",
+      "confidence": 0.7782893180847168
+    }
+  },
+  {
+    "text": "Does bactroban cause stomach upset?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "usage_lab",
+      "confidence": 0.6642102599143982
+    }
+  },
+  {
+    "text": "Can you tell me how long a person should take norvasc for?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "need_lab",
+      "confidence": 0.3143499493598938
+    }
+  },
+  {
+    "text": "strattera is why I should take it?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "risk_lab",
+      "confidence": 0.2728795111179352
+    }
+  },
+  {
+    "text": "Is rivaroxaban required for me?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.3237798810005188
+    }
+  },
+  {
+    "text": "way do i need baclofen?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.7542381882667542
+    }
+  }
+]

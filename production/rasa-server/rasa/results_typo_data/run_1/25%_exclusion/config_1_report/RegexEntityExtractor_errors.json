@@ -1,0 +1,547 @@
+[
+  {
+    "text": "How hp I know if I need an troponin?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 35,
+        "value": "troponin",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 6,
+        "confidence_entity": 0.9723453521728516,
+        "value": "hp",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 27,
+        "end": 35,
+        "confidence_entity": 0.9951223731040955,
+        "value": "troponin",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "lomotil",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "lomotRl",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9038539528846741,
+        "value": "lomotil",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "There's jardiance in it",
+    "entities": [
+      {
+        "start": 8,
+        "end": 17,
+        "value": "jarEiance",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can the Liver function tests be risky?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 28,
+        "value": "Kiver function tCsts",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.532343327999115,
+        "value": "Liver",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 23,
+        "end": 28,
+        "confidence_entity": 0.9550137519836426,
+        "value": "tests",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what do you suggest me to do before haptoglobin test?",
+    "entities": [
+      {
+        "start": 36,
+        "end": 52,
+        "value": "haptoglobin telt",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 36,
+        "end": 52,
+        "confidence_entity": 0.692376434803009,
+        "value": "haptoglobin test",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Would you have any suggestions on how people should prepare for an heavy metal blood?",
+    "entities": [
+      {
+        "start": 67,
+        "end": 84,
+        "value": "heavj metal blood",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 79,
+        "end": 84,
+        "confidence_entity": 0.9963072538375854,
+        "value": "blood",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "The liver function is what?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 18,
+        "value": "liver functiin",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 4,
+        "end": 9,
+        "confidence_entity": 0.5679342150688171,
+        "value": "liver",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What should I not do if I make zyprexa",
+    "entities": [
+      {
+        "start": 31,
+        "end": 38,
+        "value": "zyprexa",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 31,
+        "end": 38,
+        "confidence_entity": 0.9458301067352295,
+        "value": "zyprexa",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can I avoid anything when taking 5-hp?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 38,
+        "value": "5-htp",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 34,
+        "end": 37,
+        "confidence_entity": 0.8514993786811829,
+        "value": "-hp",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "ketoconazole-topical should not be taken with the following drugs?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 20,
+        "value": "ketocoOazole-topiVal",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 20,
+        "confidence_entity": 0.8832414746284485,
+        "value": "ketoconazole-topical",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 12,
+        "value": "ketoconazole",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Do omnicef bnp certain medications interact?",
+    "entities": [
+      {
+        "start": 3,
+        "end": 10,
+        "value": "omnicef",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "that happens during an bacteria culture test?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 44,
+        "value": "balteria culture test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 23,
+        "end": 31,
+        "confidence_entity": 0.3991192579269409,
+        "value": "bacteria",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How can an uric acid test Help me?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 25,
+        "value": "uric acid test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 11,
+        "end": 25,
+        "confidence_entity": 0.6605298519134521,
+        "value": "uric acid test",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What is the purpose of an ca-125 blood test?",
+    "entities": [
+      {
+        "start": 26,
+        "end": 43,
+        "value": "cR-125 blood test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 26,
+        "end": 43,
+        "confidence_entity": 0.5103553533554077,
+        "value": "ca-125 blood test",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Is kt possible for griseofulvin to have unexpected effects",
+    "entities": [
+      {
+        "start": 19,
+        "end": 31,
+        "value": "griseofulvin",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 19,
+        "end": 31,
+        "confidence_entity": 0.9146335124969482,
+        "value": "griseofulvin",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What are the side effects of semaglutide?",
+    "entities": [
+      {
+        "start": 29,
+        "end": 40,
+        "value": "seLaglutide",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What does the hemoglobin a1R test test result mean",
+    "entities": [
+      {
+        "start": 14,
+        "end": 33,
+        "value": "hemoglobin a1R test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 14,
+        "end": 24,
+        "confidence_entity": 0.9354615211486816,
+        "value": "hemoglobin",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.5883474349975586,
+        "value": "test test",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How do the number appear on the dhea sulfate report?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 45,
+        "value": "dhea sulfate",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 37,
+        "end": 44,
+        "confidence_entity": 0.4940837323665619,
+        "value": "sulfate",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What do the numbers in reticulocyte count mean",
+    "entities": [
+      {
+        "start": 23,
+        "end": 41,
+        "value": "reticulocyte count",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What should I watch out for when taking hydrochlorothiazide-and-losartan",
+    "entities": [
+      {
+        "start": 40,
+        "end": 72,
+        "value": "hydrochlorothiazide-and-losartan",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 59,
+        "end": 64,
+        "confidence_entity": 0.8211286067962646,
+        "value": "-and-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 64,
+        "end": 72,
+        "confidence_entity": 0.9173316359519958,
+        "value": "losartan",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 60,
+        "end": 63,
+        "value": "and",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Does bactroban cause stomach upset?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 14,
+        "value": "bactroban",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 5,
+        "end": 14,
+        "confidence_entity": 0.8972023725509644,
+        "value": "bactroban",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.710573673248291,
+        "value": "stomach",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Csf zostavax a safe drug to take?",
+    "entities": [
+      {
+        "start": 3,
+        "end": 11,
+        "value": "zostavax",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9944775700569153,
+        "value": "Csf",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "drug",
+        "start": 4,
+        "end": 12,
+        "confidence_entity": 0.9985639452934265,
+        "value": "zostavax",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How often can I take dexilant a day?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 29,
+        "value": "dexilant",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "strattera is why I should take it?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "strattera",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.9425313472747803,
+        "value": "strattera",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Where jan I get wilate",
+    "entities": [
+      {
+        "start": 16,
+        "end": 22,
+        "value": "wilate",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How does furosemide work?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "lurosemide",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

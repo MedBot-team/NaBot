@@ -1,0 +1,122 @@
+[
+  {
+    "text": "How hp I know if I need an troponin?",
+    "intent": "need_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.5677300095558167
+    }
+  },
+  {
+    "text": "lomotil",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.2380225658416748
+    }
+  },
+  {
+    "text": "There's jardiance in it",
+    "intent": "inform_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.5298230051994324
+    }
+  },
+  {
+    "text": "Can the Liver function tests be risky?",
+    "intent": "risk_lab",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.18532976508140564
+    }
+  },
+  {
+    "text": "what do you suggest me to do before haptoglobin test?",
+    "intent": "prepare_lab",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.45550402998924255
+    }
+  },
+  {
+    "text": "What should I not do if I make zyprexa",
+    "intent": "avoid_drug",
+    "intent_prediction": {
+      "name": "warnings_drug",
+      "confidence": 0.8296647071838379
+    }
+  },
+  {
+    "text": "How can an uric acid test Help me?",
+    "intent": "usage_lab",
+    "intent_prediction": {
+      "name": "result_lab",
+      "confidence": 0.5152764916419983
+    }
+  },
+  {
+    "text": "How do the number appear on the dhea sulfate report?",
+    "intent": "result_lab",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.31451526284217834
+    }
+  },
+  {
+    "text": "What should I watch out for when taking hydrochlorothiazide-and-losartan",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "avoid_drug",
+      "confidence": 0.5509820580482483
+    }
+  },
+  {
+    "text": "Does bactroban cause stomach upset?",
+    "intent": "warnings_drug",
+    "intent_prediction": {
+      "name": "usage_drug",
+      "confidence": 0.32321569323539734
+    }
+  },
+  {
+    "text": "Csf zostavax a safe drug to take?",
+    "intent": "dosage_drug",
+    "intent_prediction": {
+      "name": "interaction_drug",
+      "confidence": 0.8905444145202637
+    }
+  },
+  {
+    "text": "strattera is why I should take it?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "dosage_drug",
+      "confidence": 0.49127891659736633
+    }
+  },
+  {
+    "text": "Where jan I get wilate",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "request_drug",
+      "confidence": 0.227237731218338
+    }
+  },
+  {
+    "text": "How does furosemide work?",
+    "intent": "usage_drug",
+    "intent_prediction": {
+      "name": "during_lab",
+      "confidence": 0.8564706444740295
+    }
+  },
+  {
+    "text": "I need instructions regarding my medication",
+    "intent": "request_drug",
+    "intent_prediction": {
+      "name": "request_lab",
+      "confidence": 0.9441021680831909
+    }
+  }
+]

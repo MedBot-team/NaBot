@@ -1,0 +1,342 @@
+[
+  {
+    "text": "How important ns an hearing  for adultM for me",
+    "entities": [
+      {
+        "start": 20,
+        "end": 39,
+        "value": "hearing  for adultM",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Is there a Visk associated with an immunotherapy rests?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 54,
+        "value": "immunotherapy rests",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 35,
+        "end": 48,
+        "confidence_entity": 0.5070964097976685,
+        "value": "immunotherapy",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What preparation is required for tie measuring blood pressuZe",
+    "entities": [
+      {
+        "start": 37,
+        "end": 61,
+        "value": "measuring blood pressuZe",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 47,
+        "end": 61,
+        "confidence_entity": 0.9890663623809814,
+        "value": "blood pressuZe",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "wfat do you suggest me to do before haptoglobin telt?",
+    "entities": [
+      {
+        "start": 36,
+        "end": 52,
+        "value": "haptoglobin telt",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 36,
+        "end": 47,
+        "confidence_entity": 0.9972025156021118,
+        "value": "haptoglobin",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Whicg is the aim of the niPrites in urine?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 41,
+        "value": "niPrites in urine",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 24,
+        "end": 32,
+        "confidence_entity": 0.5695142149925232,
+        "value": "niPrites",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 36,
+        "end": 41,
+        "confidence_entity": 0.9825392961502075,
+        "value": "urine",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "beniear interacthons: which drugs?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "beniear",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Is xelyda affecteF by other drugs?",
+    "entities": [
+      {
+        "start": 3,
+        "end": 9,
+        "value": "xelyda",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "HoI does an herpes tDst work?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 23,
+        "value": "herpes tDst",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 19,
+        "end": 23,
+        "confidence_entity": 0.518674910068512,
+        "value": "tDst",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Why do we usX potassium blood?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 29,
+        "value": "potassium blood",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 10,
+        "end": 13,
+        "confidence_entity": 0.7071347236633301,
+        "value": "usX",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 14,
+        "end": 29,
+        "confidence_entity": 0.9597713351249695,
+        "value": "potassium blood",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How is the glomerular filtration rate usod?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 37,
+        "value": "glomerular filtration rate",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 11,
+        "end": 21,
+        "confidence_entity": 0.8465877771377563,
+        "value": "glomerular",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "calcium in urinO test results: What do they mean",
+    "entities": [
+      {
+        "start": 0,
+        "end": 21,
+        "value": "calcium in urinO test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9975436329841614,
+        "value": "calcium",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 11,
+        "end": 21,
+        "confidence_entity": 0.7415852546691895,
+        "value": "urinO test",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Could you explain my results from the pleural fSuid analysis test to me?",
+    "entities": [
+      {
+        "start": 38,
+        "end": 60,
+        "value": "pleural fSuid analysis",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 38,
+        "end": 45,
+        "confidence_entity": 0.7701042294502258,
+        "value": "pleural",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 52,
+        "end": 60,
+        "confidence_entity": 0.7177462577819824,
+        "value": "analysis",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What does the hemoglobin a1R test test result mean",
+    "entities": [
+      {
+        "start": 14,
+        "end": 33,
+        "value": "hemoglobin a1R test",
+        "entity": "lab"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 14,
+        "end": 24,
+        "confidence_entity": 0.9471554160118103,
+        "value": "hemoglobin",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lab",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.6075081825256348,
+        "value": "test test",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can I take cybbalta without worry?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 19,
+        "value": "cybbalta",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lab",
+        "start": 11,
+        "end": 19,
+        "confidence_entity": 0.6221871376037598,
+        "value": "cybbalta",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Why is berinert used as a mCdicine?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 15,
+        "value": "berinert",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "urso-foQte can cure what?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "urso-foQte",
+        "entity": "drug"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug",
+        "start": 4,
+        "end": 5,
+        "confidence_entity": 0.8322196006774902,
+        "value": "-",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]
