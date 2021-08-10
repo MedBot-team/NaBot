@@ -82,7 +82,7 @@ stories:
   steps:
   - user: |
       what do i need to do before [pregnancy test](lab)?
-    intent: prepare-lab
+    intent: prepare_lab
   - action: lab_retrieve
   - user: |
       what do i need [panic disorder test](lab) for?
@@ -105,7 +105,7 @@ stories:
   steps:
   - user: |
       what are the warnings for using [ketamine](drug)?
-    intent: warning_drug
+    intent: warnings_drug
   - action: drug_retrieve
   - user: |
       How mauch [ketamine](drug) should i take everytime?
