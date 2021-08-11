@@ -1,4 +1,5 @@
 # Rasa Medical Chatbot
+![Chatbot Unit testing](https://github.com/arezae/chatbot/actions/workflows/rasa-test.yml/badge.svg?style=svg)
 ![Action server workflow](https://github.com/arezae/chatbot/actions/workflows/docker_push_actions.yml/badge.svg?style=svg)
 ![Chatbot server workflow](https://github.com/arezae/chatbot/actions/workflows/docker_push_chatbot.yml/badge.svg?style=svg)
 ![Chatbot UI workflow](https://github.com/arezae/chatbot/actions/workflows/docker_push_ui.yml/badge.svg?style=svg)

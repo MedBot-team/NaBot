@@ -1,5 +1,5 @@
 # To-Do: Make test case and add it the workflow pipeline
-name: Chatbot server CI
+name: Chatbot UI CI
 
 # Only trigger the workflow in the case of a version tag pushed 
 on:

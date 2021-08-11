@@ -1,0 +1,80 @@
+name: Chatbot Unit testing
+
+# Only trigger the workflow in the case of a version tag pushed 
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  #   branches:
+  #     - 'rasa'
+  # pull_request:
+  #   branches:
+  #     - 'rasa'
+
+  # Workflow can be run manually with REST API and 'ref' as request body parameters.
+  # The reference should be tag name,
+  # Reference: https://docs.github.com/en/rest/reference/actions#create-a-workflow-dispatch-event
+  workflow_dispatch:
+
+
+jobs:
+  build:
+    name: Run Unittests on the chatbot
+    # Builds run on latest Ubuntu instance
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8]
+
+    steps:
+      # Checks-out repository under $GITHUB_WORKSPACE, so the job can access it
+      # We don't use 're: rasa' in this step, refs should be the tags 
+      - name: Check Out Repo 
+        uses: actions/checkout@v2
+      
+      # Store the github repository tag
+      - uses: actions/checkout@v2
+      - name: Set output
+        id: vars
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+        
+      # Set python version
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          
+      # Install chatbot dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f ./production/rasa-server/requirements.txt ]; then pip install -r ./production/rasa-server/requirements.txt; fi
+      
+      # Download chatbot weights
+      - name: Download model weights
+        run: |
+          mkdir ./production/rasa-server/rasa/models/
+          wget -q https://www.dropbox.com/s/u1o8s2u96lpt8cv/${{ steps.vars.outputs.tag }}.tar.gz \
+          -P ./production/rasa-server/rasa/models/
+      
+      # Download Spacy weights
+      - name: Download spacy weights
+        run: |
+          python -m spacy download en_core_web_md
+      
+      # Download autocorrect module dictionary
+      - name: Copy autocorrect module from production and download autocorrect dictionary
+        run: | 
+          cp -r ./production/rasa-server/autocorrect/ ./development/testcase/
+          mkdir -p ./development/testcase/autocorrect/data/
+          python -c "import sys; sys.path.insert(0, './development/testcase/'); import autocorrect; autocorrect.Speller('en_med')"
+      
+      # Copy domain file to the test directory
+      - name: Copy domain.yml file
+        run: |
+          cp ./production/rasa-server/rasa/domain.yml .
+      
+      # Run test units
+      - name: Test with unittest
+        run: |
+          python ./development/testcase/rasa_test.py
