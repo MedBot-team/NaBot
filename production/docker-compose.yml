@@ -52,6 +52,10 @@ services:
     # Expose 5005 port to ui server can see the chatbot server
     expose: 
       - 5005
+    # Map TCP port 5005 in the container to port 5005 on the Docker host.
+    # This is a chatbot rest api port
+    ports:
+      - 5005:5005
     # Healthcheck condition
     healthcheck:
         test: ["CMD", 'curl', 'f', 'localhost:5005']
