@@ -76,6 +76,45 @@ class TestRasaMethods(unittest.TestCase):
                 f1_score = test_result['response_selection_evaluation']['f1_score']
                 self.assertTrue(f1_score > threshold)
 
+    def test_f1_intent_typo(self):
+        threshold = 0.9
+        test_result = self.test_result_typo
+
+        if test_result['intent_evaluation'] is not None:
+            if 'report' not in test_result['intent_evaluation']:
+                for intent in test_result['intent_evaluation']:
+                    f1_score = test_result['intent_evaluation'][intent]['f1_score']
+                    self.assertTrue(f1_score > threshold)
+            else:
+                f1_score = test_result['intent_evaluation']['f1_score']
+                self.assertTrue(f1_score > threshold)
+
+    def test_f1_entity_typo(self):
+        threshold = 0.9
+        test_result = self.test_result_typo
+
+        if test_result['entity_evaluation'] is not None:
+            if 'report' not in test_result['entity_evaluation']:
+                for entity in test_result['entity_evaluation']:
+                    f1_score = test_result['entity_evaluation'][entity]['f1_score']
+                    self.assertTrue(f1_score > threshold)
+            else:
+                f1_score = test_result['entity_evaluation']['f1_score']
+                self.assertTrue(f1_score > threshold)
+
+    def test_f1_response_selector_typo(self):
+        threshold = 0.9
+        test_result = self.test_result_typo
+
+        if test_result['response_selection_evaluation'] is not None:
+            if 'report' not in test_result['response_selection_evaluation']:
+                for entity in test_result['response_selection_evaluation']:
+                    f1_score = test_result['response_selection_evaluation'][entity]['f1_score']
+                    self.assertTrue(f1_score > threshold)
+            else:
+                f1_score = test_result['response_selection_evaluation']['f1_score']
+                self.assertTrue(f1_score > threshold)
+
 
 if __name__ == '__main__':
     unittest.main()
