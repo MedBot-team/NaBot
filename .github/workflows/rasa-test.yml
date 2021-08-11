@@ -68,6 +68,11 @@ jobs:
           cp -r ./production/rasa-server/autocorrect/ ./development/testcase/
           mkdir -p ./development/testcase/autocorrect/data/
           python -c "import sys; sys.path.insert(0, './development/testcase/'); import autocorrect; autocorrect.Speller('en_med')"
+          
+      # Copy spell-checker script to the development directory
+      - name: Copy spell_checker script
+        run: |
+          cp ./production/rasa-server/rasa/spell_checker.py ./development/testcase/
       
       # Copy domain file to the test directory
       - name: Copy domain.yml file
