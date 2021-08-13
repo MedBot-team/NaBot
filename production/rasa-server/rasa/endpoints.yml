@@ -14,8 +14,24 @@ action_endpoint:
  url: "http://app:5055/webhook"
 
 # Tracker store which is used to store the conversations.
-# By default the conversations are stored in memory.
-# https://rasa.com/docs/rasa/tracker-stores
+
+tracker_store:
+    type: SQL
+    dialect: "mysql" 
+    url: "$HOST" 
+    db: "$MYSQL_EVENTS_DATABASE" 
+    username: "$SQL_USER"  
+    password: "$MYSQL_ROOT_PASSWORD" 
+    query: 
+      unix_socket: "/var/run/mysqld/mysqld.sock"
+    
+#tracker_store:
+    #type: SQL
+    #dialect: "postgresql" 
+    #url: "localhost"
+    #db: "rasa" 
+    #username: "postgres"  
+    #password: "" 
 
 #tracker_store:
 #    type: redis
