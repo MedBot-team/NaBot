@@ -59,19 +59,18 @@ services:
     # Healthcheck condition
     healthcheck:
         test: ["CMD", 'curl', 'f', 'localhost:5005']
-        interval: 10s
-        timeout: 3s
+        interval: 45s
+        timeout: 10s
         retries: 30
     # Store chatbot logs out side of the container
     volumes:
       - logs_data:/rasa-server/rasa/logs
+      - ./.env:/rasa-server/rasa/.env
     # Make the same network for chatbot server and actions server
     networks:
       - rasa-netowrk
       - frontend-netowrk
-    # Read token from .env file and run the container with the token
-    # This token is needed to authenticate requests to the chatbot server
-    command: ${TOKEN}
+      - backend-network
   # Build action server
   app:
     build: 
@@ -101,8 +100,8 @@ services:
     # Configuration of healthcheck for mysql action server
     healthcheck:
         test: ["CMD", 'curl', 'f', 'localhost:5055']
-        interval: 10s
-        timeout: 3s
+        interval: 45s
+        timeout: 10s
         retries: 30
   # Build mysql server
   db:
@@ -133,8 +132,8 @@ services:
     healthcheck:
         test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', 
                 '-u', 'root', '-p$MYSQL_ROOT_PASSWORD' ]
-        interval: 2m30s
-        timeout: 30s
+        interval: 3m30s
+        timeout: 45s
         retries: 30
 
 # List of docker netowrks
