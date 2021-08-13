@@ -10,7 +10,7 @@ from rasa.core.test import test as core_test
 
 
 class TestRasaMethods(unittest.TestCase):
-    model_path = '../../production/rasa-server/rasa/models/'
+    model_path = './production/rasa-server/rasa/models/'
     unpacked_model = get_model(model_path)
     tmp_name = ''.join(random.choices(
         string.ascii_uppercase + string.digits, k=10))
@@ -21,7 +21,7 @@ class TestRasaMethods(unittest.TestCase):
     nlu_model = os.path.join(unpacked_model, "nlu")
 
     # Normal NLU tests data
-    test_data = '../../production/rasa-server/rasa/train_test_split/test_data.yml'
+    test_data = './production/rasa-server/rasa/train_test_split/test_data.yml'
 
     async_test_result = run_evaluation(test_data,
                                        nlu_model,
@@ -34,7 +34,7 @@ class TestRasaMethods(unittest.TestCase):
     test_result = asyncio.run(async_test_result)
 
     # Typo NLU tests data
-    test_data_typo = '../../production/rasa-server/rasa/train_test_split/test_data_typo.yml'
+    test_data_typo = './production/rasa-server/rasa/train_test_split/test_data_typo.yml'
 
     async_test_result_typo = run_evaluation(test_data_typo,
                                             nlu_model,
@@ -50,7 +50,7 @@ class TestRasaMethods(unittest.TestCase):
     CORE TEST
     """
     # Normal Core test data
-    test_story = '../../production/rasa-server/rasa/tests/test_stories.yml'
+    test_story = './production/rasa-server/rasa/tests/test_stories.yml'
 
     _agent = Agent.load(unpacked_model)
     async_test_results_core = core_test(test_story,
