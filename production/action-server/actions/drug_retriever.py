@@ -13,7 +13,7 @@ class DrugRetrieve(Action):
 
         password = config('MYSQL_ROOT_PASSWORD') 
         user = config('SQL_USER')
-        host = config('HOST')
+        host = config('DB_HOST')
         database = config('MYSQL_DATABASE')
 
         print(user)

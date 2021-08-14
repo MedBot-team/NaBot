@@ -7,7 +7,7 @@ set +a
 
 # Create database in mysql-server to store rasa events
 python -c "import sqlalchemy;\
-sqlalchemy.create_engine('mysql://${SQL_USER}:${MYSQL_ROOT_PASSWORD}@${HOST}')\
+sqlalchemy.create_engine('mysql://${SQL_USER}:${MYSQL_ROOT_PASSWORD}@${DB_HOST}')\
 .execute('CREATE DATABASE IF NOT EXISTS ${MYSQL_EVENTS_DATABASE}')"
 
 # Substitute environment variables into endpoints file

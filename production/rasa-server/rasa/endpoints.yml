@@ -11,14 +11,14 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 action_endpoint:
- url: "http://app:5055/webhook"
+ url: "http://$ACTION_HOST:5055/webhook"
 
 # Tracker store which is used to store the conversations.
 
 tracker_store:
     type: SQL
     dialect: "mysql" 
-    url: "$HOST" 
+    url: "$DB_HOST" 
     db: "$MYSQL_EVENTS_DATABASE" 
     username: "$SQL_USER"  
     password: "$MYSQL_ROOT_PASSWORD" 

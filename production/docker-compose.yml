@@ -106,7 +106,7 @@ services:
   # Build mysql server
   db:
     # Use mysql image
-    image: mysql:latest
+    image: mysql:8
     container_name: mysql-server
     # Use mysql_native_password instead of caching_sha2_password
     command: '--default-authentication-plugin=mysql_native_password'
