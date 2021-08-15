@@ -5,7 +5,6 @@ FROM python:3.8-slim AS base
 # Update base image. It might be helpful for security reasons 
 RUN apt-get update -qq && \
     apt-get upgrade -qq -y && \
-    apt-get install -qq -y curl && \
     apt-get autoremove -y -qq && \
     apt-get autoclean -y -qq
 

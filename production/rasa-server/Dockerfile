@@ -5,14 +5,16 @@ FROM python:3.8-slim AS base
 # Update base image. It might be helpful for security reasons 
 RUN apt-get update -qq && \
     apt-get upgrade -qq -y && \
-    apt-get install -qq -y curl && \
+    apt-get install -qq -y gettext-base \
+                default-libmysqlclient-dev && \
     apt-get autoremove -y -qq && \
     apt-get autoclean -y -qq
 
 # Build stage
 FROM base AS build-stage
 # install wget for downloading model weights
-RUN apt-get install -qq -y wget
+RUN apt-get install -qq -y wget \
+                           build-essential
 # Change current directory to build
 WORKDIR /build
 # Copy requirements list from the host
@@ -63,6 +65,6 @@ VOLUME /tmp
 # Expose 5005 port for api 
 EXPOSE 5005
 # Create logs. And set an API enabled
-ENTRYPOINT ["rasa", "run", "--log-file", "logs/rasa-server.log", "--enable-api", "--auth-token"]
+ENTRYPOINT ["bash"]
 # Run container with your token and command
-CMD [ "YOUR TOKEN" ] 
+CMD [ "run_rasa.sh" ] 
