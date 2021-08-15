@@ -50,12 +50,20 @@ if [[ $OS == 'Ubuntu' && (($(echo "$VER >= 18.04" | bc -l))) ]]; then
 	# Install chatbot dependencies
 	echo "Install requirements"
 	sudo apt-get update
-	sudo apt-get install -y wget git build-essential python3.8 python3.8-dev python3.8-venv python3-pip mysql-server libmysqlclient-dev
+	sudo apt-get install -y wget build-essential python3.8 python3.8-dev python3.8-venv python3-pip mysql-server libmysqlclient-dev
 
 	sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/
 	sudo apparmor_parser -R /etc/apparmor.d/usr.sbin.mysqld
 
 	sudo apt install -f
+	
+	# Download and install libmysqlclient20 in the case of newer version of Ubuntu, which libmysqlclient20 is replaced by libmysqlclient21
+	if (($(echo "$VER > 18.04" | bc -l))); then
+		TEMP_DEB="$(mktemp)"
+		wget -O "$TEMP_DEB" 'http://security.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/libmysqlclient20_5.7.35-0ubuntu0.18.04.1_amd64.deb'
+		sudo dpkg -i "$TEMP_DEB"
+		rm -f "$TEMP_DEB"
+  	fi
 
 	# Configure MySQL server
 	echo "Configure MySQL settings"
