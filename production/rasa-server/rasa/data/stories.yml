@@ -2,37 +2,44 @@ version: "2.0"
 
 stories:
 
-- story: request drug info 1
+- story: only drug info path
   steps:
+  - intent: greet
+  - action: utter_greet
   - intent: request_drug
   - action: drugs_form
   - active_loop: drugs_form
-
-- story: request drug info 2
-  steps:
-  - intent: request_drug
-  - action: drugs_form
-  - active_loop: drugs_form
-  - intent: usage_drug
-  - action: drug_retrieve
+  - intent: mood_great
   - action: utter_any_more_questions
-  - intent: affirm
-  - action: utter_how_can_help
-  - intent: avoid_drug
+  - intent: deny
+  - action: utter_goodbye
+
+- story: complete request drug info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_drug
+  - action: drugs_form
+  - active_loop: drugs_form
+  - or:
+    - intent: usage_drug
+    - intent: dosage_drug
+    - intent: interaction_drug
+    - intent: avoid_drug
+    - intent: sideeffects_drug
+    - intent: warnings_drug
   - action: drug_retrieve
   - action: utter_any_more_questions
   - intent: deny
   - action: utter_goodbye
 
-- story: request test info
+- story: only test info
   steps:
-  - intent: greet
-  - action: utter_greet
   - intent: request_lab
   - action: labs_form
   - active_loop: labs_form
-  - intent: during_lab
-  - action: lab_retrieve
+  - intent: mood_great
+  - action: utter_goodbye
 
 - story: request lab and drug info
   steps:
@@ -46,31 +53,57 @@ stories:
   - action: labs_form
   - active_loop: labs_form
   
-
-
-- story: happy path
+- story: drug warning path
   steps:
   - intent: greet
   - action: utter_greet
+  - or:
+    - intent: usage_drug
+    - intent: dosage_drug
+    - intent: interaction_drug
+    - intent: avoid_drug
+    - intent: sideeffects_drug
+    - intent: warnings_drug
+  - action: drug_retrieve
   - intent: mood_great
-  - action: utter_happy
+  - action: utter_any_more_questions
+  - intent: deny
+  - action: utter_goodbye
 
-- story: sad path 1
+- story: long complex request info
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: request_drug
+  - action: drugs_form
+  - active_loop: drugs_form
+  - intent: mood_great
+  - action: utter_any_more_questions
   - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - action: utter_how_can_help
+  - or:
+    - intent: usage_drug
+    - intent: dosage_drug
+    - intent: interaction_drug
+    - intent: avoid_drug
+    - intent: sideeffects_drug
+    - intent: warnings_drug
+  - action: drug_retrieve
+  - intent: mood_great
+  - action: utter_any_more_questions
+  - intent: affirm
+  - action: utter_how_can_help
+  - or:
+    - intent: detail_lab
+    - intent: during_lab
+    - intent: any_detail_lab
+    - intent: need_lab
+    - intent: prepare_lab
+    - intent: result_lab
+    - intent: risk_lab
+    - intent: usage_lab
+  - action: lab_retrieve
+  - intent: mood_great
+  - action: utter_any_more_questions
   - intent: deny
   - action: utter_goodbye
