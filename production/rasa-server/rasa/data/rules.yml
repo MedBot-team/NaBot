@@ -102,6 +102,7 @@ rules:
     - action: lab_retrieve
 
 - rule: Say hi anytime the user says hi 
+  conversation_start: true
   steps:
     - intent: greet 
     - action: utter_greet

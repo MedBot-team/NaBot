@@ -349,7 +349,6 @@ nlu:
     - What is the meaning of [strep b test](lab)?
     - Are you familiar with the term [legionella tests](lab)?
 
-
 - intent: usage_lab
   examples: |
     - What is the [c. diff](lab) used for?
