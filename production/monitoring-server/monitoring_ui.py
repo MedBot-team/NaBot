@@ -1,7 +1,6 @@
 from matplotlib.backends.backend_agg import RendererAgg
 import streamlit as st
-import numpy as np
-import pandas as pd
+import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib
 from matplotlib.figure import Figure
@@ -44,6 +43,7 @@ def get_confidences(datas):
     data_count = len(datas)
     intent_confidences = []
     entity_confidences = []
+    timestamps = []
 
     for i in range(data_count):
         json_acceptable_string = datas[i].replace("'", "\"")
@@ -55,20 +55,23 @@ def get_confidences(datas):
             if len(entity) != 0 and 'confidence_entity' in entity.keys():
                 entity_confidences.append(entity['confidence_entity'])
 
-    return intent_confidences, entity_confidences
+        timestamps.append(dictionary['timestamp'])
+
+    return intent_confidences, entity_confidences, timestamps
+
 
 
 matplotlib.use("agg")
 
 _lock = RendererAgg.lock
-sns.set_style('darkgrid')
+sns.set_style("white")
 st.text('Analyzing Chatbot Records')
 
 
 events = get_events()
 intents = get_intents(events)
 datas = get_datas(events)
-intent_confidences, entity_confidences = get_confidences(datas)
+intent_confidences, entity_confidences, timestamps = get_confidences(datas)
 
 
 st.write('')
@@ -79,11 +82,8 @@ with row1_1, _lock:
     st.subheader('Intent Confidence Distribution')
     fig = Figure()
     ax = fig.subplots()
-    ax.hist(intent_confidences, density=True, bins=30)
-    ax.set_xlabel('Confidences')
-    ax.set_ylabel('Density')
+    sns.histplot(intent_confidences, color="dodgerblue", kde=True, stat="density", linewidth=0, ax=ax)
     st.pyplot(fig)
-
     st.markdown("Distribution of intents confidences")
 
 
@@ -91,9 +91,33 @@ with row1_2, _lock:
     st.subheader('Entity Confidence Distribution')
     fig = Figure()
     ax = fig.subplots()
-    ax.hist(entity_confidences, density=True, bins=30)
-    ax.set_xlabel('Confidences')
-    ax.set_ylabel('Density')
+    sns.histplot(entity_confidences, color="deeppink", kde=True, stat="density", linewidth=0, ax=ax)
     st.pyplot(fig)
 
     st.markdown("Distribution of entities confidences")
+
+
+st.write('')
+row2_space1, row2_1, row2_space2, row2_2, row2_space3 = st.columns(
+    (.1, 1, .1, 1, .1))
+
+with row2_1, _lock:
+    st.subheader('Intents Distribution')
+    fig = Figure(figsize=(8, 6))
+    ax = fig.subplots()
+    ax.hist(intents, density=True, bins=30)
+    ax.set_xlabel('Intents')
+    ax.set_ylabel('Density')
+    plt.setp(ax.xaxis.get_majorticklabels(), rotation=70 )
+    st.pyplot(fig)
+
+    st.markdown("Distribution of intents")
+
+
+with row2_2, _lock:
+    st.subheader('Chatbot requests over time')
+    fig = Figure()
+    ax = fig.subplots()
+    sns.histplot(timestamps, color="orange", kde=True, stat="density", linewidth=0, ax=ax)
+    st.pyplot(fig)
+    st.markdown("Chatbot requests over time")
