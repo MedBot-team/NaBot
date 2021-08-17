@@ -22,7 +22,7 @@ class LabRetrieve(Action):
             user=user,
             password=password,
             database=database)
-        self.buttons = [
+        self.like_buttons = [
                 {"payload": "/good_response", "title": "👍🏻"},
                 {"payload": "/bad_response", "title": "👎🏻"},
                 ]
@@ -105,8 +105,8 @@ class LabRetrieve(Action):
         else:
             dispatcher.utter_message(
             text = 'I\'m sorry. Unfortunately, I don\'t have that lab in my dataset yet',
-            buttons = self.buttons,
-            button_type = self.addition_button,)
+            buttons = self.addition_button,
+            button_type = self.button_type,)
 
         cursor.close()
         # self.db.close()
