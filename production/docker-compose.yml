@@ -22,10 +22,10 @@ services:
     # Mount .env file to the ui server to read chatbot URL
     volumes:
       - ./.env:/streamlit/.env
-    # Map TCP port 8501 in the container to port 8501 on the Docker host.
+    # Map TCP port 8501 in the container to port 80 on the Docker host.
     # This is a chatbot rest api port
     ports:
-      - 8501:8501
+      - 80:8501
     # Healthcheck condition
     healthcheck:
         test: ["CMD", "printf", ".", ">", "/dev/tcp/127.0.0.1/8501"]
