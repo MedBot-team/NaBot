@@ -7,8 +7,10 @@ from matplotlib.figure import Figure
 import mysql.connector
 import json
 from decouple import config
+from datetime import datetime
 
 
+plt.set_loglevel('WARNING')
 password = config('password')
 
 st.set_page_config(layout="wide")
@@ -60,6 +62,11 @@ def get_confidences(datas):
     return intent_confidences, entity_confidences, timestamps
 
 
+def convert_date(timestamps):
+    dates = [datetime.fromtimestamp(timestamp).strftime(
+        '%Y-%m-%d') for timestamp in timestamps]
+    return dates
+
 
 matplotlib.use("agg")
 
@@ -72,7 +79,7 @@ events = get_events()
 intents = get_intents(events)
 datas = get_datas(events)
 intent_confidences, entity_confidences, timestamps = get_confidences(datas)
-
+dates = convert_date(timestamps)
 
 st.write('')
 row1_space1, row1_1, row1_space2, row1_2, row1_space3 = st.columns(
@@ -82,7 +89,8 @@ with row1_1, _lock:
     st.subheader('Intent Confidence Distribution')
     fig = Figure()
     ax = fig.subplots()
-    sns.histplot(intent_confidences, color="dodgerblue", kde=True, stat="density", linewidth=0, ax=ax)
+    sns.histplot(intent_confidences, color="dodgerblue",
+                 kde=True, stat="density", linewidth=0, ax=ax)
     st.pyplot(fig)
     st.markdown("Distribution of intents confidences")
 
@@ -91,9 +99,9 @@ with row1_2, _lock:
     st.subheader('Entity Confidence Distribution')
     fig = Figure()
     ax = fig.subplots()
-    sns.histplot(entity_confidences, color="deeppink", kde=True, stat="density", linewidth=0, ax=ax)
+    sns.histplot(entity_confidences, color="deeppink",
+                 kde=True, stat="density", linewidth=0, ax=ax)
     st.pyplot(fig)
-
     st.markdown("Distribution of entities confidences")
 
 
@@ -108,16 +116,23 @@ with row2_1, _lock:
     ax.hist(intents, density=True, bins=30)
     ax.set_xlabel('Intents')
     ax.set_ylabel('Density')
-    plt.setp(ax.xaxis.get_majorticklabels(), rotation=70 )
+    plt.setp(ax.xaxis.get_majorticklabels(), rotation=70)
     st.pyplot(fig)
-
     st.markdown("Distribution of intents")
 
 
 with row2_2, _lock:
     st.subheader('Chatbot requests over time')
+
     fig = Figure()
     ax = fig.subplots()
-    sns.histplot(timestamps, color="orange", kde=True, stat="density", linewidth=0, ax=ax)
+    sns.histplot(dates, color="orange", kde=True,
+                 stat="density", linewidth=0, ax=ax);
+
+    xticks = ax.get_xticks()
+    ax.set_xticks(xticks[::len(xticks) // 2]) 
+    ax.tick_params(axis='x', rotation=70) 
+
+
     st.pyplot(fig)
     st.markdown("Chatbot requests over time")
