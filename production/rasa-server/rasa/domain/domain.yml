@@ -1,0 +1,40 @@
+version: "2.0"
+
+entities:
+  - drug 
+  - lab
+
+intents:
+  - good_response
+  - bad_response
+  - addition_request
+  - affirm
+  - any_detail_lab
+  - avoid_drug
+  - bot_challenge
+  - deny
+  - detail_lab
+  - dosage_drug
+  - during_lab
+  - goodbye
+  - greet
+  - inform_drug
+  - inform_lab
+  - interaction_drug
+  - mood_great
+  - mood_unhappy
+  - need_lab
+  - prepare_lab
+  - request_drug
+  - request_lab
+  - result_lab
+  - risk_lab
+  - sideeffects_drug
+  - usage_drug
+  - usage_lab
+  - warnings_drug
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
