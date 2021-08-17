@@ -7,13 +7,13 @@ from decouple import config
 url = config('RASA_SERVER_URL')
 
 # Page header texts
-st.set_page_config(page_title="Synthia")
+st.set_page_config(page_title="MedBot")
 
 st.markdown("<h1 style='text-align: center; color:grey;'>\
              MedBot</h1>", unsafe_allow_html=True)
 
 st.markdown("<h3 style='text-align: center; color: grey;'>\
-             Ask your medical questions :) </h3>", unsafe_allow_html=True)
+             Ask your medical questions 👩‍⚕️ </h3>", unsafe_allow_html=True)
 st.write('')
 
 # Show GitHub page badge
