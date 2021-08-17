@@ -24,6 +24,13 @@ class DrugRetrieve(Action):
             user=user,
             password=password,
             database=database)
+        self.like_buttons = [
+                {"payload": "/good_response", "title": "👍🏻"},
+                {"payload": "/bad_response", "title": "👎🏻"},
+                ]
+        self.addition_button = [{"payload": "/addition_request", 
+                                 "title": "request addition to database"},]
+        self.button_type='inline'
 
     def name(self) -> Text:
         return "drug_retrieve"
@@ -49,7 +56,10 @@ class DrugRetrieve(Action):
         # Check if entity is recognized or not
         if not tracker.latest_message['entities']:
             dispatcher.utter_message(
-                'I\'m sorry. Unfortunately, I don\'t have that drug in my dataset yet')
+               text = 'I\'m sorry. Unfortunately, I don\'t have that drug in my dataset yet',
+               buttons = self.addition_button,
+               button_type = self.button_type,
+               )
             return []
 
         # Check rasa forms are used or not
@@ -79,17 +89,25 @@ class DrugRetrieve(Action):
             # Check whether the question about the drug exists or not
             if len(list(cursor)) == 0:
                 dispatcher.utter_message(
-                    'I\'m sorry. Unfortunately, I\'m not aware of that yet.')
+                text = 'I\'m sorry. Unfortunately, I\'m not aware of that yet.',
+                buttons = self.addition_button,
+                button_type = self.button_type,)
             else:
                 cursor.execute(f"SELECT {col} \
                                 FROM {self.table} \
                                 WHERE medicine = '{drugs[0]}';")
 
                 reply = "".join(item[0]+'\n' for item in list(cursor))
-                dispatcher.utter_message(reply)
+                dispatcher.utter_message(
+                    text = reply,
+                    buttons = self.like_buttons,
+                    button_type = self.button_type,)
         else:
             dispatcher.utter_message(
-                'I\'m sorry. Unfortunately, I don\'t have that drug in my dataset yet')
+                text = 'I\'m sorry. Unfortunately, I don\'t have that drug in my dataset yet',
+                buttons = self.addition_button,
+                button_type = self.button_type,
+                )
         
         cursor.close()
         # self.db.close()

@@ -5,6 +5,9 @@ entities:
   - lab
 
 intents:
+  - good_response
+  - bad_response
+  - addition_request
   - affirm
   - any_detail_lab
   - avoid_drug
