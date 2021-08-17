@@ -1,82 +1,21 @@
-from matplotlib.backends.backend_agg import RendererAgg
-import streamlit as st
-import matplotlib.pyplot as plt
-import seaborn as sns
 import matplotlib
-from matplotlib.figure import Figure
-import mysql.connector
-import json
+import streamlit as st
+import seaborn as sns
+import matplotlib.pyplot as plt
 from decouple import config
-from datetime import datetime
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_agg import RendererAgg
+from utils import Monitoring
 
 
 plt.set_loglevel('WARNING')
-password = config('password')
+
+database_host = config('HOST')
+events_database = config('MYSQL_EVENTS_DATABASE')
+mysql_user = config('SQL_USER')
+mysql_password = config('MYSQL_ROOT_PASSWORD')
 
 st.set_page_config(layout="wide")
-
-
-def get_events():
-    db = mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password=password,
-        database='rasa')
-
-    cursor = db.cursor()
-    cursor.execute(
-        "SELECT intent_name, data FROM events WHERE type_name = 'user'")
-    events = [item for item in list(cursor)]
-
-    return events
-
-
-def get_intents(events):
-    intents = [event[0] for event in events]
-    return intents
-
-
-def get_datas(events):
-    datas = [event[1] for event in events]
-    return datas
-
-
-def get_confidences(datas):
-    data_count = len(datas)
-    intent_confidences = []
-    entity_confidences = []
-    timestamps = []
-    input_channels = []
-    entity_extractors = []
-
-    for i in range(data_count):
-        json_acceptable_string = datas[i].replace("'", "\"")
-        dictionary = json.loads(json_acceptable_string)
-        intent_confidences.append(
-            dictionary['parse_data']['intent']['confidence'])
-
-        for entity in dictionary['parse_data']['entities']:
-            if len(entity) != 0 and 'confidence_entity' in entity.keys():
-                entity_confidences.append(entity['confidence_entity'])
-
-        timestamps.append(dictionary['timestamp'])
-        input_channels.append(dictionary['input_channel'])
-        entity_extractors += [entity['extractor'] for entity in dictionary['parse_data']['entities']]
-
-    return intent_confidences, entity_confidences, timestamps, input_channels, entity_extractors
-
-
-def convert_date(timestamps):
-    dates = [datetime.fromtimestamp(timestamp).strftime(
-        '%Y-%m-%d') for timestamp in timestamps]
-    return dates
-
-
-def get_feedbacks(intents):
-    feedbacks = [intent for intent in intents if intent in [
-        'good_response', 'bad_response']]
-    return feedbacks
-
 
 matplotlib.use("agg")
 
@@ -84,13 +23,15 @@ _lock = RendererAgg.lock
 sns.set_style("white")
 st.text('Analyzing Chatbot Records')
 
-
-events = get_events()
-intents = get_intents(events)
-datas = get_datas(events)
-intent_confidences, entity_confidences, timestamps, input_channels, entity_extractors = get_confidences(datas)
-dates = convert_date(timestamps)
-feedbacks = get_feedbacks(intents)
+monitoring = Monitoring(database_host, mysql_user,
+                        mysql_password, events_database)
+events = monitoring.get_events()
+intents = monitoring.get_intents(events)
+datas = monitoring.get_datas(events)
+intent_confidences, entity_confidences, \
+    timestamps, input_channels, entity_extractors = monitoring.get_confidences(datas)
+dates = monitoring.convert_date(timestamps)
+feedbacks = monitoring.get_feedbacks(intents)
 
 
 st.write('')
