@@ -12,7 +12,7 @@ from utils import Monitoring
 plt.set_loglevel('WARNING')
 
 # Load some parameters from .env file
-database_host = config('HOST')
+database_host = config('DB_HOST')
 events_database = config('MYSQL_EVENTS_DATABASE')
 mysql_user = config('SQL_USER')
 mysql_password = config('MYSQL_ROOT_PASSWORD')
