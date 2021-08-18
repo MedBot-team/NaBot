@@ -58,8 +58,18 @@ st.write('')
 question = st.text_area("We support medicine and lab test related questions. For more information visit our website",
                         max_chars=500, value="Can you give me dosage information of Acetaminophen?")
 
-# Get the question from user
-if st.button('Give me the answer'):
+
+def send_feedback(feedback):
+    payload = json.dumps({
+        "message": f"{feedback}",
+        "sender": "default"
+        })
+    requests.request("POST", url, headers=headers, data=payload)
+    
+    
+b = st.button('Give me the answer')
+
+if b:
     if question == '':
         st.error('Please ask your question')
     else:
@@ -78,7 +88,17 @@ if st.button('Give me the answer'):
 
             response = requests.request(
                 "POST", url, headers=headers, data=payload)
+            if response.json()[0]['buttons']:
+                for button in response.json()[0]['buttons']:
+                    b = st.button(
+                        label=button['title'],
+                        on_click=send_feedback,
+                        args = [button['payload']],)
+                    
             # Give the chatbot answer to the user
             st.markdown(response.json()[0]['text'].replace('\n', '<br>'), unsafe_allow_html=True)
+            
+            # b1 = st.button('hello', on_click=send_feedback)
+
 
 st.markdown('___')
