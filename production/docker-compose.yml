@@ -41,7 +41,7 @@ services:
     image: monitoring-ui
     # Don't start ui server before mysql server
     depends_on:
-      db:
+      rasa:
         condition: service_healthy
     # Choose container name
     container_name: monitoring-server
