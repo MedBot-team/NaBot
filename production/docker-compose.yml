@@ -32,6 +32,36 @@ services:
         interval: 10s
         timeout: 3s
         retries: 30
+  # Build a monitoring server
+  monitoring:
+    build:
+      context: ./monitoring-server
+      dockerfile: Dockerfile
+    # Choose image name
+    image: monitoring-ui
+    # Don't start ui server before mysql server
+    depends_on:
+      db:
+        condition: service_healthy
+    # Choose container name
+    container_name: monitoring-server
+    restart: always
+    # Make the same network for chatbot server and ui server
+    networks:
+      - backend-network
+    # Mount .env file to the ui server to read chatbot URL
+    volumes:
+      - ./.env:/monitoring_ui/.env
+    # Map TCP port 8501 in the container to port 80 on the Docker host.
+    # This is a chatbot rest api port
+    ports:
+      - 8501:8501
+    # Healthcheck condition
+    healthcheck:
+        test: ["CMD", "printf", ".", ">", "/dev/tcp/127.0.0.1/8501"]
+        interval: 10s
+        timeout: 3s
+        retries: 30
   # Build chatbot server
   rasa:
     build:
