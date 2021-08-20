@@ -21,7 +21,7 @@ tracker_store:
     url: "$EVENTS_DB_HOST" 
     db: "$MYSQL_EVENTS_DATABASE" 
     username: "$SQL_USER"  
-    password: "$MYSQL_ROOT_PASSWORD" 
+    password: "$MYSQL_EVENTS_ROOT_PASSWORD" 
     query: 
       unix_socket: "/var/run/mysqld/mysqld.sock"
     

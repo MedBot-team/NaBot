@@ -11,7 +11,7 @@ class DrugRetrieve(Action):
     def __init__(self) -> None:
         super().__init__()  
 
-        password = config('MYSQL_ROOT_PASSWORD') 
+        password = config('MYSQL_DATASETS_ROOT_PASSWORD') 
         user = config('SQL_USER')
         host = config('DATASETS_DB_HOST')
         database = config('MYSQL_DATASETS_DATABASE')

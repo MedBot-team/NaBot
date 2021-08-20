@@ -154,6 +154,7 @@ services:
       - ./.env
     environment:
       - MYSQL_DATABASE=${MYSQL_DATASETS_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_DATASETS_ROOT_PASSWORD}
     # Expose 3306 port to action server can see the mysql server
     expose: 
       - 3306
@@ -188,6 +189,7 @@ services:
       - ./.env
     environment:
       - MYSQL_DATABASE=${MYSQL_EVENTS_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_EVENTS_ROOT_PASSWORD}
     # Expose 3306 port to action server can see the mysql server
     expose: 
       - 3306
