@@ -210,15 +210,21 @@ services:
         interval: 3m30s
         timeout: 45s
         retries: 30
+  # Build nginx container
   nginx:
     container_name: nginx
     image: nginx
+    # Map TCP port 80 and 443 of the container to port 80 and 443 of the Docker host, respectively.
     ports:
       - 80:80
       - 443:443
     volumes:
+     # Mount nginx default config file to the container
       - ./nginx:/etc/nginx/conf.d
+     # Mount letsencrypt certifications to the container. 
+     # If you're using different certificate authority, change the following line
       - /etc/letsencrypt:/etc/letsencrypt:ro
+    # Nginx container depends on rasa, ui and monitoring containers
     depends_on:
       rasa:
         condition: service_healthy
@@ -226,6 +232,7 @@ services:
         condition: service_healthy
       ui:
         condition: service_healthy
+    # Make the same network for rasa, ui and monitoring containers
     networks:
       - nginx-network
 
@@ -247,6 +254,7 @@ networks:
   events-network:
     name: medbot-events-network
     driver: bridge
+  # A network for all endpoints (rasa - ui - monitoring)
   nginx-network:
     name: medbot-nginx-network
     driver: bridge
