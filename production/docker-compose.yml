@@ -18,7 +18,7 @@ services:
     restart: always
     # Make the same network for chatbot server and ui server
     networks:
-      - frontend-netowrk
+      - frontend-network
     # Mount .env file to the ui server to read chatbot URL
     volumes:
       - ./.env:/streamlit/.env
@@ -29,8 +29,8 @@ services:
     # Healthcheck condition
     healthcheck:
         test: ["CMD", "printf", ".", ">", "/dev/tcp/127.0.0.1/8501"]
-        interval: 10s
-        timeout: 3s
+        interval: 30s
+        timeout: 10s
         retries: 30
   # Build a monitoring server
   monitoring:
@@ -48,7 +48,7 @@ services:
     restart: always
     # Make the same network for chatbot server and ui server
     networks:
-      - backend-network
+      - events-network
     # Mount .env file to the ui server to read chatbot URL
     volumes:
       - ./.env:/monitoring_ui/.env
@@ -59,8 +59,8 @@ services:
     # Healthcheck condition
     healthcheck:
         test: ["CMD", "printf", ".", ">", "/dev/tcp/127.0.0.1/8501"]
-        interval: 10s
-        timeout: 3s
+        interval: 30s
+        timeout: 10s
         retries: 30
   # Build chatbot server
   rasa:
@@ -98,9 +98,9 @@ services:
       - ./.env:/rasa-server/rasa/.env
     # Make the same network for chatbot server and actions server
     networks:
-      - rasa-netowrk
-      - frontend-netowrk
-      - backend-network
+      - rasa-network
+      - frontend-network
+      - events-network
   # Build action server
   app:
     build: 
@@ -110,7 +110,7 @@ services:
     image: action-server
     # Don't start action server before database
     depends_on:
-      db:
+      db_datasets:
         condition: service_healthy
     # Choose container name
     container_name: action-server
@@ -122,8 +122,8 @@ services:
     # Make the same network for chatbot server and actions server
     # And also action server and mysql server
     networks:
-      - rasa-netowrk
-      - backend-network
+      - rasa-network
+      - datasets-network
     # Expose 5055 port to chatbot server can see the action server
     expose: 
       - 5055
@@ -134,24 +134,60 @@ services:
         timeout: 10s
         retries: 30
   # Build mysql server
-  db:
+  db_datasets:
     # Use mysql image
     image: mysql:8
-    container_name: mysql-server
+    container_name: datasets-server
     # Use mysql_native_password instead of caching_sha2_password
     command: '--default-authentication-plugin=mysql_native_password'
     restart: always
     volumes:
       # Load mysql dumps (datasets) to the fresh mysql server during initialization
-      - ./mysql-server:/docker-entrypoint-initdb.d
+      - ./datasets-server:/docker-entrypoint-initdb.d
       # Store mysql records in the seperate volume. records won't be removed even with removing containers
       - db-data:/var/lib/mysql
     # Make the same network for mysql server and actions server
     networks:
-      - backend-network
+      - datasets-network
     # Read MYSQL password and database name from .env file
     env_file:
       - ./.env
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATASETS_DATABASE}
+    # Expose 3306 port to action server can see the mysql server
+    expose: 
+      - 3306
+    # Add the capability CAP_SYS_NICE to MySQL server can handle mbind error itself silently.
+    cap_add:
+      - SYS_NICE
+    # Configuration of healthcheck for mysql db
+    healthcheck:
+        test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', 
+                '-u', 'root', '-p$MYSQL_ROOT_PASSWORD' ]
+        interval: 3m30s
+        timeout: 45s
+        retries: 30
+  # Build mysql server
+  db_events:
+    # Use mysql image
+    image: mysql:8
+    container_name: events-server
+    # Use mysql_native_password instead of caching_sha2_password
+    command: '--default-authentication-plugin=mysql_native_password'
+    restart: always
+    volumes:
+      # Load mysql dumps (events) to the fresh mysql server during initialization
+      - ./events-server:/docker-entrypoint-initdb.d
+      # Store mysql records in the seperate volume. records won't be removed even with removing containers
+      - db-event:/var/lib/mysql
+    # Make the same network for mysql server and actions server
+    networks:
+      - events-network
+    # Read MYSQL password and database name from .env file
+    env_file:
+      - ./.env
+    environment:
+      - MYSQL_DATABASE=${MYSQL_EVENTS_DATABASE}
     # Expose 3306 port to action server can see the mysql server
     expose: 
       - 3306
@@ -166,26 +202,33 @@ services:
         timeout: 45s
         retries: 30
 
-# List of docker netowrks
+# List of docker networks
 networks:
   # network between chatbot and streamlit server
-  frontend-netowrk:
-    name: medbot_frontend-netowrk
+  frontend-network:
+    name: medbot-frontend-network
     driver: bridge
   # network between chatbot and action server
-  rasa-netowrk:
-    name: medbot_rasa-netowrk
+  rasa-network:
+    name: medbot-rasa-network
     driver: bridge
   # network between action server and mysql server
-  backend-network:
-    name: medbot_backend-netowrk
+  datasets-network:
+    name: medbot-datasets-network
+    driver: bridge
+  # network between ui/rasa server and mysql server
+  events-network:
+    name: medbot-events-network
     driver: bridge
 
 # Seperate volumes
 volumes:
-  # MYSQL database volume
+  # MYSQL datasets database volume
   db-data:
-    name: mysql_db
+    name: data_db
+  # MYSQL events database volume
+  db-event:
+    name: event_db
   # Storing logs volume
   logs_data:
     name: logs_db

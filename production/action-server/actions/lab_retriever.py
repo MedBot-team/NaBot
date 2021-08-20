@@ -13,8 +13,8 @@ class LabRetrieve(Action):
 
         password = config('MYSQL_ROOT_PASSWORD') 
         user = config('SQL_USER')
-        host = config('DB_HOST')
-        database = config('MYSQL_DATABASE')
+        host = config('DATASETS_DB_HOST')
+        database = config('MYSQL_DATASETS_DATABASE')
 
         self.table = config('LAB_TABLE')
         self.db = mysql.connector.connect(
