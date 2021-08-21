@@ -30,7 +30,7 @@ st.markdown(page_title, unsafe_allow_html=True)
 
 statement = st.selectbox(
     "Do you want to monitor which time interval logs?",
-    ['Today', 'Last week', 'Last month']
+    ['Last 24 hour', 'Last week', 'Last month']
 )
 
 if st.button("Show charts"):

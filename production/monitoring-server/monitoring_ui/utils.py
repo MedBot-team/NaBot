@@ -15,7 +15,7 @@ class Monitoring():
 
     # Find number of days from user statement
     def __day_mapper(self, statement):
-        day = {'Today': 1,
+        day = {'Last 24 hour': 1,
                'Last week': 7,
                'Last month': 30}
 
