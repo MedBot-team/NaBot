@@ -2,6 +2,12 @@ import json
 import requests
 import streamlit as st
 from decouple import config
+import random
+
+# Create random user_id
+if 'user_id' not in st.session_state:
+    user_id = 'st' + str(random.randint(100000, 999999))
+    st.session_state['user_id'] = user_id
 
 # Read URL from .env file in the directory
 url = config('RASA_SERVER_URL')
@@ -17,7 +23,6 @@ st.markdown("<h3 style='text-align: center; color: grey;'>\
 st.write('')
 
 # Show GitHub page badge
-
 """
 [![Star](https://img.shields.io/github/stars/arezae/chatbot.svg?logo=github&style=social)](https://gitHub.com/arezae/chatbot)
 """
@@ -58,8 +63,21 @@ st.write('')
 question = st.text_area("We support medicine and lab test related questions. For more information visit our website",
                         max_chars=500, value="Can you give me dosage information of Acetaminophen?")
 
-# Get the question from user
-if st.button('Give me the answer'):
+
+# Ask question button
+ask_button = st.button('Give me the answer')
+
+# Function to use when feedback button is clicked
+def send_feedback(feedback):
+    payload = json.dumps({
+        "message": f"{feedback}",
+        "sender": f"{st.session_state['user_id']}"
+        })
+    requests.request("POST", url, headers=headers, data=payload)
+    st.success('Feedback submitted successfully')
+
+# When ask question button is clicked    
+if ask_button:
     if question == '':
         st.error('Please ask your question')
     else:
@@ -69,7 +87,7 @@ if st.button('Give me the answer'):
 
             payload = json.dumps({
                 "message": f"{question}",
-                "sender": "default"
+                "sender": f"{st.session_state['user_id']}"
             })
 
             headers = {
@@ -78,7 +96,16 @@ if st.button('Give me the answer'):
 
             response = requests.request(
                 "POST", url, headers=headers, data=payload)
+            
+            # Display feedback buttons
+            if response.json()[0]['buttons']:
+                for button in response.json()[0]['buttons']:
+                    b = st.button(
+                        label=button['title'],
+                        on_click=send_feedback,
+                        args = [button['payload']],)
+                    
             # Give the chatbot answer to the user
             st.markdown(response.json()[0]['text'].replace('\n', '<br>'), unsafe_allow_html=True)
-
+            
 st.markdown('___')
