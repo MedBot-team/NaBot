@@ -2,6 +2,11 @@ import json
 import requests
 import streamlit as st
 from decouple import config
+import random
+
+if 'user_id' not in st.session_state:
+    user_id = 'st' + str(random.randint(100000, 999999))
+    st.session_state['user_id'] = user_id
 
 # Read URL from .env file in the directory
 url = config('RASA_SERVER_URL')
@@ -65,7 +70,7 @@ b = st.button('Give me the answer')
 def send_feedback(feedback):
     payload = json.dumps({
         "message": f"{feedback}",
-        "sender": "default"
+        "sender": f"{st.session_state['user_id']}"
         })
     requests.request("POST", url, headers=headers, data=payload)
     st.success('Feedback submitted successfully')
@@ -80,7 +85,7 @@ if b:
 
             payload = json.dumps({
                 "message": f"{question}",
-                "sender": "default"
+                "sender": f"{st.session_state['user_id']}"
             })
 
             headers = {
