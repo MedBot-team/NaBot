@@ -19,13 +19,16 @@ services:
     # Make the same network for chatbot server and ui server
     networks:
       - frontend-network
+      - nginx-network
     # Mount .env file to the ui server to read chatbot URL
     volumes:
       - ./.env:/streamlit/.env
+    expose:
+      - 8501
     # Map TCP port 8501 in the container to port 80 on the Docker host.
     # This is a chatbot rest api port
-    ports:
-      - 80:8501
+    # ports:
+    #  - 80:8501
     # Healthcheck condition
     healthcheck:
         test: ["CMD", "printf", ".", ">", "/dev/tcp/127.0.0.1/8501"]
@@ -49,13 +52,16 @@ services:
     # Make the same network for chatbot server and ui server
     networks:
       - events-network
+      - nginx-network
     # Mount .env file to the ui server to read chatbot URL
     volumes:
       - ./.env:/monitoring_ui/.env
     # Map TCP port 8501 in the container to port 80 on the Docker host.
     # This is a chatbot rest api port
-    ports:
-      - 8501:8501
+    #ports:
+    #  - 8501:8501
+    expose:
+      - 8501
     # Healthcheck condition
     healthcheck:
         test: ["CMD", "printf", ".", ">", "/dev/tcp/127.0.0.1/8501"]
@@ -84,8 +90,8 @@ services:
       - 5005
     # Map TCP port 5005 in the container to port 5005 on the Docker host.
     # This is a chatbot rest api port
-    ports:
-      - 5005:5005
+    # ports:
+    #  - 5005:5005
     # Healthcheck condition
     healthcheck:
         test: ["CMD", "printf", ".", ">", "/dev/tcp/127.0.0.1/5005"]
@@ -101,6 +107,7 @@ services:
       - rasa-network
       - frontend-network
       - events-network
+      - nginx-network
   # Build action server
   app:
     build: 
@@ -203,6 +210,31 @@ services:
         interval: 3m30s
         timeout: 45s
         retries: 30
+  # Build nginx container
+  nginx:
+    container_name: nginx
+    image: nginx
+    # Map TCP port 80 and 443 of the container to port 80 and 443 of the Docker host, respectively.
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+     # Mount nginx default config file to the container
+      - ./nginx:/etc/nginx/conf.d
+     # Mount letsencrypt certifications to the container. 
+     # If you're using different certificate authority, change the following line
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    # Nginx container depends on rasa, ui and monitoring containers
+    depends_on:
+      rasa:
+        condition: service_healthy
+      monitoring:
+        condition: service_healthy
+      ui:
+        condition: service_healthy
+    # Make the same network for rasa, ui and monitoring containers
+    networks:
+      - nginx-network
 
 # List of docker networks
 networks:
@@ -222,6 +254,10 @@ networks:
   events-network:
     name: medbot-events-network
     driver: bridge
+  # A network for all endpoints (rasa - ui - monitoring)
+  nginx-network:
+    name: medbot-nginx-network
+    driver: bridge
 
 # Seperate volumes
 volumes:
@@ -234,3 +270,4 @@ volumes:
   # Storing logs volume
   logs_data:
     name: logs_db
+ 

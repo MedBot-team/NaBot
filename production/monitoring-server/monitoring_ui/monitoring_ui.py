@@ -12,10 +12,10 @@ from utils import Monitoring
 plt.set_loglevel('WARNING')
 
 # Load some parameters from .env file
-database_host = config('DB_HOST')
+database_host = config('EVENTS_DB_HOST')
 events_database = config('MYSQL_EVENTS_DATABASE')
 mysql_user = config('SQL_USER')
-mysql_password = config('MYSQL_ROOT_PASSWORD')
+mysql_password = config('MYSQL_EVENTS_ROOT_PASSWORD')
 refresh_rate=config('REFRESH_RATE')
 
 # Set page layout to wide

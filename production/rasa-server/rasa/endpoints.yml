@@ -18,10 +18,10 @@ action_endpoint:
 tracker_store:
     type: SQL
     dialect: "mysql" 
-    url: "$DB_HOST" 
+    url: "$EVENTS_DB_HOST" 
     db: "$MYSQL_EVENTS_DATABASE" 
     username: "$SQL_USER"  
-    password: "$MYSQL_ROOT_PASSWORD" 
+    password: "$MYSQL_EVENTS_ROOT_PASSWORD" 
     query: 
       unix_socket: "/var/run/mysqld/mysqld.sock"
     
