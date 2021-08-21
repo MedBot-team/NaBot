@@ -4,6 +4,7 @@ import streamlit as st
 from decouple import config
 import random
 
+# Create random user_id
 if 'user_id' not in st.session_state:
     user_id = 'st' + str(random.randint(100000, 999999))
     st.session_state['user_id'] = user_id
@@ -22,7 +23,6 @@ st.markdown("<h3 style='text-align: center; color: grey;'>\
 st.write('')
 
 # Show GitHub page badge
-
 """
 [![Star](https://img.shields.io/github/stars/arezae/chatbot.svg?logo=github&style=social)](https://gitHub.com/arezae/chatbot)
 """
@@ -64,9 +64,10 @@ question = st.text_area("We support medicine and lab test related questions. For
                         max_chars=500, value="Can you give me dosage information of Acetaminophen?")
 
 
+# Ask question button
+ask_button = st.button('Give me the answer')
 
-b = st.button('Give me the answer')
-
+# Function to use when feedback button is clicked
 def send_feedback(feedback):
     payload = json.dumps({
         "message": f"{feedback}",
@@ -74,8 +75,9 @@ def send_feedback(feedback):
         })
     requests.request("POST", url, headers=headers, data=payload)
     st.success('Feedback submitted successfully')
-    
-if b:
+
+# When ask question button is clicked    
+if ask_button:
     if question == '':
         st.error('Please ask your question')
     else:
@@ -94,6 +96,8 @@ if b:
 
             response = requests.request(
                 "POST", url, headers=headers, data=payload)
+            
+            # Display feedback buttons
             if response.json()[0]['buttons']:
                 for button in response.json()[0]['buttons']:
                     b = st.button(
@@ -104,7 +108,4 @@ if b:
             # Give the chatbot answer to the user
             st.markdown(response.json()[0]['text'].replace('\n', '<br>'), unsafe_allow_html=True)
             
-            # b1 = st.button('hello', on_click=send_feedback)
-    
-
 st.markdown('___')
