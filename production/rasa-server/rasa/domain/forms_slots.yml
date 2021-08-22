@@ -1,27 +1,27 @@
 version: "2.0"
 
-forms:
-  drugs_form:
+forms: 
+  entity_form:
     required_slots:
-      drug: 
+      entity_name: 
         - type: from_entity
-          entity: drug
-          influence_conversation: false
+          entity: entity_name
+          influence_conversation: true
 
-  labs_form:
-    required_slots:
-      lab: 
-        - type: from_entity
-          entity: lab
-          influence_conversation: false
+  # labs_form:
+  #   required_slots:
+  #     lab: 
+  #       - type: from_entity
+  #         entity: lab
+  #         influence_conversation: false
 
 slots:
-  drug:
+  entity_name:
     type: text
-    auto_fill: false
-    influence_conversation: false
+    auto_fill: true
+    influence_conversation: true
 
-  lab:
-    type: text
-    auto_fill: false
-    influence_conversation: false
+  # lab:
+  #   type: text
+  #   auto_fill: true
+  #   influence_conversation: true

@@ -1,123 +1,147 @@
 version: "2.0"
 
 rules:
-- rule: activate drugs form
-  steps:
-    - intent: request_drug
-    - action: drugs_form
-    - active_loop: drugs_form
 
-- rule: submit drugs form
+- rule: what_is form
+  steps:
+    - intent: what_is
+    - slot_was_set:
+      - entity_name: null
+    - action: entity_form
+    - active_loop: entity_form
+
+- rule: submit form
   condition:
-  - active_loop: drugs_form
+    - active_loop: entity_form
   steps:
-    - action: drugs_form 
-    - active_loop: null 
-    - action: drug_retrieve
-    - action: slots_reset
+    - action: entity_form
+    - active_loop: null
+    - action: retrieve
 
-- rule: activate labs form
-  steps:
-    - intent: request_lab
-    - action: labs_form
-    - active_loop: labs_form
 
-- rule: submit labs form
-  condition:
-  - active_loop: labs_form
+- rule: what_is
   steps:
-    - action: labs_form 
-    - active_loop: null 
-    - action: lab_retrieve
-    - action: slots_reset
+    - intent: what_is
+    - slot_was_set:
+      - entity_name
+    - action: retrieve
+# - rule: activate drugs form
+#   steps:
+#     - intent: request_drug
+#     - action: drugs_form
+#     - active_loop: drugs_form
 
-- rule: get drugs usage
-  steps:
-    - intent: usage_drug
-    - action: drug_retrieve
+# - rule: submit drugs form
+#   condition:
+#   - active_loop: drugs_form
+#   steps:
+#     - action: drugs_form 
+#     - active_loop: null 
+#     - action: drug_retrieve
+#     - action: slots_reset
 
-- rule: get drugs dosage
-  steps:
-    - intent: dosage_drug
-    - action: drug_retrieve
+# - rule: activate labs form
+#   steps:
+#     - intent: request_lab
+#     - action: labs_form
+#     - active_loop: labs_form
 
-- rule: get drugs interaction
-  steps:
-    - intent: interaction_drug
-    - action: drug_retrieve
+# - rule: submit labs form
+#   condition:
+#   - active_loop: labs_form
+#   steps:
+#     - action: labs_form 
+#     - active_loop: null 
+#     - action: lab_retrieve
+#     - action: slots_reset
 
-- rule: get drugs what-to-avoid
-  steps:
-    - intent: avoid_drug
-    - action: drug_retrieve
+# - rule: get drugs usage
+#   steps:
+#     - intent: usage_drug
+#     - action: drug_retrieve
 
-- rule: get drugs side-effects
-  steps:
-    - intent: sideeffects_drug
-    - action: drug_retrieve
+# - rule: get drugs dosage
+#   steps:
+#     - intent: dosage_drug
+#     - action: drug_retrieve
 
-- rule: get drugs warnings
-  steps:
-    - intent: warnings_drug
-    - action: drug_retrieve
+# - rule: get drugs interaction
+#   steps:
+#     - intent: interaction_drug
+#     - action: drug_retrieve
 
-- rule: get labs details
-  steps:
-    - intent: detail_lab
-    - action: lab_retrieve
+# - rule: get drugs what-to-avoid
+#   steps:
+#     - intent: avoid_drug
+#     - action: drug_retrieve
 
-- rule: get during labs details
-  steps:
-    - intent: during_lab
-    - action: lab_retrieve
+# - rule: get drugs side-effects
+#   steps:
+#     - intent: sideeffects_drug
+#     - action: drug_retrieve
 
-- rule: get any things else of labs
-  steps:
-    - intent: any_detail_lab
-    - action: lab_retrieve
+# - rule: get drugs warnings
+#   steps:
+#     - intent: warnings_drug
+#     - action: drug_retrieve
 
-- rule: get why do I need labs details
-  steps:
-    - intent: need_lab
-    - action: lab_retrieve
+# - rule: get labs details
+#   steps:
+#     - intent: detail_lab
+#     - action: lab_retrieve
 
-- rule: get labs preparation details
-  steps:
-    - intent: prepare_lab
-    - action: lab_retrieve
+# - rule: get during labs details
+#   steps:
+#     - intent: during_lab
+#     - action: lab_retrieve
 
-- rule: get labs result meaning details
-  steps:
-    - intent: result_lab
-    - action: lab_retrieve
+# - rule: get any things else of labs
+#   steps:
+#     - intent: any_detail_lab
+#     - action: lab_retrieve
 
-- rule: get labs risk meaning details
-  steps:
-    - intent: risk_lab
-    - action: lab_retrieve
+# - rule: get why do I need labs details
+#   steps:
+#     - intent: need_lab
+#     - action: lab_retrieve
 
-- rule: get labs usage
-  steps:
-    - intent: usage_lab
-    - action: lab_retrieve
+# - rule: get labs preparation details
+#   steps:
+#     - intent: prepare_lab
+#     - action: lab_retrieve
 
-- rule: Say hi when the user says hi at start
-  conversation_start: true
-  steps:
-    - intent: greet 
-    - action: utter_greet
+# - rule: get labs result meaning details
+#   steps:
+#     - intent: result_lab
+#     - action: lab_retrieve
 
-- rule: Say hi anytime the user says hi 
-  steps:
-    - intent: greet 
-    - action: utter_greet
+# - rule: get labs risk meaning details
+#   steps:
+#     - intent: risk_lab
+#     - action: lab_retrieve
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-    - intent: goodbye
-    - action: utter_goodbye
+# - rule: get labs usage
+#   steps:
+#     - intent: usage_lab
+#     - action: lab_retrieve
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-    - intent: bot_challenge
-    - action: utter_iamabot
+# - rule: Say hi when the user says hi at start
+#   conversation_start: true
+#   steps:
+#     - intent: greet 
+#     - action: utter_greet
+
+# - rule: Say hi anytime the user says hi 
+#   steps:
+#     - intent: greet 
+#     - action: utter_greet
+
+# - rule: Say goodbye anytime the user says goodbye
+#   steps:
+#     - intent: goodbye
+#     - action: utter_goodbye
+
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#     - intent: bot_challenge
+#     - action: utter_iamabot

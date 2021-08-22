@@ -1,38 +1,33 @@
 version: "2.0"
 
 entities:
-  - drug 
-  - lab
+  - entity_name
 
 intents:
+  # Feedback
   - good_response
   - bad_response
   - addition_request
-  - affirm
-  - any_detail_lab
-  - avoid_drug
-  - bot_challenge
-  - deny
-  - detail_lab
-  - dosage_drug
-  - during_lab
-  - goodbye
+  # Chitchat
   - greet
-  - inform_drug
-  - inform_lab
-  - interaction_drug
-  - mood_great
-  - mood_unhappy
-  - need_lab
-  - prepare_lab
-  - request_drug
+  - goodbye
+  - thank
+  - bot_challenge
+  - bot_usage
+  # FAQ
   - request_lab
-  - result_lab
-  - risk_lab
-  - sideeffects_drug
-  - usage_drug
-  - usage_lab
-  - warnings_drug
+  - request_drug
+  - inform
+  - what_is
+  - usage
+  - risk
+  - lab_result
+  - lab_prepare
+  - lab_during
+  - drug_warning
+  - drug_dosage
+  - drug_interaction
+  - drug_sideeffects
 
 
 session_config:
