@@ -2,7 +2,7 @@ version: '2.0'
 
 nlu:
 
-- lookup: lab
+- lookup: entity_name
   examples: |
     - 17-hydroxyprogesterone
     - acetaminophen level
@@ -373,7 +373,6 @@ nlu:
     - dengue fever 
     - dhea sulfate 
     - down syndrome 
-    - drug 
     - estrogen levels 
     - fecal occult blood  
     - fobt

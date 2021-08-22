@@ -2,7 +2,7 @@ version: '2.0'
 
 nlu:
 
-- lookup: drug
+- lookup: entity_name
   examples: |
     - 1-day
     - 12-hour-nasal
