@@ -136,3 +136,6 @@ dmypy.json
 
 # Environmental variables
 *.env
+
+# scrapy files
+\datasets\LabDrugScraping-workplace
