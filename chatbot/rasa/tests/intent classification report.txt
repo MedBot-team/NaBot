@@ -1,0 +1,24 @@
+                  precision    recall  f1-score   support
+
+  any_detail_lab       0.55      0.67      0.60         9
+      avoid_drug       0.50      0.38      0.43         8
+      detail_lab       0.29      0.22      0.25         9
+     dosage_drug       0.91      0.91      0.91        11
+      during_lab       0.50      0.75      0.60         8
+     inform_drug       1.00      0.80      0.89         5
+      inform_lab       0.33      0.33      0.33         3
+interaction_drug       0.82      0.82      0.82        11
+        need_lab       0.40      0.33      0.36         6
+     prepare_lab       0.62      1.00      0.77         5
+    request_drug       0.83      1.00      0.91        15
+     request_lab       1.00      1.00      1.00        13
+      result_lab       0.91      1.00      0.95        10
+        risk_lab       1.00      0.67      0.80         6
+sideeffects_drug       0.73      0.80      0.76        10
+      usage_drug       0.70      0.54      0.61        13
+       usage_lab       0.50      0.33      0.40         9
+   warnings_drug       0.55      0.55      0.55        11
+
+        accuracy                           0.70       162
+       macro avg       0.67      0.67      0.66       162
+    weighted avg       0.70      0.70      0.69       162

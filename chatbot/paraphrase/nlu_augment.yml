@@ -11,112 +11,134 @@ nlu:
     - Give me instructions about my test.
     - can you explain a lab test for me?
     - I need lab test details.
-    - Details about the lab tests are needed.
-    - I need the results of a lab test.
-    - Details of the lab test are needed.
-    - I'm looking for more information about the lab test.
-    - I need details about lab tests.
-    - My lab test results are needed.
-    - I need details on the lab test.
-    - For lab test details, please.
-    - Information about lab tests would be helpful.
-    - Would you be able to tell me more about a test
-    - Is there a test I can take?
-    - Is there any testing information you can provide?
-    - Can you tell me what the test entails?
-    - Would you mind telling me about a test
-    - Could you provide me with information about a test
+    - Details about lab tests are needed.
+    - I am looking for details about the lab test.
+    - I would like to know the results of a lab test.
+    - I'm looking for lab test results.
+    - Please provide me with lab test details.
+    - The details of lab tests are what I need.
+    - Please send me details of the lab test.
+    - The lab test details are important to me.
+    - Detailed lab test information is required.
+    - Is there a test you can tell me about?
+    - Are there any tests I can take?
+    - Would you be able to tell me more about this test
     - How can I find out about a test
-    - Could you give me information about the test
-    - Are you able to give me details about a test
-    - Please let me know if there are any tests available?
-    - I would like to know more about a medical test
+    - What information can you give me about the test
+    - Could you provide me with information regarding a test
+    - What information do you have about a test
+    - Could you please give me information about a test
+    - Can you let me know how to take a test
+    - What is the test about?
+    - I would like some information about a medical test
+    - The medical test I'm interested in is not listed on your website.
+    - A medical test is on my mind. I want some information.
     - A medical test interests me.
-    - The test I'm interested in is a medical one.
-    - I need some information about a medical test
-    - My doctor suggested that I take a medical test
-    - There is some information I need regarding a medical test
-    - My doctor suggested I have a medical test. Please tell me more about that.
-    - I am looking for information about a medical test
-    - I would like to find out the results of a medical test
-    - My question is about a medical test
-    - I would like detailed information about a test
-    - Describe the test in detail for me.
-    - A test I am taking needs detailed information.
-    - A test needs to be described in detail to me.
-    - I need detailed information on a test
-    - A test's details would be helpful to me.
+    - There's a medical test I'd like to know about.
+    - Please give me some information on a medical test
+    - The results of a medical test interest me.
+    - A medical test intrigues me, please tell me more about it.
+    - There was an issue with a medical test that I wanted to know more about.
+    - Interested in learning more about medical tests.
+    - A detailed description of a test is needed.
+    - This test needs to be described in detail.
+    - There is a test I need detailed information about.
     - Details about a test are needed.
-    - An explanation of the test is needed.
+    - It would be helpful if you could give me detailed information about a test
+    - Please provide me with detailed information about the test
+    - The details of a test are important to me.
+    - An explanation of a test would be helpful to me.
     - Detailed information is needed about a test
-    - This test requires detailed information.
+    - A test should have detailed information.
     - Please give me instructions about my test
     - Please explain my test to me.
-    - Please tell me what to do for my test
-    - Tell me how to take my test
-    - Please let me know how to do my test
-    - I need instructions for my test
-    - Please instruct me on my test
+    - Please let me know how to take my test
+    - Provide me with test instructions.
+    - Tell me what I need to do to pass my test
+    - Send me the instructions for my test
+    - I need directions on my test
     - My test instructions.
-    - I want to know more about my test
-    - Give me instructions regarding my test
-    - Would you be able to explain a lab test to me
-    - Why do lab tests matter?
-    - Is there anything you can tell me about a lab test?
-    - Would you mind explaining a laboratory test to me
+    - Tell me about my test
+    - Give me directions for my test
+    - Is it possible for you to explain a lab test to me
     - How does a lab test work?
-    - Could you explain to me what a lab test is?
-    - Is there a lab test I should know about?
-    - What is a lab test?
-    - Is it possible for you to explain a laboratory test?
-    - How do I interpret a lab test?
+    - Would you mind explaining how a lab test works to me
+    - How can I understand a lab test?
+    - What are the results of a lab test?
+    - Are you able to explain a laboratory test to me
+    - What is a lab test and what does it involve?
+    - Could you explain the lab test to me
+    - Can you elaborate on a lab test?
+    - What does a lab test involve?
 
 - intent: any_detail_lab
   examples: |
     - Is there anything else I need to know about the [Anoscopy](lab)?
     - What else should I know about an [Anoscopy](lab)?
     - any other info about [Anoscopy](lab)?
-    - is there any thing left that you haven't told me?
-    - Is there anything else I should know about the [Anoscopy](lab)?
-    - Would you mind telling me more about the [Anoscopy](lab)?
-    - Are there any other things I need to know about my Anoscope?
-    - What else should I know about the Anascopy?
-    - Are there any other questions I should ask about the [Anoscopy](lab)?
-    - Would you mind providing any further information about the Anoscope?
-    - Can you tell me if there is anything else I need to know about the [Anoscopy](lab)
-    - Would there be anything else I should know about an [Anoscopy](lab)?
-    - Would you mind telling me anything else about the [Anoscopy](lab)?
-    - Any further information about an oscopy would be helpful?
-    - Is there anything else I should know about an [Anoscopy](lab)?
-    - An anascopy: what else do I need to know?
+    - is there any thing left that you haven't told me about [Anoscopy](lab)?
+    - what other information you can give me about [Anoscopy](lab)?
+    - tell me more about [Anoscopy](lab).
+    - What else do I need to know about the [Anoscopy](lab)?
+    - Do you have any more information about the Anoscope?
+    - What else should I know about an [Anoscopy](lab)
+    - Do you need to tell me anything else about the [Anoscopy](lab)
+    - Would you please let me know anything else I should know about the [Anoscopy](lab)
+    - Any further questions about the anascopy?
+    - Does there need to be anything else I know about the [Anoscopy](lab)?
+    - Are there any other details I need to know about the Anoscope?
+    - Do you have any other information about the Anascopy?
+    - Could you please tell me anything else I need to know about the [Anoscopy](lab)
+    - What else should I know about an angioscopy?
+    - Are there other things I need to know about an [Anoscopy](lab)
     - How else should I prepare for an [Anoscopy](lab)?
-    - [Anoscopy](lab): What else should I know?
-    - Are there any other things I need to know about a nooscopy?
-    - Other information I need to think about an [Anoscopy](lab)?
-    - Another thing I should know about an Angioscopy?
-    - An Angioscopy should I know about?
-    - How else can I prepare for an [Anoscopy](lab)?
-    - In addition to what I should know about an Anoscope?
-    - Do you have any other information about [Anoscopy](lab)?
-    - Is there anything else you can tell me about anascopy?
-    - Are there any other details on [Anoscopy](lab)?
-    - What else do you know about angioscopy?
-    - How else can I learn about anesthesia?
-    - Other info about [Anoscopy](lab)?
+    - Is there anything else I should know about an angioscopy?
+    - In addition to an anascopy, what else should I know?
+    - I have questions about an [Anoscopy](lab). What can I do?
+    - An [Anoscopy](lab) should I know another thing?
+    - The rest of the information I should know about an angioscopy?
+    - An anascopy: where does it come from? What should I know about it?
+    - Are there any other things I should know about an [Anoscopy](lab)?
+    - Is there any other information about [Anoscopy](lab)?
+    - Is there anything else you would like to know about anascopy?
+    - How does [Anoscopy](lab) work?
+    - How else can I learn about [Anoscopy](lab)?
+    - What else do you know about [Anoscopy](lab)
     - Can you tell me more about anascopy?
-    - Is there any other information you can give me about [Anoscopy](lab)?
-    - Can you provide any further information on [Anoscopy](lab)?
-    - What other information is available regarding anascopy?
-    - Is there anything you haven't told me yet?
-    - Do you have anything left to tell me
-    - Are there any other things I haven't heard from you?
-    - What else have you not told me
-    - What else do you need to tell me
-    - Have you told me anything else?
-    - Do you still have anything to tell me
-    - Do you have any other information to share with me
-    - Did you tell me anything else that I still need to know?
-    - Did I miss anything?
+    - Are there any other details about [Anoscopy](lab)?
+    - Do you have any additional information about [Anoscopy](lab)?
+    - Other info about [Anoscopy](lab)?
+    - Another article on angioscopy?
+    - Is there anything else you need to tell me about anascopy?
+    - Have you told me anything about [Anoscopy](lab) that I haven't gotten?
+    - Anything else I need to know about [Anoscopy](lab)
+    - Are there any other details about [Anoscopy](lab) that you have not mentioned?
+    - Has there been anything left that you did not explain to me about [Anoscopy](lab)?
+    - What is the last thing that you could tell me about [Anoscopy](lab)
+    - Did I miss anything important about [Anoscopy](lab)
+    - Did you ask me anything else about [Anoscopy](lab)?
+    - What remains to be told about Anesthesia?
+    - Do you have anything left to tell me about [Anoscopy](lab)
+    - Is there anything else you can tell me about [Anoscopy](lab)?
+    - Can you provide me with any other information about anascopy?
+    - Can you tell me more about [Anoscopy](lab)?
+    - Are there any other details you can provide me regarding [Anoscopy](lab)?
+    - What other information can you give me about [Anoscopy](lab)?
+    - Could you please give me any more information about anesthesia?
+    - Do you have any further information on [Anoscopy](lab)?
+    - Would you mind if I asked you for any further details about [Anoscopy](lab)?
+    - How can I find out more about [Anoscopy](lab)
+    - How else can you inform me about [Anoscopy](lab)
+    - I would like to learn more about [Anoscopy](lab).
+    - An overview of Anesthesia would be helpful.
+    - I'd like to know more about [Anoscopy](lab).
+    - I'm interested in learning more about [Anoscopy](lab).
+    - [Anoscopy](lab) interests me.
+    - More information on [Anoscopy](lab) please.
+    - [Anoscopy](lab). Tell me more about it.
+    - Describe in more detail what Annoscopy is.
+    - [Anoscopy](lab) interests me. Please explain it to me.
+    - More information about anesthesia.
 
 - intent: result_lab
   examples: |
@@ -127,65 +149,65 @@ nlu:
     - how can i interpret my [Anoscopy](lab) test results?
     - can you help me understand my [Anoscopy](lab) test results?
     - What does the [Anoscopy](lab) test result mean
-    - [Anoscopy](lab) results: What do they mean
-    - How should the results of the [Anoscopy](lab) test be interpreted?
-    - [Anoscopy](lab) test results: What does it mean
-    - What does an [Anoscopy](lab) test mean
-    - In what sense do the results of an [Anoscopy](lab) mean
-    - How do the [Anoscopy](lab) test results mean
-    - Anasocopy test results: what's the deal?
-    - How can the results of the AO test be understood?
-    - How do the results of the Angioscopy test help you?
+    - Anascopy test results: What does it mean
+    - Anascopy results: what do they mean
     - What are the results of the [Anoscopy](lab) test?
-    - [Anoscopy](lab) test results: what do they mean
-    - What does the [Anoscopy](lab) test result mean
-    - How can the results of an Annoscopy test be interpreted?
-    - Anascopy results: what does it mean
-    - [Anoscopy](lab) test: what do the results mean
-    - Annoscopy results: what does that mean
-    - The [Anoscopy](lab) test results mean what?
-    - How does the [Anoscopy](lab) test help determine what's going on?
-    - In what way do the results of the Anoscope test tell us something about the result?
+    - How do the [Anoscopy](lab) test results help you?
+    - How does an [Anoscopy](lab) test result help?
+    - Are the [Anoscopy](lab) results significant?
+    - In what way do the results of the Anoscope test help us?
+    - Are there any meanings associated with [Anoscopy](lab) results?
+    - [Anoscopy](lab) test results: How does it help you?
+    - What are the results of the [Anoscopy](lab) test?
+    - Annoscopy results: what does it mean
+    - How does the [Anoscopy](lab) test result translate into clinical meaning?
+    - Anascopy test results: What do they mean
+    - [Anoscopy](lab) test results: what does that mean
+    - Anascopy tests: What do the results mean
+    - In what way is the result of the Angiography test significant?
+    - Using an Anoscope, what will the results show?
+    - How does an [Anoscopy](lab) test translate?
+    - What does an anoscope test mean
     - What do the numbers in [Anoscopy](lab) mean
     - [Anoscopy](lab) numbers: what do they mean
-    - What does the [Anoscopy](lab) number mean
-    - Why are there different numbers in an [Anoscopy](lab)?
-    - Annoscopy's numbers mean what?
-    - Can you tell me what the numbers on the Anoscope mean
-    - How do the numbers in [Anoscopy](lab) relate to each other?
-    - [Anoscopy](lab) has numbers, but what are they meant for?
-    - In [Anoscopy](lab), what does the number mean
-    - What does the alphabetical order in [Anoscopy](lab) mean
+    - In an [Anoscopy](lab), why are there numbers?
+    - In [Anoscopy](lab), what does each number mean
+    - Annoscopy numbers mean what?
+    - [Anoscopy](lab): What do these numbers mean
+    - Annoscopy numbers are used in what way?
+    - How can the numbers in [Anoscopy](lab) be interpreted?
+    - Why are the numbers in an [Anoscopy](lab) significant?
+    - Why did [Anoscopy](lab) get so many numbers?
     - What are the numbers in the [Anoscopy](lab) result
-    - What is the number in the anascopy result
-    - What are the results of the [Anoscopy](lab)?
-    - How can I read an [Anoscopy](lab) result
-    - How do the numbers appear on the [Anoscopy](lab) report?
-    - What is the [Anoscopy](lab) result number?
-    - The result of an [Anoscopy](lab) has numbers. What do they mean?
-    - How does the anascopy result look like?
-    - How do you interpret the numbers in an [Anoscopy](lab) result
-    - Which numbers do the [Anoscopy](lab) results represent?
-    - What should I do if I have an [Anoscopy](lab) test result?
-    - What are the results of my Anoscope?
-    - What does my [Anoscopy](lab) test mean?
-    - [Anoscopy](lab) test results: how should I interpret them?
-    - Is it possible to interpret my [Anoscopy](lab) results
-    - What do my results of the [Anoscopy](lab) mean?
-    - In what way can I interpret the results of an [Anoscopy](lab) test?
-    - What effect does the [Anoscopy](lab) test have on my health?
-    - My results from the [Anoscopy](lab) test are confusing. What do I do?
-    - What can I do if I don't understand my [Anoscopy](lab) results
-    - Would you be able to help me understand the results of my [Anoscopy](lab) test?
-    - What do my anascopy results mean?
-    - Could you explain my results from the [Anoscopy](lab) test to me?
-    - Is there anything you can tell me about my results from my [Anoscopy](lab) test?
-    - How do I interpret my [Anoscopy](lab) test results
-    - Why didn't my [Anoscopy](lab) test result make sense to me?
-    - Could you help me understand my [Anoscopy](lab) results
-    - I want to understand why I had an [Anoscopy](lab) test. Can you help me?
-    - Why did my [Anoscopy](lab) test fail?
-    - Do you have any insight to share regarding my [Anoscopy](lab) test results
+    - In an angioscopy result, what numbers appear?
+    - [Anoscopy](lab) result numbers: what do they mean?
+    - What are the results of an [Anoscopy](lab)?
+    - What is the number in the Anoscope result
+    - How many numbers are in the result of an angioscopy?
+    - What numbers appear on the [Anoscopy](lab) report?
+    - How are the [Anoscopy](lab) results organized?
+    - In an [Anoscopy](lab) result, what numbers are shown?
+    - How big are the numbers on the [Anoscopy](lab) result
+    - What do the results of my [Anoscopy](lab) test mean?
+    - What should I do if I'm having an [Anoscopy](lab)?
+    - What do my [Anoscopy](lab) results mean?
+    - How can I interpret my results from an [Anoscopy](lab) test?
+    - My [Anoscopy](lab) test results: what do they mean?
+    - The result of my Anoscope test will be interpreted in what way?
+    - How should I interpret the results of an [Anoscopy](lab) test?
+    - What does my [Anoscopy](lab) test result mean?
+    - Is it safe to interpret my [Anoscopy](lab) results
+    - Which results should I interpret based on my [Anoscopy](lab)?
+    - Would you be able to explain the results of my [Anoscopy](lab) test?
+    - What do my [Anoscopy](lab) results mean?
+    - Is it possible for you to interpret my results from an [Anoscopy](lab)?
+    - Could you help me understand the [Anoscopy](lab) test results
+    - Could you please explain my [Anoscopy](lab) results to me?
+    - How can you explain my [Anoscopy](lab) test results
+    - What do you think of my results from the [Anoscopy](lab) test?
+    - Is there anything you can tell me about the results of my [Anoscopy](lab) test?
+    - Why I got a bad [Anoscopy](lab) result?
+    - What do my findings from my [Anoscopy](lab) mean?
 
 - intent: risk_lab
   examples: |
@@ -195,66 +217,66 @@ nlu:
     - should i be afraid of [Anoscopy](lab)?
     - what should i worry about when doing [Anoscopy](lab)?
     - does [Anoscopy](lab) harm people?
-    - Is there any risk associated with an [Anoscopy](lab)?
-    - What are the risks of an anascopy?
-    - Is the [Anoscopy](lab) risky?
-    - Do the anoscopies have any risks?
-    - Are there any risks associated with an angioscopy?
-    - Is there a risk associated with the [Anoscopy](lab)?
-    - Does the [Anoscopy](lab) carry any risks?
-    - Can the [Anoscopy](lab) be risky?
-    - [Anoscopy](lab) poses any risks?
-    - The [Anoscopy](lab) has any risks?
     - Is there a risk associated with an [Anoscopy](lab)?
-    - An angioscopy carries any risks?
-    - An [Anoscopy](lab) entails any risks?
-    - What is the risk of an [Anoscopy](lab)
-    - Is an [Anoscopy](lab) associated with any risks?
-    - [Anoscopy](lab) is it risky?
-    - Does an [Anoscopy](lab) carry any risk?
-    - What are the risks involved in an [Anoscopy](lab)?
-    - Can an angioscopy cause any harm?
-    - An [Anoscopy](lab) comes with what risks?
+    - [Anoscopy](lab) poses any risks?
+    - What are the risks of an [Anoscopy](lab)?
+    - Is the [Anoscopy](lab) risky?
+    - Are there any risks associated with the [Anoscopy](lab)?
+    - Do the anoscopies carry any risks?
+    - Does the [Anoscopy](lab) have any risks?
+    - Can the Annoscopy cause any harm?
+    - Is there anything to be worried about during an [Anoscopy](lab)?
+    - Do you think the [Anoscopy](lab) carries any risks?
+    - Is there a risk associated with an [Anoscopy](lab)?
+    - An angioscopy poses any risks?
+    - Is an [Anoscopy](lab) risky?
+    - An [Anoscopy](lab) carries any risk?
+    - How risky is an angioscopy?
+    - Are annoscopies associated with any risks?
+    - An [Anoscopy](lab) comes with a risk, is that true?
+    - What are the risks involved with an [Anoscopy](lab)?
+    - Are there risks associated with an angioscopy?
+    - Can an angioscopy carry any risks?
     - Annoscopy is it dangerous
-    - What are the risks of anesthesia?
-    - [Anoscopy](lab) can be dangerous, right?
+    - What are the risks associated with anesthesia?
     - How dangerous is an angioscopy?
-    - Is anesthesia dangerous
-    - What is the danger of anesthesia?
-    - Does anesthesia pose a risk?
-    - [Anoscopy](lab): is it a risky procedure?
-    - Anascopy--dangerous or not?
-    - [Anoscopy](lab) poses a risk?
-    - Can I be afraid of an angioscopy?
-    - What are the risks associated with anesthesia?
-    - How much should I fear an [Anoscopy](lab)?
-    - Is an [Anoscopy](lab) something to be feared?
-    - [Anoscopy](lab): Is it a thing to fear?
-    - Annoscopy: Do I need to be afraid?
-    - What is the risk of having an [Anoscopy](lab)?
-    - Are there any risks associated with an [Anoscopy](lab)?
-    - How worried should I be about an anascopy?
-    - How should I feel about an anesthesia?
-    - How should I prepare for an [Anoscopy](lab)?
-    - Do I need to worry about anything when I have an angioscopy?
-    - When performing an [Anoscopy](lab), what should I be concerned about?
-    - Is there anything I should worry about when I do an [Anoscopy](lab)?
-    - What should I keep in mind when doing an angioscopy?
-    - What should I consider when undergoing an [Anoscopy](lab)?
-    - How should I approach an [Anoscopy](lab)?
-    - Why should I worry when doing an [Anoscopy](lab)?
-    - When I perform an angioscopy, what should I be worried about?
-    - Annoscopy: What should I take into consideration?
-    - Is anesthesia harmful to people
-    - What are the risks associated with anesthesia?
+    - What is the risk of anesthesia?
+    - Anesthesia is dangerous, right?
+    - [Anoscopy](lab) poses a threat?
+    - Does anascopy pose any danger?
+    - What is the danger of an angioscopy?
+    - The [Anoscopy](lab) procedure carries a risk, right?
+    - Anascopy is dangerous
+    - Are there any risks associated with an angioscopy?
+    - [Anoscopy](lab): Is it a scary procedure?
+    - Annoscopy: Should I be afraid?
+    - How should I feel about an [Anoscopy](lab)?
+    - Is an anesthesia examination to be feared?
+    - Am I afraid of an [Anoscopy](lab)
+    - How much should I fear an angioscopy?
+    - Anascopy: Do I have to be afraid of it?
+    - Is it necessary for me to be fearful of an Anascopy?
+    - Is it normal to be scared of an [Anoscopy](lab)?
+    - What should I be concerned about when doing an [Anoscopy](lab)?
+    - How can I prepare for an [Anoscopy](lab)?
+    - Is there anything I should worry about during an [Anoscopy](lab)?
+    - Do I need to be worried about anything when I do an angioscopy?
+    - What should I worry about when I have an [Anoscopy](lab)?
+    - An anascopy, what should I watch out for?
+    - When performing an [Anoscopy](lab), what should I consider?
+    - What should I look out for during an Angioscopy?
+    - Do I need to worry about anything when undergoing an [Anoscopy](lab)?
+    - When performing an Anatomy, how should I prepare myself?
+    - Annoscopy harms people
+    - Is anesthesia harmful to the patient?
     - Are people harmed by anesthesia?
-    - How does anesthesia affect people
-    - [Anoscopy](lab) harms people
+    - What are the risks associated with anesthesia?
+    - Is an angioscopy harmful to people
+    - How does [Anoscopy](lab) affect people
     - Can anesthesia harm people
-    - [Anoscopy](lab): Is it harmful?
-    - Anascopy: Is there any harm in it?
-    - [Anoscopy](lab): does it harm people
-    - Annoscopy is harmful to people
+    - What is the harm of anesthesia?
+    - The [Anoscopy](lab) procedure is it harmful to patients?
+    - Can an angioscopy be harmful?
 
 - intent: prepare_lab
   examples: |
@@ -264,55 +286,55 @@ nlu:
     - what do you suggest me to do before [Anoscopy](lab)?
     - Do you have any recommendations for people about how to get ready for [Anoscopy](lab)?
     - Is there anything I need to do to prepare for the [Anoscopy](lab)?
-    - Does the [Anoscopy](lab) require any preparation on my part?
-    - How should I prepare for an angioscopy?
-    - Are there any preparations I need to make prior to the [Anoscopy](lab)
-    - Am I required to prepare anything for the [Anoscopy](lab)
-    - What preparation is required for the [Anoscopy](lab)
-    - Can I do anything to prepare for an [Anoscopy](lab)?
-    - Is there anything I have to do before the [Anoscopy](lab)?
-    - Can I prepare for the [Anoscopy](lab) in any way?
-    - Should I prepare something for the [Anoscopy](lab)?
+    - Does preparing for an [Anoscopy](lab) require any special preparation?
+    - How do I prepare for an angioscopy?
+    - Do I have to prepare anything for the [Anoscopy](lab)?
+    - Are there any preparations to be made for an [Anoscopy](lab)?
+    - How should I prepare for the anascopy?
+    - Will there be any preparation for the angioscopy?
+    - Does preparing for the [Anoscopy](lab) require any actions on my part?
+    - Am I required to do anything to prepare for the [Anoscopy](lab)?
+    - Can I prepare for an [Anoscopy](lab) in any way?
     - What should I do to prepare for the [Anoscopy](lab)
-    - What is the best way to prepare for an [Anoscopy](lab)?
-    - What should I do before having an angioscopy?
-    - How should I prepare for the angioscopy?
-    - Is there anything I should prepare for [Anoscopy](lab)
-    - Preparation for the [Anoscopy](lab)?
-    - The [Anoscopy](lab): What does my preparation look like?
-    - How can I prepare for my anascopy?
-    - What should I do before I undergo an [Anoscopy](lab)?
-    - In what way should I prepare for an angiogram?
+    - Why is annoscopy so important?
+    - Is there anything I should prepare for an [Anoscopy](lab)
+    - In what way should I prepare for an angioscopy?
+    - Do I need to prepare for my [Anoscopy](lab)?
+    - The Annoscopy: How should I prepare?
+    - I am preparing for my [Anoscopy](lab). What should I do?
+    - Is there anything I need to do in preparation for an angiogram?
+    - Why is it important to prepare for the [Anoscopy](lab)
+    - Preparation for an Anascopy What should I do?
     - How should I prepare for an [Anoscopy](lab)?
-    - Can you tell me what I need to know before having an angioscopy?
-    - What should I know before I undergo an [Anoscopy](lab)?
-    - Before undergoing an [Anoscopy](lab), what information should I have?
-    - Is there anything I should know before I get an anostoscopy?
-    - How can I prepare myself for an [Anoscopy](lab)
-    - When should I have an [Anoscopy](lab)?
-    - Do I need to know anything before doing an Angioscopy?
-    - When will I need an angioscopy?
-    - What should I know about an [Anoscopy](lab)?
-    - How should I prepare for an [Anoscopy](lab)?
+    - Is there anything I need to know before I undergo an angioscopy?
+    - Can you tell me what I should know before undergoing an angioscopy?
+    - What should I know before having an angioscopy?
+    - Why should I know what to expect before an angioscopy?
+    - Do I need to know anything before performing an [Anoscopy](lab)?
+    - Before I go through an angioscopy, what should I know?
+    - Can I get an Angioscopy without getting a blood test first?
+    - Before undergoing an [Anoscopy](lab), what should I know?
+    - Before having an Angioscopy, what are some things I should know?
+    - How should I prepare for an angioscopy?
     - Can you tell me what I should do before an [Anoscopy](lab)?
-    - Do you have any suggestions for me before an angioscopy?
-    - What should I do before my [Anoscopy](lab)?
-    - Would you recommend I do anything before my [Anoscopy](lab)?
-    - Are there any preparations I need to make before the surgery?
-    - Is there anything I should do before the [Anoscopy](lab)?
-    - Can you suggest anything that I need to do before an Angio?
-    - Could you please suggest some things that I should do before the [Anoscopy](lab)?
-    - Do you have any tips for me before the [Anoscopy](lab)
-    - How should people prepare for an [Anoscopy](lab)?
-    - Is there anything you would recommend people do to prepare for an angioscopy?
-    - What advice would you give to someone who wants to get ready for an angioscopy?
-    - Would you be able to suggest any tips for people who are preparing for an angioscopy?
-    - What preparation should people do before an [Anoscopy](lab)
-    - Are there any recommendations about how to prepare for an [Anoscopy](lab)
-    - Would you have any suggestions on how people should prepare for an [Anoscopy](lab)?
-    - Could you recommend any preparation tips for someone undergoing an anesthetic?
-    - In your opinion, how should someone prepare for an angioscopy?
-    - Could you provide some advice to people about how to prep for an [Anoscopy](lab)?
+    - What are your suggestions for me to do before my [Anoscopy](lab)?
+    - What should I do before an angioscopy?
+    - Are there any steps I should take before an [Anoscopy](lab)?
+    - Would you please give me some advice before my [Anoscopy](lab)?
+    - Do you have any recommendations for me before the procedure?
+    - Can you suggest anything I should do before having an angioscopy?
+    - I'm planning to have an angioscopy soon. What could I do to prepare?
+    - Are there any precautions I need to take before an Angioscopy?
+    - How should someone prepare for an [Anoscopy](lab)?
+    - Could you please tell me how to prepare for an angioscopy?
+    - What are your recommendations for patients about getting ready for an [Anoscopy](lab)?
+    - Are there any recommendations on how people should prepare for their [Anoscopy](lab)
+    - Would you be willing to give us any tips on how people can prepare for an [Anoscopy](lab)?
+    - Do you have any tips for people about how to prepare for an anesthetic?
+    - What are your recommendations for those who are getting ready for an angioscopy?
+    - Would you mind offering some tips on how to prepare for an angioscopy?
+    - In order to prepare for an angioscopy, what are your recommendations?
+    - Could you make any recommendations about how people can prepare for an [Anoscopy](lab)
 
 - intent: during_lab
   examples: |
@@ -324,53 +346,53 @@ nlu:
     - What happens during an [Anoscopy](lab)?
     - How does an [Anoscopy](lab) work?
     - An [Anoscopy](lab) consists of what?
-    - When does the [Anoscopy](lab) take place?
-    - During the [Anoscopy](lab), what happens?
-    - How is the [Anoscopy](lab) performed?
-    - Is an [Anoscopy](lab) painful?
-    - [Anoscopy](lab): What happens during the procedure?
+    - During an angioscopy, what happens?
+    - An [Anoscopy](lab) involves what?
     - In an [Anoscopy](lab), what happens?
-    - Anascopy: What happens during it?
-    - What happens during an [Anoscopy](lab)?
-    - [Anoscopy](lab): What happens during the procedure?
-    - How does an [Anoscopy](lab) work?
-    - An [Anoscopy](lab) involves what?
-    - During an Angioscopy, what happens
-    - The [Anoscopy](lab) process consists of what?
-    - In an anascopy, what happens
-    - When is an [Anoscopy](lab) performed?
-    - In a procedure called an [Anoscopy](lab), what happens
-    - When an [Anoscopy](lab) is performed, what is done?
-    - What is an [Anoscopy](lab)?
-    - What does an Annoscopy entail?
-    - [Anoscopy](lab): how does it work?
-    - What happens during an [Anoscopy](lab)?
-    - What are the steps involved in an [Anoscopy](lab)?
-    - [Anoscopy](lab): what does it entail?
+    - An [Anoscopy](lab) takes place during what?
+    - How does the [Anoscopy](lab) process work?
+    - When does an [Anoscopy](lab) take place?
     - How is an angioscopy performed?
-    - [Anoscopy](lab): what is it like?
-    - An annoscopy is performed in what way?
-    - Annoscopy: what's the procedure?
-    - What should I do during an [Anoscopy](lab)?
-    - How should I perform an angioscopy?
-    - Can you tell me what to do in [Anoscopy](lab)
-    - How should I proceed in an [Anoscopy](lab)?
-    - Do I have to do anything in [Anoscopy](lab)
-    - Is there anything I should do during an [Anoscopy](lab)?
-    - When I go in for an angiogram, what should I expect?
-    - How should I do [Anoscopy](lab)
-    - What do I need to do during an [Anoscopy](lab)
-    - An [Anoscopy](lab), what is my duty?
-    - How does an [Anoscopy](lab) test work?
-    - [Anoscopy](lab) consists of what?
-    - How is an [Anoscopy](lab) performed?
-    - During an [Anoscopy](lab), what is done?
+    - What happens during an [Anoscopy](lab)?
+    - The Anostoscopy procedure consists of what?
+    - When an [Anoscopy](lab) is performed, what happens
+    - How does an [Anoscopy](lab) work?
+    - In an [Anoscopy](lab), what happens
     - An [Anoscopy](lab) involves what?
-    - [Anoscopy](lab) entails what?
-    - In an [Anoscopy](lab) test, what happens?
-    - Can you tell me what happens during an [Anoscopy](lab)?
-    - What is an Anascopy test
-    - An [Anoscopy](lab) test involves what?
+    - During an angioscopy, what happens
+    - An [Anoscopy](lab) takes place during what?
+    - An [Anoscopy](lab) consists of what?
+    - Is an [Anoscopy](lab) painful?
+    - What is an angioscopy?
+    - What does an [Anoscopy](lab) entail?
+    - When and how is an [Anoscopy](lab) performed?
+    - Annoscopy: what does it involve?
+    - An [Anoscopy](lab) is done by?
+    - Anascopy: how does it work?
+    - [Anoscopy](lab): What is it like?
+    - Annoscopy is conducted in what way?
+    - What does Angioscopy entail?
+    - The process of an [Anoscopy](lab)?
+    - How should I perform an [Anoscopy](lab)?
+    - Do I need to do anything during an angioscopy?
+    - Can you tell me what to do during an [Anoscopy](lab)?
+    - In an angioscopy, what should I do?
+    - How should I prepare for an [Anoscopy](lab)?
+    - How should I proceed during an [Anoscopy](lab)?
+    - Is [Anoscopy](lab) important?
+    - How should I conduct an osteoscopy?
+    - When performing an [Anoscopy](lab), what should I do?
+    - Is there anything I need to do in anascopy?
+    - An [Anoscopy](lab) involves what?
+    - During an [Anoscopy](lab), what is done?
+    - What does an [Anoscopy](lab) test entail?
+    - How is an [Anoscopy](lab) performed?
+    - An [Anoscopy](lab) consists of what?
+    - [Anoscopy](lab) tests involve what?
+    - What happens in an [Anoscopy](lab)?
+    - An Annoscopy test involves what?
+    - How does an Anesthesia test work?
+    - [Anoscopy](lab) - what does it entail?
 
 - intent: need_lab
   examples: |
@@ -378,104 +400,126 @@ nlu:
     - Is [Anoscopy](lab) necessary for me?
     - should i have an [Anoscopy](lab)?
     - do i need [Anoscopy](lab)?
-    - What is the purpose of the [Anoscopy](lab)?
+    - why do i have to do [Anoscopy](lab)?
+    - What is the purpose of an [Anoscopy](lab)?
     - [Anoscopy](lab): Why do I need it?
-    - Why should I have an [Anoscopy](lab)?
-    - How do I know if I need an [Anoscopy](lab)?
-    - Is the [Anoscopy](lab) necessary for me?
-    - Why am I in need of an [Anoscopy](lab)?
-    - What is the need for the [Anoscopy](lab)?
-    - How can I get an angioscopy?
-    - The [Anoscopy](lab) is required for what purpose?
-    - Can you tell me why I should have an [Anoscopy](lab)
+    - Is the [Anoscopy](lab) necessary?
+    - Can you tell me why I need an [Anoscopy](lab)?
+    - Is an Annoscopy necessary for me?
+    - How can I benefit from the [Anoscopy](lab)?
+    - What is the point of getting an [Anoscopy](lab)
+    - An anascopy is necessary for what reason?
+    - When does the [Anoscopy](lab) need to be performed?
+    - An [Anoscopy](lab) is needed for what?
+    - Is an angioscopy necessary for me
     - Do I need an angioscopy?
-    - Is an [Anoscopy](lab) necessary for me
     - Can I benefit from an angioscopy?
-    - Does an angioscopy make sense for me
     - Am I a candidate for an angioscopy?
-    - What are my chances of needing an angioscopy?
-    - Would an angioscopy be beneficial to me
-    - Should I have an angioscopy?
-    - How important is an [Anoscopy](lab) for me
-    - Is an [Anoscopy](lab) required for me
-    - What is the benefit of an [Anoscopy](lab)?
-    - [Anoscopy](lab): should I have one?
-    - [Anoscopy](lab) is recommended for me?
-    - Do I need an angioscopy?
-    - Can I have an angioscopy?
-    - An Angioscopy is a good idea for me?
-    - What are the benefits of an [Anoscopy](lab)
-    - An anascopy would be beneficial to me?
-    - [Anoscopy](lab): Is it necessary?
-    - How much benefit will I receive from an [Anoscopy](lab)?
-    - Is an angioscopy necessary?
-    - [Anoscopy](lab) is necessary for me?
     - What are the benefits of an [Anoscopy](lab)?
-    - Do I need an angioscopy?
+    - What is the need for me to perform an angioscopy?
+    - What are my chances of requiring an angioscopy?
+    - Should I have an angioscopy?
+    - Would an angioscopy be beneficial for me
+    - Does my condition necessitate an angioscopy?
+    - Is an [Anoscopy](lab) necessary?
+    - [Anoscopy](lab): Do I need one?
     - How often should I have an angioscopy?
-    - Would I benefit from an angioscopy?
-    - Does an angioscopy make sense for me?
-    - Is Annoscopy necessary?
-    - Should I undergo an angioscopy?
-    - Is an Anascopy necessary?
+    - What is the benefit of an [Anoscopy](lab)?
+    - Can I benefit from an [Anoscopy](lab)
+    - [Anoscopy](lab) is recommended for me?
+    - An [Anoscopy](lab) is a good idea for me?
+    - Is an angioscopy necessary?
+    - An angioscopy is recommended?
+    - Would it be wise to have an angioscopy?
+    - Is an angioscopy necessary?
+    - Would I benefit from an [Anoscopy](lab)?
+    - Do I need an angioscopy?
+    - Should I have an angioscopy?
+    - [Anoscopy](lab) is needed?
+    - Does Annoscopy make sense for me?
+    - What are the benefits of an [Anoscopy](lab)
+    - Can I get an angioscopy?
+    - How can I find out if I need an [Anoscopy](lab)?
+    - Would an angioscopy be helpful?
+    - What is the purpose of an [Anoscopy](lab)?
+    - Why do I have to undergo an angioscopy?
+    - Is an [Anoscopy](lab) necessary for me?
+    - Is it necessary for me to do an [Anoscopy](lab)?
+    - When should I have an [Anoscopy](lab)?
+    - What is the point of an [Anoscopy](lab)?
+    - An [Anoscopy](lab) is required? Why?
+    - Why am I required to perform an angioscopy?
+    - The reason I need an [Anoscopy](lab)?
+    - How can I justify having an [Anoscopy](lab)?
 
 - intent: detail_lab
   examples: |
-    - What is the [Anoscopy](lab)?
+    - What is [Anoscopy](lab)?
     - The [Anoscopy](lab) is what?
     - i need some info about [Anoscopy](lab)?
     - give me information about [Anoscopy](lab).
     - can you tell me what [Anoscopy](lab) is?
+    - i want to know about [Anoscopy](lab)?
+    - What is an [Anoscopy](lab)?
+    - How does an [Anoscopy](lab) work?
     - An [Anoscopy](lab) is what?
-    - How does the Anoscope work?
-    - [Anoscopy](lab): What is it?
+    - Anascopy: What is it?
+    - In what way does [Anoscopy](lab) work?
+    - The [Anoscopy](lab) process is what?
+    - Anascopy: How does it work?
+    - How is an [Anoscopy](lab) performed?
+    - In what ways is annoscopy used?
+    - Exactly what is an ophthalmologist's anascopy?
     - What is an [Anoscopy](lab)?
-    - Who is an anoscopist?
-    - As a medical procedure, what is [Anoscopy](lab)?
-    - Anascopy is what it's called. What does it do?
-    - In what sense is the Anascopy used?
-    - What exactly is an [Anoscopy](lab)?
-    - The [Anoscopy](lab) is what?
-    - What is an [Anoscopy](lab)?
-    - Who is the anoscopist?
-    - In an angioscopy, you perform what
-    - [Anoscopy](lab) refers to what
+    - In an angioscopy, what happens?
+    - What is the [Anoscopy](lab)?
+    - What does an anascopy entail?
     - An [Anoscopy](lab) is what
-    - In an [Anoscopy](lab), what does one see?
-    - Is this what the [Anoscopy](lab) is?
-    - How is the Angioscopy performed?
-    - Anascopy is what
-    - Which is the aim of the [Anoscopy](lab)?
-    - Would you mind providing me with some information about [Anoscopy](lab)?
-    - Is there any information on [Anoscopy](lab) I should know?
+    - How do you perform an angioscopy?
+    - Anascopy refers to what
+    - Which of the following is an [Anoscopy](lab)?
+    - [Anoscopy](lab) means what
+    - How does the [Anoscopy](lab) work?
+    - Can you give me some information about [Anoscopy](lab)?
+    - What is annoscopy? Could you please tell me more?
     - How can I find out more about [Anoscopy](lab)?
+    - Would you mind providing me with some information on [Anoscopy](lab)?
     - What can you tell me about [Anoscopy](lab)?
-    - What is an [Anoscopy](lab)?
-    - What do I need to know about [Anoscopy](lab)
-    - Could you please give me some information on [Anoscopy](lab)?
-    - Do you have any information about [Anoscopy](lab)?
-    - Would you mind telling me more about [Anoscopy](lab)?
-    - I would like to know more about anascopy?
+    - Do you have any information about anascopy?
+    - Do you know anything about [Anoscopy](lab)?
+    - Would you mind telling me more about anascopy?
+    - Are there any articles about [Anoscopy](lab) available?
+    - Where can I learn about anascopy?
     - Please tell me more about [Anoscopy](lab).
-    - I would like to know more about Anesthesia.
-    - Describe the [Anoscopy](lab) procedure to me.
-    - Please inform me about anascopy.
-    - [Anoscopy](lab) information would be appreciated.
-    - Describe what an [Anoscopy](lab) is to me.
-    - I would like information on [Anoscopy](lab)
-    - Information about anascopy is appreciated.
-    - [Anoscopy](lab) information is of interest to me.
-    - Let me know more about [Anoscopy](lab).
+    - Describe an [Anoscopy](lab) in detail.
+    - I would like information about [Anoscopy](lab).
+    - I want to know more about [Anoscopy](lab).
+    - [Anoscopy](lab) information is requested.
+    - Inform me about [Anoscopy](lab).
+    - Let me know about [Anoscopy](lab).
+    - I would like to learn more about rhinoscopy.
+    - Please tell me anything you know about [Anoscopy](lab).
+    - Please tell me about [Anoscopy](lab).
     - What is an [Anoscopy](lab)?
-    - Is [Anoscopy](lab) what you mean?
-    - Could you please tell me what an [Anoscopy](lab) is
-    - The term anascopy is new to me. What does it mean?
-    - [Anoscopy](lab) is what you are referring to, right?
-    - Are you able to explain what an oscopy is
-    - Do you know what [Anoscopy](lab) is
-    - What is the meaning of [Anoscopy](lab)?
-    - Are you familiar with the term [Anoscopy](lab)?
-    - Would you mind telling me what an angiogram is
+    - Is [Anoscopy](lab) what you describe?
+    - What exactly is an oscopy?
+    - Do you know what an [Anoscopy](lab) is
+    - What is [Anoscopy](lab)?
+    - Could you please tell me what [Anoscopy](lab) is
+    - Would you mind explaining [Anoscopy](lab) to me?
+    - How does an anascopy work?
+    - Is Anascopy what it is
+    - Are you familiar with [Anoscopy](lab)?
+    - What is an [Anoscopy](lab)?
+    - How do I learn more about anascopy?
+    - Would you like to know more about [Anoscopy](lab)?
+    - How does an [Anoscopy](lab) work?
+    - How can I learn about [Anoscopy](lab)?
+    - Can you tell me about [Anoscopy](lab)?
+    - Are you interested in [Anoscopy](lab)
+    - What is [Anoscopy](lab)
+    - What are the benefits of annoscopy?
+    - Would you please tell me more about Angioscopy?
 
 
 - intent: usage_lab
@@ -487,65 +531,65 @@ nlu:
     - when is [Anoscopy](lab) needed?
     - where is [Anoscopy](lab) useful?
     - What is the purpose of an [Anoscopy](lab)?
-    - The [Anoscopy](lab) is used for what?
-    - [Anoscopy](lab): what is its purpose?
-    - How is an [Anoscopy](lab) used?
-    - How does the [Anoscopy](lab) work?
-    - For what does an [Anoscopy](lab) are used?
-    - Why is the Anoscope used?
-    - [Anoscopy](lab): for what purpose is it used?
+    - Annoscopy is used for what?
+    - Where does an [Anoscopy](lab) come in handy?
+    - For what does the Anoscope serve?
     - How is the [Anoscopy](lab) used?
-    - How is [Anoscopy](lab) used?
+    - Why do we use an [Anoscopy](lab)?
+    - How are anoscopies used?
+    - For what is an [Anoscopy](lab) used?
+    - [Anoscopy](lab): What is it for
+    - In what context does the Anascopy come into play?
     - What is the purpose of an [Anoscopy](lab)?
-    - An [Anoscopy](lab) is used for what?
     - How does an [Anoscopy](lab) work?
     - [Anoscopy](lab): What is its purpose?
     - Why is an [Anoscopy](lab) performed?
-    - The [Anoscopy](lab) has what purpose?
-    - Why would you want an [Anoscopy](lab)?
-    - [Anoscopy](lab): What is it for?
-    - Exactly what does an [Anoscopy](lab) do?
-    - In what way does an anascopy serve?
+    - An [Anoscopy](lab) has what purpose?
+    - An [Anoscopy](lab) is performed for what purpose?
+    - [Anoscopy](lab): What's the point?
+    - How does the [Anoscopy](lab) work?
+    - In what sense does an [Anoscopy](lab) serve?
+    - Anascopy: Why is it performed?
     - Why do I need an [Anoscopy](lab)?
-    - [Anoscopy](lab) is needed for what?
-    - How can an [Anoscopy](lab) help me?
-    - What is the purpose of an [Anoscopy](lab)?
+    - Annoscopy is needed for what purpose?
     - What does an [Anoscopy](lab) do for me?
-    - How do I use an [Anoscopy](lab)?
-    - How can I benefit from an osteoscopy?
-    - [Anoscopy](lab): Why is it necessary?
-    - Is an Oscopy necessary for me?
+    - What is the purpose of an [Anoscopy](lab)?
+    - Why should I get an [Anoscopy](lab)?
+    - Why is an angioscopy necessary?
+    - Can I benefit from an [Anoscopy](lab)?
+    - How does an [Anoscopy](lab) help me?
+    - Why would I need an angioscopy?
+    - Is an [Anoscopy](lab) necessary?
     - [Anoscopy](lab) is used for what?
-    - Annoscopy is used for what?
-    - How does annoscopy work?
-    - What is the purpose of an [Anoscopy](lab)?
-    - In what context does [Anoscopy](lab) take place?
+    - Anascopy serves what purpose?
+    - How does an [Anoscopy](lab) work?
+    - What is the purpose of an osteoscopy?
     - Why do we use [Anoscopy](lab)?
-    - How is anascopy used?
-    - Why is [Anoscopy](lab) used?
-    - What is an [Anoscopy](lab)?
-    - For what is annoscopy used?
-    - For what does annoscopy serve?
+    - In what context is [Anoscopy](lab) used?
+    - How is anesthesia used?
+    - Why is an Oscopy performed?
+    - When is an [Anoscopy](lab) used?
+    - In what situations is angioscopy used?
     - Annoscopy is needed when?
-    - What are the benefits of an angioscopy?
-    - What is the need for an [Anoscopy](lab)?
-    - When is an [Anoscopy](lab) necessary?
-    - When should an [Anoscopy](lab) be performed?
-    - An [Anoscopy](lab) is required when?
-    - Annoscopy: when is it necessary?
+    - How often does an [Anoscopy](lab) need to be performed?
     - What is the purpose of an [Anoscopy](lab)?
-    - Annoscopy is necessary when?
-    - What are the reasons for having an [Anoscopy](lab)?
-    - What is the purpose of [Anoscopy](lab)?
-    - What are the uses of an Oscopy?
-    - Annoscopy is useful in what situations?
-    - How can anascopy be useful
-    - How and where can [Anoscopy](lab) be helpful?
-    - When is [Anoscopy](lab) useful
-    - In what situations does [Anoscopy](lab) come in handy?
-    - Can Annoscopy be used anywhere?
-    - What uses does anascopy have?
-    - [Anoscopy](lab) is useful when and where?
+    - When is an angioscopy necessary?
+    - Why do I need an [Anoscopy](lab)?
+    - What are the reasons for an anascopy?
+    - [Anoscopy](lab) is necessary when?
+    - What situations require an [Anoscopy](lab)?
+    - Is an [Anoscopy](lab) necessary?
+    - In what situations does an Angioscopy become necessary?
+    - What are the uses of [Anoscopy](lab)?
+    - Annoscopy can be useful in what situations?
+    - What is the role of annoscopy?
+    - How can [Anoscopy](lab) be used?
+    - When is an [Anoscopy](lab) useful
+    - What is the use of [Anoscopy](lab)?
+    - [Anoscopy](lab) is useful when?
+    - [Anoscopy](lab), why and where is it useful
+    - In which situations is [Anoscopy](lab) useful
+    - What applications can an angioscopy be used for?
 
 - intent: inform_lab
   examples: |
@@ -555,55 +599,55 @@ nlu:
     - its name is [Anoscopy](lab)
     - i think it's [Anoscopy](lab)
     - Angioscopy
-    - Anesthesia
     - Anatomy
     - Angiography
     - Diagnosis
+    - ANASOPHY
+    - Optoscopy
+    - Anesthetics
+    - Optometry
     - The angioscope
-    - Examined under anesthesia
-    - Observation of an object
-    - ANOSCOPIA
-    - Asbestosis
-    - [Anoscopy](lab) is what it is
-    - An anascopy
+    - The Anascopy
+    - Annoscopy is what it is
+    - ANASCOPY
+    - [Anoscopy](lab) is the procedure
+    - It's an angioscopy
     - The procedure is called anascopy
-    - It is an angioscopy
-    - Annoscopy is the process
-    - It is called an angioscopy
-    - Anascopy is it
-    - It's an angiogram
-    - [Anoscopy](lab) is the procedure
-    - The procedure is known as an angioscopy
-    - The procedure is called an angioscopy
+    - This is an [Anoscopy](lab)
+    - This is called an angioscopy
+    - Anascopy is the process
+    - [Anoscopy](lab) is it
+    - The Anoscope is used in this procedure
+    - It's an angioscopy
     - Anascopy
-    - [Anoscopy](lab) is the procedure
-    - It's an osteoscopy
+    - Anascopy is what it is
+    - [Anoscopy](lab) is involved
+    - The procedure is an angioscopy
+    - This is called an angioscopy
     - Angioscopy
-    - It's called an [Anoscopy](lab)
-    - Anascopy is involved
-    - There's an angioscopy
-    - [Anoscopy](lab)
-    - An angiogram
+    - That's Anoscop
+    - Anascopy is the term
+    - ANASOPHOSCOPY
     - [Anoscopy](lab) is its name
-    - [Anoscopy](lab) is what it is called
-    - The name of the procedure is Anoscop
-    - Annoscopy is the name for it
-    - As its name suggests, it is Anoscop
-    - Noscopy is also known as Anoscop
-    - There is an app called Anoscop
-    - As you might guess, it's called Anascopy
-    - Its name is Anostoscopy
-    - This process is called [Anoscopy](lab)
+    - Anascopy is what it is called
+    - The name of the device is Anoscop
+    - The term [Anoscopy](lab) applies to it
+    - [Anoscopy](lab) is called that
+    - [Anoscopy](lab) is the name of it
+    - The term is Anoscop
+    - Anascopy is the name it goes by
+    - There is a new test called [Anoscopy](lab)
+    - The name is Anascopy
     - I think it's an angioscopy
-    - My guess is an angioscopy
+    - This is probably an angioscopy
+    - It seems to be an [Anoscopy](lab)
     - Anascopy, I think
-    - It appears to be an [Anoscopy](lab)
-    - It's probably an angioscopy
-    - It seems to be an angioscopy
-    - Anascopy is what I think it is
+    - It may be an angioscopy
+    - I think this is an angioscopy
     - I believe it's an [Anoscopy](lab)
-    - This looks like an angiogram
-    - Anascopy, perhaps
+    - It's an angioscope, I think
+    - That's probably an [Anoscopy](lab)
+    - My best guess is an angioscopy
 
 - intent: request_drug
   examples: |
@@ -616,74 +660,74 @@ nlu:
     - Give me instructions about my medication.
     - I'm looking for drug information
     - Detailed information about drugs is needed
-    - I need drug details
     - Drug details are what I need
-    - The details of the drug I'm interested in
-    - I need details on drugs
-    - Detailed information on drugs would be helpful to me
-    - The drug details I need
-    - My goal is to find out drug details
-    - My interest is in drug details
+    - I am looking for details about drugs
+    - My goal is to find drug information
+    - Please give me the details of the drug
+    - I need more information about drugs
+    - I need details about the drug
+    - It is a detail on a drug I need
+    - Please provide me with information about drugs
     - I am looking for information about drugs
     - Information on drugs is what I need
-    - Looking for drug informatio
-    - The information I need pertains to drugs
-    - Interested in finding out more about drugs
-    - Finding information about drugs is important to me
-    - Where can I find information about drugs
-    - My goal is to learn more about drugs
-    - Information about drugs would be helpful
-    - The information I'm looking for is on drugs
-    - I need information about a medicine.
-    - The medicine I'm interested in is listed below.
-    - A medicine interests me.
+    - My goal is to find out more about drugs
+    - The information I need is about drugs
+    - I want to know more about drugs
+    - I need information about drugs
+    - Interested in drug informatio
+    - I'm looking for drugs informatio
+    - Trying to find drug informatio
+    - Interested in learning about drugs
     - I want to know more about a medicine.
-    - A medicine that I'm looking for information about.
-    - There's information I need about a medicine.
-    - Looking for information on a medicine.
-    - I am searching for information about a medicine.
-    - My research concern a medicine.
-    - There is information I need on a particular medicine.
+    - A medicine that I'm interested in is listed here.
+    - Information about a medicine is what I am looking for.
+    - I am searching for information on a medicine.
+    - There is information I need about a medicine.
+    - It's about a medicine I'm trying to find out more about.
+    - Currently, I'm researching a medicine.
+    - I'm looking for information about a drug.
+    - This medicine interests me.
+    - My question is about a medicine.
+    - Would you be able to tell me more about a medicine
+    - What is the medication's name?
     - Is there any information you can give me about a medicine
-    - What is the drug I am interested in?
-    - Would you mind providing me with information about a medicine
-    - Could you please tell me more about a medicine
-    - What information do you have about a medicine
-    - What do you know about a medicine
-    - Is it possible for you to tell me about a medicine
-    - How can I find out more about a medication?
-    - What information can you provide about this medicine
-    - What is the name of the medicine you have?
-    - I need some information about a drug
-    - The drug I'm interested in isn't listed on the internet.
+    - Are you able to give me information about a medicine
+    - Do you know anything about this medicine
+    - Where can I find information on a medicine
+    - How do I find out about a medicine
+    - What is the name of the medicine
+    - Is there any medicine I should know about?
+    - Would you mind telling me about a medicine
+    - I need information about a drug
+    - Here's some information on the drug I'm interested in.
+    - There is a drug I am interested in learning more about.
+    - I would like to know more about this drug
     - A drug interests me. Please tell me more.
-    - I want to know more about a drug
-    - I would like some information on a drug
-    - There is a drug I'd like more information about.
+    - There is something I want to know about a drug
+    - My question concerns a drug
+    - Here is some information regarding a drug
     - My question is about a drug
-    - Please provide me with some information regarding a drug
-    - There is something I need to know about a drug
-    - I am looking for drug information.
-    - I need information about a drug in detail.
-    - The drug I am looking for needs to be described in detail.
-    - A drug's details would be helpful to me.
-    - A drug I'm interested in requires detailed information.
-    - An explanation of a drug is needed.
-    - There is a drug I'd like to learn more about.
-    - A drug needs detailed information.
-    - It is necessary for me to find out more about a drug
-    - Detailed information is needed about a drug
-    - I will need detailed information on a drug
+    - There's some information I need about a drug
+    - I am looking for detailed information about a drug
+    - A drug needs to be described in detail to me.
+    - The drug I am interested in needs detailed information.
+    - An in-depth analysis of a drug is needed.
+    - Details about a drug are needed.
+    - There is a drug about which I need detailed information.
+    - A drug I'm interested in deserves detailed information.
+    - My question is about a drug in detail.
+    - The drug I want to know more about needs detailed information.
+    - It would be helpful if you provided me with detailed information about a drug
     - Please give me instructions about my medication
-    - My medication instructions.
-    - Please tell me how to take my medication
+    - Please explain my medication to me.
     - Provide me with medication instructions.
+    - Please let me know how to take my medication
     - I need instructions regarding my medication
-    - Please provide me with directions regarding my medication
-    - You should tell me what to do about my medication
-    - Provide me with instructions on my medication
-    - I need instructions for my medication
-    - Let me know what my medication contains.
+    - Tell me what my medication is for.
+    - I need instructions on my medication
+    - My medication should be prescribed to me.
+    - My medication needs instructions.
+    - My medicine needs to be administered according to instructions.
 
 - intent: warnings_drug
   examples: |
@@ -692,56 +736,56 @@ nlu:
     - what should i be aware of, when using [acetaminophen](drug)?
     - what should i worry about, when taking [acetaminophen](drug)?
     - can you give me warnings about [acetaminophen](drug)?
+    - When should you avoid taking [acetaminophen](drug)
     - [acetaminophen](drug) should not be taken when?
-    - Is it safe to take [acetaminophen](drug) during pregnancy?
-    - What situations should you avoid taking [acetaminophen](drug)
+    - Can you take [acetaminophen](drug) without a prescription?
     - When is [acetaminophen](drug) not recommended?
+    - What are the circumstances under which you shouldn't take [acetaminophen](drug)
+    - Is [acetaminophen](drug) safe to take when you have a fever?
+    - What conditions should you not take [acetaminophen](drug) for?
+    - Is there a time when it's best not to take [acetaminophen](drug)
     - If you should not take [acetaminophen](drug), when should you do so?
-    - Does [acetaminophen](drug) need to be avoided in certain situations?
-    - What are the times you shouldn't take [acetaminophen](drug)
-    - Is [acetaminophen](drug) safe to take when you are pregnant?
-    - What should you not take [acetaminophen](drug) for?
-    - Does [acetaminophen](drug) cause stomach upset?
-    - What are the times when you shouldn't take [acetaminophen](drug)
-    - Can you take [acetaminophen](drug) at any time?
-    - Does [acetaminophen](drug) have a time when it shouldn't be taken?
-    - Do you ever need to avoid taking [acetaminophen](drug)?
-    - If you take [acetaminophen](drug), when should you not take it?
-    - At what time should you avoid taking [acetaminophen](drug)
-    - Are there any situations in which you shouldn't take [acetaminophen](drug)
-    - What situations make you not take [acetaminophen](drug)
-    - What are some situations when they shouldn't be taken with [acetaminophen](drug)
-    - Does [acetaminophen](drug) have any danger periods?
-    - When using [acetaminophen](drug), what should I be aware of?
+    - Does [acetaminophen](drug) have a time limit?
+    - When should you not take [acetaminophen](drug)
+    - Can [acetaminophen](drug) be taken during certain times of the day?
+    - Can you take [acetaminophen](drug) when you're sick?
+    - When is [acetaminophen](drug) not recommended?
+    - Do you ever need to avoid taking [acetaminophen](drug)
+    - Are there any times when you shouldn't take [acetaminophen](drug)
+    - Does anyone know a time when [acetaminophen](drug) shouldn't be taken?
+    - At what times should you avoid taking [acetaminophen](drug)
+    - Is there a time when taking [acetaminophen](drug) not recommended?
+    - Do you know when [acetaminophen](drug) should not be taken?
     - How should I use [acetaminophen](drug)
-    - Are there any precautions I need to take when taking [acetaminophen](drug)
-    - Is there anything I need to know when I use [acetaminophen](drug)
+    - Can [acetaminophen](drug) cause liver damage?
+    - When taking [acetaminophen](drug), what should I know?
+    - Is there anything I should know before taking [acetaminophen](drug)
+    - Should I be aware of anything when taking [acetaminophen](drug)
+    - When using [acetaminophen](drug), how should I act?
+    - What should I know about [acetaminophen](drug) use?
+    - Can I use [acetaminophen](drug) with a bacteriostatic cleanser?
+    - Can I use [acetaminophen](drug) safely and should I be aware of the possible side effects?
+    - If I use [acetaminophen](drug), what should I know?
+    - When taking [acetaminophen](drug), what should I worry about?
+    - When taking [acetaminophen](drug), should I be concerned about anything?
+    - How should I take [acetaminophen](drug)
+    - Is there anything to worry about when taking [acetaminophen](drug)
     - What should I watch out for when taking [acetaminophen](drug)
-    - What precautions should I take if I use [acetaminophen](drug)
-    - What should I know if I choose to use [acetaminophen](drug)?
-    - How should I manage [acetaminophen](drug) use?
-    - Should I be aware of any risks when taking [acetaminophen](drug)
-    - Should I be aware of what to expect when taking [acetaminophen](drug)
-    - When taking [acetaminophen](drug), what should I watch out for?
-    - Is taking [acetaminophen](drug) a cause for concern?
-    - Should I be concerned about taking [acetaminophen](drug)
-    - Can I take [acetaminophen](drug) without worry?
-    - Is there anything I should be concerned about when taking [acetaminophen](drug)?
-    - Can I have problems taking [acetaminophen](drug)
-    - Can [acetaminophen](drug) cause problems for me?
-    - Can I worry when I take [acetaminophen](drug)
-    - Is taking [acetaminophen](drug) something to be worried about?
-    - Should [acetaminophen](drug) cause concern when taken?
-    - What warnings do you have about [acetaminophen](drug)
-    - Is [acetaminophen](drug) dangerous?
+    - When taking [acetaminophen](drug), do I need to worry about anything?
+    - Can I be worried when taking [acetaminophen](drug)
+    - Can I be concerned when taking [acetaminophen](drug)?
+    - When taking [acetaminophen](drug), what should I be aware of?
+    - If I take [acetaminophen](drug), what should I watch out for?
+    - Do you have any warnings about [acetaminophen](drug)
+    - How should I take [acetaminophen](drug)?
+    - Would you please let me know if [acetaminophen](drug) has any warnings?
+    - What warnings should I know about [acetaminophen](drug)
     - Does [acetaminophen](drug) come with warnings?
-    - What warnings are there about [acetaminophen](drug)
-    - How should I use [acetaminophen](drug)
-    - What are the warnings about [acetaminophen](drug)?
-    - Can you give me instructions on [acetaminophen](drug)
-    - Can you tell me how long a person should take [acetaminophen](drug) for?
-    - Do you know about the dangers of [acetaminophen](drug)?
-    - Would you care to tell me about the warnings of [acetaminophen](drug)
+    - What are the warnings on [acetaminophen](drug)
+    - Can you inform me about [acetaminophen](drug) warnings?
+    - Would it be possible to provide me with warnings about [acetaminophen](drug)
+    - Could you alert me to any risks associated with [acetaminophen](drug)
+    - Could you please tell me how much [acetaminophen](drug) I should take?
 
 - intent: avoid_drug
   examples: |
@@ -750,45 +794,45 @@ nlu:
     - what should i be careful about [acetaminophen](drug)?
     - what should i not do when using [acetaminophen](drug)?
     - What should you avoid while taking [acetaminophen](drug)
-    - When taking [acetaminophen](drug), what should be avoided?
+    - When should [acetaminophen](drug) be avoided?
     - [acetaminophen](drug): what to avoid?
-    - How should I avoid [acetaminophen](drug) while taking it?
-    - How can you avoid taking [acetaminophen](drug)
-    - Is there anything to avoid when taking [acetaminophen](drug)
-    - Is [acetaminophen](drug) harmful if taken with alcohol or caffeine?
-    - Avoid these things while taking [acetaminophen](drug)
-    - How to avoid these side effects when taking [acetaminophen](drug)
-    - [acetaminophen](drug) and what to avoid?
+    - What should I avoid when taking [acetaminophen](drug)
+    - Are there any risks associated with taking [acetaminophen](drug)
+    - How can you avoid [acetaminophen](drug)'s side effects?
+    - What should be avoided when taking [acetaminophen](drug)
+    - When should one avoid taking [acetaminophen](drug)
+    - How to avoid adverse effects while taking [acetaminophen](drug)
+    - Avoiding [acetaminophen](drug) during pregnancy?
     - What should I avoid when taking [acetaminophen](drug)?
-    - Do I need to avoid taking [acetaminophen](drug)?
-    - How should I take [acetaminophen](drug)?
-    - Can I take [acetaminophen](drug) with or without alcohol?
+    - Do I need to avoid anything when taking [acetaminophen](drug)?
     - How should I avoid taking [acetaminophen](drug)?
-    - Can I avoid anything when taking [acetaminophen](drug)?
-    - Which side effects should I avoid when I take [acetaminophen](drug)?
-    - What is one thing that I should avoid when taking [acetaminophen](drug)?
-    - What should I avoid taking [acetaminophen](drug) when I'm going to take it?
-    - What should I avoid taking [acetaminophen](drug) with?
-    - How should I use [acetaminophen](drug) safely?
-    - Are there any [acetaminophen](drug) side effects I should watch out for?
-    - Are there any precautions I need to take with [acetaminophen](drug)?
-    - What should I keep in mind when taking [acetaminophen](drug)
-    - Is there anything I should know about [acetaminophen](drug)
-    - When should I be careful with [acetaminophen](drug)
-    - Should I take [acetaminophen](drug) with caution?
+    - Is there anything I should avoid whilst taking [acetaminophen](drug)?
+    - Can I take [acetaminophen](drug) with any medications?
+    - Why should I avoid [acetaminophen](drug) when taking it?
+    - Which drugs should I avoid taking with [acetaminophen](drug)?
+    - How should I take [acetaminophen](drug) safely?
+    - Should I avoid taking [acetaminophen](drug) when I have a fever?
+    - How should I avoid adverse reactions when taking [acetaminophen](drug)?
+    - How should I take [acetaminophen](drug)
+    - [acetaminophen](drug): what should I be careful about?
+    - Are there any precautions that I need to take when taking [acetaminophen](drug)
+    - How should I use [acetaminophen](drug) with caution?
     - How should I handle [acetaminophen](drug)?
-    - What do I need to be aware of when taking [acetaminophen](drug)
-    - Why should I avoid taking [acetaminophen](drug)
-    - What should I not do when taking [acetaminophen](drug)
-    - Can I use [acetaminophen](drug) if I am pregnant?
-    - If I'm taking [acetaminophen](drug), what should I avoid?
-    - Can I take [acetaminophen](drug) if there is something that I should not do?
-    - Why should I avoid taking [acetaminophen](drug)?
-    - In the case of [acetaminophen](drug), what should I avoid doing?
-    - Can I interfere with the use of [acetaminophen](drug) with anything?
-    - Can I take [acetaminophen](drug) if I have a high fever?
+    - Why should I be cautious about [acetaminophen](drug)?
+    - What should I avoid when taking [acetaminophen](drug)?
+    - Why must I take [acetaminophen](drug) with care?
+    - [acetaminophen](drug): how should I take it?
+    - How should I take [acetaminophen](drug) if I have diabetes?
+    - When taking [acetaminophen](drug), what should I not do?
+    - Why shouldn't I use [acetaminophen](drug)
     - Is there anything I should not do when taking [acetaminophen](drug)?
-    - What should I not do if I take [acetaminophen](drug)
+    - Do I need to avoid doing anything when taking [acetaminophen](drug)
+    - How should I not use [acetaminophen](drug)
+    - When will [acetaminophen](drug) not work for me?
+    - What should I avoid doing when taking [acetaminophen](drug)?
+    - How should I use [acetaminophen](drug) properly?
+    - If I am using [acetaminophen](drug), what should I be careful not to do?
+    - Is there anything I shouldn't do when taking [acetaminophen](drug)
 
 - intent: sideeffects_drug
   examples: |
@@ -798,55 +842,55 @@ nlu:
     - does [acetaminophen](drug) have any side effects?
     - can [acetaminophen](drug) have unexpected effects?
     - What are the side effects of [acetaminophen](drug)?
-    - How does [acetaminophen](drug) affect me?
-    - [acetaminophen](drug) has what side effects?
-    - [acetaminophen](drug) side effects: what are they?
-    - How can [acetaminophen](drug) cause side effects?
-    - Which side effects are associated with [acetaminophen](drug)?
-    - Can [acetaminophen](drug) have side effects?
-    - Are there any [acetaminophen](drug) side effects?
-    - [acetaminophen](drug) side effects?
-    - Accutaminophen: what are its side effects?
-    - [acetaminophen](drug) has what side effects?
     - How does [acetaminophen](drug) affect the body?
-    - What are the side effects of [acetaminophen](drug)
     - [acetaminophen](drug) side effects: what are they?
-    - Are there any side effects associated with [acetaminophen](drug)
-    - How long does [acetaminophen](drug) stay in the system?
-    - Can [acetaminophen](drug) have side effects?
+    - Which side effects are associated with [acetaminophen](drug)?
     - How does [acetaminophen](drug) cause side effects?
-    - [acetaminophen](drug): What are its side effects?
+    - How do [acetaminophen](drug) side effects differ from other medications?
+    - [acetaminophen](drug) side effects: how does it work?
+    - Symptoms of [acetaminophen](drug) use?
+    - Acitaminophen side effects: what do they look like?
+    - Are there any side effects of [acetaminophen](drug)?
+    - What are the side effects of [acetaminophen](drug)
+    - [acetaminophen](drug) has side effects, what are they?
+    - How does [acetaminophen](drug) cause side effects?
+    - [acetaminophen](drug) has what side-effects?
+    - Are there any side effects associated with [acetaminophen](drug)
+    - How is [acetaminophen](drug) side-effected?
+    - What is the side effect of [acetaminophen](drug)
     - How do [acetaminophen](drug) side effects occur?
+    - [acetaminophen](drug) causes what side effects?
+    - How does [acetaminophen](drug) affect you?
     - [acetaminophen](drug) has what side effects?
     - Does [acetaminophen](drug) have any side effects?
     - What are the side effects of [acetaminophen](drug)?
-    - Is there any side effect of [acetaminophen](drug)?
-    - Acitaminophen side effects: what are they?
-    - Is [acetaminophen](drug) associated with any side effects?
-    - How are [acetaminophen](drug)'s side effects?
-    - How can [acetaminophen](drug) adversely affect me?
-    - How long does [acetaminophen](drug) last?
-    - Do [acetaminophen](drug) side effects exist?
-    - What are the side effects of [acetaminophen](drug)?
+    - How does [acetaminophen](drug) interact with your body?
+    - [acetaminophen](drug) can have side effects, so what are they?
+    - Are there any side effects associated with [acetaminophen](drug)?
+    - [acetaminophen](drug) has which side effects?
+    - Can [acetaminophen](drug) cause side effects?
+    - How much [acetaminophen](drug) does a person need?
+    - Is [acetaminophen](drug) associated with side effects?
+    - Are there any side effects associated with [acetaminophen](drug)?
     - How does [acetaminophen](drug) affect the body?
     - Is there a side effect to [acetaminophen](drug)?
-    - Are there any side effects associated with [acetaminophen](drug)?
     - Is [acetaminophen](drug) associated with any side effects
-    - Can [acetaminophen](drug) have side effects
-    - What side effects might [acetaminophen](drug) cause?
-    - [acetaminophen](drug): does it have any side effects
-    - Do [acetaminophen](drug)'s side effects last?
-    - [acetaminophen](drug) is safe, but what are its side effects
-    - [acetaminophen](drug) may have unexpected side effects
-    - What are the possible side effects of [acetaminophen](drug)?
-    - [acetaminophen](drug) can have unexpected effects, can it?
-    - Is [acetaminophen](drug) capable of causing unexpected effects
-    - Is it possible for [acetaminophen](drug) to have unexpected effects
-    - What unexpected effects might be caused by [acetaminophen](drug)?
-    - Is there a possibility that [acetaminophen](drug) can cause unexpected side effects
-    - Does [acetaminophen](drug) have any unexpected side effects
-    - Is it possible that [acetaminophen](drug) has unexpected effects
-    - Can [acetaminophen](drug) cause unexpected effects
+    - Do [acetaminophen](drug)'s side effects exist?
+    - [acetaminophen](drug) has any side effects
+    - Can [acetaminophen](drug) cause any side effects
+    - [acetaminophen](drug): is it safe? Does it have any side effects
+    - How long does [acetaminophen](drug) keep you awake?
+    - How is [acetaminophen](drug) different from other painkillers?
+    - [acetaminophen](drug) can cause unexpected side effects
+    - What are the potential side effects of [acetaminophen](drug)?
+    - [acetaminophen](drug) can have unexpected effects, right?
+    - Is it possible for [acetaminophen](drug) to cause unexpected effects
+    - Does [acetaminophen](drug) have any unexpected effects
+    - What unexpected effects can [acetaminophen](drug) have?
+    - How does [acetaminophen](drug) interact with other medications?
+    - [acetaminophen](drug) may have unexpected effects
+    - What unanticipated effects might [acetaminophen](drug) have?
+    - Are there any unexpected effects of [acetaminophen](drug)?
 
 - intent: inform_drug
   examples: |
@@ -855,53 +899,51 @@ nlu:
     - it's [acetaminophen](drug)
     - its name is [acetaminophen](drug)
     - i think it's [acetaminophen](drug)
-    - Aspirin [acetaminophen](drug)
     - An[acetaminophen](drug)
-    - Analgesics
-    - It contains [acetaminophen](drug)
-    - Amitriptyline
+    - Anitaminophen
+    - Anaesthetics
     - Aspirin
-    - Analgesic...
+    - The drug [acetaminophen](drug)
     - [acetaminophen](drug) is what it is
     - That's acetaminophe
     - [acetaminophen](drug) is the active ingredient
-    - There is [acetaminophen](drug) in it
-    - [acetaminophen](drug) is in it
-    - This is acetaminophe
-    - Taking acetaminophe
-    - [acetaminophen](drug) is the ingredient
-    - There is an [acetaminophen](drug) in this
-    - The remedy consists of acetaminophe
-    - [acetaminophen](drug) is what it is
-    - [acetaminophen](drug) is the active ingredient
-    - [acetaminophen](drug)
+    - [acetaminophen](drug) is it
     - The drug is acetaminophe
     - There's [acetaminophen](drug) in it
     - The medication is acetaminophe
-    - That's acetaminophe
-    - [acetaminophen](drug) is what makes it work
-    - You have to take acetaminophe
+    - This is acetaminophe
     - [acetaminophen](drug)
+    - A.M.P. acetaminophe
+    - [acetaminophen](drug) is what it is
+    - [acetaminophen](drug) is the active ingredient
+    - The drug is acetaminophe
+    - [acetaminophen](drug) is it
+    - You're taking acetaminophe
+    - That's acetaminophe
+    - The medicine is acetaminophe
+    - [acetaminophen](drug)
+    - This is acetaminophe
+    - The medication is [acetaminophen](drug)
     - [acetaminophen](drug) is its name
-    - The drug is called acetaminophe
+    - You can find [acetaminophen](drug) by typing [acetaminophen](drug) in the search box
     - [acetaminophen](drug) is the name of the drug
-    - You may know it as acetaminophe
-    - Aspirin is also known as acetaminophe
-    - It is acetaminophe
-    - You can call it acetaminophe
-    - This medicine is acetaminophe
-    - You're talking about [acetaminophen](drug)
-    - It is known as acetaminophe
+    - There is a drug called acetaminophe
+    - Aspirin is known as acetaminophe
+    - Acitaminophen is what it is called
+    - [acetaminophen](drug) is its generic name
+    - A [acetaminophen](drug) tablet has been identified as the active ingredient
+    - This is acetaminophe
+    - You should know that it is called acetaminophe
+    - [acetaminophen](drug), I think
     - It's probably acetaminophe
-    - [acetaminophen](drug), I believe
+    - [acetaminophen](drug) is probably the culprit
     - [acetaminophen](drug) is what I think it is
-    - [acetaminophen](drug) might be the culprit
-    - It seems to be acetaminophe
-    - There's [acetaminophen](drug) in it
-    - My guess is acetaminophe
-    - The drug is [acetaminophen](drug), I think
+    - It may be acetaminophe
+    - I believe it's acetaminophe
+    - It might be acetaminophe
+    - The drug is acetaminophe
+    - My guess is that it's acetaminophe
     - Possibly acetaminophe
-    - [acetaminophen](drug) may be the cause
 
 - intent: usage_drug
   examples: |
@@ -911,66 +953,66 @@ nlu:
     - why do i need [acetaminophen](drug)?
     - what is [acetaminophen](drug) used for?
     - what does [acetaminophen](drug) cure?
-    - [acetaminophen](drug) details are what I'm looking for.
-    - Detailed information about [acetaminophen](drug) is needed.
-    - I need details on [acetaminophen](drug).
-    - Please provide me with [acetaminophen](drug) details.
-    - I want to know more about [acetaminophen](drug).
-    - The [acetaminophen](drug) detail I'm after.
-    - Details about [acetaminophen](drug) would be helpful.
-    - Details regarding [acetaminophen](drug) are needed.
-    - Please give me [acetaminophen](drug) details.
-    - Looking for [acetaminophen](drug) details.
+    - [acetaminophen](drug) detail is what I'm looking for.
+    - The details of [acetaminophen](drug) interest me.
+    - I am looking for details about [acetaminophen](drug).
+    - I would like more information about [acetaminophen](drug).
+    - I want to learn more about [acetaminophen](drug).
+    - I am seeking [acetaminophen](drug) details.
+    - Please give me more details on [acetaminophen](drug).
+    - My interest is in [acetaminophen](drug) details.
+    - A description of [acetaminophen](drug) is needed.
+    - My goal is to find the [acetaminophen](drug) details.
     - [acetaminophen](drug) is what?
     - How does [acetaminophen](drug) work?
-    - [acetaminophen](drug), what is it?
     - Where can I buy [acetaminophen](drug)
-    - How is [acetaminophen](drug) used?
-    - Where can you find [acetaminophen](drug)
+    - Exactly what is [acetaminophen](drug)
+    - Acitaminophen is a type of medication. What is it?
+    - The drug [acetaminophen](drug) is what it is called?
+    - What are the uses of [acetaminophen](drug)
     - Why should you take [acetaminophen](drug)
-    - Where can I get [acetaminophen](drug)
-    - Who is [acetaminophen](drug)
-    - Where can you buy [acetaminophen](drug)
-    - What are the benefits of taking [acetaminophen](drug)
-    - [acetaminophen](drug) is why I should take it?
-    - How does [acetaminophen](drug) help me?
-    - Do I need to take [acetaminophen](drug)
+    - Who is [acetaminophen](drug) for?
+    - Where can I find [acetaminophen](drug)
     - What is the purpose of taking [acetaminophen](drug)
-    - How can I take [acetaminophen](drug)
-    - Is [acetaminophen](drug) necessary for my condition?
-    - [acetaminophen](drug) - why should I take it?
-    - [acetaminophen](drug) is recommended for why?
-    - Is it okay for me to take [acetaminophen](drug)
+    - [acetaminophen](drug): why do I need it?
+    - Is [acetaminophen](drug) necessary for me?
+    - When should I take [acetaminophen](drug)
+    - Where can I get [acetaminophen](drug)
+    - How come I need to take [acetaminophen](drug)
+    - What is the reason I should take [acetaminophen](drug)
+    - What are the advantages of taking [acetaminophen](drug)
+    - [acetaminophen](drug) is useful for what reasons?
+    - Can I take [acetaminophen](drug) for a headache?
     - What is the purpose of [acetaminophen](drug)
     - [acetaminophen](drug) is why I need it?
-    - Is [acetaminophen](drug) necessary for me?
+    - How does [acetaminophen](drug) help me?
+    - What's the need for [acetaminophen](drug)
+    - Is [acetaminophen](drug) necessary for my condition?
+    - What are the reasons I need [acetaminophen](drug)
     - Where can I find [acetaminophen](drug)
     - [acetaminophen](drug) is needed for what purpose?
     - When should I take [acetaminophen](drug)
-    - Is there a reason I need [acetaminophen](drug)
-    - Does [acetaminophen](drug) help me?
-    - What is the use of [acetaminophen](drug)
-    - Is [acetaminophen](drug) required for me?
+    - What is the reason for taking [acetaminophen](drug)
     - [acetaminophen](drug) is used for what?
     - How does [acetaminophen](drug) work?
-    - What is the purpose of [acetaminophen](drug)?
-    - Acitaminophen is used to treat what?
-    - Why is [acetaminophen](drug) used?
-    - Where does [acetaminophen](drug) come from?
-    - When should you take [acetaminophen](drug)?
-    - Uses of [acetaminophen](drug)?
-    - Where can you find [acetaminophen](drug)?
-    - Why are [acetaminophen](drug) tablets used?
-    - [acetaminophen](drug) treats what?
-    - How does [acetaminophen](drug) treat pain?
     - [acetaminophen](drug) is used to treat what?
+    - What is the purpose of [acetaminophen](drug)?
+    - Why is [acetaminophen](drug) used?
+    - How do you use [acetaminophen](drug)?
+    - Uses of [acetaminophen](drug)?
+    - [acetaminophen](drug) helps treat pain, but what does it do?
+    - What does [acetaminophen](drug) do?
+    - When should I take [acetaminophen](drug)?
+    - [acetaminophen](drug) treats what?
+    - How is [acetaminophen](drug) used to treat pain?
     - [acetaminophen](drug) cures what?
+    - How does [acetaminophen](drug) treat pain?
+    - Can [acetaminophen](drug) cure a cold?
+    - What are the uses of [acetaminophen](drug)?
+    - [acetaminophen](drug) is used to treat what?
     - The treatment of [acetaminophen](drug)?
-    - What is the cure for [acetaminophen](drug)?
-    - Does [acetaminophen](drug) cure anything?
-    - Why is [acetaminophen](drug) used as a medicine?
-    - [acetaminophen](drug) can cure what?
-    - [acetaminophen](drug) treats which conditions?
+    - Why is [acetaminophen](drug) so effective?
+    - [acetaminophen](drug) cures what kind of ailment?
 
 - intent: dosage_drug
   examples: |
@@ -981,54 +1023,54 @@ nlu:
     - how [acetaminophen](drug) should i take every time?
     - What is the best way to take [acetaminophen](drug)
     - [acetaminophen](drug) should be taken as directed?
+    - [acetaminophen](drug): how should I take it?
     - Can I take [acetaminophen](drug) with food?
-    - What are the instructions for taking [acetaminophen](drug)?
-    - Is there a way I can take [acetaminophen](drug) properly?
-    - When and how should I take [acetaminophen](drug)
-    - What is the recommended dosage of [acetaminophen](drug)
-    - Where can I find [acetaminophen](drug)
-    - Is [acetaminophen](drug) a safe drug to take?
-    - Why is it important to take [acetaminophen](drug) on an empty stomach?
-    - Please tell me the [acetaminophen](drug) dosage.
-    - How much [acetaminophen](drug) should I take.
-    - Give me the dosage information for [acetaminophen](drug).
-    - I need information on [acetaminophen](drug) dosage.
-    - Please let me know how much [acetaminophen](drug) to take.
-    - I would like to know the [acetaminophen](drug) dosage.
-    - I need [acetaminophen](drug) dosage information
-    - Give me information about [acetaminophen](drug) dosage.
-    - Please tell me what [acetaminophen](drug) dosage I need.
-    - Provide me with the dosage for [acetaminophen](drug).
-    - Can I take [acetaminophen](drug) more than once a day?
-    - What is the maximum dosage of [acetaminophen](drug) I can take each day?
-    - How often can a person take [acetaminophen](drug) each day?
-    - Am I allowed to take [acetaminophen](drug) many times a day?
-    - What is the recommended dose of [acetaminophen](drug) per day for me?
-    - If I take [acetaminophen](drug) every morning, how many times should I do so?
-    - Can I take [acetaminophen](drug) as often as I like?
-    - How often can I take [acetaminophen](drug) a day?
-    - How many times per day can I take [acetaminophen](drug)?
-    - When can I take [acetaminophen](drug) per day?
+    - What are the best ways to take [acetaminophen](drug)
+    - Is [acetaminophen](drug) best taken with food?
+    - Do I need to drink anything with [acetaminophen](drug)
+    - Is it safe to take [acetaminophen](drug)
     - When should I take [acetaminophen](drug)
-    - What is the recommended frequency of [acetaminophen](drug) use?
-    - Do I need to take [acetaminophen](drug) every day?
-    - [acetaminophen](drug) should I be taken how often?
-    - What's the recommended dose for [acetaminophen](drug)
-    - [acetaminophen](drug) dosage: how often should I take it?
-    - What is the appropriate dosage of [acetaminophen](drug)
-    - Is it recommended to take [acetaminophen](drug) frequently?
-    - Is it necessary to take an [acetaminophen](drug) every day?
-    - Should I use [acetaminophen](drug) every day?
+    - Is [acetaminophen](drug) better taken with food or with water?
+    - Please tell me how much [acetaminophen](drug) to take.
+    - I need dosage information on [acetaminophen](drug).
+    - I would like to know the [acetaminophen](drug) dosage.
+    - Please provide me with [acetaminophen](drug) dosage information
+    - Please let me know the dosage of [acetaminophen](drug).
+    - Please tell me the dosage for [acetaminophen](drug).
+    - Information about [acetaminophen](drug) dosage.
+    - Give me a dosage guide for [acetaminophen](drug).
+    - How much [acetaminophen](drug) should I take.
+    - Give me details on [acetaminophen](drug) dosage.
+    - How often can I take [acetaminophen](drug) per day?
+    - Is it possible to take [acetaminophen](drug) several times a day?
+    - [acetaminophen](drug) can be taken how many times per day?
+    - What are the maximum doses of [acetaminophen](drug) I can take during the day?
+    - Is it okay to take [acetaminophen](drug) a number of times a day?
+    - If I take [acetaminophen](drug) twice a day, how many times is that okay?
+    - Am I allowed to take [acetaminophen](drug) in any number of doses a day?
+    - Am I supposed to take [acetaminophen](drug) multiple times a day?
+    - I need to know how many times I can take [acetaminophen](drug) each day?
+    - [acetaminophen](drug) dosage: how many times a day?
+    - When should I take [acetaminophen](drug)
+    - [acetaminophen](drug) should be taken how often?
+    - What is the recommended dosage of [acetaminophen](drug)
+    - Do I need to take [acetaminophen](drug) frequently?
+    - Can I use [acetaminophen](drug) every day?
+    - Is there a recommended dosage for taking [acetaminophen](drug)
+    - If I take [acetaminophen](drug) how often should I take it?
+    - Can I take [acetaminophen](drug) on a regular basis?
+    - What is the optimal dose of [acetaminophen](drug)
+    - What should I do when I take [acetaminophen](drug)
     - How much [acetaminophen](drug) should I take every time
-    - Do I need to take [acetaminophen](drug) every time I get a headache?
-    - Whenever I take [acetaminophen](drug), how much should I take it?
-    - The amount of [acetaminophen](drug) that I should take every time I take it?
-    - Is there an [acetaminophen](drug) dose I must follow every time
-    - Should I take [acetaminophen](drug) every time
-    - Is it necessary to take [acetaminophen](drug) every time
-    - What dose of [acetaminophen](drug) should I take every time
-    - Do I have to take [acetaminophen](drug) every time
-    - Is there a way to take [acetaminophen](drug) every time I become sick?
+    - What is the recommended dosage of [acetaminophen](drug)?
+    - Can I take [acetaminophen](drug) every time I get sick?
+    - The amount of [acetaminophen](drug) I should take each time
+    - What do I need to take every time I take [acetaminophen](drug)?
+    - What amount of [acetaminophen](drug) should be taken every time
+    - Do you recommend taking [acetaminophen](drug) at the same dose every time
+    - What dosage of [acetaminophen](drug) should I always take?
+    - Should I take [acetaminophen](drug) the same way every time
+    - Is there a recommended dosage of [acetaminophen](drug) every time
 
 - intent: interaction_drug
   examples: |
@@ -1036,42 +1078,54 @@ nlu:
     - What drugs should not be taken with [acetaminophen](drug)?
     - which drugs have interaction with [acetaminophen](drug)?
     - what are the interactions of [acetaminophen](drug)?
-    - What other drugs interact with [acetaminophen](drug)
-    - How does [acetaminophen](drug) interact with other medications?
-    - [acetaminophen](drug) can be affected by what other drugs?
-    - Are there any other drugs that affect [acetaminophen](drug)
-    - How are other drugs likely to affect [acetaminophen](drug)
-    - Is [acetaminophen](drug) affected by other drugs?
-    - Do other drugs affect [acetaminophen](drug)
-    - Can [acetaminophen](drug) be harmed by other medications?
-    - How will other medications affect [acetaminophen](drug)
-    - Which other drugs will affect [acetaminophen](drug)?
-    - Which drugs should not be taken with [acetaminophen](drug)
-    - Is [acetaminophen](drug) safe to take with what medications?
+    - which drugs can cause problem if used with [acetaminophen](drug)?
+    - Other drugs that may interact with [acetaminophen](drug)
+    - [acetaminophen](drug) has what side effects?
+    - [acetaminophen](drug) is affected by what other drugs?
+    - Is there anything else that will affect [acetaminophen](drug)?
+    - Can [acetaminophen](drug) be affected by other drugs?
+    - Is [acetaminophen](drug) affected by any other drugs?
+    - Does [acetaminophen](drug) interact with other drugs?
+    - Can other drugs affect [acetaminophen](drug)
+    - Do other medications affect [acetaminophen](drug)
+    - What other medications can affect [acetaminophen](drug)?
+    - Are there any drugs that should not be taken with [acetaminophen](drug)
+    - Can I take [acetaminophen](drug) with what drugs?
+    - When should [acetaminophen](drug) be avoided?
+    - Taking [acetaminophen](drug) with what medications is not recommended?
     - How should [acetaminophen](drug) be taken?
-    - Do I have to avoid taking [acetaminophen](drug) with any of the following drugs?
-    - Are there any drugs that should not be taken together with [acetaminophen](drug)
-    - Is it ok to take [acetaminophen](drug) with the following drugs?
-    - Do not take any drugs with [acetaminophen](drug)
-    - [acetaminophen](drug) should not be taken with what drugs?
-    - [acetaminophen](drug) should not be taken with the following drugs?
+    - When should [acetaminophen](drug) not be taken?
+    - Is there any medication not to be taken with [acetaminophen](drug)
+    - Do you know what drugs should not be taken with [acetaminophen](drug)?
+    - Can I take [acetaminophen](drug) with these medications?
+    - When should [acetaminophen](drug) not be taken with other drugs?
     - What drugs interact with [acetaminophen](drug)
     - [acetaminophen](drug) interacts with which drugs?
-    - Do [acetaminophen](drug) and certain medications interact?
+    - How do [acetaminophen](drug) and other medications interact?
     - How does [acetaminophen](drug) interact with other drugs?
     - Are there any drugs that interact with [acetaminophen](drug)
+    - [acetaminophen](drug) and what drugs do they interact with?
+    - Is [acetaminophen](drug) interacted with by any drugs?
+    - Is there any drug interaction with [acetaminophen](drug)
     - [acetaminophen](drug) and which drugs interact?
-    - [acetaminophen](drug) and what drugs?
-    - Are there drugs which interact with [acetaminophen](drug)
-    - [acetaminophen](drug) interactions: which drugs?
-    - Do [acetaminophen](drug) and other drugs interact?
+    - Is [acetaminophen](drug) affected by other drugs?
     - [acetaminophen](drug) interactions: what are they?
     - How does [acetaminophen](drug) interact with other medications?
     - [acetaminophen](drug) interacts with what?
-    - What are the interactions between [acetaminophen](drug) and other medications?
-    - [acetaminophen](drug) interactions?
-    - What are [acetaminophen](drug)'s interactions?
-    - A potential interaction of [acetaminophen](drug)
-    - [acetaminophen](drug) interacts with which drugs?
-    - The interactions of [acetaminophen](drug)
-    - Do [acetaminophen](drug) interactions occur?
+    - What are the interactions between [acetaminophen](drug) and other drugs?
+    - What is the interaction of [acetaminophen](drug)
+    - Are there any interactions with [acetaminophen](drug)
+    - What interactions does [acetaminophen](drug) have?
+    - Do [acetaminophen](drug)'s interactions affect you?
+    - What are some interactions of [acetaminophen](drug)
+    - [acetaminophen](drug): what are its interactions?
+    - What drugs can cause problems if taken with [acetaminophen](drug)
+    - Can [acetaminophen](drug) be combined with what drugs?
+    - Using [acetaminophen](drug) with which drugs may cause problems?
+    - Can certain drugs interact with [acetaminophen](drug)
+    - Are there drugs that can cause problems when taken with [acetaminophen](drug)
+    - Can there be problems if [acetaminophen](drug) is taken with certain drugs?
+    - How can [acetaminophen](drug) interact with other drugs?
+    - What drugs may interact with [acetaminophen](drug)
+    - Which medications can seriously interfere with the effects of [acetaminophen](drug)
+    - Which drugs can interact with [acetaminophen](drug)

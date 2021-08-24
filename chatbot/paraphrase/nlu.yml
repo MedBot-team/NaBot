@@ -16,7 +16,9 @@ nlu:
     - Is there anything else I need to know about the [Anoscopy](lab)?
     - What else should I know about an [Anoscopy](lab)?
     - any other info about [Anoscopy](lab)?
-    - is there any thing left that you haven't told me?
+    - is there any thing left that you haven't told me about [Anoscopy](lab)?
+    - what other information you can give me about [Anoscopy](lab)?
+    - tell me more about [Anoscopy](lab).
 
 - intent: result_lab
   examples: |
@@ -58,14 +60,16 @@ nlu:
     - Is [Anoscopy](lab) necessary for me?
     - should i have an [Anoscopy](lab)?
     - do i need [Anoscopy](lab)?
+    - why do i have to do [Anoscopy](lab)?
 
 - intent: detail_lab
   examples: |
-    - What is the [Anoscopy](lab)?
+    - What is [Anoscopy](lab)?
     - The [Anoscopy](lab) is what?
     - i need some info about [Anoscopy](lab)?
     - give me information about [Anoscopy](lab).
     - can you tell me what [Anoscopy](lab) is?
+    - i want to know about [Anoscopy](lab)?
 
 
 - intent: usage_lab
@@ -149,3 +153,4 @@ nlu:
     - What drugs should not be taken with [acetaminophen](drug)?
     - which drugs have interaction with [acetaminophen](drug)?
     - what are the interactions of [acetaminophen](drug)?
+    - which drugs can cause problem if used with [acetaminophen](drug)?

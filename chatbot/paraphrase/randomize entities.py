@@ -1,7 +1,6 @@
 import re
 from ruamel import yaml
 import numpy as np
-import sys
 
 
 def load_entities(entity_names):
