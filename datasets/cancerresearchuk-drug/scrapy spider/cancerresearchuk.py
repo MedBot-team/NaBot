@@ -2,7 +2,6 @@ import scrapy
 import time
 import re
 
-
 class CancerresearchukSpider(scrapy.Spider):
     name = 'cancerresearchuk'
     allowed_domains = ['www.cancerresearchuk.org']
