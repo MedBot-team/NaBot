@@ -1,6 +1,3 @@
-import sys
-sys.path.insert(0, '../')
-
 import typing
 from typing import Any, Optional, Text, Dict, List, Type
 
@@ -12,7 +9,7 @@ from rasa.nlu.components import Component
 if typing.TYPE_CHECKING:
     from rasa.nlu.model import Metadata
 
-from autocorrect import Speller
+from symspellpy import SymSpell
 
 
 class SpellChecker(Component):
@@ -23,21 +20,15 @@ class SpellChecker(Component):
 
     defaults = {}
 
-    supported_language_list = ["en",
-                               "pl",
-                               "ru",
-                               "uk",
-                               "tr",
-                               "es",
-                               "pt",
-                               "cs",
-                               "el",
-                               "it",
-                               "fa"]
+    supported_language_list = ["en"]
 
 
     def __init__(self, component_config: Optional[Dict[Text, Any]] = None) -> None:
         super().__init__(component_config)
+
+        self.dictionary_path = "dictionary/frequency_dictionary.txt"
+        self.med_dictionary_path = "dictionary/frequency_med_dictionary.txt"
+        self.bigram_path = "dictionary/frequency_bigramdictionary.txt"
 
     def train(
         self,
@@ -50,10 +41,27 @@ class SpellChecker(Component):
 
     def process(self, message: Message, **kwargs: Any) -> None:
         # Correct english and medical typoes
-        spell = Speller(lang='en_med')
-        correct = spell(message.get("text"))
-        
-        message.set('text', correct, add_to_output=True)
+        sym_spell = SymSpell(max_dictionary_edit_distance=2, 
+                             prefix_length=7)
+
+        # Load general English words
+        sym_spell.load_dictionary(self.dictionary_path, term_index=0, count_index=1)
+        # Load medical English words
+        sym_spell.load_dictionary(self.med_dictionary_path, term_index=0, count_index=1)
+        # Load bigram English words
+        sym_spell.load_bigram_dictionary(self.bigram_path, term_index=0, count_index=2)       
+        # Get user message
+        input_term = message.get("text")
+        # Get suggestions list from SymSpell
+        suggestions = sym_spell.lookup_compound(input_term,
+                                        max_edit_distance=2,
+                                        ignore_term_with_digits=True,
+                                        ignore_non_words=True,
+                                        transfer_casing=True)
+        # Get the top suggestion
+        first_suggestion = suggestions[0]._term
+        # Return top suggestion
+        message.set('text', first_suggestion, add_to_output=True)
 
     def persist(self, file_name: Text, model_dir: Text) -> Optional[Dict[Text, Any]]:
 
