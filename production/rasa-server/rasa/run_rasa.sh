@@ -5,10 +5,14 @@ set -a
 source .env
 set +a
 
+##########
+#datasets and events databases are seperated. 
+#and both of them are created at initialization
+##########
 # Create database in mysql-server to store rasa events
-python -c "import sqlalchemy;\
-sqlalchemy.create_engine('mysql://${SQL_USER}:${MYSQL_EVENTS_ROOT_PASSWORD}@${EVENTS_DB_HOST}')\
-.execute('CREATE DATABASE IF NOT EXISTS ${MYSQL_EVENTS_DATABASE}')"
+# python -c "import sqlalchemy;\
+# sqlalchemy.create_engine('mysql://${SQL_USER}:${MYSQL_EVENTS_ROOT_PASSWORD}@${EVENTS_DB_HOST}')\
+# .execute('CREATE DATABASE IF NOT EXISTS ${MYSQL_EVENTS_DATABASE}')"
 
 # List of files which will be modified 
 declare -a files=("endpoints.yml" "credentials.yml")
