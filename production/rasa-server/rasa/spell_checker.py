@@ -26,9 +26,11 @@ class SpellChecker(Component):
     def __init__(self, component_config: Optional[Dict[Text, Any]] = None) -> None:
         super().__init__(component_config)
 
+        # Path of dictionaries
         self.dictionary_path = "dictionary/frequency_dictionary.txt"
         self.med_dictionary_path = "dictionary/frequency_med_dictionary.txt"
         self.bigram_path = "dictionary/frequency_bigramdictionary.txt"
+        self.med_bigram_path = "dictionary/frequency_med_bigramdictionary.txt"
 
     def train(
         self,
@@ -39,29 +41,41 @@ class SpellChecker(Component):
 
         pass
 
-    def process(self, message: Message, **kwargs: Any) -> None:
+    def correct(self, input_term):
         # Correct english and medical typoes
         sym_spell = SymSpell(max_dictionary_edit_distance=2, 
-                             prefix_length=7)
+                            prefix_length=7)
 
         # Load general English words
         sym_spell.load_dictionary(self.dictionary_path, term_index=0, count_index=1)
-        # Load medical English words
+        # Load medical words
         sym_spell.load_dictionary(self.med_dictionary_path, term_index=0, count_index=1)
         # Load bigram English words
-        sym_spell.load_bigram_dictionary(self.bigram_path, term_index=0, count_index=2)       
-        # Get user message
-        input_term = message.get("text")
+        sym_spell.load_bigram_dictionary(self.bigram_path, term_index=0, count_index=2)   
+        # Load bigram medical words
+        sym_spell.load_bigram_dictionary(self.med_bigram_path, term_index=0, count_index=2)        
         # Get suggestions list from SymSpell
         suggestions = sym_spell.lookup_compound(input_term,
                                         max_edit_distance=2,
+                                        split_phrase_by_space=True,
                                         ignore_term_with_digits=True,
                                         ignore_non_words=True,
                                         transfer_casing=True)
         # Get the top suggestion
         first_suggestion = suggestions[0]._term
-        # Return top suggestion
-        message.set('text', first_suggestion, add_to_output=True)
+        return first_suggestion
+
+    def process(self, message: Message, **kwargs: Any) -> None:
+        # Get user message
+        input_term = message.get("text")
+
+        if len(input_term) > 3:
+            # Get the top suggestion
+            first_suggestion = self.correct(input_term)
+            # Return top suggestion
+            message.set('text', first_suggestion, add_to_output=True)
+        else:
+            message.set('text', input_term, add_to_output=True)
 
     def persist(self, file_name: Text, model_dir: Text) -> Optional[Dict[Text, Any]]:
 
