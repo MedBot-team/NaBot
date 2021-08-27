@@ -16,8 +16,6 @@ class DrugRetrieve(Action):
         host = config('DATASETS_DB_HOST')
         database = config('MYSQL_DATASETS_DATABASE')
 
-        print(user)
-
         self.table = config('DRUG_TABLE')
         self.db = mysql.connector.connect(
             host=host,
