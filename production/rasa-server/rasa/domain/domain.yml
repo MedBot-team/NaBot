@@ -15,9 +15,7 @@ intents:
   - bot_challenge
   - bot_usage
   # FAQ
-  - request_lab
-  - request_drug
-  - inform
+  - new_issue
   - what_is
   - usage
   - risk
