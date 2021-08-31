@@ -8,20 +8,13 @@ forms:
           entity: entity_name
           influence_conversation: true
 
-  # labs_form:
-  #   required_slots:
-  #     lab: 
-  #       - type: from_entity
-  #         entity: lab
-  #         influence_conversation: false
-
 slots:
   entity_name:
     type: text
     auto_fill: true
     influence_conversation: true
-
-  # lab:
+  
+  # intent_name:
   #   type: text
-  #   auto_fill: true
-  #   influence_conversation: true
+  #   auto_fill: false
+  #   influence_conversation: false
