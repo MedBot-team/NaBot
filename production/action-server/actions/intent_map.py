@@ -1,4 +1,6 @@
 intent_map = {
+    'new_issue': {'drug': ['uses'],
+                'lab': ['What_is_the_test']},
     'what_is': {'drug': ['uses'],
                 'lab': ['What_is_the_test']},
     'usage': {'drug': ['uses'],
