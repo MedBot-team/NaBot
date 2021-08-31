@@ -2,23 +2,16 @@ version: "2.0"
 
 actions:
   - retrieve
+  # - slot_reset
+  # - intent_set
 
 responses:
   utter_ask_entity_name:
-  - text: "what is it??"
+  - text: "what is it?"
   - text: "Name it please."
 
-  # utter_ask_lab:
-  # - text: "Which lab test?"
-
-  # utter_slots_values_drug:
-  # - text: "I am going to show details about {drug}"
-
-  # utter_slots_values_lab:
-  # - text: "I am going to show details about {lab}"
-
-  # utter_greet:
-  # - text: "Hey! I'm medical chatbot. What can I do for you?"
+  utter_greet:
+  - text: "Hey! I'm medical chatbot. What can I do for you?"
 
   # utter_any_more_questions:
   # - text: "Do you have any more questions?"
@@ -32,15 +25,15 @@ responses:
   # utter_happy:
   # - text: "Great, carry on!"
 
-  # utter_goodbye:
-  # - text: "Bye"
-  # - text: "See you later"
-  # - text: "See you"
-  # - text: "Goodbye"
-  # - text: "Have good day"
-  # - text: "I'll catch you later"
-  # - text: "Farewell"
-  # - text: "cheerio"
+  utter_goodbye:
+  - text: "Bye"
+  - text: "See you later"
+  - text: "See you"
+  - text: "Goodbye"
+  - text: "Have good day"
+  - text: "I'll catch you later"
+  - text: "Farewell"
+  - text: "cheerio"
 
   # utter_iamabot:
   # - text: "I am a medical bot that help others people to find drug. Developed in AImedic"
