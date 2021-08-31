@@ -11,17 +11,17 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 action_endpoint:
- url: "http://localhost:5055/webhook"
-
+ url: "http://$ACTION_HOST:5055/webhook"
+ 
 # Tracker store which is used to store the conversations.
 
 tracker_store:
     type: SQL
     dialect: "mysql" 
-    url: "localhost" 
-    db: "rasa" 
-    username: "root"  
-    password: "f4tiMl3kyulI8UqS9oeG" 
+    url: "$EVENTS_DB_HOST" 
+    db: "$MYSQL_EVENTS_DATABASE" 
+    username: "$SQL_USER"  
+    password: "$MYSQL_EVENTS_ROOT_PASSWORD" 
     query: 
       unix_socket: "/var/run/mysqld/mysqld.sock"
     
