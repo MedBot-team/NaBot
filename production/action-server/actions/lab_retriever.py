@@ -106,6 +106,8 @@ class LabRetrieve(Action):
                 question = tracker.latest_message['text']
                 response = requests.post(f'{self.rest_host}:{self.rest_port}/',
                                     json={"context": db_response, "question": question, "api_key": self.api_key}).json()
+                
+                response['context'] = db_response
             
                 dispatcher.utter_message(
                     text = json.dumps(response),
