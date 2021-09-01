@@ -7,7 +7,7 @@ set +a
 
 # Create database in mysql-server to store rasa events
 python -c "import sqlalchemy;\
-sqlalchemy.create_engine('mysql://${SQL_USER}:${MYSQL_EVENTS_ROOT_PASSWORD}@${EVENTS_DB_HOST}')\
+sqlalchemy.create_engine('mysql://${SQL_USER}:${MYSQL_EVENTS_ROOT_PASSWORD}@${EVENTS_DB_HOST}?unix_socket=/var/run/mysqld/mysqld.sock')\
 .execute('CREATE DATABASE IF NOT EXISTS ${MYSQL_EVENTS_DATABASE}')"
 
 # List of files which will be modified 
