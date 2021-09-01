@@ -2,16 +2,21 @@ import requests
 import streamlit as st
 from decouple import config
 from utils import QuestionAnswering
+from ui_annotator import HTMLAnnotator
+
 
 # Read API key, Rest API host address, and Rest API port from .env file
-api_key = config('API_KEY')
+api_key = config('REST_API_KEY')
 rest_host = config('REST_HOST')
 rest_port = config('REST_PORT')
 
 # Configure the web page
 st.set_page_config(page_title='QuestionAnswering',
-                   layout='wide', 
+                   layout='wide',
                    initial_sidebar_state='auto')
+
+html_annotator = HTMLAnnotator()
+text_annotator = html_annotator.annotated_text
 
 #############################
 # An example of context
@@ -28,6 +33,8 @@ You may need to shake the liquid before each use. Follow the directions on the m
 sample_question = "Can you give me dosage information of Acetaminophen for children?"
 
 #############################
+
+
 def main():
     qa = QuestionAnswering()
     # Set page title
@@ -63,12 +70,18 @@ def main():
         # Send a post request to the QA REST API for getting the answer text
         if st.form_submit_button("Give me the answer"):
             st.markdown("**Answer:**")
-            # Show this loading message  
+            # Show this loading message
             with st.spinner("Interpreting your text (This may take some time)"):
-                answer = requests.post(f'{rest_host}:{rest_port}/',
-                                       json={"context": context, "question": question, "api_key": api_key})
-            # Show the answer to the user
-            st.markdown(answer.json()['answer'])
+                response = requests.post(f'{rest_host}:{rest_port}/',
+                                       json={"context": context, "question": question, "api_key": api_key}).json()
+            # Show the context to the user with highlighting the answer
+            text_annotator(
+                response['context_preceding_answer'],
+                (response['answer'], "#afa"),
+                response['context_following_answer'],
+            )
+
+            # st.markdown(answer)
 
 
 if __name__ == "__main__":
