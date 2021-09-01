@@ -1,7 +1,4 @@
-import tensorflow as tf
-from transformers import AutoTokenizer, TFAutoModelForQuestionAnswering
-
-
+from transformers import pipeline
 class QuestionAnswering():
     def __init__(self):
         super(QuestionAnswering, self).__init__()
@@ -9,48 +6,31 @@ class QuestionAnswering():
     # List of all available models in QA task
     def available_model(self):
         models = [
-            "allenai/longformer-large-4096-finetuned-triviaqa",
+            "ahotrod/albert_xxlargev1_squad2_512",
             "bert-large-uncased-whole-word-masking-finetuned-squad",
             "bert-large-cased-whole-word-masking-finetuned-squad",
+            "mrm8488/squeezebert-finetuned-squadv2",
+            "bigwiz83/sapbert-from-pubmedbert-squad2",
+            "franklu/pubmed_bert_squadv2",
             "distilbert-base-uncased-distilled-squad",
             "distilbert-base-cased-distilled-squad",
-            "ahotrod/albert_xxlargev1_squad2_512",
-            "roberta-large",
-            "roberta-base"]
+            "allenai/longformer-large-4096-finetuned-triviaqa"]
         return models
 
     # Initialize QA model
     def model_init(self, model_name):
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = TFAutoModelForQuestionAnswering.from_pretrained(
-            model_name)
+        self.model = pipeline(model = model_name, 
+                              tokenizer = model_name, 
+                              task="question-answering")
 
     # Get the answer from QA model
     def get_answer(self, question, context):
-        # Truncate tokens if they're larger than 512
-        inputs = self.tokenizer.encode_plus(question,
-                                            context,
-                                            add_special_tokens=True,
-                                            truncation=True,
-                                            max_length=512,
-                                            return_tensors="tf")
-
-        input_ids = inputs["input_ids"].numpy()[0]
-        # Get the answer start and end points
-        answer_start_scores, answer_end_scores = self.model(inputs,
-                                                            return_dict=False)
-
-        answer_start = tf.argmax(answer_start_scores, axis=1).numpy()[0]
-        answer_end = (tf.argmax(answer_end_scores, axis=1) + 1).numpy()[0]
+        model_out = self.model(question=question, 
+                              truncation = True,
+                              max_seq_len = 512,
+                              context=context)
+        answer = model_out['answer']
+        start = model_out['start']
+        end = model_out['end']
         
-        sep_idx = self.tokenizer.convert_ids_to_tokens(input_ids).index('[SEP]') 
-        # Select context preceding the answer
-        context_preceding_answer = self.tokenizer.convert_tokens_to_string(
-            self.tokenizer.convert_ids_to_tokens(input_ids[sep_idx:answer_start], skip_special_tokens=True))
-        # Select the answer 
-        answer = self.tokenizer.convert_tokens_to_string(
-            self.tokenizer.convert_ids_to_tokens(input_ids[answer_start:answer_end], skip_special_tokens=True))
-        # Select context following the answer
-        context_following_answer = self.tokenizer.convert_tokens_to_string(
-            self.tokenizer.convert_ids_to_tokens(input_ids[answer_end:], skip_special_tokens=True))
-        return context_preceding_answer, answer, context_following_answer
+        return answer, start, end
