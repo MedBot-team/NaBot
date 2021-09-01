@@ -5,7 +5,7 @@ from utils import QuestionAnswering
 
 app = Flask(__name__)
 # Read API_KEY from .env file
-api_key = config('API_KEY')
+api_key = config('REST_API_KEY')
 
 # Default model
 model_name = 'ahotrod/albert_xxlargev1_squad2_512'
@@ -46,8 +46,11 @@ def QuAn():
         question = request.json['question']
         context = request.json['context']
 
-        answer = qa.get_answer(question=question, context=context)
-        return jsonify(answer=answer)
+        context_preceding_answer, answer, context_following_answer = qa.get_answer(question=question, context=context)
+
+        return jsonify(context_preceding_answer=context_preceding_answer, 
+                       answer=answer, 
+                       context_following_answer=context_following_answer)
 
 # Run flask APP in production mode
 if __name__ == '__main__':
