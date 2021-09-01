@@ -106,26 +106,27 @@ if ask_button:
 
             response = requests.request(
                 "POST", url, headers=headers, data=payload).json()[0]
-            
-            response_txt_json = json.loads(response['text'])
-
+        
             # Display feedback buttons
-            if len(response.json()) != 0:
+            if len(response) != 0:
+                response_text_json = json.loads(response['text'])
+                context = response_text_json['context']
+                
                 if response['buttons']:
                     for button in response['buttons']:
                         b = st.button(
                             label=button['title'],
                             on_click=send_feedback,
                             args=[button['payload']],)
+                
+                context_preceding_answer = context[:response_text_json['start']]
+                context_following_answer = context[response_text_json['end']:]
 
                 # Show the response to the user with highlighting the answer
                 text_annotator(
-                    response_txt_json['context_preceding_answer'].replace(
-                    '\n', '<br>'),
-                    (response_txt_json['answer'].replace(
-                    '\n', '<br>'), "#afa"),
-                    response_txt_json['context_following_answer'].replace(
-                    '\n', '<br>'),
+                    context_preceding_answer.replace('\n', ''),
+                    (response_text_json['answer'].replace('\n', ''), "#afa"),
+                    context_following_answer.replace('\n', ''),
                 )
             else:
                 print('Unfortunately, I don\'t know the answer to this question yet')
