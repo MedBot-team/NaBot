@@ -46,11 +46,11 @@ def QuAn():
         question = request.json['question']
         context = request.json['context']
 
-        context_preceding_answer, answer, context_following_answer = qa.get_answer(question=question, context=context)
+        answer, start, end = qa.get_answer(question=question, context=context)
 
-        return jsonify(context_preceding_answer=context_preceding_answer, 
-                       answer=answer, 
-                       context_following_answer=context_following_answer)
+        return jsonify(answer=answer, 
+                       start=start, 
+                       end=end)
 
 # Run flask APP in production mode
 if __name__ == '__main__':
