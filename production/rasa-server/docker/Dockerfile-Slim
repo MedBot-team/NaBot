@@ -34,11 +34,6 @@ RUN python -m spacy download en_core_web_md && \
     python -m spacy link en_core_web_md en
 
 WORKDIR /rasa-server
-# Copy autocorrect module from the host
-COPY autocorrect ./autocorrect
-# Download autocorrect module dictionary
-RUN mkdir -p ./autocorrect/data && \
-    python -c "import autocorrect; autocorrect.Speller('en_med')"
 # Copy rasa config files from the host
 COPY rasa ./rasa
 # Pass the version of model weights as an argument to the dockerfile. 
