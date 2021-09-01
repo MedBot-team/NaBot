@@ -51,6 +51,7 @@ def main():
             #  send a post request to the QA REST API
             _ = requests.post(f'{rest_host}:{rest_port}/model',
                               json={"model": model_name, "api_key": api_key})
+            
     # Put context, question test areas and Give me the answer button in the form, to avoid autorefresh with any change in text areas
     with st.form(key='qa'):
         # Context text area
@@ -74,14 +75,17 @@ def main():
             with st.spinner("Interpreting your text (This may take some time)"):
                 response = requests.post(f'{rest_host}:{rest_port}/',
                                        json={"context": context, "question": question, "api_key": api_key}).json()
-            # Show the context to the user with highlighting the answer
-            text_annotator(
-                response['context_preceding_answer'],
-                (response['answer'], "#afa"),
-                response['context_following_answer'],
-            )
 
-            # st.markdown(answer)
+            context_preceding_answer = context[:response['start']]
+            context_following_answer = context[response['end']:]
+            # Show the context to the user with highlighting the answer
+            #text_annotator(
+                #context_preceding_answer,
+                #(response['answer'], "#afa"),
+                #context_following_answer,
+            #)
+
+            response['answer']
 
 
 if __name__ == "__main__":
