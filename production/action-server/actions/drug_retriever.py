@@ -1,4 +1,6 @@
+import json
 import difflib
+import requests
 import mysql.connector
 from decouple import config
 from typing import Any, Text, Dict, List
@@ -10,24 +12,28 @@ class DrugRetrieve(Action):
 
     def __init__(self) -> None:
         super().__init__()  
-
+        # Read imformation about MySQL server from .env file
         password = config('MYSQL_DATASETS_ROOT_PASSWORD') 
         user = config('SQL_USER')
         host = config('DATASETS_DB_HOST')
         database = config('MYSQL_DATASETS_DATABASE')
-
-        print(user)
+        # Read API key, Rest API host address, and Rest API port from .env file
+        self.api_key = config('REST_API_KEY')
+        self.rest_host = config('REST_HOST')
+        self.rest_port = config('REST_PORT')
 
         self.table = config('DRUG_TABLE')
+
         self.db = mysql.connector.connect(
             host=host,
             user=user,
             password=password,
             database=database)
+
         self.like_buttons = [
                 {"payload": "/good_response", "title": "👍🏻"},
-                {"payload": "/bad_response", "title": "👎🏻"},
-                ]
+                {"payload": "/bad_response", "title": "👎🏻"},]
+
         self.addition_button = [{"payload": "/addition_request", 
                                  "title": "request addition to database"},]
         self.button_type='inline'
@@ -97,9 +103,13 @@ class DrugRetrieve(Action):
                                 FROM {self.table} \
                                 WHERE medicine = '{drugs[0]}';")
 
-                reply = "".join(item[0]+'\n' for item in list(cursor))
+                db_response = "".join(item[0]+'\n' for item in list(cursor))
+                question = tracker.latest_message['text']
+                response = requests.post(f'{self.rest_host}:{self.rest_port}/',
+                                    json={"context": db_response, "question": question, "api_key": self.api_key}).json()
+                            
                 dispatcher.utter_message(
-                    text = reply,
+                    text = json.dumps(response),
                     buttons = self.like_buttons,
                     button_type = self.button_type,)
         else:
