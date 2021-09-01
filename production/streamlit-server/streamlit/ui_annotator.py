@@ -42,5 +42,5 @@ class HTMLAnnotator():
             else:
                 raise Exception("Wrong format")
 
-        st.markdown(str(out), unsafe_allow_html=True)
+        st.markdown(out, unsafe_allow_html=True)
 
