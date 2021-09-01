@@ -17,11 +17,11 @@ class DrugRetrieve(Action):
         user = config('SQL_USER')
         host = config('DATASETS_DB_HOST')
         database = config('MYSQL_DATASETS_DATABASE')
+
         # Read API key, Rest API host address, and Rest API port from .env file
         self.api_key = config('REST_API_KEY')
         self.rest_host = config('REST_HOST')
         self.rest_port = config('REST_PORT')
-
         self.table = config('DRUG_TABLE')
 
         self.db = mysql.connector.connect(
