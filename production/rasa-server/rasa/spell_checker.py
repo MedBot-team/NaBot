@@ -23,14 +23,18 @@ class SpellChecker(Component):
     supported_language_list = ["en"]
 
 
-    def __init__(self, component_config: Optional[Dict[Text, Any]] = None) -> None:
+    def __init__(self, dictionary_path = "dictionary/frequency_dictionary.txt",
+                       med_dictionary_path = "dictionary/frequency_med_dictionary.txt",
+                       bigram_path = "dictionary/frequency_bigramdictionary.txt",
+                       med_bigram_path = "dictionary/frequency_med_bigramdictionary.txt",
+                       component_config: Optional[Dict[Text, Any]] = None) -> None:
         super().__init__(component_config)
 
         # Path of dictionaries
-        self.dictionary_path = "dictionary/frequency_dictionary.txt"
-        self.med_dictionary_path = "dictionary/frequency_med_dictionary.txt"
-        self.bigram_path = "dictionary/frequency_bigramdictionary.txt"
-        self.med_bigram_path = "dictionary/frequency_med_bigramdictionary.txt"
+        self.dictionary_path = dictionary_path
+        self.med_dictionary_path = med_dictionary_path
+        self.bigram_path = bigram_path
+        self.med_bigram_path = med_bigram_path
 
     def train(
         self,
