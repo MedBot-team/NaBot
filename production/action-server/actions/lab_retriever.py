@@ -1,4 +1,5 @@
 import difflib
+from dns.message import Message
 import mysql.connector
 from decouple import config
 from typing import Any, Text, Dict, List
@@ -22,12 +23,7 @@ class LabRetrieve(Action):
             user=user,
             password=password,
             database=database)
-        self.like_buttons = [
-                {"payload": "/good_response", "title": "👍🏻"},
-                {"payload": "/bad_response", "title": "👎🏻"},
-                ]
-        self.addition_button = [{"payload": "/addition_request", 
-                                 "title": "request addition to database"},]
+        
         self.button_type='inline'
 
     def name(self) -> Text:
@@ -53,11 +49,21 @@ class LabRetrieve(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
+        message_id = tracker.latest_message['message_id']
+        like_buttons = [
+                {"payload": "/good_response{{\"message_id\":\"{id}\"}}".format(id=message_id),
+                 "title": "👍🏻"},
+                {"payload": "/bad_response{{\"message_id\":\"{id}\"}}".format(id=message_id), 
+                 "title": "👎🏻"},
+                ]
+        addition_button = [{"payload": "/addition_request{{\"message_id\":\"{id}\"}}".format(id=message_id), 
+                            "title": "request addition to database"},]
+        
         # Check if entity is recognized or not
         if not tracker.latest_message['entities']:
             dispatcher.utter_message(
         text = 'I\'m sorry. Unfortunately, I don\'t have that lab in my dataset yet',
-        buttons = self.addition_button,
+        buttons = addition_button,
         button_type = self.button_type,)
             return []
 
@@ -89,7 +95,7 @@ class LabRetrieve(Action):
             if len(list(cursor)) == 0:
                 dispatcher.utter_message(
                 text = 'I\'m sorry. Unfortunately, I\'m not aware of that yet.',
-                buttons = self.addition_button,
+                buttons = addition_button,
                 button_type = self.button_type,)
             else:
                 cursor.execute(f"SELECT {col} \
@@ -99,13 +105,13 @@ class LabRetrieve(Action):
                 reply = "".join(item[0]+'\n' for item in list(cursor))
                 dispatcher.utter_message(
                     text = reply,
-                    buttons = self.like_buttons,
+                    buttons = like_buttons,
                     button_type = self.button_type,
                     )
         else:
             dispatcher.utter_message(
             text = 'I\'m sorry. Unfortunately, I don\'t have that lab in my dataset yet',
-            buttons = self.addition_button,
+            buttons = addition_button,
             button_type = self.button_type,)
 
         cursor.close()

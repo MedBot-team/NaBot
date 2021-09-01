@@ -3,6 +3,7 @@ version: "2.0"
 entities:
   - drug 
   - lab
+  - message_id
 
 intents:
   - good_response
