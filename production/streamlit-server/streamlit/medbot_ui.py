@@ -1,19 +1,28 @@
 import json
+import random
 import requests
 import streamlit as st
 from decouple import config
-import random
+from ui_annotator import HTMLAnnotator
+
+
 
 # Create random user_id
 if 'user_id' not in st.session_state:
     user_id = 'st' + str(random.randint(100000, 999999))
     st.session_state['user_id'] = user_id
 
+# Configure the web page (header , ...)
+st.set_page_config(page_title='MedBot',
+                   layout='wide',
+                   initial_sidebar_state='auto')
+
+html_annotator = HTMLAnnotator()
+text_annotator = html_annotator.annotated_text
+
+
 # Read URL from .env file in the directory
 url = config('RASA_SERVER_URL')
-
-# Page header texts
-st.set_page_config(page_title="MedBot")
 
 st.markdown("<h1 style='text-align: center; color:grey;'>\
              MedBot</h1>", unsafe_allow_html=True)
@@ -29,7 +38,7 @@ st.write('')
 
 st.markdown('___')
 
-# Page sidebar 
+# Page sidebar
 # sidebar header
 st.sidebar.header('About MedBot')
 st.sidebar.write('')
@@ -72,11 +81,12 @@ def send_feedback(feedback):
     payload = json.dumps({
         "message": f"{feedback}",
         "sender": f"{st.session_state['user_id']}"
-        })
+    })
     requests.request("POST", url, headers=headers, data=payload)
     st.success('Feedback submitted successfully')
 
-# When ask question button is clicked    
+
+# When ask question button is clicked
 if ask_button:
     if question == '':
         st.error('Please ask your question')
@@ -95,17 +105,26 @@ if ask_button:
             }
 
             response = requests.request(
-                "POST", url, headers=headers, data=payload)
+                "POST", url, headers=headers, data=payload).json()[0]
             
+            response_txt_json = json.loads(response['text'])
+
             # Display feedback buttons
-            if response.json()[0]['buttons']:
-                for button in response.json()[0]['buttons']:
+            if response['buttons']:
+                for button in response['buttons']:
                     b = st.button(
                         label=button['title'],
                         on_click=send_feedback,
-                        args = [button['payload']],)
-                    
-            # Give the chatbot answer to the user
-            st.markdown(response.json()[0]['text'].replace('\n', '<br>'), unsafe_allow_html=True)
-            
+                        args=[button['payload']],)
+
+            # Show the response to the user with highlighting the answer
+            text_annotator(
+                response_txt_json['context_preceding_answer'].replace(
+                '\n', '<br>'),
+                (response_txt_json['answer'].replace(
+                '\n', '<br>'), "#afa"),
+                response_txt_json['context_following_answer'].replace(
+                '\n', '<br>'),
+            )
+
 st.markdown('___')
