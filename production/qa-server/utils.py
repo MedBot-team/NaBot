@@ -42,7 +42,15 @@ class QuestionAnswering():
 
         answer_start = tf.argmax(answer_start_scores, axis=1).numpy()[0]
         answer_end = (tf.argmax(answer_end_scores, axis=1) + 1).numpy()[0]
+        
+        sep_idx = self.tokenizer.convert_ids_to_tokens(input_ids).index('[SEP]') 
+        # Select context preceding the answer
+        context_preceding_answer = self.tokenizer.convert_tokens_to_string(
+            self.tokenizer.convert_ids_to_tokens(input_ids[sep_idx:answer_start], skip_special_tokens=True))
         # Select the answer 
         answer = self.tokenizer.convert_tokens_to_string(
-            self.tokenizer.convert_ids_to_tokens(input_ids[answer_start:answer_end]))
-        return answer
+            self.tokenizer.convert_ids_to_tokens(input_ids[answer_start:answer_end], skip_special_tokens=True))
+        # Select context following the answer
+        context_following_answer = self.tokenizer.convert_tokens_to_string(
+            self.tokenizer.convert_ids_to_tokens(input_ids[answer_end:], skip_special_tokens=True))
+        return context_preceding_answer, answer, context_following_answer
