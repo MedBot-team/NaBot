@@ -3,7 +3,7 @@ version: "2.0"
 actions:
   - retrieve
   # - slot_reset
-  # - intent_set
+  - intent_set
 
 responses:
   utter_ask_entity_name:

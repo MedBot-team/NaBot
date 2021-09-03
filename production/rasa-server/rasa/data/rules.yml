@@ -23,7 +23,7 @@ rules:
       - intent: drug_dosage
       - intent: drug_interaction
       - intent: drug_sideeffects
-    # - action: intent_set
+    - action: intent_set
     - slot_was_set:
       - entity_name: null
     - action: entity_form
@@ -42,7 +42,7 @@ rules:
       - intent: drug_dosage
       - intent: drug_interaction
       - intent: drug_sideeffects
-    # - action: intent_set
+    - action: intent_set
     - slot_was_set:
       - entity_name
     - action: retrieve

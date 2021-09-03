@@ -14,7 +14,7 @@ slots:
     auto_fill: true
     influence_conversation: true
   
-  # intent_name:
-  #   type: text
-  #   auto_fill: false
-  #   influence_conversation: false
+  intent_name:
+    type: text
+    auto_fill: false
+    influence_conversation: false

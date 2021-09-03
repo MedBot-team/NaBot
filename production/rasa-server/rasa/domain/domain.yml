@@ -2,6 +2,7 @@ version: "2.0"
 
 entities:
   - entity_name
+  - intent_name
 
 intents:
   # Feedback
