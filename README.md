@@ -12,6 +12,19 @@ MedBot is a [Rasa-based](https://rasa.com/), smart medical chatbot. It can retri
 
 We will support more features in the future. But now, we only support medicines and lab tests information.
 
+# Test Chatbot
+
+- Use website:
+  - https://nabot.ml/
+- Use Telegram channel
+  - http://t.me/ask_nabot
+
+# Use api
+  - https://api.nabot.ml
+
+# Test Monitoring tools
+  - https://monitor.nabot.ml/
+
 # List of MedBot features
 
 You can find out a list of medicines, labs, and their information which we're supporting, in the following. 
