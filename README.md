@@ -1,11 +1,11 @@
-# Rasa Medical Chatbot
+# NaBot Medical Chatbot :robot:
 ![Chatbot Unit testing](https://github.com/MedBot-team/NaBot/actions/workflows/rasa-test.yml/badge.svg?style=svg)
 ![Action server workflow](https://github.com/MedBot-team/NaBot/actions/workflows/docker_push_actions.yml/badge.svg?style=svg)
 ![Chatbot server workflow](https://github.com/MedBot-team/NaBot/actions/workflows/docker_push_chatbot.yml/badge.svg?style=svg)
 ![Chatbot UI workflow](https://github.com/MedBot-team/NaBot/actions/workflows/docker_push_ui.yml/badge.svg?style=svg)
 
 
-NaBot is a [Rasa-based](https://rasa.com/), smart medical chatbot. It can retrieve medicines and lab tests information for users just by chatting with it.
+NaBot is a smart medical chatbot. It can retrieve medicines and lab tests information for users just by chatting with it.
 
 - Hey, NaBot, can you give me dosage information of Acetaminophen?
 - Of course, I can! :wink:
