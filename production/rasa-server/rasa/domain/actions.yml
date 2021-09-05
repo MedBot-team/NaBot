@@ -37,3 +37,6 @@ responses:
 
   # utter_iamabot:
   # - text: "I am a medical bot that help others people to find drug. Developed in AImedic"
+
+  utter_not_found:
+  - text: "I\'m sorry. Unfortunately, I don\'t have that drug in my dataset yet"
