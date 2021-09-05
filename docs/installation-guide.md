@@ -1,9 +1,9 @@
-# MedBot Installation Guide
+# NaBot Installation Guide
 
-MedBot can be installed from its source code or by docker images. 
+NaBot can be installed from its source code or by docker images. 
 
 ---
-## Install MedBot by docker
+## Install NaBot by docker
 
 
 1. Install [docker-compose](https://docs.docker.com/compose/install/)
@@ -61,7 +61,7 @@ MedBot can be installed from its source code or by docker images.
 1. Clone Rasa branch
 
     ```
-    git clone https://github.com/arezae/chatbot --branch rasa --single-branch --depth 1
+    git clone https://github.com/MedBot-team/NaBot --branch rasa --single-branch --depth 1
     ```
 
 2. Directory tree
@@ -153,7 +153,7 @@ MedBot can be installed from its source code or by docker images.
         rasa run --log-file logs/action-server.log actions --actions actions
         ```
 
-11. Enjoy chatting with MedBot :hugs:
+11. Enjoy chatting with NaBot :hugs:
 
     ```
     curl --location --request POST 'http://localhost:5005/webhooks/rest/webhook' \
@@ -170,7 +170,7 @@ MedBot can be installed from its source code or by docker images.
 1. Clone Rasa branch
 
     ```
-    git clone https://github.com/arezae/chatbot --branch rasa --single-branch --depth 1
+    git clone https://github.com/MedBot-team/NaBot --branch rasa --single-branch --depth 1
     ```
 
 2. Directory tree
@@ -238,7 +238,7 @@ MedBot can be installed from its source code or by docker images.
     
     * Also the version of the **model weights** you want to use, can be assigned by the `VERSION` argument in the docker-compose file. This will download the `VERSION.tar.gz` file from Dropbox while building a Docker images.
 
-      Please note that, if you want to use the special version of our bot, you should clone that version alongside assigning that version as the `VERSION` argument in the docker-compose file. You can find out available versions [here](https://github.com/arezae/chatbot/releases).
+      Please note that, if you want to use the special version of our bot, you should clone that version alongside assigning that version as the `VERSION` argument in the docker-compose file. You can find out available versions [here](https://github.com/MedBot-team/NaBot/releases).
 
 
 6. Build an image
