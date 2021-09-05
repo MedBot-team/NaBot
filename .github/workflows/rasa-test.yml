@@ -62,13 +62,6 @@ jobs:
         run: |
           python -m spacy download en_core_web_md
       
-      # Download autocorrect module dictionary
-      - name: Copy autocorrect module from production and download autocorrect dictionary
-        run: | 
-          cp -r ./production/rasa-server/autocorrect/ ./development/testcase/
-          mkdir -p ./development/testcase/autocorrect/data/
-          python -c "import sys; sys.path.insert(0, './development/testcase/'); import autocorrect; autocorrect.Speller('en_med')"
-          
       # Copy spell-checker script to the development directory
       - name: Copy spell_checker script
         run: |
