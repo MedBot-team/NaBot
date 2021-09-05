@@ -35,7 +35,7 @@ st.sidebar.header('About NaBot')
 st.sidebar.write('')
 # sidebar text
 st.sidebar.markdown("<h4 style='text-align: left; color:grey;'>\
-                    NaBot is a Rasa-based, smart medical chatbot.\
+                    NaBot smart medical chatbot.\
                     It can retrieve medicines and lab tests information\
                     for users just by chatting with it.</h4>", unsafe_allow_html=True)
 
@@ -47,7 +47,7 @@ st.sidebar.write('')
 # add expander to the sidebar for website detail
 site_expander = st.sidebar.expander('Website')
 site_expander.markdown(
-    "[NaBot instruction](https://arezae.github.io/chatbot/)")
+    "[NaBot instruction](https://github.com/MedBot-team/NaBot)")
 
 # add expander to the sidebar for some conversation examples
 exm_expander = st.sidebar.expander('Conversation Example')
