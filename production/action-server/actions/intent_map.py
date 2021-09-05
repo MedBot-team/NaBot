@@ -15,3 +15,6 @@ intent_map = {
     'drug_interaction': {'drug': ['interactions']},
     'drug_sideeffects': {'drug': ['side_effects']},
 }
+
+def get_columns(intent, table):
+    return intent_map[intent][table]
