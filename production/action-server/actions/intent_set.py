@@ -14,7 +14,5 @@ class IntentSet(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         intent = tracker.latest_message['intent']['name']
-        entity = tracker.get_slot('entity_name')
-        print(entity)
-        return [SlotSet("entity_name", entity),
-                SlotSet("intent_name", intent),]
+
+        return [SlotSet("intent_name", intent)]
