@@ -175,8 +175,6 @@ services:
     container_name: events-server
     restart: always
     volumes:
-      # Load postgres dumps (events) to the fresh postgres server during initialization
-      - ./events-server:/docker-entrypoint-initdb.d
       # Store postgres records in the seperate volume. records won't be removed even with removing containers
       - db-event:/var/lib/postgres/data
     # Make the same network for postgres server and actions server
