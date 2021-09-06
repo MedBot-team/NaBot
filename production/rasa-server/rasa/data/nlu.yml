@@ -147,7 +147,7 @@ nlu:
     - What are side-effects of [kalbitor](entity_name)?
     - what side effects does [ketoprofen](entity_name) have?
     - does [kevzara](entity_name) have any side effects?
-    - can [lamictal](druentity_nameg) have unexpected effects?
+    - can [lamictal](entity_name) have unexpected effects?
 
 - intent: greet
   examples: |
