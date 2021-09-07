@@ -13,6 +13,11 @@ slots:
     type: text
     auto_fill: true
     influence_conversation: true
+
+  chosen_entity:
+    type: text
+    auto_fill: true
+    influence_conversation: false
   
   intent_name:
     type: text

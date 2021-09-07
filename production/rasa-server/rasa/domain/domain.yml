@@ -2,13 +2,14 @@ version: "2.0"
 
 entities:
   - entity_name
-  - intent_name
+  - chosen_entity
 
 intents:
   # Feedback
   - good_response
   - bad_response
   - addition_request
+  - choose_candidate
   # Chitchat
   - greet
   - goodbye

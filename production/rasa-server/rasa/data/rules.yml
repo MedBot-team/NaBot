@@ -48,7 +48,10 @@ rules:
     - action: retrieve
 
 
-
+- rule: choose_entity
+  steps:
+    - intent: choose_candidate
+    - action: retrieve
 # - rule: new_issue form
 #   steps:
 #   - intent: new_issue
