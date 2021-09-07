@@ -2,20 +2,20 @@ version: '2.0'
 
 nlu:
 
-# - intent: new_issue
-#   examples: |
-#     - I want some information about a drug.
-#     - I need some information about a pill.
-#     - I'm looking for lab test details. 
-#     - Can you give me information about a test?
-#     - I want some info about a medical test
-#     - Give me instructions about my test.
-#     - can you explain a lab test for me?
-#     - I am looking for drug information
-#     - I'm looking for information about a medicine.
-#     - Can you give me information about a potion?
-#     - I want some info about a pill.
-#     - Give me instructions about my medication.
+- intent: new_issue
+  examples: |
+    - I want some information about a drug.
+    - I need some information about a pill.
+    - I'm looking for lab test details. 
+    - Can you give me information about a test?
+    - I want some info about a medical test
+    - Give me instructions about my test.
+    - can you explain a lab test for me?
+    - I am looking for drug information
+    - I'm looking for information about a medicine.
+    - Can you give me information about a potion?
+    - I want some info about a pill.
+    - Give me instructions about my medication.
 
 - intent: what_is
   examples: |

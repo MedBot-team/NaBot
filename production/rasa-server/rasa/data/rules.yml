@@ -23,9 +23,9 @@ rules:
       - intent: drug_dosage
       - intent: drug_interaction
       - intent: drug_sideeffects
-    - action: intent_set
     - slot_was_set:
       - entity_name: null
+    - action: intent_set
     - action: entity_form
     - active_loop: entity_form
 
@@ -42,9 +42,9 @@ rules:
       - intent: drug_dosage
       - intent: drug_interaction
       - intent: drug_sideeffects
-    - action: intent_set
     - slot_was_set:
       - entity_name
+    - action: intent_set
     - action: retrieve
 
 
@@ -52,12 +52,14 @@ rules:
   steps:
     - intent: choose_candidate
     - action: retrieve
-# - rule: new_issue form
-#   steps:
-#   - intent: new_issue
-#   - action: slot_reset
-#   - action: entity_form
-#   - active_loop: entity_form
+
+- rule: new_issue form
+  steps:
+  - intent: new_issue
+  - action: intent_set
+  - action: slot_reset
+  - action: entity_form
+  - active_loop: entity_form
 
 - rule: Say hi anytime the user says hi 
   steps:
