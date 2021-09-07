@@ -3,6 +3,7 @@ version: "2.0"
 entities:
   - entity_name
   - chosen_entity
+  - message_id
 
 intents:
   # Feedback

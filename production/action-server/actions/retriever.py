@@ -52,37 +52,72 @@ class Retrieve(Action):
                             "title": f"{candidate}"} for candidate in candidates]
                 dispatcher.utter_message(
                     text=f'Which one do you mean?',
-                    buttons = buttons,
-                    button_type = 'vertical',
+                    buttons=buttons,
+                    button_type='vertical',
                     )  
                  
             elif drugs:
+                message_id = tracker.latest_message['message_id']
+                buttons = [
+                    {"payload": "/good_response{{\"message_id\":\"{id}\"}}".format(id=message_id),
+                    "title": "👍🏻"},
+                    {"payload": "/bad_response{{\"message_id\":\"{id}\"}}".format(id=message_id), 
+                    "title": "👎🏻"},
+                    ]
+                
                 columns = get_columns(intent, 'drug')
                 if columns:
                     answer = self.db.retrieve_drug(column=columns[0], drug_name=input_entity)
-                    dispatcher.utter_message(text=answer[0])
+                    dispatcher.utter_message(text=answer[0],
+                                             buttons=buttons,
+                                             button_type='inline',
+                                             )
                 else:
-                    dispatcher.utter_message(response='utter_cant_answer')
+                    dispatcher.utter_message(response='utter_cant_answer',
+                                             buttons=buttons,
+                                             button_type='inline',
+                                             )
                     
                 
             elif labs:
+                message_id = tracker.latest_message['message_id']
+                buttons = [
+                    {"payload": "/good_response{{\"message_id\":\"{id}\"}}".format(id=message_id),
+                    "title": "👍🏻"},
+                    {"payload": "/bad_response{{\"message_id\":\"{id}\"}}".format(id=message_id), 
+                    "title": "👎🏻"},
+                    ]
+                
                 columns = get_columns(intent, 'lab')
                 if columns:
                     answer = self.db.retrieve_drug(column=columns[0], drug_name=input_entity)
-                    dispatcher.utter_message(text=answer[0])
+                    dispatcher.utter_message(text=answer[0],
+                                             buttons=buttons,
+                                             button_type='inline',
+                                             )
                 else:
-                    dispatcher.utter_message(response='utter_cant_answer')
+                    dispatcher.utter_message(response='utter_cant_answer',
+                                             buttons=buttons,
+                                             button_type='inline',
+                                             )
                 
             else:
-                
-                dispatcher.utter_message(response='utter_not_found')
+                message_id = tracker.latest_message['message_id']
+                button = [{"payload": "/addition_request{{\"message_id\":\"{id}\"}}".format(id=message_id), 
+                            "title": "request addition to database"},]
+                dispatcher.utter_message(response='utter_not_found',
+                                         buttons=button,
+                                         button_type='inline',
+                                         )
                
         else:
-            print(6)
-            dispatcher.utter_message(response='utter_not_found')
-        # dispatcher.utter_message(
-        #     text = f'intent:{intent}, entity:{entity[-1]}',
-        #     )
+            message_id = tracker.latest_message['message_id']
+            button = [{"payload": "/addition_request{{\"message_id\":\"{id}\"}}".format(id=message_id), 
+                        "title": "request addition to database"},]
+            dispatcher.utter_message(response='utter_not_found',
+                                        buttons=button,
+                                        button_type='inline',
+                                        )
     
     @staticmethod
     def get_entity(tracker: Tracker):
