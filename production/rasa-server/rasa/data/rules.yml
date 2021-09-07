@@ -59,12 +59,6 @@ rules:
 #   - action: entity_form
 #   - active_loop: entity_form
 
-# - rule: Say hi when the user says hi at start
-#   conversation_start: true
-#   steps:
-#     - intent: greet 
-#     - action: utter_greet
-
 - rule: Say hi anytime the user says hi 
   steps:
     - intent: greet 
@@ -75,7 +69,7 @@ rules:
     - intent: goodbye
     - action: utter_goodbye
 
-# - rule: Say 'I am a bot' anytime the user challenges
-#   steps:
-#     - intent: bot_challenge
-#     - action: utter_iamabot
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot

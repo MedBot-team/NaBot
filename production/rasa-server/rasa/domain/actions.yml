@@ -13,18 +13,6 @@ responses:
   utter_greet:
     - text: "Hey! I'm medical chatbot. What can I do for you?"
 
-  # utter_any_more_questions:
-  # - text: "Do you have any more questions?"
-  
-  # utter_how_can_help:
-  # - text: "How can I help you?"
-
-  # utter_did_that_help:
-  # - text: "Did that help you?"
-
-  # utter_happy:
-  # - text: "Great, carry on!"
-
   utter_goodbye:
     - text: "Bye"
     - text: "See you later"
@@ -35,8 +23,8 @@ responses:
     - text: "Farewell"
     - text: "cheerio"
 
-  # utter_iamabot:
-  # - text: "I am a medical bot that help others people to find drug. Developed in AImedic"
+  utter_iamabot:
+  - text: "I am a bot and my job is to help people with their questions about drugs and tests."
 
   utter_not_found:
     - text: "I'm sorry. Unfortunately, I don't have that drug in my dataset yet."
