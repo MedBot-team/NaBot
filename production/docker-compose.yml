@@ -176,7 +176,7 @@ services:
     restart: always
     volumes:
       # Store postgres records in the seperate volume. records won't be removed even with removing containers
-      - db-event:/var/lib/postgres/data
+      - db-event:/var/lib/postgresql/data/
     # Make the same network for postgres server and actions server
     networks:
       - events-network
