@@ -1,6 +1,6 @@
 import json
 import mysql.connector
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 class Monitoring():
@@ -13,12 +13,33 @@ class Monitoring():
             password=password,
             database=database)
 
+    # Find number of days from user statement
+    def __day_mapper(self, statement):
+        day = {'Last 24 hour': 1,
+               'Last week': 7,
+               'Last month': 30}
+
+        return day[statement]
+
+    # Return timestamp of X days ago
+    def __past_timestamp(self, past_days):
+        delta = timedelta(days=past_days)
+        now = datetime.now()
+        past_time = now - delta
+        past_timestamp = round(past_time.timestamp())
+        return past_timestamp
+
     # Get list of events from database
-    def get_events(self):
+    def get_events(self, statement):
+        past_days = self.__day_mapper(statement)
+        past_timestamp = self.__past_timestamp(past_days)
+
         cursor = self.db.cursor()
-        cursor.execute("SELECT intent_name, data \
+
+        cursor.execute(f"SELECT intent_name, data \
 FROM events \
-WHERE type_name = 'user'")
+WHERE type_name = 'user' \
+AND timestamp >= {past_timestamp};")
 
         events = [item for item in list(cursor)]
         return events
@@ -35,8 +56,9 @@ WHERE type_name = 'user'")
 
     # Convert data from string to python dictionary
     def __data2dict(self, data):
-        json_acceptable_string = data.replace("'", "\"")
-        dictionary = json.loads(json_acceptable_string)
+        # json_acceptable_string = data.replace("'", "\"")
+        # dictionary = json.loads(json_acceptable_string)
+        dictionary = json.loads(data)
         return dictionary
 
     # Get important variables from datas by parsing the data
@@ -74,4 +96,4 @@ WHERE type_name = 'user'")
     def get_feedbacks(self, intents):
         feedbacks = [intent for intent in intents if intent in [
             'good_response', 'bad_response']]
-        return feedbacks        
+        return feedbacks
