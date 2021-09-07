@@ -17,4 +17,7 @@ intent_map = {
 }
 
 def get_columns(intent, table):
-    return intent_map[intent][table]
+    if table in intent_map[intent].keys():
+        return intent_map[intent][table]
+    else:
+        return []
