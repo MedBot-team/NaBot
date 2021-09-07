@@ -90,7 +90,7 @@ class Retrieve(Action):
                 
                 columns = get_columns(intent, 'lab')
                 if columns:
-                    answer = self.db.retrieve_drug(column=columns[0], drug_name=input_entity)
+                    answer = self.db.retrieve_lab(column=columns[0], test_name=input_entity)
                     dispatcher.utter_message(text=answer[0],
                                              buttons=buttons,
                                              button_type='inline',
