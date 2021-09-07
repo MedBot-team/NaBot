@@ -1,11 +1,11 @@
-import difflib
-import mysql.connector
 from decouple import config
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from .intent_map import get_columns
 from .database import DatabaseConnector
+from rasa_sdk.events import SlotSet
+
 
 class Retrieve(Action):    
     def __init__(self) -> None:
@@ -36,30 +36,49 @@ class Retrieve(Action):
             dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
-        entity = self.get_entity(tracker=tracker)
+              
+        input_entity = self.get_entity(tracker=tracker)
+        chosen_entity = tracker.get_slot('chosen_entity')        
         intent = tracker.get_slot('intent_name')
-        
-        if entity is not None:
-            drugs = self.db.search_drug(entity)
-            labs = self.db.search_lab(entity)
-            if drugs and labs:
+
+        if input_entity is not None:
+            drugs = self.db.search_drug(input_entity)
+            labs = self.db.search_lab(input_entity)
+            
+            candidates = drugs + labs
+            
+            if len(candidates)>1 and input_entity!=chosen_entity:
+                buttons = [{"payload": "/choose_candidate{{\"entity_name\":\"{cnd}\", \"chosen_entity\":\"{cnd}\"}}".format(cnd=candidate),
+                            "title": f"{candidate}"} for candidate in candidates]
                 dispatcher.utter_message(
-                    text = 'entity is in both drug and lab',
-                    )
+                    text=f'Which one do you mean?',
+                    buttons = buttons,
+                    button_type = 'vertical',
+                    )  
+                 
             elif drugs:
-                column = get_columns(intent, 'drug')[0]
-                answer = self.db.retrieve_drug(column=column, drug_name=entity)
-                print(entity)
-                dispatcher.utter_message(text=answer[0])
+                columns = get_columns(intent, 'drug')
+                if columns:
+                    answer = self.db.retrieve_drug(column=columns[0], drug_name=input_entity)
+                    dispatcher.utter_message(text=answer[0])
+                else:
+                    dispatcher.utter_message(response='utter_cant_answer')
+                    
+                
             elif labs:
-                column = get_columns(intent, 'lab')[0]
-                answer = self.db.retrieve_lab(column=column, drug_name=entity)
-                dispatcher.utter_message(text=answer[0])
+                columns = get_columns(intent, 'lab')
+                if columns:
+                    answer = self.db.retrieve_drug(column=columns[0], drug_name=input_entity)
+                    dispatcher.utter_message(text=answer[0])
+                else:
+                    dispatcher.utter_message(response='utter_cant_answer')
+                
             else:
+                
                 dispatcher.utter_message(response='utter_not_found')
                
         else:
+            print(6)
             dispatcher.utter_message(response='utter_not_found')
         # dispatcher.utter_message(
         #     text = f'intent:{intent}, entity:{entity[-1]}',
