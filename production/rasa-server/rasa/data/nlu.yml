@@ -30,7 +30,14 @@ nlu:
     - give me information about [Anoscopy](entity_name).
     - can you tell me what [esr](entity_name) is?
     - i want to know about [csf igg index](entity_name)
-  
+    - i don't know what is [kombiglyze-xr](entity_name)
+    - [zofran-odt](entity_name) is a drug or not?
+    - i want [fluphenazine](entity_name), what is it?
+    - i want some information about a lab, its name is [uric acid test](entity_name). 
+    - [lactate dehydrogenase isoenzymes](entity_name)
+    - Do you have knowledge about  [liver function tests](entity_name)? 
+    - what is [vanos](entity_name)
+
 - intent: usage
   examples: |
     - where is it used
@@ -54,6 +61,9 @@ nlu:
     - what do i need [helicobacter pylori tests](entity_name) for?
     - when is [hiv viral load](entity_name) needed?
     - where is [iron tests](entity_name) useful?
+    - What is the recommended usage of [5-htp](entity_name)
+    - Give me information about [azithromycin](entity_name) usage.
+    - Why is [berinert](entity_name) used as a medicine?
 
 - intent: risk
   examples: |
@@ -70,6 +80,8 @@ nlu:
     - what should i worry about when doing [rdw](entity_name)?
     - does [pt/inr](entity_name) harm people?
     - what should i be careful about [acetaminophen](entity_name)?
+    - should i be afraid of [procalcitonin](entity_name)?
+    - can it harm me?
     
 - intent: lab_result
   examples: |
@@ -82,6 +94,7 @@ nlu:
     - what are the numbers in [hsv](entity_name) result?
     - how can i interpret my [myelography](entity_name) test results?
     - can you help me understand my [neurological exam](entity_name) test results?
+    - Is it possible to interpret my [urobilinogen in urine](entity_name) results
 
 - intent: lab_prepare
   examples: |
@@ -102,6 +115,7 @@ nlu:
     - how is [gfr test](entity_name) done?
     - what should i do in [fobt](entity_name)?
     - what is done in an [concussion tests](entity_name) test?
+    - What do I need to do during test?
 
 - intent: drug_warning
   examples: |
@@ -115,6 +129,7 @@ nlu:
     - What to avoid while taking [nexium](entity_name)?
     - When taking [lomotil](entity_name), what should I avoid?
     - what should i not do when using [latuda](entity_name)?
+    - Is [lo-loestrin-fe](entity_name) safe to take when you are pregnant?
 
 - intent: drug_dosage
   examples: |
@@ -126,6 +141,9 @@ nlu:
     - how many times a day i can take [gabapentin](entity_name)?
     - how often i should use [flovent](entity_name)?
     - how [duloxetine](entity_name) should i take every time?
+    - how often i should use [zaditor](entity_name)?
+    - What is the maximum dosage of it ?
+    - What is the recommended dose of [haloperidol](entity_name) per day for me?
 
 - intent: drug_interaction
   examples: |
@@ -138,13 +156,65 @@ nlu:
     - which drugs have interaction with [ilumya](entity_name)?
     - what are the interactions of [indapamide](entity_name)?
     - which drugs can cause problem if used with [insulin](entity_name)?
+    - Is [sertraline](entity_name) safe to take with what medications?
 
 - intent: drug_sideeffects
   examples: |
     - what are the side effects?
     - what side effects should i expect?
-    - What are [acejardiancetaminophen](entity_name) side-effects?
+    - What are [acejardiancetaminophen](entity_name) side effects?
     - What are side-effects of [kalbitor](entity_name)?
     - what side effects does [ketoprofen](entity_name) have?
     - does [kevzara](entity_name) have any side effects?
     - can [lamictal](entity_name) have unexpected effects?
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hi there
+    - hey there
+    - let's go
+    - hey dude
+    - pleasure to meet you
+    - good morning
+    - goodmorning
+    - good evening
+    - goodevening
+    - good afternoon
+    - good noon
+    - good to see you again
+    - good to meet you again
+
+- intent: goodbye
+  examples: |
+    - see you later
+    - see you soon
+    - talk to you later
+    - bye
+    - bye bye
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - goodbye
+    - have a nice day
+    - see you around
+    - see you later
+    - peace out
+    - i’m out
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what's your name?
+    - what's your creator?
+    - are you a real person or a chatbot? 
+    - how you can help me?
+    - can you help me?
+    - can i talk with you?
