@@ -31,8 +31,6 @@ pipeline:
      constrain_similarities: true
 #     intent_tokenization_flag: True
 #     intent_split_symbol: "+"
-   - name: SpacyEntityExtractor
-#     dimensions: ["PRODUCT", "ORG"]
   #  - name: MitieEntityExtractor
   #  - name: CRFEntityExtractor
    - name: RegexEntityExtractor
