@@ -1,17 +1,23 @@
 import json
-import mysql.connector
 from datetime import datetime, timedelta
+import psycopg2
+from psycopg2 import OperationalError
 
 
-class Monitoring():
-    def __init__(self, host, user, password, database):
+class Monitoring:
+    def __init__(self, db_name, db_user, db_password, db_host, db_port) -> None:
         super(Monitoring, self).__init__()
         # Connect to the MySQL server
-        self.db = mysql.connector.connect(
-            host=host,
-            user=user,
-            password=password,
-            database=database)
+        try:
+            self.db = psycopg2.connect(
+                database=db_name,
+                user=db_user,
+                password=db_password,
+                host=db_host,
+                port=db_port,
+            )
+        except OperationalError as e:
+            print(f"The error '{e}' occurred")
 
     # Find number of days from user statement
     def __day_mapper(self, statement):
@@ -97,3 +103,13 @@ AND timestamp >= {past_timestamp};")
         feedbacks = [intent for intent in intents if intent in [
             'good_response', 'bad_response']]
         return feedbacks
+    
+    def get_question(self, datas):
+        questions = []
+        for data in datas:
+            dictionary = self.__data2dict(data)
+
+            questions.append(dictionary['text'])
+        
+        return questions
+
