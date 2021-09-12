@@ -7,7 +7,7 @@ from utils import read_bytes
 
 uploaded = st.file_uploader(
     "Upload a `.yml` file like `nlu.yml` for clustering.",
-    type="yaml",
+    type="yml",
 )
 
 if not uploaded:

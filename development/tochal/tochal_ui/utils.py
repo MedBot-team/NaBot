@@ -2,7 +2,7 @@ import yaml
 
 
 def read_bytes(f):
-    nlu = yaml.load(f)['nlu']
+    nlu = yaml.safe_load(f)['nlu']
     texts = []
     for intent in nlu:
         examples = intent['examples']
