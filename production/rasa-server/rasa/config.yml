@@ -11,28 +11,20 @@ pipeline:
   # language model to load
     #  model: "data/total_word_feature_extractor.dat"
   - name: spell_checker.SpellChecker
-  - name: SpacyNLP
-    model: en_core_web_md
-    case_sensitive: False
-  #  model: en_core_web_lg
-  - name: SpacyTokenizer
-  - name: SpacyFeaturizer
+  # - name: SpacyNLP
+  #   model: en_core_web_md
+  #   case_sensitive: False
+  - name: ConveRTTokenizer
+  - name: ConveRTFeaturizer
+    model_url: "https://github.com/connorbrinton/polyai-models/releases/download/v1.0/model.tar.gz"
+  # - name: SpacyTokenizer
+  # - name: SpacyFeaturizer
   - name: RegexFeaturizer
     case_sensitive: False
     use_word_boundaries: True
-  - name: LexicalSyntacticFeaturizer
-  - name: CountVectorsFeaturizer
-  - name: CountVectorsFeaturizer
-    analyzer: char_wb
-    min_ngram: 1
-    max_ngram: 4
   - name: DIETClassifier
     epochs: 100
     constrain_similarities: true
-#     intent_tokenization_flag: True
-#     intent_split_symbol: "+"
-#  - name: MitieEntityExtractor
-#  - name: CRFEntityExtractor
   - name: RegexEntityExtractor
     case_sensitive: False
     use_regexes: True
