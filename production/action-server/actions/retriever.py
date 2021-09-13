@@ -4,7 +4,6 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from .intent_map import get_columns
 from .database import DatabaseConnector
-from rasa_sdk.events import SlotSet
 
 
 class Retrieve(Action):    
