@@ -95,7 +95,8 @@ nlu:
     - how can i interpret my [myelography](entity_name) test results?
     - can you help me understand my [neurological exam](entity_name) test results?
     - Is it possible to interpret my [urobilinogen in urine](entity_name) results
-
+    - What can I do if I don't understand my [creatine kinase](entity_name) results
+    
 - intent: lab_prepare
   examples: |
     - i want to know how should i prepare for my test.
@@ -130,6 +131,7 @@ nlu:
     - When taking [lomotil](entity_name), what should I avoid?
     - what should i not do when using [latuda](entity_name)?
     - Is [lo-loestrin-fe](entity_name) safe to take when you are pregnant?
+    - When using [soliqua](entity_name), what should I be aware of?
 
 - intent: drug_dosage
   examples: |
