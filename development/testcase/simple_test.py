@@ -65,53 +65,38 @@ class TestRasaMethods(unittest.TestCase):
     # test_result_core = asyncio.run(async_test_results_core)
 
     # Test f1_score of intents
-    # def test_f1_intent(self):
-    #     threshold = 0.2
-    #     test_result = self.test_result
-    #     # Check if intent extractor is in the pipeline
-    #     if test_result['intent_evaluation'] is not None:
-    #         # Check if multiple intent extractors are in the pipeline
-    #         if 'report' not in test_result['intent_evaluation']:
-    #             for intent in test_result['intent_evaluation']:
-    #                 f1_score = test_result['intent_evaluation'][intent]['f1_score']
-    #                 print(f1_score)
-    #                 self.assertTrue(f1_score > threshold)
-    #         else:
-    #             f1_score = test_result['intent_evaluation']['f1_score']
-    #             print(f1_score)
-    #             self.assertTrue(f1_score > threshold)
+    def test_f1_intent(self):
+        threshold = 1
+        test_result = self.test_result
+        # Check if intent extractor is in the pipeline
+        if test_result['intent_evaluation'] is not None:
+            # Check if multiple intent extractors are in the pipeline
+            if 'report' not in test_result['intent_evaluation']:
+                for intent in test_result['intent_evaluation']:
+                    f1_score = test_result['intent_evaluation'][intent]['f1_score']
+                    print(f1_score)
+                    self.assertTrue(f1_score >= threshold)
+            else:
+                f1_score = test_result['intent_evaluation']['f1_score']
+                print(f1_score)
+                self.assertTrue(f1_score >= threshold)
 
     # Test f1_score of entities
     def test_f1_entity(self):
-        threshold = 0.2
+        threshold = 1
         test_result = self.test_result
         # Check if entity extractor is in the pipeline
         if test_result['entity_evaluation'] is not None:
             # Check if multiple entity extractors are in the pipeline
             if 'report' not in test_result['entity_evaluation']:
                 f1_score = test_result['entity_evaluation']['RegexEntityExtractor']['f1_score']
-                self.assertTrue(f1_score > threshold)
+                print(f1_score)
+                self.assertTrue(f1_score >= threshold)
             else:
                 f1_score = test_result['entity_evaluation']['f1_score']
                 print(f1_score)
-                self.assertTrue(f1_score > threshold)
+                self.assertTrue(f1_score >= threshold)
 
-    # # Test f1_score of reponse selectors
-    # def test_f1_response_selector(self):
-    #     threshold = 0.2
-    #     test_result = self.test_result
-    #     # Check if reponse selectors is in the pipeline
-    #     if test_result['response_selection_evaluation'] is not None:
-    #         # Check if multiple reponse selectors are in the pipeline   
-    #         if 'report' not in test_result['response_selection_evaluation']:
-    #             for entity in test_result['response_selection_evaluation']:
-    #                 f1_score = test_result['response_selection_evaluation'][entity]['f1_score']
-    #                 print(f1_score)
-    #                 self.assertTrue(f1_score > threshold)
-    #         else:
-    #             f1_score = test_result['response_selection_evaluation']['f1_score']
-    #             print(f1_score)
-    #             self.assertTrue(f1_score > threshold)
 
     # Check f1_score of the rasa core - Test stories
     # def test_f1_core(self):
