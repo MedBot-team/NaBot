@@ -49,7 +49,6 @@ intents:
   # Chitchat
   - greet
   - goodbye
-  - thank
   - bot_challenge
   - bot_usage
   # FAQ
