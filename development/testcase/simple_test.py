@@ -37,33 +37,6 @@ class TestRasaMethods(unittest.TestCase):
                                        )
     test_result = asyncio.run(async_test_result)
 
-    # # Typo NLU tests data
-    # test_data_typo = './production/rasa-server/rasa/train_test_split/test_data_typo.yml'
-
-    # async_test_result_typo = run_evaluation(test_data_typo,
-    #                                         nlu_model,
-    #                                         successes=True,
-    #                                         errors=True,
-    #                                         output_directory=f'/tmp/{tmp_name}',
-    #                                         disable_plotting=True,
-    #                                         report_as_dict=True,
-    #                                         )
-    # test_result_typo = asyncio.run(async_test_result_typo)
-
-    # """
-    # CORE TEST
-    # """
-    # # Normal Core test data
-    # test_story = './production/rasa-server/rasa/tests/test_stories.yml'
-
-    # _agent = Agent.load(unpacked_model)
-    # async_test_results_core = core_test(test_story,
-    #                                     _agent,
-    #                                     e2e=False,
-    #                                     disable_plotting=True,
-    #                                     )
-    # test_result_core = asyncio.run(async_test_results_core)
-
     # Test f1_score of intents
     def test_f1_intent(self):
         threshold = 1
@@ -96,15 +69,6 @@ class TestRasaMethods(unittest.TestCase):
                 f1_score = test_result['entity_evaluation']['f1_score']
                 print(f1_score)
                 self.assertTrue(f1_score >= threshold)
-
-
-    # Check f1_score of the rasa core - Test stories
-    # def test_f1_core(self):
-    #     threshold = 0.2
-    #     test_result = self.test_result_core
-
-    #     f1_score = test_result['f1']
-    #     self.assertTrue(f1_score > threshold)
 
 
 if __name__ == '__main__':
