@@ -61,6 +61,11 @@ rules:
   - action: entity_form
   - active_loop: entity_form
 
+- rule: Ask to rephrase
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+
 - rule: Say hi anytime the user says hi 
   steps:
     - intent: greet 

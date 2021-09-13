@@ -31,6 +31,9 @@ responses:
   
   utter_cant_answer:
     - text: "Sorry, I can't answer that."
+  
+  utter_please_rephrase:
+    - text: I'm sorry, I didn't quite understand that. Could you rephrase?
 
 entities:
   - entity_name
