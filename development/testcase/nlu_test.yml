@@ -27,7 +27,6 @@ nlu:
 
 - intent: lab_result
   examples: |
-    - What can I do if I don't understand my [creatine kinase](entity_name) results
     - help me to understand this test result 
     - Could you explain my results from the [pleural fluid analysis](entity_name) test to me?
     - i can't understand my lab result, help me 
@@ -38,7 +37,7 @@ nlu:
     - Am I required to do anything before my test
     - Will I need to do anything to prepare for the [hiv screening](entity_name)?
     - Could you provide some advice about how to prep for an [uric acid test](entity_name)?
-    # - How can I prepare myself for an [fobt](entity_name)
+    - How can I prepare myself for an [fobt](entity_name)
 
 - intent: lab_during
   examples: |
@@ -50,7 +49,6 @@ nlu:
   examples: |
     - What warnings do you have about [acetaminophen](entity_name)
     - What are the warnings about [bryhali](entity_name)?
-    - When using [soliqua](entity_name), what should I be aware of?
     - Would you pls tell me about the warnings of [aimovig](entity_name)
     - what is warnings of the drug? 
 
