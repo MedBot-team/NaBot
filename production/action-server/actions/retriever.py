@@ -21,13 +21,6 @@ class Retrieve(Action):
                                     password=password,
                                     database=database,
                                     )
-        # self.like_buttons = [
-        #         {"payload": "/good_response", "title": "👍🏻"},
-        #         {"payload": "/bad_response", "title": "👎🏻"},
-        #         ]
-        # self.addition_button = [{"payload": "/addition_request", 
-        #                          "title": "request addition to database"},]
-        # self.button_type='inline'
     
     def name(self) -> Text:
         return "retrieve"
