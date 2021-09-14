@@ -104,7 +104,7 @@ AND timestamp >= {past_timestamp};")
             'good_response', 'bad_response']]
         return feedbacks
     
-    def get_question(self, datas):
+    def get_questions(self, datas):
         questions = []
         for data in datas:
             dictionary = self.__data2dict(data)
