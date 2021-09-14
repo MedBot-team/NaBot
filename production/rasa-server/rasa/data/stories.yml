@@ -2,16 +2,76 @@ version: "2.0"
 
 stories:
 
-# - story: only drug info path
+# - story: path
 #   steps:
 #   - intent: greet
 #   - action: utter_greet
-#   - intent: request_drug
-#   - action: drugs_form
-#   - active_loop: drugs_form
-#   - intent: mood_great
-#   - action: utter_any_more_questions
-#   - intent: deny
+#   - or:  
+#     - intent: what_is
+#     - intent: usage
+#     - intent: risk
+#     - intent: lab_result
+#     - intent: lab_prepare
+#     - intent: lab_during
+#     - intent: drug_warning
+#     - intent: drug_dosage
+#     - intent: drug_interaction
+#     - intent: drug_sideeffects
+#   - slot_was_set:
+#       - entity_name
+#   - action: intent_set
+#   - action: retrieve
+#   - or:  
+#     - intent: what_is
+#     - intent: usage
+#     - intent: risk
+#     - intent: lab_result
+#     - intent: lab_prepare
+#     - intent: lab_during
+#     - intent: drug_warning
+#     - intent: drug_dosage
+#     - intent: drug_interaction
+#     - intent: drug_sideeffects
+#   - action: intent_set
+#   - action: retrieve
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - story: pathh
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - or:  
+#     - intent: what_is
+#     - intent: usage
+#     - intent: risk
+#     - intent: lab_result
+#     - intent: lab_prepare
+#     - intent: lab_during
+#     - intent: drug_warning
+#     - intent: drug_dosage
+#     - intent: drug_interaction
+#     - intent: drug_sideeffects
+#   - slot_was_set:
+#       - entity_name
+#   - action: intent_set
+#   - action: retrieve
+#   - or:  
+#     - intent: what_is
+#     - intent: usage
+#     - intent: risk
+#     - intent: lab_result
+#     - intent: lab_prepare
+#     - intent: lab_during
+#     - intent: drug_warning
+#     - intent: drug_dosage
+#     - intent: drug_interaction
+#     - intent: drug_sideeffects
+#   - slot_was_set:
+#       - entity_name
+#   - action: intent_set
+#   - action: retrieve
+#   - intent: goodbye
 #   - action: utter_goodbye
 
 # - story: complete request drug info
