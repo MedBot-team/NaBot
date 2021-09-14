@@ -139,4 +139,9 @@ dmypy.json
 
 # Personal scripts
 production/rasa-server/rasa/my_rasa_run.sh
-domain.yml
+
+# Weights
+production/rasa-server/rasa/weights
+
+# Files
+./domain.yml
