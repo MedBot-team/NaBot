@@ -144,4 +144,4 @@ production/rasa-server/rasa/my_rasa_run.sh
 production/rasa-server/rasa/weights
 
 # Files
-./domain.yml
+domain.yml
