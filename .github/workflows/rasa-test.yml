@@ -54,25 +54,17 @@ jobs:
       - name: Download model weights
         run: |
           mkdir ./production/rasa-server/rasa/models/
-          wget -q https://www.dropbox.com/s/u1o8s2u96lpt8cv/${{ steps.vars.outputs.tag }}.tar.gz \
+          wget -q https://www.dropbox.com/s/304elqbdfptcyvl/${{ steps.vars.outputs.tag }}.tar.gz \
           -P ./production/rasa-server/rasa/models/
       
-      # Download Spacy weights
-      - name: Download spacy weights
+      # Download and extract ConveRT weights
+      - name: Download ConveRT weights
         run: |
-          python -m spacy download en_core_web_md
-      
-      # Download autocorrect module dictionary
-      - name: Copy autocorrect module from production and download autocorrect dictionary
-        run: | 
-          cp -r ./production/rasa-server/autocorrect/ ./development/testcase/
-          mkdir -p ./development/testcase/autocorrect/data/
-          python -c "import sys; sys.path.insert(0, './development/testcase/'); import autocorrect; autocorrect.Speller('en_med')"
-          
-      # Copy spell-checker script to the development directory
-      - name: Copy spell_checker script
-        run: |
-          cp ./production/rasa-server/rasa/spell_checker.py ./development/testcase/
+          mkdir -p /rasa-server/rasa/weights/model 
+          wget -q https://github.com/connorbrinton/polyai-models/releases/download/v1.0/model.tar.gz \
+          -P /rasa-server/rasa/weights/
+          tar -xvzf /rasa-server/rasa/weights/model.tar.gz -C /rasa-server/rasa/weights/model
+          rm /rasa-server/rasa/weights/model.tar.gz
       
       # Copy domain file to the test directory
       - name: Copy domain.yml file
@@ -82,4 +74,4 @@ jobs:
       # Run test units
       - name: Test with unittest
         run: |
-          python ./development/testcase/rasa_test.py
+          python ./development/testcase/simple_test.py
