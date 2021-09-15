@@ -30,12 +30,10 @@ punctuation = punctuation.replace("'", "")
 def read_examples(file_path: str) -> Iterator[Tuple[str, List[str]]]:
     """Read examples json file that read line by line a json 
     file include a dict with a correct text and five typo examples
-
     Parameters
     ----------
     file_path : str
         address of json file
-
     Yields
     -------
     Iterator[Tuple[str, List[str]]]
