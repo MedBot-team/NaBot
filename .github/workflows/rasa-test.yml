@@ -67,10 +67,11 @@ jobs:
           -C ./production/rasa-server/rasa/weights/model 
           rm ./production/rasa-server/rasa/weights/model.tar.gz
       
-      # Copy domain file to the test directory
-      - name: Copy domain.yml file
+      # Copy domain and weight files to the test directory
+      - name: Copy domain.yml file and convert weights
         run: |
           cp ./production/rasa-server/rasa/domain.yml .
+          cp -r ./production/rasa-server/rasa/weights .
       
       # Run test units
       - name: Test with unittest
