@@ -60,11 +60,12 @@ jobs:
       # Download and extract ConveRT weights
       - name: Download ConveRT weights
         run: |
-          mkdir -p /rasa-server/rasa/weights/model 
+          mkdir -p ./production/rasa-server/rasa/weights/model 
           wget -q https://github.com/connorbrinton/polyai-models/releases/download/v1.0/model.tar.gz \
-          -P /rasa-server/rasa/weights/
-          tar -xvzf /rasa-server/rasa/weights/model.tar.gz -C /rasa-server/rasa/weights/model
-          rm /rasa-server/rasa/weights/model.tar.gz
+          -P ./production/rasa-server/rasa/weights/
+          tar -xvzf ./production/rasa-server/rasa/weights/model.tar.gz \
+          -C ./production/rasa-server/rasa/weights/model 
+          rm ./production/rasa-server/rasa/weights/model.tar.gz
       
       # Copy domain file to the test directory
       - name: Copy domain.yml file
