@@ -1,4 +1,5 @@
 import os
+import sys
 import random
 import string
 import asyncio
@@ -7,6 +8,9 @@ from rasa.model import get_model
 from rasa.core.agent import Agent
 from rasa.nlu.test import run_evaluation
 from rasa.core.test import test as core_test
+
+path = './production/rasa-server/rasa/'
+sys.path.append(path)
 
 
 class TestRasaMethods(unittest.TestCase):

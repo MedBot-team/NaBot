@@ -1,0 +1,99 @@
+version: "2.0"
+
+nlu:
+- intent: what_is
+  examples: |
+    - what is [atenolol](entity_name)?
+    - [benazepril](entity_name)
+    - tell me what is this
+    - give me info about it.
+
+- intent: usage
+  examples: |
+    - why do i need [baclofen](entity_name)?
+    - When is [platelet tests](entity_name) useful?
+    - Uses of it?
+    - when i need [anion gap blood](entity_name)?
+    - What is the purpose of the [ketones in urine](entity_name)?
+
+- intent: risk
+  examples: |
+    - is it Harmful for body?
+    - What is the risk of an [complete blood count](entity_name)
+    - is [yeast infection tests](entity_name) risky?
+    - What is the risk of having an [strep a test](entity_name)?
+    - is [shbg blood](entity_name) dangerous?
+
+- intent: lab_result
+  examples: |
+    - help me to understand this test result 
+    - Could you explain my results from the [pleural fluid analysis](entity_name) test to me?
+    - i can't understand my lab result, help me 
+
+- intent: lab_prepare
+  examples: |
+    - Am I required to do anything before my test
+    - Will I need to do anything to prepare for the [hiv screening](entity_name)?
+    - Could you provide some advice about how to prep for an [uric acid test](entity_name)?
+    - How can I prepare myself for an [fobt](entity_name)
+
+- intent: lab_during
+  examples: |
+    - During the [nasal swab](entity_name), what happens?
+    - What do I need to do during test?
+    - What happens during an [immunoglobulins blood test](entity_name)?
+
+- intent: drug_warning
+  examples: |
+    - What warnings do you have about [acetaminophen](entity_name)
+    - What are the warnings about [bryhali](entity_name)?
+    - Would you pls tell me about the warnings of [aimovig](entity_name)
+    - what is warnings of the drug? 
+
+- intent: drug_dosage
+  examples: |
+    - I need information on [berinert](entity_name) dosage.
+    - Give me [advil](entity_name) dosage information.
+    - How much [nebivolol](entity_name) should I take.
+    - How many times per day can I take [kevzara](entity_name)?
+    - tell me what [xofluza](entity_name) dosage I need.
+
+- intent: drug_interaction
+  examples: |
+    - How does [trazodone](entity_name) interact with other drugs?
+    - What other drugs will affect [alunbrig](entity_name)?
+    - Which drugs should not be taken with [glucagon](entity_name)
+
+- intent: drug_sideeffects
+  examples: |
+    - What are [gemfibrozil](entity_name) side effects?
+    - Are there any [jadenu](entity_name) sideeffects?
+    - What are its side effects?
+    - [ketamine](entity_name) side effects?
+    - Are there any side-effects associated with [vraylar](entity_name)?
+    - What are the side effects of this drug?
+
+- intent: greet
+  examples: |
+    - hello
+    - hey
+    - hi
+
+- intent: goodbye
+  examples: |
+    - bye
+    - i'll catch you later
+    - thanks bye
+
+- intent: new_issue
+  examples: |
+    - I want some information about a drug.
+    - I need some information about a pill.
+    - I'm looking for lab test details. 
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?

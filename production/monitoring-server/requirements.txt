@@ -2,4 +2,8 @@ streamlit==0.86.0
 python-decouple==3.4
 matplotlib==3.4.2
 seaborn==0.11.1
-mysql-connector-python==8.0.26
+psycopg2-binary==2.9.1
+spacy==3.1.2
+altair==4.1.0
+whatlies==0.6.3
+nlpaug==1.1.7

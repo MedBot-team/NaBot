@@ -2,108 +2,168 @@ version: "2.0"
 
 stories:
 
-- story: only drug info path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: request_drug
-  - action: drugs_form
-  - active_loop: drugs_form
-  - intent: mood_great
-  - action: utter_any_more_questions
-  - intent: deny
-  - action: utter_goodbye
+# - story: path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - or:  
+#     - intent: what_is
+#     - intent: usage
+#     - intent: risk
+#     - intent: lab_result
+#     - intent: lab_prepare
+#     - intent: lab_during
+#     - intent: drug_warning
+#     - intent: drug_dosage
+#     - intent: drug_interaction
+#     - intent: drug_sideeffects
+#   - slot_was_set:
+#       - entity_name
+#   - action: intent_set
+#   - action: retrieve
+#   - or:  
+#     - intent: what_is
+#     - intent: usage
+#     - intent: risk
+#     - intent: lab_result
+#     - intent: lab_prepare
+#     - intent: lab_during
+#     - intent: drug_warning
+#     - intent: drug_dosage
+#     - intent: drug_interaction
+#     - intent: drug_sideeffects
+#   - action: intent_set
+#   - action: retrieve
+#   - intent: goodbye
+#   - action: utter_goodbye
 
-- story: complete request drug info
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: request_drug
-  - action: drugs_form
-  - active_loop: drugs_form
-  - or:
-    - intent: usage_drug
-    - intent: dosage_drug
-    - intent: interaction_drug
-    - intent: avoid_drug
-    - intent: sideeffects_drug
-    - intent: warnings_drug
-  - action: drug_retrieve
-  - action: utter_any_more_questions
-  - intent: deny
-  - action: utter_goodbye
+# - story: pathh
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - or:  
+#     - intent: what_is
+#     - intent: usage
+#     - intent: risk
+#     - intent: lab_result
+#     - intent: lab_prepare
+#     - intent: lab_during
+#     - intent: drug_warning
+#     - intent: drug_dosage
+#     - intent: drug_interaction
+#     - intent: drug_sideeffects
+#   - slot_was_set:
+#       - entity_name
+#   - action: intent_set
+#   - action: retrieve
+#   - or:  
+#     - intent: what_is
+#     - intent: usage
+#     - intent: risk
+#     - intent: lab_result
+#     - intent: lab_prepare
+#     - intent: lab_during
+#     - intent: drug_warning
+#     - intent: drug_dosage
+#     - intent: drug_interaction
+#     - intent: drug_sideeffects
+#   - slot_was_set:
+#       - entity_name
+#   - action: intent_set
+#   - action: retrieve
+#   - intent: goodbye
+#   - action: utter_goodbye
 
-- story: only test info
-  steps:
-  - intent: request_lab
-  - action: labs_form
-  - active_loop: labs_form
-  - intent: mood_great
-  - action: utter_goodbye
+# - story: complete request drug info
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: request_drug
+#   - action: drugs_form
+#   - active_loop: drugs_form
+#   - or:
+#     - intent: usage_drug
+#     - intent: dosage_drug
+#     - intent: interaction_drug
+#     - intent: avoid_drug
+#     - intent: sideeffects_drug
+#     - intent: warnings_drug
+#   - action: drug_retrieve
+#   - action: utter_any_more_questions
+#   - intent: deny
+#   - action: utter_goodbye
 
-- story: request lab and drug info
-  steps:
-  - intent: detail_lab
-  - action: lab_retrieve
-  - intent: prepare_lab
-  - action: lab_retrieve
-  - intent: avoid_drug
-  - action: drug_retrieve
-  - intent: request_lab
-  - action: labs_form
-  - active_loop: labs_form
+# - story: only test info
+#   steps:
+#   - intent: request_lab
+#   - action: labs_form
+#   - active_loop: labs_form
+#   - intent: mood_great
+#   - action: utter_goodbye
+
+# - story: request lab and drug info
+#   steps:
+#   - intent: detail_lab
+#   - action: lab_retrieve
+#   - intent: prepare_lab
+#   - action: lab_retrieve
+#   - intent: avoid_drug
+#   - action: drug_retrieve
+#   - intent: request_lab
+#   - action: labs_form
+#   - active_loop: labs_form
   
-- story: drug warning path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - or:
-    - intent: usage_drug
-    - intent: dosage_drug
-    - intent: interaction_drug
-    - intent: avoid_drug
-    - intent: sideeffects_drug
-    - intent: warnings_drug
-  - action: drug_retrieve
-  - intent: mood_great
-  - action: utter_any_more_questions
-  - intent: deny
-  - action: utter_goodbye
+# - story: drug warning path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - or:
+#     - intent: usage_drug
+#     - intent: dosage_drug
+#     - intent: interaction_drug
+#     - intent: avoid_drug
+#     - intent: sideeffects_drug
+#     - intent: warnings_drug
+#   - action: drug_retrieve
+#   - intent: mood_great
+#   - action: utter_any_more_questions
+#   - intent: deny
+#   - action: utter_goodbye
 
-- story: long complex request info
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: request_drug
-  - action: drugs_form
-  - active_loop: drugs_form
-  - intent: mood_great
-  - action: utter_any_more_questions
-  - intent: affirm
-  - action: utter_how_can_help
-  - or:
-    - intent: usage_drug
-    - intent: dosage_drug
-    - intent: interaction_drug
-    - intent: avoid_drug
-    - intent: sideeffects_drug
-    - intent: warnings_drug
-  - action: drug_retrieve
-  - intent: mood_great
-  - action: utter_any_more_questions
-  - intent: affirm
-  - action: utter_how_can_help
-  - or:
-    - intent: detail_lab
-    - intent: during_lab
-    - intent: any_detail_lab
-    - intent: need_lab
-    - intent: prepare_lab
-    - intent: result_lab
-    - intent: risk_lab
-    - intent: usage_lab
-  - action: lab_retrieve
-  - intent: mood_great
-  - action: utter_any_more_questions
-  - intent: deny
-  - action: utter_goodbye
+# - story: long complex request info
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: request_drug
+#   - action: drugs_form
+#   - active_loop: drugs_form
+#   - intent: mood_great
+#   - action: utter_any_more_questions
+#   - intent: affirm
+#   - action: utter_how_can_help
+#   - or:
+#     - intent: usage_drug
+#     - intent: dosage_drug
+#     - intent: interaction_drug
+#     - intent: avoid_drug
+#     - intent: sideeffects_drug
+#     - intent: warnings_drug
+#   - action: drug_retrieve
+#   - intent: mood_great
+#   - action: utter_any_more_questions
+#   - intent: affirm
+#   - action: utter_how_can_help
+#   - or:
+#     - intent: detail_lab
+#     - intent: during_lab
+#     - intent: any_detail_lab
+#     - intent: need_lab
+#     - intent: prepare_lab
+#     - intent: result_lab
+#     - intent: risk_lab
+#     - intent: usage_lab
+#   - action: lab_retrieve
+#   - intent: mood_great
+#   - action: utter_any_more_questions
+#   - intent: deny
+#   - action: utter_goodbye

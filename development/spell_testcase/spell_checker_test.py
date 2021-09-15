@@ -3,80 +3,78 @@
 Warning: This test may take a long time in the case of numerous examples
 """
 ################################################################
-
-# Define Rasa spell checker path
+from typing import Iterator, List, Tuple
 import sys
+import json
+import unittest
+from string import punctuation
+# Define Rasa spell checker path
 path = '../../production/rasa-server/rasa/'
 sys.path.append(path)
-# Import Modules
-import unittest
-import nlpaug.augmenter.char as nac
-from string import punctuation
 from spell_checker import SpellChecker
 
 
-# Path of dictionaries
-dictionary_path = f"{path}dictionary/frequency_dictionary.txt"
-med_dictionary_path = f"{path}dictionary/frequency_med_dictionary.txt"
-bigram_path = f"{path}dictionary/frequency_bigramdictionary.txt"
-med_bigram_path = f"{path}dictionary/frequency_med_bigramdictionary.txt"
-
+dictionary_path: str = f"{path}dictionary/frequency_dictionary.txt"
+med_dictionary_path: str = f"{path}dictionary/frequency_med_dictionary.txt"
+bigram_path: str = f"{path}dictionary/frequency_bigramdictionary.txt"
+med_bigram_path: str = f"{path}dictionary/frequency_med_bigramdictionary.txt"
+test_exampels_path: str = "augmented_examples_test.json"
 
 # Load spell checker component of rasa
-check = SpellChecker(dictionary_path, med_dictionary_path, bigram_path, med_bigram_path)
+check: object = SpellChecker(
+    dictionary_path, med_dictionary_path, bigram_path, med_bigram_path)
 # Remove ' from punctuations
 punctuation = punctuation.replace("'", "")
 
-# Apply typo error simulation to textual input
-aug = nac.KeyboardAug(
-    aug_char_min=1,
-    aug_char_max=4,
-    aug_word_min=1,
-    aug_word_max=2,
-    include_special_char=False,
-    include_numeric=False,
-    include_upper_case=False,
-)
 
-def add_typo(word):
-    return aug.augment(word)
+def read_examples(file_path: str) -> Iterator[Tuple[str, List[str]]]:
+    """Read examples json file that read line by line a json 
+    file include a dict with a correct text and five typo examples
+    Parameters
+    ----------
+    file_path : str
+        address of json file
+    Yields
+    -------
+    Iterator[Tuple[str, List[str]]]
+        yields correct text and a list of five typo texts
+    """
+    with open(file_path) as f:
+        inp: list = json.load(f)
+        for texts_noises in inp:
+            text: str = next(iter(texts_noises.keys()))
+            noises: List[str] = next(iter(texts_noises.values()))
+            text = text.strip()
+            text = text.translate(str.maketrans('', '', punctuation))
 
-# Read examples file line by line
-def read_file():
-    with open("examples.txt") as f:
-        for line in f:
-            line = line.strip()
-            line = line.translate(str.maketrans('', '', punctuation))
-            yield line
+            yield text, noises
 
-# Test how many of correct sentences remains unchanged 
+
 class TestCorrectWords(unittest.TestCase):
     def test_spell(self):
-        correct_threshold = 0.95
-        corrects = [line == check.correct(line) for line in read_file()]    
-        correct_percent = sum(corrects) / len(corrects)
-        # print(correct_percent)
+        """Test how percent of correct sentences remains unchanged
+        """
+        correct_threshold: float = 0.95
+        corrects: List[bool] = [t == check.correct(t) for t, _ in
+                                read_examples(test_exampels_path)]
+        correct_percent: float = sum(corrects) / len(corrects)
+
         self.assertTrue(correct_percent >= correct_threshold)
 
-# Test how many of typo contained sentences can be corrected
+
 class TestTypoWords(unittest.TestCase):
     def test_noise(self):
-        typo_threshold = 0.4
-        corrects = []
-        for line in read_file():
+        """Test how many of typo contained sentences can be corrected
+        """
+        typo_threshold: float = 0.4
+        corrects: List[bool] = []
+        for t, n in read_examples(test_exampels_path):
             # Add typo 5 times, differently
-            for _ in range(5):
-                typo = add_typo(line)
-                correction = check.correct(typo)
-                corrects.append(correction == line)
-                # if correction != line:
-                #     print("original ==>", line)
-                #     print("with typo ==> ", typo)
-                #     print("after correction ==> ", correction)
-        correct_percent = sum(corrects) / len(corrects)
-        # print(correct_percent)
+            corrects.extend([t == check.correct(typo) for typo in n])
+        correct_percent: float = sum(corrects) / len(corrects)
+
         self.assertTrue(correct_percent >= typo_threshold)
 
-# Run unittests
+
 if __name__ == '__main__':
     unittest.main()
