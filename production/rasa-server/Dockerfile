@@ -35,7 +35,7 @@ WORKDIR /rasa-server
 COPY rasa ./rasa
 # Pass the version of model weights as an argument to the dockerfile. 
 # The default value is the latest (v0.1.0) version tag.
-# This version should be the same as the MedBot version you've cloned.
+# This version should be the same as the NaBot version you've cloned.
 ARG VERSION=v0.2.0
 # Download rasa model weights
 RUN mkdir -p /rasa-server/rasa/models && \

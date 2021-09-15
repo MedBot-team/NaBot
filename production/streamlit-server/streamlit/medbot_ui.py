@@ -13,10 +13,10 @@ if 'user_id' not in st.session_state:
 url = config('RASA_SERVER_URL')
 
 # Page header texts
-st.set_page_config(page_title="MedBot")
+st.set_page_config(page_title="NaBot")
 
 st.markdown("<h1 style='text-align: center; color:grey;'>\
-             MedBot</h1>", unsafe_allow_html=True)
+             NaBot</h1>", unsafe_allow_html=True)
 
 st.markdown("<h3 style='text-align: center; color: grey;'>\
              Ask your medical questions 👩‍⚕️ </h3>", unsafe_allow_html=True)
@@ -24,18 +24,18 @@ st.write('')
 
 # Show GitHub page badge
 """
-[![Star](https://img.shields.io/github/stars/arezae/chatbot.svg?logo=github&style=social)](https://gitHub.com/arezae/chatbot)
+[![Star](https://img.shields.io/github/stars/MedBot-team/NaBot.svg?logo=github&style=social)](https://gitHub.com/MedBot-team/NaBot)
 """
 
 st.markdown('___')
 
 # Page sidebar 
 # sidebar header
-st.sidebar.header('About MedBot')
+st.sidebar.header('About NaBot')
 st.sidebar.write('')
 # sidebar text
 st.sidebar.markdown("<h4 style='text-align: left; color:grey;'>\
-                    MedBot is a Rasa-based, smart medical chatbot.\
+                    NaBot is a Rasa-based, smart medical chatbot.\
                     It can retrieve medicines and lab tests information\
                     for users just by chatting with it.</h4>", unsafe_allow_html=True)
 
@@ -47,7 +47,7 @@ st.sidebar.write('')
 # add expander to the sidebar for website detail
 site_expander = st.sidebar.expander('Website')
 site_expander.markdown(
-    "[MedBot instruction](https://arezae.github.io/chatbot/)")
+    "[NaBot instruction](https://medbot-team.github.io/NaBot)")
 
 # add expander to the sidebar for some conversation examples
 exm_expander = st.sidebar.expander('Conversation Example')
