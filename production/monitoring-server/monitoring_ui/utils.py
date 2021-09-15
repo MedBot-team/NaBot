@@ -1,99 +1,55 @@
 import json
-import mysql.connector
-from datetime import datetime, timedelta
+import spacy
+import requests
+import altair as alt
+from spacy import displacy
+from spacy.tokens import Doc
 
 
-class Monitoring():
-    def __init__(self, host, user, password, database):
-        super(Monitoring, self).__init__()
-        # Connect to the MySQL server
-        self.db = mysql.connector.connect(
-            host=host,
-            user=user,
-            password=password,
-            database=database)
+def create_displacy_chart(tokens, entities):
+    nlp = spacy.blank("en")
+    doc = Doc(nlp.vocab, words=tokens, spaces=[True for _ in tokens])
 
-    # Find number of days from user statement
-    def __day_mapper(self, statement):
-        day = {'Last 24 hour': 1,
-               'Last week': 7,
-               'Last month': 30}
+    taken = []
+    conf = 0
+    for ent in entities:
+        label = ""
+        if (ent["start"], ent["end"]) not in taken:
+            if ent["extractor"] == "DIETClassifier":
+                conf = ent["confidence_entity"]
 
-        return day[statement]
+            if conf != 0:
+                label = ent["entity"] + " " + f"({str(round(conf, 2))})"
+            else:
+                label = ent["entity"]
+            
+            span = doc.char_span(ent["start"], ent["end"], label=label)
+            doc.ents = list(doc.ents) + [span]
+            taken.append((ent["start"], ent["end"]))
 
-    # Return timestamp of X days ago
-    def __past_timestamp(self, past_days):
-        delta = timedelta(days=past_days)
-        now = datetime.now()
-        past_time = now - delta
-        past_timestamp = round(past_time.timestamp())
-        return past_timestamp
+    return displacy.render(doc, style="ent")
 
-    # Get list of events from database
-    def get_events(self, statement):
-        past_days = self.__day_mapper(statement)
-        past_timestamp = self.__past_timestamp(past_days)
 
-        cursor = self.db.cursor()
+def create_altair_chart(dataf):
+    return (
+        alt.Chart(dataf)
+        .mark_bar()
+        .encode(
+            y="name:N",
+            x="confidence:Q",
+            tooltip=["name", "confidence"],
+        )
+    )
 
-        cursor.execute(f"SELECT intent_name, data \
-FROM events \
-WHERE type_name = 'user' \
-AND timestamp >= {past_timestamp};")
 
-        events = [item for item in list(cursor)]
-        return events
+def get_api(question: str, token: str) -> dict:
+    reqUrl = f"https://api.nabot.ml/model/parse?token={token}"
+    
+    payload = json.dumps({
+        "text": question
+    })
 
-    # Extract list of intents from database
-    def get_intents(self, events):
-        intents = [event[0] for event in events]
-        return intents
+    response = requests.request("POST", reqUrl, data=payload)
+    answer = json.loads(response.text)
 
-    # Extract list of `data` from events
-    def get_datas(self, events):
-        datas = [event[1] for event in events]
-        return datas
-
-    # Convert data from string to python dictionary
-    def __data2dict(self, data):
-        # json_acceptable_string = data.replace("'", "\"")
-        # dictionary = json.loads(json_acceptable_string)
-        dictionary = json.loads(data)
-        return dictionary
-
-    # Get important variables from datas by parsing the data
-    def get_variables(self, datas):
-        intent_confidences = []
-        entity_confidences = []
-        timestamps = []
-        input_channels = []
-        entity_extractors = []
-
-        for data in datas:
-            dictionary = self.__data2dict(data)
-
-            intent_confidences.append(
-                dictionary['parse_data']['intent']['confidence'])
-
-            timestamps.append(dictionary['timestamp'])
-            input_channels.append(dictionary['input_channel'])
-
-            entity_extractors += [entity['extractor']
-                                  for entity in dictionary['parse_data']['entities']]
-
-            entity_confidences += [entity['confidence_entity']
-                                   for entity in dictionary['parse_data']['entities'] if 'confidence_entity' in entity.keys()]
-
-        return intent_confidences, entity_confidences, timestamps, input_channels, entity_extractors
-
-    # Convert timestamps to YYYY-MM-DD format
-    def convert_date(self, timestamps):
-        dates = [datetime.fromtimestamp(timestamp).strftime(
-            '%Y-%m-%d') for timestamp in timestamps]
-        return dates
-
-    # Extract list of feedbacks from datas
-    def get_feedbacks(self, intents):
-        feedbacks = [intent for intent in intents if intent in [
-            'good_response', 'bad_response']]
-        return feedbacks
+    return answer
