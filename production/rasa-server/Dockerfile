@@ -29,9 +29,6 @@ RUN python -m venv /opt/venv && \
     pip wheel --requirement=requirements.txt --wheel-dir=wheels && \
     pip install --no-deps wheels/*.whl && \
     rm -rf wheels *.egg-info
-# Download spacy model weights 
-RUN python -m spacy download en_core_web_md && \
-    python -m spacy link en_core_web_md en
 
 WORKDIR /rasa-server
 # Copy rasa config files from the host
@@ -39,12 +36,17 @@ COPY rasa ./rasa
 # Pass the version of model weights as an argument to the dockerfile. 
 # The default value is the latest (v0.1.0) version tag.
 # This version should be the same as the MedBot version you've cloned.
-ARG VERSION=v0.1.0
+ARG VERSION=v0.2.0
 # Download rasa model weights
 RUN mkdir -p /rasa-server/rasa/models && \
-    wget -q https://www.dropbox.com/s/u1o8s2u96lpt8cv/$VERSION.tar.gz \
+    wget -q https://www.dropbox.com/s/304elqbdfptcyvl/$VERSION.tar.gz \
     -P /rasa-server/rasa/models/
-
+# Download and extract ConveRT model weights
+RUN mkdir -p /rasa-server/rasa/weights/model && \
+    wget -q https://github.com/connorbrinton/polyai-models/releases/download/v1.0/model.tar.gz \
+    -P /rasa-server/rasa/weights/ && \
+    tar -xvzf /rasa-server/rasa/weights/model.tar.gz -C /rasa-server/rasa/weights/model && \
+    rm /rasa-server/rasa/weights/model.tar.gz
 # Runtime stage
 FROM base AS runtime-stage
 # Copy installed libraries and rasa-server from the build stage 
