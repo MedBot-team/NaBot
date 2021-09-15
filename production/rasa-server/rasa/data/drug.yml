@@ -2,7 +2,7 @@ version: '2.0'
 
 nlu:
 
-- lookup: drug
+- lookup: entity_name
   examples: |
     - 1-day
     - 12-hour-nasal
@@ -1000,3 +1000,126 @@ nlu:
     - zyrtec
     - zytiga
     - zyvox
+    - 1 day
+    - 12 hour nasal
+    - 3m skin and nasal antiseptic
+    - 4 way
+    - 5 htp
+    - 5 hydroxytryptophan
+    - 8 mop
+    - abilify maintena injection
+    - adderall xr
+    - advair diskus
+    - aspir 81
+    - betamethasone topical
+    - bismuth subsalicylate
+    - breo ellipta
+    - breztri aerosphere
+    - buprenorphine and naloxone oral sublingual
+    - butalbital compound
+    - calcium carbonate
+    - carbidopa and levodopa
+    - cetirizine hcl
+    - clobetasol topical
+    - depo provera
+    - diastat acudial
+    - divalproex sodium
+    - effexor xr
+    - epipen auto injector
+    - ferrous gluconate
+    - flovent hfa
+    - fluocinonide topical
+    - fluticasone and salmeterol
+    - fluticasone nasal
+    - gas x
+    - ginkgo biloba
+    - glucosamine chondroitin with msm
+    - green tea
+    - gvoke hypopen injection
+    - hepatitis b adult vaccine
+    - humulin r
+    - humulin r concentrated u 500
+    - hydrochlorothiazide and lisinopril
+    - hydrochlorothiazide and losartan
+    - hydrochlorothiazide and olmesartan
+    - hydrochlorothiazide and triamterene
+    - hydrochlorothiazide and valsartan
+    - hydrocortisone topical
+    - hydroquinone topical
+    - incruse ellipta
+    - insulin detemir
+    - insulin glargine
+    - insulin lispro
+    - insulin regular
+    - invega sustenna
+    - isosorbide dinitrate
+    - janumet xr
+    - jentadueto xr
+    - jornay pm
+    - k dur
+    - ketoconazole topical
+    - ketorolac ophthalmic
+    - ketotifen ophthalmic
+    - klor con
+    - kombiglyze xr
+    - krill oil
+    - levodopa inhalation
+    - lo loestrin fe
+    - magnesium oxide
+    - medrol dosepak
+    - mupirocin topical
+    - np thyroid
+    - nurtec odt
+    - olopatadine nasal
+    - olopatadine ophthalmic
+    - omega 3 polyunsaturated fatty acids
+    - ortho tri cyclen
+    - oxymetazoline nasal
+    - polyethylene glycol 3350
+    - proair hfa
+    - quillichew er
+    - quillivant xr
+    - qvar redihaler
+    - sodium bicarbonate
+    - somatuline depot
+    - spinraza injection
+    - stiolto respimat
+    - sulfamethoxazole and trimethoprim
+    - tazarotene topical
+    - tessalon perles
+    - tranexamic acid
+    - trelegy ellipta
+    - trokendi xr
+    - tylenol with codeine 3
+    - ultram er
+    - umeclidinium and vilanterol
+    - undecylenic acid topical
+    - unisom sleep gels
+    - urea topical
+    - urocit k
+    - urogesic blue
+    - urso forte
+    - utibron neohaler
+    - valproic acid
+    - vitamin a
+    - vitamin b6
+    - vitamin c
+    - vitamin d3
+    - voltaren gel
+    - wart remover
+    - wellbutrin sr
+    - wellbutrin xl
+    - winrho sdf
+    - witch hazel topical
+    - xeljanz xr
+    - xigduo xr
+    - xopenex hfa
+    - xtampza er
+    - xulane transdermal
+    - xylocaine mpf
+    - xylometazoline nasal
+    - yellow fever vaccine
+    - zinc gluconate
+    - zinc sulfate
+    - zofran odt
+    - zoledronic acid

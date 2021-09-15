@@ -12,7 +12,7 @@
 
 action_endpoint:
  url: "http://$ACTION_HOST:5055/webhook"
-
+ 
 # Tracker store which is used to store the conversations.
 
 tracker_store:

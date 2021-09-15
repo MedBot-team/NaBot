@@ -1,111 +1,70 @@
 version: "2.0"
 
 rules:
-- rule: activate drugs form
-  steps:
-    - intent: request_drug
-    - action: drugs_form
-    - active_loop: drugs_form
 
-- rule: submit drugs form
+- rule: submit form
   condition:
-  - active_loop: drugs_form
+    - active_loop: entity_form
   steps:
-    - action: drugs_form 
-    - active_loop: null 
-    - action: drug_retrieve
-    - action: slots_reset
+    - action: entity_form
+    - active_loop: null
+    - action: retrieve
 
-- rule: activate labs form
+- rule: what_is form
   steps:
-    - intent: request_lab
-    - action: labs_form
-    - active_loop: labs_form
+    - or:  
+      - intent: what_is
+      - intent: usage
+      - intent: risk
+      - intent: lab_result
+      - intent: lab_prepare
+      - intent: lab_during
+      - intent: drug_warning
+      - intent: drug_dosage
+      - intent: drug_interaction
+      - intent: drug_sideeffects
+    - slot_was_set:
+      - entity_name: null
+    - action: intent_set
+    - action: entity_form
+    - active_loop: entity_form
 
-- rule: submit labs form
-  condition:
-  - active_loop: labs_form
+- rule: what_is
   steps:
-    - action: labs_form 
-    - active_loop: null 
-    - action: lab_retrieve
-    - action: slots_reset
+    - or:  
+      - intent: what_is
+      - intent: usage
+      - intent: risk
+      - intent: lab_result
+      - intent: lab_prepare
+      - intent: lab_during
+      - intent: drug_warning
+      - intent: drug_dosage
+      - intent: drug_interaction
+      - intent: drug_sideeffects
+    - slot_was_set:
+      - entity_name
+    - action: intent_set
+    - action: retrieve
 
-- rule: get drugs usage
-  steps:
-    - intent: usage_drug
-    - action: drug_retrieve
 
-- rule: get drugs dosage
+- rule: choose_entity
   steps:
-    - intent: dosage_drug
-    - action: drug_retrieve
+    - intent: choose_candidate
+    - action: retrieve
 
-- rule: get drugs interaction
+- rule: new_issue form
   steps:
-    - intent: interaction_drug
-    - action: drug_retrieve
+  - intent: new_issue
+  - action: intent_set
+  - action: slot_reset
+  - action: entity_form
+  - active_loop: entity_form
 
-- rule: get drugs what-to-avoid
+- rule: Ask to rephrase
   steps:
-    - intent: avoid_drug
-    - action: drug_retrieve
-
-- rule: get drugs side-effects
-  steps:
-    - intent: sideeffects_drug
-    - action: drug_retrieve
-
-- rule: get drugs warnings
-  steps:
-    - intent: warnings_drug
-    - action: drug_retrieve
-
-- rule: get labs details
-  steps:
-    - intent: detail_lab
-    - action: lab_retrieve
-
-- rule: get during labs details
-  steps:
-    - intent: during_lab
-    - action: lab_retrieve
-
-- rule: get any things else of labs
-  steps:
-    - intent: any_detail_lab
-    - action: lab_retrieve
-
-- rule: get why do I need labs details
-  steps:
-    - intent: need_lab
-    - action: lab_retrieve
-
-- rule: get labs preparation details
-  steps:
-    - intent: prepare_lab
-    - action: lab_retrieve
-
-- rule: get labs result meaning details
-  steps:
-    - intent: result_lab
-    - action: lab_retrieve
-
-- rule: get labs risk meaning details
-  steps:
-    - intent: risk_lab
-    - action: lab_retrieve
-
-- rule: get labs usage
-  steps:
-    - intent: usage_lab
-    - action: lab_retrieve
-
-- rule: Say hi when the user says hi at start
-  conversation_start: true
-  steps:
-    - intent: greet 
-    - action: utter_greet
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
 
 - rule: Say hi anytime the user says hi 
   steps:

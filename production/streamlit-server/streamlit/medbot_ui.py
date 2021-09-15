@@ -99,16 +99,17 @@ if ask_button:
             
             # Display feedback buttons
             if len(response.json()) != 0:
-                if response.json()[0]['buttons']:
+                if 'buttons' in response.json()[0].keys():
                     for button in response.json()[0]['buttons']:
                         b = st.button(
                             label=button['title'],
                             on_click=send_feedback,
                             args = [button['payload']],)
-                        
+                                
                 # Give the chatbot answer to the user
-                st.markdown(response.json()[0]['text'].replace('\n', '<br>'), unsafe_allow_html=True)
+                st.markdown(response.json()[0]['text'].replace('\n', '<br>'),
+                            unsafe_allow_html=True)
             else:
-                print('Unfortunately, I don\'t know the answer to this question yet')
+                st.markdown('Unfortunately, I don\'t know the answer to this question yet')
             
 st.markdown('___')

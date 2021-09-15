@@ -137,3 +137,12 @@ dmypy.json
 # Environmental variables
 *.env
 
+# Personal scripts
+production/rasa-server/rasa/my_rasa_run.sh
+
+# Weights
+production/rasa-server/rasa/weights
+weights
+
+# Files
+domain.yml
