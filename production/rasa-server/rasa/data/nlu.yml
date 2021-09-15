@@ -135,6 +135,7 @@ nlu:
 
 - intent: drug_dosage
   examples: |
+    - how should i use it?
     - how should i take it?
     - how much of it should i take?
     - what's the dosage?
@@ -146,6 +147,7 @@ nlu:
     - how often i should use [zaditor](entity_name)?
     - What is the maximum dosage of it ?
     - What is the recommended dose of [haloperidol](entity_name) per day for me?
+    - Can you give me dosage information of [Acetaminophen](entity_name)?
 
 - intent: drug_interaction
   examples: |
