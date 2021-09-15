@@ -29,26 +29,14 @@ class Retrieve(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
               
-        input_entity = self.get_entity(tracker=tracker)
-        chosen_entity = tracker.get_slot('chosen_entity')        
+        input_entity = self.get_entity(tracker=tracker)       
         intent = tracker.get_slot('intent_name')
 
         if input_entity is not None:
             drugs = self.db.search_drug(input_entity)
             labs = self.db.search_lab(input_entity)
             
-            candidates = drugs + labs
-            
-            if len(candidates)>1 and input_entity!=chosen_entity:
-                buttons = [{"payload": "/choose_candidate{{\"entity_name\":\"{cnd}\", \"chosen_entity\":\"{cnd}\"}}".format(cnd=candidate),
-                            "title": f"{candidate}"} for candidate in candidates]
-                dispatcher.utter_message(
-                    text=f'Which one do you mean?',
-                    buttons=buttons,
-                    button_type='vertical',
-                    )  
-                 
-            elif drugs:
+            if drugs:
                 message_id = tracker.latest_message['message_id']
                 buttons = [
                     {"payload": "/good_response{{\"message_id\":\"{id}\"}}".format(id=message_id),
