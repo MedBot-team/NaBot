@@ -55,7 +55,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            medbot/medbot_ui
+            medbot/nabot_ui
           tags: |
             type=schedule
             type=ref,event=branch
