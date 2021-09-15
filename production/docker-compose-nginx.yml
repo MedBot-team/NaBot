@@ -8,7 +8,7 @@ services:
       context: ./streamlit-server
       dockerfile: Dockerfile
     # Choose image name
-    image: medbot-ui
+    image: nabot-ui
     # Don't start ui server before chatbot server
     depends_on:
       rasa:
@@ -237,23 +237,23 @@ services:
 networks:
   # network between chatbot and streamlit server
   frontend-network:
-    name: medbot-frontend-network
+    name: nabot-frontend-network
     driver: bridge
   # network between chatbot and action server
   rasa-network:
-    name: medbot-rasa-network
+    name: nabot-rasa-network
     driver: bridge
   # network between action server and mysql server
   datasets-network:
-    name: medbot-datasets-network
+    name: nabot-datasets-network
     driver: bridge
   # network between ui/rasa server and postgres server
   events-network:
-    name: medbot-events-network
+    name: nabot-events-network
     driver: bridge
   # A network for all endpoints (rasa - ui - monitoring)
   nginx-network:
-    name: medbot-nginx-network
+    name: nabot-nginx-network
     driver: bridge
 
 # Seperate volumes
