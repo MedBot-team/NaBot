@@ -22,7 +22,6 @@ nlu:
     - What is the risk of an [complete blood count](entity_name)
     - is [yeast infection tests](entity_name) risky?
     - What is the risk of having an [strep a test](entity_name)?
-    - Can the [liver function tests](entity_name) be risky?
     - is [shbg blood](entity_name) dangerous?
 
 - intent: lab_result
@@ -33,7 +32,6 @@ nlu:
 
 - intent: lab_prepare
   examples: |
-    - Do you have any tips for me before the [nasal swab](entity_name)
     - Am I required to do anything before my test
     - Will I need to do anything to prepare for the [hiv screening](entity_name)?
     - Could you provide some advice about how to prep for an [uric acid test](entity_name)?
@@ -78,7 +76,8 @@ nlu:
 - intent: greet
   examples: |
     - hello
-    - hey bot
+    - hey
+    - hi
 
 - intent: goodbye
   examples: |

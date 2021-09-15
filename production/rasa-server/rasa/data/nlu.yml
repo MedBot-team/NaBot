@@ -82,6 +82,7 @@ nlu:
     - what should i be careful about [acetaminophen](entity_name)?
     - should i be afraid of [procalcitonin](entity_name)?
     - can it harm me?
+    - Can the [liver function tests](entity_name) be risky?
     
 - intent: lab_result
   examples: |
@@ -106,6 +107,8 @@ nlu:
     - what should i know before doing [hysteroscopy](entity_name)?
     - what do you suggest me to do before [ldh isoenzymes test](entity_name)?
     - Do you have any recommendations for people about how to get ready for [mthfr mutation test](entity_name)?
+    - Do you have any tips for me before the [nasal swab](entity_name)
+    
 
 - intent: lab_during
   examples: |
