@@ -4,28 +4,29 @@
 services:
   # Build streamlit ui server
   ui:
-    build:
-      context: ./streamlit-server
-      dockerfile: Dockerfile
+    # Choose container name
+    container_name: ui-server
     # Choose image name
-    image: nabot-ui
+    image: medbot/nabot_ui
     # Don't start ui server before chatbot server
     depends_on:
       rasa:
         condition: service_healthy
     # Choose container name
-    container_name: ui-server
     restart: always
     # Make the same network for chatbot server and ui server
     networks:
       - frontend-network
+      - nginx-network
     # Mount .env file to the ui server to read chatbot URL
     volumes:
       - ./.env:/streamlit/.env
+    expose:
+      - 8501
     # Map TCP port 8501 in the container to port 80 on the Docker host.
     # This is a chatbot rest api port
-    ports:
-      - 80:8501
+    # ports:
+    #  - 80:8501
     # Healthcheck condition
     healthcheck:
         test: ["CMD", "printf", ".", ">", "/dev/tcp/127.0.0.1/8501"]
@@ -34,28 +35,29 @@ services:
         retries: 30
   # Build a monitoring server
   monitoring:
-    build:
-      context: ./monitoring-server
-      dockerfile: Dockerfile
+    # Choose container name
+    container_name: monitoring-server
     # Choose image name
-    image: monitoring-ui
-    # Don't start ui server before mysql server
+    image: medbot/nabot_monitoring
+    # Don't start ui server before postgres server
     depends_on:
       rasa:
         condition: service_healthy
-    # Choose container name
     container_name: monitoring-server
     restart: always
     # Make the same network for chatbot server and ui server
     networks:
       - events-network
+      - nginx-network
     # Mount .env file to the ui server to read chatbot URL
     volumes:
       - ./.env:/monitoring_ui/.env
     # Map TCP port 8501 in the container to port 80 on the Docker host.
     # This is a chatbot rest api port
-    ports:
-      - 8501:8501
+    #ports:
+    #  - 8501:8501
+    expose:
+      - 8501
     # Healthcheck condition
     healthcheck:
         test: ["CMD", "printf", ".", ">", "/dev/tcp/127.0.0.1/8501"]
@@ -64,28 +66,23 @@ services:
         retries: 30
   # Build chatbot server
   rasa:
-    build:
-      context: ./rasa-server
-      dockerfile: Dockerfile
-      args:
-        # Pass model weights version as an argument 
-        - VERSION=v0.1.0
+    # Choose container name
+    container_name: chatbot-server
     # Choose image name
-    image: rasa-server
+    image: medbot/nabot_chatbot
     # Don't start chatbot server before action server
     depends_on:
       app:
         condition: service_healthy
-    # Choose container name
-    container_name: chatbot-server
+
     restart: always
     # Expose 5005 port to ui server can see the chatbot server
     expose: 
       - 5005
     # Map TCP port 5005 in the container to port 5005 on the Docker host.
     # This is a chatbot rest api port
-    ports:
-      - 5005:5005
+    # ports:
+    #  - 5005:5005
     # Healthcheck condition
     healthcheck:
         test: ["CMD", "printf", ".", ">", "/dev/tcp/127.0.0.1/5005"]
@@ -101,26 +98,24 @@ services:
       - rasa-network
       - frontend-network
       - events-network
+      - nginx-network
   # Build action server
   app:
-    build: 
-      context: ./action-server
-      dockerfile: Dockerfile
+    # Choose container name
+    container_name: action-server
     # Choose image name
-    image: action-server
+    image: medbot/nabot_action
     # Don't start action server before database
     depends_on:
       db_datasets:
         condition: service_healthy
-    # Choose container name
-    container_name: action-server
     restart: always
     # Store chatbot logs out side of the container
     volumes:
       - logs_data:/action-server/logs
       - ./.env:/action-server/.env
     # Make the same network for chatbot server and actions server
-    # And also action server and mysql server
+    # And also action server and postgres server
     networks:
       - rasa-network
       - datasets-network
@@ -176,8 +171,8 @@ services:
     restart: always
     volumes:
       # Store postgres records in the seperate volume. records won't be removed even with removing containers
-      - db-event:/var/lib/postgresql/data/
-    # Make the same network for postgres server and actions server
+       - db-event:/var/lib/postgresql/data/
+    # Make the same network for mysql server and actions server
     networks:
       - events-network
     # Read postgres password and database name from .env file
@@ -193,13 +188,62 @@ services:
     # Add the capability CAP_SYS_NICE to MySQL server can handle mbind error itself silently.
     cap_add:
       - SYS_NICE
-    # Configuration of healthcheck for postgres db
+    # Configuration of healthcheck for mysql db
     healthcheck:
         test: ["CMD", 'pg_isready', '-d', '$POSTGRES_EVENTS_DATABASE',
                 '-h', 'localhost']
         interval: 3m30s
         timeout: 45s
         retries: 30
+  # Build nginx container
+  nginx:
+    # Use nginx image
+    image: nginx
+    container_name: nginx
+    # Map TCP port 80 and 443 of the container to port 80 and 443 of the Docker host, respectively.
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+     # Mount nginx default config file to the container
+      - ./nginx:/etc/nginx/conf.d
+     # Mount letsencrypt certifications to the container. 
+     # If you're using different certificate authority, change the following line
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    # Nginx container depends on rasa, ui and monitoring containers
+    depends_on:
+      rasa:
+        condition: service_healthy
+      monitoring:
+        condition: service_healthy
+      ui:
+        condition: service_healthy
+    # Make the same network for rasa, ui and monitoring containers
+    networks:
+      - nginx-network
+  # pgAdmin4 container
+  pgadmin:
+    # Use pgAdmin4 image
+    image: dpage/pgadmin4
+    container_name: pgadmin4
+    restart: always
+    # pgAdmin4 container depends on db_events containers
+    depends_on:
+      db_events:
+        condition: service_healthy
+    # Read postgres password and database name from .env file
+    env_file:
+      - ./.env
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+      - PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION="True"
+    ports:
+      - 5050:80
+    # Make the same network for eventdb and pgadmin containers
+    networks:
+      - events-network
+
 
 # List of docker networks
 networks:
@@ -219,6 +263,10 @@ networks:
   events-network:
     name: nabot-events-network
     driver: bridge
+  # A network for all endpoints (rasa - ui - monitoring)
+  nginx-network:
+    name: nabot-nginx-network
+    driver: bridge
 
 # Seperate volumes
 volumes:
@@ -231,3 +279,4 @@ volumes:
   # Storing logs volume
   logs_data:
     name: logs_db
+ 
