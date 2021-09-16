@@ -85,7 +85,7 @@ AND timestamp >= {past_timestamp};")
             input_channels.append(dictionary['input_channel'])
 
             entity_extractors += [entity['extractor']
-                                  for entity in dictionary['parse_data']['entities']]
+                                  for entity in dictionary['parse_data']['entities'] if 'extractor' in entity.keys()]
 
             entity_confidences += [entity['confidence_entity']
                                    for entity in dictionary['parse_data']['entities'] if 'confidence_entity' in entity.keys()]
