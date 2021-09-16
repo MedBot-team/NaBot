@@ -108,8 +108,8 @@ AND timestamp >= {past_timestamp};")
         questions = []
         for data in datas:
             dictionary = self.__data2dict(data)
-
-            questions.append(dictionary['text'])
+            
+            if dictionary['text'][0] != "/":
+                questions.append(dictionary['text'])
         
         return questions
-
