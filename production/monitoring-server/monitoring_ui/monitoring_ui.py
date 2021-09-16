@@ -23,7 +23,7 @@ DB_NAME = config('POSTGRES_EVENTS_DATABASE')
 DB_USER = config('POSTGRES_USER')
 DB_PASSWD = config('POSTGRES_EVENTS_PASSWORD')
 DB_PORT = config('POSTGRES_PORT')
-TOKEN = config("TOKEN")
+URL = config("API_URL")
 
 plt.set_loglevel('WARNING')  # Set matplotlib logging level to warnings
 st.set_page_config(
@@ -185,7 +185,7 @@ if "NLU Model" in charts:
         index=0,
     )
 
-    blob = get_api(text_input, TOKEN)
+    blob = get_api(text_input, URL)
     text = blob["text"]
     text = text.translate(str.maketrans('', '', punctuation))
     tokens = text.split()
@@ -244,7 +244,7 @@ if "Spell Generator" in charts:
     augs = aug.augment(text_input, n=n_generate)
     data = reduce(
         lambda a, b: a +
-        b, [get_api(a, TOKEN)["intent_ranking"] for a in augs]
+        b, [get_api(a, URL)["intent_ranking"] for a in augs]
     )
 
     source = pd.DataFrame(data)[["name", "confidence"]].rename(
@@ -305,7 +305,7 @@ if "Question Distribution" in charts:
         reduction = Pca(2)
 
     lang = SpacyLanguage("en_core_web_md")
-    emb = EmbeddingSet(*[lang[t] for t in questions])
+    emb = EmbeddingSet(*[lang[t] for t in set(questions)])
 
     try:
         p = (

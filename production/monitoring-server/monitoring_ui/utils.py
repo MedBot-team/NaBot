@@ -42,8 +42,8 @@ def create_altair_chart(dataf):
     )
 
 
-def get_api(question: str, token: str) -> dict:
-    reqUrl = f"https://api.nabot.ml/model/parse?token={token}"
+def get_api(question: str, url: str) -> dict:
+    reqUrl = url
     
     payload = json.dumps({
         "text": question
