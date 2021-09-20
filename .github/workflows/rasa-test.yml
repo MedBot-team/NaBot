@@ -54,7 +54,7 @@ jobs:
       - name: Download model weights
         run: |
           mkdir ./production/rasa-server/rasa/models/
-          wget -q https://www.dropbox.com/s/304elqbdfptcyvl/${{ steps.vars.outputs.tag }}.tar.gz \
+          wget -q ftps://nabot.ml/medbot_weights/${{ steps.vars.outputs.tag }}.tar.gz \
           -P ./production/rasa-server/rasa/models/
       
       # Download and extract ConveRT weights
