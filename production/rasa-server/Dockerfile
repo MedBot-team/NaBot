@@ -39,8 +39,11 @@ COPY rasa ./rasa
 ARG VERSION=v0.2.0
 # Download rasa model weights
 RUN mkdir -p /rasa-server/rasa/models && \
-    wget -q https://www.dropbox.com/s/304elqbdfptcyvl/$VERSION.tar.gz \
-    -P /rasa-server/rasa/models/
+    wget -q ftps://nabot.ml/medbot_weights/$VERSION.tar.gz \
+    -P /rasa-server/rasa/models/  
+# RUN mkdir -p /rasa-server/rasa/models && \
+#     wget -q https://www.dropbox.com/s/304elqbdfptcyvl/v0.2.0.tar.gz \
+#     -P /rasa-server/rasa/models/
 # Download and extract ConveRT model weights
 RUN mkdir -p /rasa-server/rasa/weights/model && \
     wget -q https://github.com/connorbrinton/polyai-models/releases/download/v1.0/model.tar.gz \
