@@ -1,8 +1,9 @@
 import requests
 import json
+from decouple import config
 from flask import Flask, render_template, request
 
-# url = config('RASA_SERVER_URL')
+url = config('RASA_SERVER_URL')
 headers = {
                 'Content-Type': 'application/json'
             }
