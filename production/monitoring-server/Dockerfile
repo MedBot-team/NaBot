@@ -24,6 +24,8 @@ RUN python -m venv /opt/venv && \
     pip wheel --requirement=requirements.txt --wheel-dir=wheels && \
     pip install --no-deps wheels/*.whl && \
     rm -rf wheels *.egg-info
+# Download spacy model weights 
+RUN python -m spacy download en_core_web_md
 
 # Runtime stage
 FROM base AS runtime-stage
