@@ -1,3 +1,7 @@
+import sys
+path = '../qa_core'
+sys.path.append(path)
+
 import requests
 import streamlit as st
 from decouple import config
