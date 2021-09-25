@@ -25,16 +25,29 @@ body {
 }
 
 .side-bar{
+  background: #ffffff;
   width: 25%;
+  margin-right: 2vw;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;;
+  border-radius: 5px;
 }
 
 .main-box{
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  flex: 1;
   width: 75%;
   background-image: url("images/bg.jpg");
   background-size: 100%;
+  border-radius: 5px;
+  margin: 0 auto;
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;;
+  border-radius: 5px;
 }
 
 .chat-box{
@@ -49,9 +62,37 @@ body {
   margin-top: 10px;
 }
 
+.msg-name{
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.msg-bubble{
+  max-width: 550px;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.left-msg .msg-bubble{
+  border-bottom-left-radius: 0;
+  background: #ececec;
+}
+
 .input-area{
   display: flex;
   background: #eee;
+  border-top: var(--border);
+  background: #eee;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+.input-area *{
+  padding: 10px;
+  border: none;
+  border-bottom-left-radius: 5;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 .input{
@@ -61,4 +102,13 @@ body {
 
 .send-button{
   margin-left: 10px;
+  background: rgb(0, 196, 65);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.send-button:hover{
+  background: rgb(0, 180, 50);
 }
