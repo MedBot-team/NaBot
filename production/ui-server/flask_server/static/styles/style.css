@@ -29,9 +29,24 @@ body {
 }
 
 .main-box{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
   width: 75%;
   background-image: url("images/bg.jpg");
   background-size: 100%;
+}
+
+.chat-box{
+  display: flex;
+  flex-flow: column;
+}
+
+.msg {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .input-area{
