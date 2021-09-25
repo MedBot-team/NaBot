@@ -5,6 +5,8 @@
 ![Chatbot UI workflow](https://github.com/MedBot-team/NaBot/actions/workflows/docker_push_ui.yml/badge.svg?style=svg)
 ![Chatbot Monitoring workflow](https://github.com/MedBot-team/NaBot/actions/workflows/docker_push_monitoring.yml/badge.svg?style=svg)
 
+![Logo](https://github.com/Ali-Razmdideh/NaBot/blob/main/logo.png)
+
 NaBot is a smart medical chatbot. It can retrieve medicines and lab tests information for users just by chatting with it.
 
 - Hey, NaBot, can you give me dosage information of Acetaminophen?
