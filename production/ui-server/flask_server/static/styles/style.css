@@ -53,6 +53,17 @@ body {
 .chat-box{
   display: flex;
   flex-flow: column;
+  overflow-y: auto;
+}
+
+.chat-box::-webkit-scrollbar {
+  width: 8px;
+}
+.chat-box::-webkit-scrollbar-track {
+  background: #ddd;
+}
+.chat-box::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
 }
 
 .msg {
