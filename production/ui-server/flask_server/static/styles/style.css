@@ -85,13 +85,28 @@ body {
   border-radius: 15px;
 }
 
+.right-msg {
+  flex-direction: row-reverse;
+}
+
 .left-msg .msg-image{
   background-image: url("images/bot.svg");
+}
+
+.right-msg .msg-image{
+  background-image: url("images/man.svg");
+  margin: 0 0 0 10px;
 }
 
 .left-msg .msg-bubble{
   border-bottom-left-radius: 0;
   background: #ececec;
+}
+
+.right-msg .msg-bubble {
+  background: #579ffb;
+  color: #fff;
+  border-bottom-right-radius: 0;
 }
 
 .input-area{
