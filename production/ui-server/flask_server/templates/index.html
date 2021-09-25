@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../static/styles/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <title>NaBot</title>
 </head>
 <body>
@@ -32,5 +33,56 @@
       </form>
     </section>
   </main>
+  <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+  <script>
+
+    const msgerForm = get(".input-area");
+    const msgerInput = get(".input");
+    const msgerChat = get(".chat-box");
+
+    const BOT_NAME = "NaBot";
+    const PERSON_NAME = "You";
+
+    msgerForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const msgText = msgerInput.value;
+      if (!msgText) return;
+
+      appendMessage(PERSON_NAME, "right", msgText);
+      msgerInput.value = "";
+      botResponse(msgText);
+    });
+
+    function appendMessage(name, side, text) {
+      const msgHTML = `
+<div class="msg ${side}-msg">
+  <div class="msg-image"></div>
+
+  <div class="msg-bubble">
+    <div class="msg-name">${name}</div>
+    <div class="msg-text">${text}</div>
+  </div>
+</div>
+`;
+
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+    }
+
+    function botResponse(rawText) {
+      // Bot Response
+      $.get("/get", { msg: rawText }).done(function (data) {
+        console.log(rawText);
+        console.log(data);
+        const msgText = data;
+        appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+      });
+    }
+    // Utils
+    function get(selector, root = document) {
+      return root.querySelector(selector);
+    }
+  </script>
 </body>
 </html>
