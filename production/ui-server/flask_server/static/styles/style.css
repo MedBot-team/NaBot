@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+}
+
+.side_bar{
+  width: 25%;
+}
+
+.main_box{
+  width: 75%;
+}
