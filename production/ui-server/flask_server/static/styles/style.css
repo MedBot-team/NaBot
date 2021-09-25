@@ -9,15 +9,41 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  height: 100vh;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: Helvetica, sans-serif;
+}
+
 .main{
+  height: 94vh;
+  margin-top: 3vh;
+  margin-right: 2vw;
+  margin-left: 2vw;
   display: flex;
   flex-direction: row;
 }
 
-.side_bar{
+.side-bar{
   width: 25%;
 }
 
-.main_box{
+.main-box{
   width: 75%;
+  background-image: url("images/bg.jpg");
+  background-size: 100%;
+}
+
+.input-area{
+  display: flex;
+  background: #eee;
+}
+
+.input{
+  flex: 1;
+  background: #ddd;
+}
+
+.send-button{
+  margin-left: 10px;
 }
