@@ -31,7 +31,7 @@
         <div class="switch-area">
           <div class="switch-text-left">Medical chat</div>
           <label class="switch">
-            <input type="checkbox" name="name">
+            <input class="selector" type="checkbox">
             <span class="slider"></span>
           </label>
           <div class="switch-text-right">Chitchat</div>
@@ -39,7 +39,7 @@
       </div>
         <div class="caution">
             <div class="caution-header">⚠️ Caution ⚠️<br></div>
-            ⚠️ We are storing your chats to improve the chatbot; 
+            ⚠️ <span class="caution-bold">We are storing your chats</span> to improve the chatbot; 
             Please don't share your personal data with this bot.<br>
             ⚠️ This chatbot is been made for fun. 
             <span class="caution-bold">Please don't consult with it about your serious life matters.</span>
@@ -78,19 +78,20 @@
     const msgerForm = get(".input-area");
     const msgerInput = get(".input");
     const msgerChat = get(".chat-box");
+    
 
     const BOT_NAME = "NaBot";
     const PERSON_NAME = "You";
 
     msgerForm.addEventListener("submit", event => {
       event.preventDefault();
-
+      const msgerSwitch = get(".selector").checked;
       const msgText = msgerInput.value;
       if (!msgText) return;
 
       appendMessage(PERSON_NAME, "right", msgText);
       msgerInput.value = "";
-      botResponse(msgText);
+      botResponse(msgText, msgerSwitch);
     });
 
     function appendMessage(name, side, text) {
@@ -108,9 +109,9 @@
       msgerChat.scrollTop += 500;
     }
 
-    function botResponse(rawText) {
+    function botResponse(rawText, chatType) {
       // Bot Response
-      $.get("/get", { msg: rawText }).done(function (data) {
+      $.get("/get", { msg: rawText , chat_type: chatType}).done(function (data) {
         console.log(rawText);
         console.log(data);
         const msgText = data;
