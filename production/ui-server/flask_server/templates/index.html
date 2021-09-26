@@ -6,34 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../static/styles/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="shortcut icon" href="../static/styles/images/bot.svg">
+  <link rel="shortcut icon" href="images/logo_small.png">
   <title>NaBot</title>
 </head>
 <body>
   <main class="main">
     <section class="side-bar">
-      <p class="bot-info">
-        NaBot is a smart medical chatbot. 
-        It can answer your questions about drugs and tests.
-      </p> 
-      <p class="bot-info"></p>
-        Go ahead and try sending a message!
-      </p>
-      <p>
+      <div>
         <a href="https://gitHub.com/MedBot-team/NaBot" target="_blank">
           <img class="github-badge" alt="Star" src="https://img.shields.io/github/stars/MedBot-team/NaBot.svg?logo=github&amp;style=social">
         </a>
-      </p>
-      <p>
-        <a href="https://medbot-team.github.io/NaBot/" target="_blank">Documentation 📖</a>
-      </p>
-      <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
-      <p class="attr">
-        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> and <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-      </p>
+        <img class="logo" src="images/logo.png" alt="logo">
+        <p class="bot-info">
+          NaBot is a smart medical chatbot. 
+          It can answer your questions about drugs and tests.<br>
+          Go ahead and try sending a message!
+        </p>
+      </div>
+      <div>   
+        <p>
+          Currently, chitchat feature is under developement,
+          you can switch between chitchat and medical questions.
+        </p> 
+        <div class="switch-area">
+          <div class="switch-text-left">Medical chat</div>
+          <label class="switch">
+            <input type="checkbox" name="name">
+            <span class="slider"></span>
+          </label>
+          <div class="switch-text-right">Chitchat</div>
+        </div>
+      </div>
+        <div class="caution">
+            <div class="caution-header">⚠️ Caution ⚠️<br></div>
+            ⚠️ We are storing your chats to improve the chatbot; 
+            Please don't share your personal data with this bot.<br>
+            ⚠️ The chatbot has been made for fun. 
+            Please don't consult with it about your serious life matters.
+        </div>   
+  
+        <div class="attr">Icons made by 
+          <a href="https://www.flaticon.com/authors/freepik" 
+          title="Freepik">Freepik</a> and 
+          <a href="https://www.flaticon.com/authors/vitaly-gorbachev" 
+          title="Vitaly Gorbachev">Vitaly Gorbachev</a> 
+          from <a href="https://www.flaticon.com/" 
+          title="Flaticon">www.flaticon.com</a>
+        </div>
     </section>
 
     <section class="main-box">
@@ -45,7 +64,7 @@
             <div class="msg-text">
               Hi, welcome to NaBot! Go ahead and send me a message. 😄
             </div>
-          </div>
+        </div>
       </section>
       <form class="input-area">
         <input type="text" class="input" id="textInput" placeholder="Enter your message...">
@@ -78,7 +97,6 @@
       const msgHTML = `
 <div class="msg ${side}-msg">
   <div class="msg-image"></div>
-
   <div class="msg-bubble">
     <div class="msg-name">${name}</div>
     <div class="msg-text">${text}</div>
@@ -96,7 +114,7 @@
         console.log(rawText);
         console.log(data);
         const msgText = data;
-        appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+        appendMessage(BOT_NAME, "left", msgText);
       });
     }
     // Utils
