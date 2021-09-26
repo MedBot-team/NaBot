@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/styles/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="shortcut icon" href="images/logo_small.png">
+  <link rel="shortcut icon" href="{{url_for('static', filename='images/logo_small.png')}}">
   <title>NaBot</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
         <a href="https://gitHub.com/MedBot-team/NaBot" target="_blank">
           <img class="github-badge" alt="Star" src="https://img.shields.io/github/stars/MedBot-team/NaBot.svg?logo=github&amp;style=social">
         </a>
-        <img class="logo" src="images/logo.png" alt="logo">
+        <img class="logo" src="{{url_for('static', filename='images/logo.png')}}" alt="logo">
         <p class="bot-info">
           NaBot is a smart medical chatbot. 
           It can answer your questions about drugs and tests.<br>
