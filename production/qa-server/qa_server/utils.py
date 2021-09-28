@@ -1,5 +1,5 @@
 from transformers import pipeline
-
+    
 class QuestionAnswering():
     def __init__(self):
         super(QuestionAnswering, self).__init__()
