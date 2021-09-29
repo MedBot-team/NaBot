@@ -1,0 +1,6 @@
+# Choose retriver type
+# Supported types:
+# full_context    --> shows full context to user
+# extractive_QA   --> displays(or annotates) a part of context as answer
+# ebstractive_QA  --> a generative model returns answer using context
+RETRIEVER_TYPE: full_context 
