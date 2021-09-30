@@ -1,6 +1,35 @@
-# Choose retriver type
+retriever: 
+# Choose retviever type 
 # Supported types:
-# full_context    --> shows full context to user
-# extractive_QA   --> displays(or annotates) a part of context as answer
-# ebstractive_QA  --> a generative model returns answer using context
-RETRIEVER_TYPE: full_context 
+# - SQL_table:
+#     Uses extracted intents and entities to query the database.
+#     Necessary configuration parameters:
+#     - host: <host address>
+#     - user: <database user>
+#     - database: <database name>
+#     NOTE: Password for database user must be in .env file in
+#           the directory of this file with key SQL_PASSWORD. 
+#     NOTE: The code is written for MYSQL and might not work with
+#           other database services.
+# - semantic:
+#     Candidate passages are retrieved using semantic search.
+#     NOT IMPLEMENTED YET!
+  type: SQL_table
+  host: localhost
+  user: root
+  database: datasets
+
+QA: 
+# Choose QA type
+# Supported types:
+# - full_context:
+#     Shows full context to user
+# - extractive_QA:
+#     Displays(or annotates) a part of context as answer
+# - abstractive_QA:
+#     A generative model returns answer using context
+#     NOT IMPLEMENTED YET!
+# - summarize:
+#     Displays summary of the context
+#     NOT IMPLEMENTED YET!  
+  type: full_context 
