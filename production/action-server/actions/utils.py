@@ -11,7 +11,7 @@ def load_yml(file_adr):
 
 def get_retriever_conf():
     '''
-    returns retriever configuration from config.yml file.
+    Returns retriever configuration from config.yml file.
     '''
     CONFIG_FILE_ADR = './config.yml'
     conf = load_yml(CONFIG_FILE_ADR)
@@ -41,7 +41,7 @@ def check_retriever_conf(conf):
 
 def get_columns(intent, table):
     '''
-    returns a list of columns mapped to intent
+    Returns a list of columns mapped to intent
     '''
     INTENT_MAP_FILE_ADR = 'intent_map.yml'
     intent_map = load_yml(INTENT_MAP_FILE_ADR)
