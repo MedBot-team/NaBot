@@ -74,3 +74,8 @@ rules:
   steps:
     - intent: bot_challenge
     - action: utter_iamabot
+
+- rule: first introduce
+  steps:
+    - intent: start
+    - action: utter_start
