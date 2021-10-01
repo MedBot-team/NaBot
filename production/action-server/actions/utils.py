@@ -21,7 +21,7 @@ def get_retriever_conf():
      
 def check_retriever_conf(conf):
     '''
-    Checks if config is done correctly.
+    Checks if retriever config is done correctly.
     '''
     supported_types = ['SQL_table', 'semantic']
     assert 'retriever' in conf, "Can't find 'retriever' in config.yml"
@@ -38,6 +38,25 @@ def check_retriever_conf(conf):
     # Checks if all parameters for semantic retriever are set
     elif conf['retriever']['type'] == 'semantic':
         pass
+
+def get_processor_conf():
+    '''
+    Returns processor configuration from config.yml file.
+    '''
+    CONFIG_FILE_ADR = './config.yml'
+    conf = load_yml(CONFIG_FILE_ADR)
+    check_processor_conf(conf)
+    return conf['processor']
+
+def check_processor_conf(conf):
+    '''
+    Checks if processor config is done correctly.
+    '''
+    supported_types = ['no_process', 'extractive_QA', 'abstractive_QA', 'summarizer']
+    assert 'processor' in conf, "Can't find 'processor' in config.yml"
+    assert 'type' in conf['processor'], "Processor type not defined in config.yml"
+    assert conf['processor']['type'] in supported_types, \
+        f"Processor type {conf['processor']['type']} is not on supported"
 
 def get_columns(intent, table):
     '''
