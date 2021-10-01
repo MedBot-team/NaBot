@@ -22,6 +22,6 @@ class GetAnswer(Action):
             dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]):
-        context = self.retriever.retrieve(tracker=tracker)
-        answer = self.processor.process(context=context, tracker=tracker)
+        context = self.retriever.retrieve(tracker)
+        answer = self.processor.process(tracker, context)
         
