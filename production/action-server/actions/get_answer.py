@@ -4,6 +4,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 from .retrievers import create_retriever
+from .processors import create_processor
 
 
 class GetAnswer(Action):    
@@ -11,8 +12,8 @@ class GetAnswer(Action):
         super().__init__() 
         
         # Creates retriever using config.yml 
-        retriever = create_retriever()
-
+        self.retriever = create_retriever()
+        self.processor = create_processor()
     
     def name(self):
         return "get_answer"
@@ -21,4 +22,6 @@ class GetAnswer(Action):
             dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]):
-        pass
+        context = self.retriever.retrieve(tracker=tracker)
+        answer = self.processor.process(context=context, tracker=tracker)
+        
