@@ -21,3 +21,11 @@ class NoProcessor(Processor):
     '''
     def process(self, context, tracker):
         return context
+
+def create_processor():
+    '''
+    Returns a processor object based on config file.
+    '''
+    conf = get_processor_conf()
+    if conf['type']=='no_process':
+        return NoProcessor()
