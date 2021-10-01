@@ -18,18 +18,22 @@ retriever:
   host: localhost
   user: root
   database: datasets
+  tables:
+  - drugs
+  - labs
 
-QA: 
-# Choose QA type
+processor: 
+# Choose the kind of process you want to be done on retrieved context
 # Supported types:
-# - full_context:
+# - no_process:
 #     Shows full context to user
 # - extractive_QA:
 #     Displays(or annotates) a part of context as answer
+#     NOT IMPLEMENTED YET!
 # - abstractive_QA:
 #     A generative model returns answer using context
 #     NOT IMPLEMENTED YET!
-# - summarize:
-#     Displays summary of the context
+# - summarizer:
+#     Displays the summary of context
 #     NOT IMPLEMENTED YET!  
-  type: full_context 
+  type: no_process
