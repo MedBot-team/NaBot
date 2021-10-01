@@ -1,25 +1,24 @@
 from ruamel import yaml
 
 
-def load_conf():
+def load_yml(file_adr):
     '''
-    Loads config.yml file
+    Loads .yml file
     '''
-    CONFIG_FILE_ADR = './config.yml'
-    with open(CONFIG_FILE_ADR, 'r') as f:
-        conf = yaml.load(f, Loader=yaml.RoundTripLoader)
-    return conf
+    with open(file_adr, 'r') as f:
+        dict_ = yaml.load(f, Loader=yaml.RoundTripLoader)
+    return dict_
 
 def get_retriever_conf():
     '''
     returns retriever configuration from config.yml file.
     '''
-    conf = load_conf()
+    CONFIG_FILE_ADR = './config.yml'
+    conf = load_yml(CONFIG_FILE_ADR)
     check_retriever_conf(conf)
     return conf['retriever']
-    
-    
-    
+
+     
 def check_retriever_conf(conf):
     '''
     Checks if config is done correctly.
@@ -35,6 +34,21 @@ def check_retriever_conf(conf):
         assert 'host' in conf['retriever'], "Host address not defined for database"
         assert 'user' in conf['retriever'], "User not defined for database"
         assert 'database' in conf['retriever'], "Database name not defined"
+        assert 'tables' in conf['retriever'], "Data tables not defined"
     # Checks if all parameters for semantic retriever are set
     elif conf['retriever']['type'] == 'semantic':
         pass
+
+def get_columns(intent, table):
+    '''
+    returns a list of columns mapped to intent
+    '''
+    INTENT_MAP_FILE_ADR = 'intent_map.yml'
+    intent_map = load_yml(INTENT_MAP_FILE_ADR)
+    if intent in intent_map[table]:
+        columns = intent_map[table][intent]
+        if not isinstance(columns, list):
+            columns = [columns]
+        return columns
+    else:
+        return []
