@@ -35,6 +35,13 @@ responses:
   utter_please_rephrase:
     - text: I'm sorry, I didn't quite understand that. Could you rephrase?
 
+  utter_start:
+    - text: "NaBot is a smart medical chatbot. It can retrieve medicines and lab tests information for users just by chatting with it.
+
+    ❗ We are storing your chats to improve the chatbot; Please don't share your personal data with this bot.
+
+    ❗ The chatbot has been made for fun. Please don't consult with it about your serious life matters."
+
 entities:
   - entity_name
   - message_id
@@ -62,7 +69,8 @@ intents:
   - drug_dosage
   - drug_interaction
   - drug_sideeffects
-
+  # Session start message
+  - start
 
 forms: 
   entity_form:
