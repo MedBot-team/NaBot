@@ -15,3 +15,9 @@ class Processor(ABC):
     def process(self, context, tracker):
         pass
     
+class NoProcessor(Processor):
+    '''
+    A processor that doesn't change the input context. 
+    '''
+    def process(self, context, tracker):
+        return context
