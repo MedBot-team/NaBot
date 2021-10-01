@@ -100,3 +100,13 @@ class SQLRetriever(Retriever):
     
 class  SemanticRetriever(Retriever):
     pass
+
+def create_retriever():
+    '''
+    Returns a retriever object based on config file.
+    '''
+    conf = get_retriever_conf()
+    if conf['type']=='SQL_table':
+        return SQLRetriever(conf)
+    elif conf['type']=='semantic':
+        pass
