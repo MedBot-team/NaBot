@@ -12,14 +12,14 @@ class Processor(ABC):
         pass
     
     @abstractmethod
-    def process(self, context, tracker):
+    def process(self, tracker, context):
         pass
     
 class NoProcessor(Processor):
     '''
     A processor that doesn't change the input context. 
     '''
-    def process(self, context, tracker):
+    def process(self, tracker, context):
         return context
 
 def create_processor():
