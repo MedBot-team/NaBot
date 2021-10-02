@@ -1,4 +1,4 @@
-git+https://github.com/deepset-ai/haystack.git
+farm-haystack==0.10.0
 python-decouple==3.4
-Flask==2.0.1
+flask==1.1.2
 waitress==2.0.0
