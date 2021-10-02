@@ -13,12 +13,14 @@ class DatabaseConnector():
         self.SEARCH = "SELECT name FROM {table} WHERE name LIKE %s"
         self.RETRIEVE = "SELECT {column} FROM {table} WHERE name = %s"
     
-    def search_in_table(self, table, entity_name):
+    def search_in_table(self, table, name):
         cursor = self.connection.cursor()
-        cursor.execute(self.SERACH.format(table=table), (f'%{entity_name}%',))
+        cursor.execute(self.SEARCH.format(table=table), (f'%{name}%',))
         records = [item[0] for item in cursor.fetchall()]
         return records
     
     def retrieve_from_table(self, table, name, column):
         cursor = self.connection.cursor()
-        cursor.execute(self.RETRIEVE_LAB.format(column=column, table=table),(name,))
+        cursor.execute(self.RETRIEVE.format(column=column, table=table),(name,))
+        records = [item[0] for item in cursor.fetchall()]
+        return records
