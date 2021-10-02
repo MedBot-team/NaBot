@@ -6,7 +6,7 @@ class Summarization():
 
     # List of all available models in QA task
     def available_model(self):
-        models = ["/media/zahra-linux/UBUNTU 18_0/Ali_QA/"]
+        models = ["google/pegasus-xsum"]
         return models
 
     # Initialize QA model
