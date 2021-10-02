@@ -1,7 +1,7 @@
 version: "2.0"
 
 actions:
-  - retrieve
+  - get_answer
   - slot_reset
   - intent_set
 
