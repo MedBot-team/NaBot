@@ -34,7 +34,7 @@ processor:
 #     NOTE: You can enter port inside host_url if needed.(e.g http://localhost:9095/)
 #     NOTE: If API key is needed to communicate with QA server it must be
 #           in .env file in the directory of this file with key QA_API_KEY.
-# - abstractive_QA:
+# - RAG:
 #     A generative model returns answer using context
 #     NOT IMPLEMENTED YET!
 # - summarizer:
