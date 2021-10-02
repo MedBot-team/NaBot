@@ -1,4 +1,5 @@
 from ruamel import yaml
+import os
 
 
 def load_yml(file_adr):
@@ -13,7 +14,7 @@ def get_retriever_conf():
     '''
     Returns retriever configuration from config.yml file.
     '''
-    CONFIG_FILE_ADR = './config.yml'
+    CONFIG_FILE_ADR = 'config.yml'
     conf = load_yml(CONFIG_FILE_ADR)
     check_retriever_conf(conf)
     return conf['retriever']
@@ -43,7 +44,7 @@ def get_processor_conf():
     '''
     Returns processor configuration from config.yml file.
     '''
-    CONFIG_FILE_ADR = './config.yml'
+    CONFIG_FILE_ADR = 'config.yml'
     conf = load_yml(CONFIG_FILE_ADR)
     check_processor_conf(conf)
     return conf['processor']
@@ -62,7 +63,8 @@ def get_columns(intent, table):
     '''
     Returns a list of columns mapped to intent
     '''
-    INTENT_MAP_FILE_ADR = 'intent_map.yml'
+    file_dir = os.path.dirname(__file__)
+    INTENT_MAP_FILE_ADR = f'{file_dir}/intent_map.yml'
     intent_map = load_yml(INTENT_MAP_FILE_ADR)
     if intent in intent_map[table]:
         columns = intent_map[table][intent]
