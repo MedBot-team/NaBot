@@ -5,6 +5,7 @@ from rasa_sdk.executor import CollectingDispatcher
 
 from .retrievers import create_retriever
 from .processors import create_processor
+from .dispatchers import dispatch
 
 
 class GetAnswer(Action):    
@@ -24,4 +25,5 @@ class GetAnswer(Action):
             domain: Dict[Text, Any]):
         context = self.retriever.retrieve(tracker)
         answer = self.processor.process(tracker, context)
+        dispatch(tracker, dispatcher, answer)
         
