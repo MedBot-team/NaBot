@@ -5,8 +5,9 @@ FROM python:3.8-slim AS base
 # Update base image. It might be helpful for security reasons 
 RUN apt-get update -qq && \
     apt-get upgrade -qq -y && \
-    apt-get autoremove -y -qq && \
-    apt-get autoclean -y -qq
+    apt-get install -qq -y libpq-dev && \
+    apt-get autoremove -qq -y && \
+    apt-get autoclean -qq -y
 
 # Build stage
 FROM base AS build-stage
