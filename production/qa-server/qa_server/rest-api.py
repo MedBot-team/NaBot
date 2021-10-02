@@ -1,14 +1,15 @@
 from decouple import config
 from flask import Flask, jsonify, request
-from utils import QuestionAnswering
+from utils import QuestionAnswering, load_conf
 
 
 app = Flask(__name__)
 # Read API_KEY from .env file
-api_key = config('REST_API_KEY')
+api_key = config('QA_API_KEY')
 
 # Default model
-model_name = 'ahotrod/albert_xxlargev1_squad2_512'
+conf = load_conf()
+model_name = conf['DEFAULT_MODEL']
 qa = QuestionAnswering()
 qa.model_init(model_name=model_name)
 
@@ -55,4 +56,4 @@ def QuAn():
 # Run flask APP in production mode
 if __name__ == '__main__':
     from waitress import serve
-    serve(app, host='0.0.0.0', port=5000)
+    serve(app, host='0.0.0.0', port=9095)
