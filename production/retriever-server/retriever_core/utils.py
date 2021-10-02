@@ -1,11 +1,12 @@
 import csv
 from haystack import Document
-from typing import Dict, List, NoReturn
+from typing import Dict, List, NoReturn, Generator
 from haystack.document_store.faiss import FAISSDocumentStore
 from haystack.retriever.dense import DensePassageRetriever
+from abc import ABC, abstractmethod
 
 
-def read_csv(path: str) -> csv.DictReader:
+def read_csv(path: str) -> Generator:
     """read `csv` file and return a generator
 
     Parameters
@@ -15,7 +16,7 @@ def read_csv(path: str) -> csv.DictReader:
 
     Returns
     -------
-    csv.DictReader
+    Generator
         generator of extarcted csv file 
     """
     with open(path, mode='r') as csv_file:
@@ -46,9 +47,22 @@ def store_document(dataset: List[Dict[str, str]]) -> List[Document]:
     return documents
 
 
-class Retriever:
+class Retriever(ABC):
+    @abstractmethod
     def __init__(self):
-        super(Retriever, self).__init__()
+        pass
+
+    @abstractmethod
+    def go(self):
+        pass
+
+    @abstractmethod
+    def retrieve(self):
+        pass
+
+
+class DensePassage(Retriever):
+    def __init__(self):
         # All huggingface models that can run
         self.query_available_model = [
             "facebook/dpr-question_encoder-single-nq-base",
@@ -59,71 +73,38 @@ class Retriever:
             "deepset/gbert-base-germandpr-ctx_encoder"
         ]
 
-    def __call_faiss(self) -> FAISSDocumentStore:
-        """create a object for use faiss storing document with `dot_product` similarity mode
-
-        Returns
-        -------
-        FAISSDocumentStore
-            object of FAISS
-        """
-        return FAISSDocumentStore(
-            faiss_index_factory_str="Flat",
-            return_embedding=True,
-            similarity="dot_product",
-        )
-
-    def __call_dpr(
-            self,
-            document_store: List[Document],
-            query_model_name: str,
-            passage_model_name: str) -> DensePassageRetriever:
-        """create a object for dense passage retriver
+    def go(self, documents: List[Document], query_model_name: str, passage_model_name: str) -> NoReturn:
+        """initialize and train model and update faiss documents
 
         Parameters
         ----------
-        document_store : List[Document]
-            list of dataset that stored with `Document` type
+        documents : List[Document]
+            list of dataset with `Document` type 
         query_model_name : str
-            model of query
+            query model name
         passage_model_name : str
-            model of passage
+            passage model name
 
         Returns
         -------
-        DensePassageRetriever
-            DensePassageRetriever object
+        NoReturn
         """
-        return DensePassageRetriever(
+        # call FAISS
+        document_store = FAISSDocumentStore(
+            faiss_index_factory_str="Flat",
+            return_embedding=True,
+            similarity="dot_product",
+            progress_bar=False
+        )
+        # call DPR
+        self.__retriever = DensePassageRetriever(
             document_store=document_store,
             query_embedding_model=query_model_name,
             passage_embedding_model=passage_model_name,
             use_gpu=True,
             embed_title=True,
+            progress_bar=False,
         )
-
-    def model_init(self, documents: List[Document], query_model_name: str, passage_model_name: str) -> NoReturn:
-        """initialize and training model
-
-        Parameters
-        ----------
-        documents : List[Document]
-            the dataset that collected for model
-        query_model_name : str
-            model of query
-        passage_model_name : str
-            model of passage
-
-        Returns
-        -------
-        NoReturn
-
-        """
-        # call FAISS
-        document_store = self.__call_faiss()
-        # call DPR
-        self.__retriever = self.__call_dpr(
-            document_store, query_model_name, passage_model_name)
 
         # Update FAISS values
         document_store.delete_documents()
@@ -131,25 +112,21 @@ class Retriever:
         document_store.update_embeddings(retriever=self.__retriever)
 
     def retrieve(self, query: str, top_k=10) -> List[str]:
-        """retrieve texts that DPR model returned
+        """[summary]
 
         Parameters
         ----------
         query : str
-            text for search in documents and model find related text
+            Question or text according to which we want the similar contexts
         top_k : int, optional
-            count of returned related text, by default 10
+            count of similar context for that must returned, by default 10
 
         Returns
         -------
         List[str]
-            list of answers
+            [description]
         """
         contexts = self.__retriever.retrieve(query=query, top_k=top_k)
-        texts = []
-        for answer in contexts:
-            texts.append(
-                answer.to_dict()['text']
-            )
+        texts = [answer.to_dict()['text'] for answer in contexts]
 
         return texts
