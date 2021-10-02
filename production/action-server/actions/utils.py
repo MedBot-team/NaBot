@@ -53,11 +53,24 @@ def check_processor_conf(conf):
     '''
     Checks if processor config is done correctly.
     '''
-    supported_types = ['no_process', 'extractive_QA', 'abstractive_QA', 'summarizer']
+    supported_types = ['no_process', 'QA', 'abstractive_QA', 'summarizer']
     assert 'processor' in conf, "Can't find 'processor' in config.yml"
     assert 'type' in conf['processor'], "Processor type not defined in config.yml"
     assert conf['processor']['type'] in supported_types, \
         f"Processor type {conf['processor']['type']} is not on supported"
+    
+    # Checks if all parameters for no_processor type are set(Nothing needs to be set)
+    if conf['processor']['type'] == 'no_processor':
+        pass
+    # Checks if all parameters for QA processor are set
+    if conf['processor']['type'] == 'QA':
+        assert 'host_url' in conf['processor'], "Host address not defined for QA server"
+    # Checks if all parameters for RAG processor are set
+    if conf['processor']['type'] == 'RAG':
+        pass
+    # Checks if all parameters for summarizer processor are set
+    if conf['processor']['type'] == 'summarizer':
+        pass
 
 def get_columns(intent, table):
     '''
