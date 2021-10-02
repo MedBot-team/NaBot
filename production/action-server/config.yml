@@ -27,13 +27,18 @@ processor:
 # Supported types:
 # - no_process:
 #     Shows full context to user
-# - extractive_QA:
+# - QA:
 #     Displays(or annotates) a part of context as answer
-#     NOT IMPLEMENTED YET!
+#     Necessary configuration parameters:
+#     - host_url: <host address> 
+#     NOTE: You can enter port inside host_url if needed.(e.g http://localhost:9095/)
+#     NOTE: If API key is needed to communicate with QA server it must be
+#           in .env file in the directory of this file with key QA_API_KEY.
 # - abstractive_QA:
 #     A generative model returns answer using context
 #     NOT IMPLEMENTED YET!
 # - summarizer:
 #     Displays the summary of context
 #     NOT IMPLEMENTED YET!  
-  type: no_process
+  type: QA
+  host_url: http://localhost:9095/
