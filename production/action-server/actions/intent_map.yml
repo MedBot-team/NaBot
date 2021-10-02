@@ -1,4 +1,4 @@
-drug:
+drugs:
   new_issue: uses
   what_is: uses
   usage: uses
@@ -10,7 +10,7 @@ drug:
   drug_interaction: interactions
   drug_sideeffects: side_effects
 
-lab:
+labs:
   new_issue: What_is_the_test
   what_is: What_is_the_test
   usage: 
