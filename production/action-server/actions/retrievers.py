@@ -93,7 +93,8 @@ class SQLRetriever(Retriever):
     def collect_answer(self, table, name, columns):
         answers = []
         for column in columns:
-            answers.append(self.db.retrieve_from_table(table, name, column))
+            record = self.db.retrieve_from_table(table, name, column) #is a list
+            answers.append(record[0])
         answer = ' '.join(answers)
         return answer
         
