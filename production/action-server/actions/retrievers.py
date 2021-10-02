@@ -91,6 +91,9 @@ class SQLRetriever(Retriever):
             return entity    
         
     def collect_answer(self, table, name, columns):
+        '''
+        collects anwers from different columns of table and puts them together.
+        '''
         answers = []
         for column in columns:
             record = self.db.retrieve_from_table(table, name, column) #is a list

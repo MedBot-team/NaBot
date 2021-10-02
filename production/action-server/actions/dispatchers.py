@@ -1,4 +1,3 @@
-
 fault_codes = {
     '__CODE0__': 'utter_not_found',
     '__CODE1__': 'utter_not_found',
@@ -27,4 +26,3 @@ def dispatch(tracker, dispatcher, message):
                                  buttons=buttons,
                                  button_type='inline',
                                  )
-    

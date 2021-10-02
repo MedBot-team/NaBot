@@ -14,6 +14,7 @@ class GetAnswer(Action):
         
         # Creates retriever using config.yml 
         self.retriever = create_retriever()
+         # Creates processor using config.yml
         self.processor = create_processor()
     
     def name(self):
@@ -25,5 +26,4 @@ class GetAnswer(Action):
             domain: Dict[Text, Any]):
         context = self.retriever.retrieve(tracker)
         answer = self.processor.process(tracker, context)
-        dispatch(tracker, dispatcher, answer)
-        
+        dispatch(tracker, dispatcher, answer)      
