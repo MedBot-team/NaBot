@@ -8,7 +8,7 @@ class Processor(ABC):
     Meta class for processors.
     '''
     @abstractmethod
-    def __init__():
+    def __init__(self):
         pass
     
     @abstractmethod
@@ -19,6 +19,9 @@ class NoProcessor(Processor):
     '''
     A processor that doesn't change the input context. 
     '''
+    def __init__(self):
+        pass
+    
     def process(self, tracker, context):
         return context
 
