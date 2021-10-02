@@ -52,6 +52,17 @@ body {
   width: 6rem;
   margin-left: auto;
   margin-right: 10px;
+  overflow-y: auto;
+}
+
+.chat-box::-webkit-scrollbar {
+  width: 8px;
+}
+.chat-box::-webkit-scrollbar-track {
+  background: #ddd;
+}
+.chat-box::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
 }
 
 .side-bar *{
