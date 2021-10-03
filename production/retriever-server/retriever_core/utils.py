@@ -8,12 +8,10 @@ from abc import ABC, abstractmethod
 
 def read_csv(path: str) -> Generator:
     """read `csv` file and return a generator
-
     Parameters
     ----------
     path : str
         path of csv file
-
     Returns
     -------
     Generator
@@ -25,12 +23,10 @@ def read_csv(path: str) -> Generator:
 
 def store_document(dataset: List[Dict[str, str]]) -> List[Document]:
     """haystack want a `Document` type data structure the function take dataset list of dict and generate `Document`
-
     Parameters
     ----------
     dataset : List[Dict[str, str]]
         dataset list that must include `title` and `text`
-
     Returns
     -------
     Document
@@ -75,7 +71,6 @@ class DensePassage(Retriever):
 
     def go(self, documents: List[Document], query_model_name: str, passage_model_name: str) -> NoReturn:
         """initialize and train model and update faiss documents
-
         Parameters
         ----------
         documents : List[Document]
@@ -84,7 +79,6 @@ class DensePassage(Retriever):
             query model name
         passage_model_name : str
             passage model name
-
         Returns
         -------
         NoReturn
@@ -113,14 +107,12 @@ class DensePassage(Retriever):
 
     def retrieve(self, query: str, top_k=10) -> List[str]:
         """[summary]
-
         Parameters
         ----------
         query : str
             Question or text according to which we want the similar contexts
         top_k : int, optional
             count of similar context for that must returned, by default 10
-
         Returns
         -------
         List[str]

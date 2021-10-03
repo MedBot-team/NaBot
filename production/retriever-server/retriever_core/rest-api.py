@@ -18,7 +18,6 @@ documents = store_document(dataset)
 
 retriever = DensePassage()
 
-
 retriever.go(documents, query_model, passage_model)
 
 
