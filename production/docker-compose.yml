@@ -20,7 +20,7 @@ services:
       - nginx-network
     # Mount .env file to the ui server to read chatbot URL
     volumes:
-      - ./.env:/streamlit/.env
+      - ./.env:/flask_server/.env
     expose:
       - 8501
     # Map TCP port 8501 in the container to port 80 on the Docker host.

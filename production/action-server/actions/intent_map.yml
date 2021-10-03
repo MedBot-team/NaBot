@@ -1,0 +1,22 @@
+drugs:
+  new_issue: uses
+  what_is: uses
+  usage: uses
+  risk:
+  - warnings
+  - side_effects
+  drug_warning: warnings
+  drug_dosage: dosage
+  drug_interaction: interactions
+  drug_sideeffects: side_effects
+
+labs:
+  new_issue: What_is_the_test
+  what_is: What_is_the_test
+  usage: 
+  - What_is_it_used_for
+  - Why_do_I_need_the_test
+  risk: Are_there_any_risks_to_the_test
+  lab_result: What_do_the_results_mean
+  lab_prepare: Will_I_need_to_do_anything_to_prepare_for_the_test
+  lab_during: What_happens_during_the_test

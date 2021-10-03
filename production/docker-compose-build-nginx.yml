@@ -5,7 +5,7 @@ services:
   # Build streamlit ui server
   ui:
     build:
-      context: ./streamlit-server
+      context: ./ui-server
       dockerfile: Dockerfile
     # Choose image name
     image: nabot-ui
@@ -22,13 +22,9 @@ services:
       - nginx-network
     # Mount .env file to the ui server to read chatbot URL
     volumes:
-      - ./.env:/streamlit/.env
+      - ./.env:/flask_server/.env
     expose:
       - 8501
-    # Map TCP port 8501 in the container to port 80 on the Docker host.
-    # This is a chatbot rest api port
-    # ports:
-    #  - 80:8501
     # Healthcheck condition
     healthcheck:
         test: ["CMD", "printf", ".", ">", "/dev/tcp/127.0.0.1/8501"]
