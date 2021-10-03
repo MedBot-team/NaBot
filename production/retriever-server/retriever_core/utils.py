@@ -121,4 +121,4 @@ class DensePassage(Retriever):
         contexts = self.__retriever.retrieve(query=query, top_k=top_k)
         texts = [answer.to_dict()['text'] for answer in contexts]
 
-        return texts 
+        return texts

@@ -22,7 +22,7 @@ tracker_store:
     db: "$POSTGRES_EVENTS_DATABASE" 
     username: "$POSTGRES_USER"  
     password: "$POSTGRES_EVENTS_PASSWORD" 
-    
+
 #tracker_store:
     #type: SQL
     #dialect: "postgresql" 

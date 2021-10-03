@@ -8,7 +8,7 @@ rules:
   steps:
     - action: entity_form
     - active_loop: null
-    - action: retrieve
+    - action: get_answer
 
 - rule: what_is form
   steps:
@@ -45,7 +45,7 @@ rules:
     - slot_was_set:
       - entity_name
     - action: intent_set
-    - action: retrieve
+    - action: get_answer
 
 - rule: new_issue form
   steps:
@@ -74,3 +74,8 @@ rules:
   steps:
     - intent: bot_challenge
     - action: utter_iamabot
+
+- rule: first introduce
+  steps:
+    - intent: start
+    - action: utter_start

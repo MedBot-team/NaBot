@@ -1,0 +1,44 @@
+retriever: 
+# Choose retviever type 
+# Supported types:
+# - SQL_table:
+#     Uses extracted intents and entities to query the database.
+#     Necessary configuration parameters:
+#     - host: <host address>
+#     - user: <database user>
+#     - database: <database name>
+#     NOTE: Password for database user must be in .env file in
+#           the directory of this file with key SQL_PASSWORD. 
+#     NOTE: The code is written for MYSQL and might not work with
+#           other database services.
+# - semantic:
+#     Candidate passages are retrieved using semantic search.
+#     NOT IMPLEMENTED YET!
+  type: SQL_table
+  host: localhost
+  user: root
+  database: datasets
+  tables:
+  - drugs
+  - labs
+
+processor: 
+# Choose the kind of process you want to be done on retrieved context
+# Supported types:
+# - no_process:
+#     Shows full context to user
+# - QA:
+#     Displays(or annotates) a part of context as answer
+#     Necessary configuration parameters:
+#     - host_url: <host address> 
+#     NOTE: You can enter port inside host_url if needed.(e.g http://localhost:9095/)
+#     NOTE: If API key is needed to communicate with QA server it must be
+#           in .env file in the directory of this file with key QA_API_KEY.
+# - RAG:
+#     A generative model returns answer using context
+#     NOT IMPLEMENTED YET!
+# - summarizer:
+#     Displays the summary of context
+#     NOT IMPLEMENTED YET!  
+  type: QA
+  host_url: http://localhost:9095/

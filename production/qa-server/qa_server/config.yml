@@ -1,0 +1,12 @@
+# default model for transformers libarary to load
+# suppoerted models:  
+#   ahotrod/albert_xxlargev1_squad2_512
+#   bert-large-uncased-whole-word-masking-finetuned-squad
+#   bert-large-cased-whole-word-masking-finetuned-squad
+#   mrm8488/squeezebert-finetuned-squadv2
+#   bigwiz83/sapbert-from-pubmedbert-squad2
+#   franklu/pubmed_bert_squadv2
+#   distilbert-base-uncased-distilled-squad
+#   distilbert-base-cased-distilled-squad
+#   allenai/longformer-large-4096-finetuned-triviaqa
+DEFAULT_MODEL: mrm8488/squeezebert-finetuned-squadv2
