@@ -1,0 +1,4 @@
+# default model for transformers libarary to load
+# suppoerted models:
+#   sshleifer/distilbart-xsum-12-3
+DEFAULT_MODEL: sshleifer/distilbart-xsum-12-3
