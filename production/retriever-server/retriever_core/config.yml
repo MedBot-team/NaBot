@@ -1,0 +1,13 @@
+# path to dataset(for now we are supporting csv)
+# data must contain "title" and "text" columns. 
+data_path: ./datasets/sample.csv
+
+# default_question_encoder:
+#   supported models:
+#   - facebook/dpr-question_encoder-single-nq-base 
+default_question_encoder: facebook/dpr-question_encoder-single-nq-base
+
+# default_context_encoder:
+#   supported models:
+#   - facebook/dpr-ctx_encoder-single-nq-base
+default_context_encoder: facebook/dpr-ctx_encoder-single-nq-base

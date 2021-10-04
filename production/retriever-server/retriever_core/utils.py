@@ -4,7 +4,15 @@ from typing import Dict, List, NoReturn, Generator
 from haystack.document_store.faiss import FAISSDocumentStore
 from haystack.retriever.dense import DensePassageRetriever
 from abc import ABC, abstractmethod
+from ruamel import yaml
 
+
+# Loads config from config.yml file
+def load_conf():
+    CONFIG_FILE_ADR = './config.yml'
+    with open(CONFIG_FILE_ADR, 'r') as f:
+        conf = yaml.load(f, Loader=yaml.RoundTripLoader)
+    return conf
 
 def read_csv(path: str) -> Generator:
     """read `csv` file and return a generator
@@ -59,7 +67,6 @@ class Retriever(ABC):
 
 class DensePassage(Retriever):
     def __init__(self):
-        # All huggingface models that can run
         self.query_available_model = [
             "facebook/dpr-question_encoder-single-nq-base",
             "deepset/gbert-base-germandpr-question_encoder",

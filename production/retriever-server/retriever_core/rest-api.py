@@ -1,25 +1,26 @@
 from decouple import config
 from flask import Flask, jsonify, request
-from utils import store_document, read_csv, DensePassage
+from utils import store_document, read_csv, DensePassage, load_conf
 
 app = Flask(__name__)
-# .env variables
-api_key: str = config("REST_API_KEY")
-csv_file: str = config("CSV_PATH")
-# Default models
-query_model: str = config("QUERY_DEFAULT_MODEL")
-passage_model: str = config("PASSAGE_DEFAULT_MODEL")
+
+conf = load_conf()
+
+# Load config
+csv_file = config("CSV_PATH")
+query_model = config("QUERY_DEFAULT_MODEL")
+passage_model = config("PASSAGE_DEFAULT_MODEL")
+
+api_key = config("DPR_API_KEY")
 
 # read csv dataset
 dataset = read_csv(csv_file)
 # dataset to Document form
 documents = store_document(dataset)
 
-
 retriever = DensePassage()
 
 retriever.go(documents, query_model, passage_model)
-
 
 # Send requests with HTTP POST method for changeing model
 @app.route('/model', methods=['POST'])
@@ -64,4 +65,4 @@ def rest():
 # Run flask APP in production mode
 if __name__ == '__main__':
     from waitress import serve
-    serve(app, host='0.0.0.0', port=5000)
+    serve(app, host='0.0.0.0', port=9590)
