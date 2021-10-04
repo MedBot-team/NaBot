@@ -38,7 +38,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 WORKDIR /summarizer-core
 # Create temp path
 VOLUME /tmp
-# Expose 9095 port for api 
+# Expose 9090 port for api 
 EXPOSE 9090
 # Run 
 ENTRYPOINT ["python"]
