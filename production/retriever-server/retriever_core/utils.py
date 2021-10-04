@@ -85,6 +85,7 @@ class DensePassage(Retriever):
         """
         # call FAISS
         document_store = FAISSDocumentStore(
+            sql_url = "sqlite:///db/faiss_document_store.db",
             faiss_index_factory_str="Flat",
             return_embedding=True,
             similarity="dot_product",
