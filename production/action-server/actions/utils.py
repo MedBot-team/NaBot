@@ -38,7 +38,8 @@ def check_retriever_conf(conf):
         assert 'tables' in conf['retriever'], "Data tables not defined"
     # Checks if all parameters for semantic retriever are set
     elif conf['retriever']['type'] == 'semantic':
-        pass
+        assert 'host' in conf['retriever'], "Host address not defined for database"
+        assert 'top_k' in conf['retriever'], "top_k not defined"
 
 def get_processor_conf():
     '''
@@ -70,7 +71,7 @@ def check_processor_conf(conf):
         pass
     # Checks if all parameters for summarizer processor are set
     if conf['processor']['type'] == 'summarizer':
-        pass
+        assert 'host_url' in conf['processor'], "Host address not defined for summarizer server"
 
 def get_columns(intent, table):
     '''
