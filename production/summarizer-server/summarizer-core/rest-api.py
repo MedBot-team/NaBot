@@ -1,18 +1,18 @@
 from decouple import config
 from flask import Flask, jsonify, request
-from utils import Summarization
+from utils import Summarizer, load_conf
 
 
 app = Flask(__name__)
 # Read API_KEY from .env file
-api_key = config('REST_API_KEY')
+api_key = config('SUMMERIZER_API_KEY')
 
 
 # Default model
-model_name = "google/pegasus-xsum"
-summ = Summarization()
+conf = load_conf()
+model_name = conf['DEFAULT_MODEL']
+summ = Summarizer()
 summ.model_init(model_name=model_name)
-
 
 
 # Send requests with HTTP POST method for changeing model
@@ -36,7 +36,7 @@ def ChModel():
 
 # Send requests with HTTP POST method for summarizaition
 @app.route('/', methods=['POST'])
-def Summerize():
+def Summarize():
     # Check if proper data has been send to Summarize server
     if not set(['context', 'api_key']) <= request.json.keys():
         return jsonify(code=403, message="bad request")
@@ -46,11 +46,11 @@ def Summerize():
     # Get the summary from model according to the context 
     else:
         context = request.json['context']
-        summary = summ.get_summarizaition(context=context)
+        summary = summ.get_summary(context=context)
         
         return jsonify(summary=summary, context=context, code=200)
 
 # Run flask APP in production mode
 if __name__ == '__main__':
     from waitress import serve
-    serve(app, host='0.0.0.0', port=5000)
+    serve(app, host='0.0.0.0', port=9090)

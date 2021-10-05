@@ -4,7 +4,16 @@ from typing import Dict, List, NoReturn, Generator
 from haystack.document_store.faiss import FAISSDocumentStore
 from haystack.retriever.dense import DensePassageRetriever
 from abc import ABC, abstractmethod
+from ruamel import yaml
+from decouple import config
 
+
+# Loads config from config.yml file
+def load_conf():
+    CONFIG_FILE_ADR = './config.yml'
+    with open(CONFIG_FILE_ADR, 'r') as f:
+        conf = yaml.load(f, Loader=yaml.RoundTripLoader)
+    return conf
 
 def read_csv(path: str) -> Generator:
     """read `csv` file and return a generator
@@ -59,7 +68,6 @@ class Retriever(ABC):
 
 class DensePassage(Retriever):
     def __init__(self):
-        # All huggingface models that can run
         self.query_available_model = [
             "facebook/dpr-question_encoder-single-nq-base",
             "deepset/gbert-base-germandpr-question_encoder",
@@ -85,6 +93,7 @@ class DensePassage(Retriever):
         """
         # call FAISS
         document_store = FAISSDocumentStore(
+            sql_url = self.build_sql_url(),
             faiss_index_factory_str="Flat",
             return_embedding=True,
             similarity="dot_product",
@@ -122,3 +131,13 @@ class DensePassage(Retriever):
         texts = [answer.to_dict()['text'] for answer in contexts]
 
         return texts
+
+    @staticmethod
+    def build_sql_url():
+        conf = load_conf()['database']
+        host = conf['postgres_host']
+        user = conf['postgres_user']
+        password = config('POSTGRES_PASSWORD')
+        db = conf['database']
+        url = f"postgresql+psycopg2://{user}:{password}@{host}/{db}"
+        return url
