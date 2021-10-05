@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 from decouple import config
+import json
+import requests
 
 from .database import DatabaseConnector
 from .utils import get_retriever_conf, get_columns
@@ -65,7 +67,6 @@ class SQLRetriever(Retriever):
             return '__CODE0__'
             
             
-           
     @staticmethod            
     def parse_conf(conf):
         '''
@@ -103,7 +104,34 @@ class SQLRetriever(Retriever):
         
     
 class  SemanticRetriever(Retriever):
-    pass
+    '''
+    
+    '''
+    def __init__(self, conf):
+        self.host = conf['host']
+        self.top_k = conf['top_k']
+        self.api_key = config('DPR_API_KEY')
+        self.headers = {'Content-Type': 'application/json'}
+    
+    def retrieve(self, tracker):
+        '''
+        Retrieves information from database. Collects parameters from tracker.
+        '''
+        query = tracker.latest_message['text']
+        payload = json.dumps({
+            "query": query,
+            "top_k": self.top_k,
+            "api_key": self.api_key,
+                })
+        response = requests.request("POST",
+                                    self.host,
+                                    headers=self.headers,
+                                    data=payload
+                                    )
+        contexts = response.json()['contexts']
+        contexts = '. '.join(contexts)
+        return contexts
+           
 
 def create_retriever():
     '''
@@ -113,4 +141,4 @@ def create_retriever():
     if conf['type']=='SQL_table':
         return SQLRetriever(conf)
     elif conf['type']=='semantic':
-        pass
+        return SemanticRetriever(conf)

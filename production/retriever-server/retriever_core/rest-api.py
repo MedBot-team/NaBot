@@ -1,25 +1,27 @@
 from decouple import config
 from flask import Flask, jsonify, request
-from utils import store_document, read_csv, DensePassage
+from utils import store_document, read_csv, DensePassage, load_conf
 
 app = Flask(__name__)
-# .env variables
-api_key: str = config("REST_API_KEY")
-csv_file: str = config("CSV_PATH")
-# Default models
-query_model: str = config("QUERY_DEFAULT_MODEL")
-passage_model: str = config("PASSAGE_DEFAULT_MODEL")
+
+
+
+# Load config
+conf = load_conf()
+csv_file = conf["data_path"]
+query_model = conf["default_question_encoder"]
+passage_model = conf["default_context_encoder"]
+
+api_key = config("DPR_API_KEY")
 
 # read csv dataset
 dataset = read_csv(csv_file)
 # dataset to Document form
 documents = store_document(dataset)
 
-
 retriever = DensePassage()
 
 retriever.go(documents, query_model, passage_model)
-
 
 # Send requests with HTTP POST method for changeing model
 @app.route('/model', methods=['POST'])

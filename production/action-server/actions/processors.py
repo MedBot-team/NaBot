@@ -17,7 +17,8 @@ class Processor(ABC):
     @abstractmethod
     def process(self, tracker, context):
         pass
-    
+
+   
 class NoProcessor(Processor):
     '''
     A processor that doesn't change the input context. 
@@ -27,6 +28,7 @@ class NoProcessor(Processor):
     
     def process(self, tracker, context):
         return context
+
 
 class QAProcessor(Processor):
     '''
@@ -51,7 +53,30 @@ class QAProcessor(Processor):
                                     )
         response = response.json()['answer']
         return response
+    
+     
+class SummarizerProcessor(Processor):
+    '''
+    Summarizes given context.
+    '''
+    def __init__(self, host):
+        self.host = host
+        self.api_key = config('SUMMARIZER_API_KEY')
+        self.headers = {'Content-Type': 'application/json'}
         
+    def process(self, tracker, context):
+        payload = json.dumps({
+            "context": context,
+            "api_key": self.api_key,
+                })
+        response = requests.request("POST",
+                                    self.host,
+                                    headers=self.headers,
+                                    data=payload
+                                    )
+        response = response.json()['summary']
+        return response
+            
 
 def create_processor():
     '''
@@ -62,3 +87,5 @@ def create_processor():
         return NoProcessor()
     elif conf['type']=='QA':
         return QAProcessor(conf['host_url'])
+    elif conf['type']=='summarizer':
+        return SummarizerProcessor(conf['host_url'])

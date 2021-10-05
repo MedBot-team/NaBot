@@ -1,0 +1,24 @@
+# path to dataset(for now we are supporting csv)
+# data must contain "title" and "text" columns. 
+data_path: ./datasets/sample.csv
+
+# A Postgres data base is needed to store embedings.
+# Follongs parameters are needed to connect to the data base:
+# - postgres_host: <postgres host>
+# - postgres_user: <postgres user>
+# - database: <database which you want to stre data>
+# NOTE: Password for <postgres user> must be in .env file with key POSTGRES_PASSWORD
+database:
+  postgres_host: 172.18.0.2
+  postgres_user: postgres
+  database: rasa
+
+# default_question_encoder:
+#   supported models:
+#   - facebook/dpr-question_encoder-single-nq-base 
+default_question_encoder: facebook/dpr-question_encoder-single-nq-base
+
+# default_context_encoder:
+#   supported models:
+#   - facebook/dpr-ctx_encoder-single-nq-base
+default_context_encoder: facebook/dpr-ctx_encoder-single-nq-base
