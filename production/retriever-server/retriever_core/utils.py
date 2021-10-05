@@ -5,6 +5,7 @@ from haystack.document_store.faiss import FAISSDocumentStore
 from haystack.retriever.dense import DensePassageRetriever
 from abc import ABC, abstractmethod
 from ruamel import yaml
+from decouple import config
 
 
 # Loads config from config.yml file
@@ -92,7 +93,7 @@ class DensePassage(Retriever):
         """
         # call FAISS
         document_store = FAISSDocumentStore(
-            sql_url = "sqlite:///db/faiss_document_store.db",
+            sql_url = self.build_sql_url(),
             faiss_index_factory_str="Flat",
             return_embedding=True,
             similarity="dot_product",
@@ -130,3 +131,13 @@ class DensePassage(Retriever):
         texts = [answer.to_dict()['text'] for answer in contexts]
 
         return texts
+
+    @staticmethod
+    def build_sql_url():
+        conf = load_conf()['database']
+        host = conf['postgres_host']
+        user = conf['postgres_user']
+        password = config('POSTGRES_PASSWORD')
+        db = conf['database']
+        url = f"postgresql+psycopg2://{user}:{password}@{host}/{db}"
+        return url
