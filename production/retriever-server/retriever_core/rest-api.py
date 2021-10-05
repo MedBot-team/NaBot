@@ -4,12 +4,13 @@ from utils import store_document, read_csv, DensePassage, load_conf
 
 app = Flask(__name__)
 
-conf = load_conf()
+
 
 # Load config
-csv_file = config("CSV_PATH")
-query_model = config("QUERY_DEFAULT_MODEL")
-passage_model = config("PASSAGE_DEFAULT_MODEL")
+conf = load_conf()
+csv_file = conf("data_path")
+query_model = conf("default_question_encoder")
+passage_model = conf("default_context_encoder")
 
 api_key = config("DPR_API_KEY")
 
