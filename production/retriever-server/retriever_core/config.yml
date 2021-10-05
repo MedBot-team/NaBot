@@ -9,7 +9,7 @@ data_path: ./datasets/sample.csv
 # - database: <database which you want to stre data>
 # NOTE: Password for <postgres user> must be in .env file with key POSTGRES_PASSWORD
 database:
-  postgres_host: 172.18.0.2
+  postgres_host: db_events
   postgres_user: postgres
   database: rasa
 
