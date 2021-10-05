@@ -17,7 +17,7 @@ from haystack.document_store.faiss import FAISSDocumentStore
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
 
-nlp = English() 
+nlp = English()
 nlp.add_pipe("sentencizer")
 
 
