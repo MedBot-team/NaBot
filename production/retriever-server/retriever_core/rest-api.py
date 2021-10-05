@@ -8,9 +8,9 @@ app = Flask(__name__)
 
 # Load config
 conf = load_conf()
-csv_file = conf("data_path")
-query_model = conf("default_question_encoder")
-passage_model = conf("default_context_encoder")
+csv_file = conf["data_path"]
+query_model = conf["default_question_encoder"]
+passage_model = conf["default_context_encoder"]
 
 api_key = config("DPR_API_KEY")
 
