@@ -128,6 +128,10 @@ class report_generator():
                 question = q_a['question']
                 reference_list = set([answer['text']
                                      for answer in q_a['answers']])
+
+                reference_list = set([entry_j for i, entry_i in enumerate(
+                    reference_list) for entry_j in reference_list if entry_i in entry_j])
+
                 reference = " ".join(reference_list)
                 reference_sents = nlp(reference)
                 reference_sents = list(reference_sents.sents)
